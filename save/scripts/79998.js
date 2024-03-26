@@ -5422,20 +5422,23 @@
           fetchWebAuthnConditionalChallenge: function () {
             return r;
           },
-          fetchWebAuthnCredentials: function () {
+          fetchWebAuthnPasswordlessChallenge: function () {
             return i;
           },
-          deleteWebAuthnCredential: function () {
+          fetchWebAuthnCredentials: function () {
             return u;
           },
-          editWebAuthnCredential: function () {
+          deleteWebAuthnCredential: function () {
             return o;
           },
-          startRegisterWebAuthnCredential: function () {
+          editWebAuthnCredential: function () {
             return d;
           },
-          finishRegisterWebAuthnCredential: function () {
+          startRegisterWebAuthnCredential: function () {
             return c;
+          },
+          finishRegisterWebAuthnCredential: function () {
+            return f;
           },
         });
       var s = n("872717"),
@@ -5447,7 +5450,11 @@
         );
         return e.body;
       }
-      function i() {
+      async function i() {
+        let e = await s.HTTP.post(l.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE);
+        return e.body;
+      }
+      function u() {
         a.default.dispatch({ type: "MFA_WEBAUTHN_CREDENTIALS_LOADING" }),
           s.HTTP.get(l.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
             a.default.dispatch({
@@ -5456,12 +5463,12 @@
             });
           });
       }
-      function u(e) {
+      function o(e) {
         s.HTTP.del(l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
           a.default.dispatch({ type: "AUTHENTICATOR_DELETE", credential: e });
         });
       }
-      async function o(e, t) {
+      async function d(e, t) {
         let n = await s.HTTP.patch({
           url: l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e),
           body: { name: t },
@@ -5471,7 +5478,7 @@
           credential: n.body,
         });
       }
-      async function d() {
+      async function c() {
         let {
           body: { ticket: e, challenge: t },
         } = await s.HTTP.post({
@@ -5480,7 +5487,7 @@
         });
         return { ticket: e, challenge: t };
       }
-      async function c(e, t, n) {
+      async function f(e, t, n) {
         let r = await s.HTTP.post({
           url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
           body: { name: e, ticket: t, credential: n },
@@ -6088,4 +6095,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a077468a569db524d690.js.map
+//# sourceMappingURL=634944cf5f586989c929.js.map

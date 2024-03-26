@@ -342,8 +342,8 @@
         N = s("10514"),
         S = s("521012"),
         T = s("145131"),
-        C = s("251752"),
-        P = s("719923"),
+        P = s("251752"),
+        C = s("719923"),
         R = s("942456"),
         A = s("646718"),
         M = s("843455"),
@@ -374,7 +374,7 @@
           children: (0, a.jsx)(o.ListNavigatorContainer, {
             children: e => {
               let { ref: t, ...n } = e;
-              return (0, a.jsx)(C.default, {
+              return (0, a.jsx)(P.default, {
                 className: l(L.verticalFit, L.paginator),
                 currentPageIndex: d,
                 onChangePage: N,
@@ -434,7 +434,7 @@
                       paymentGatewayName:
                         M.PaymentGatewayToFriendlyName[e.paymentGateway],
                       billingHistoryLink: (0,
-                      P.getExternalSubscriptionMethodUrl)(
+                      C.getExternalSubscriptionMethodUrl)(
                         e.paymentGateway,
                         "BILLING_HISTORY"
                       ),
@@ -519,7 +519,7 @@
           null == s ||
           null == a ||
           Object.values(A.PremiumSubscriptionSKUs).includes(s) ||
-          (0, P.isPremiumSubscriptionPlan)(a)
+          (0, C.isPremiumSubscriptionPlan)(a)
         );
       }
       function U(e) {
@@ -602,8 +602,8 @@
         N = s("545158"),
         S = s("299285"),
         T = s("609190"),
-        C = s("442379"),
-        P = s("565559"),
+        P = s("442379"),
+        C = s("565559"),
         R = s("928576"),
         A = s("407417"),
         M = s("246421"),
@@ -615,8 +615,8 @@
         D = s("865146"),
         U = s("305961"),
         O = s("357957"),
-        v = s("10514"),
-        b = s("251013"),
+        b = s("10514"),
+        v = s("251013"),
         B = s("145131"),
         j = s("953109"),
         G = s("37785"),
@@ -724,7 +724,7 @@
       };
       function eE(e) {
         let { guildId: t, guildProductListingId: s } = e,
-          a = (0, C.useFetchGuildProductListing)(t, s, {
+          a = (0, P.useFetchGuildProductListing)(t, s, {
             requireCurrentGuild: !1,
           }),
           n = (0, R.useProductType)(a),
@@ -766,13 +766,13 @@
       function ef(e) {
         var t, s;
         let { guildId: a, guildProductListingId: n } = e,
-          l = (0, C.useFetchGuildProductListing)(a, n, {
+          l = (0, P.useFetchGuildProductListing)(a, n, {
             requireCurrentGuild: !1,
           }),
           r = (0, p.useStateFromStores)(
-            [P.default],
+            [C.default],
             () =>
-              P.default.getGuildProductFetchState(n) === P.FetchState.FETCHING
+              C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING
           ),
           u = null == l ? void 0 : l.role_id,
           o = (0, p.useStateFromStores)(
@@ -1272,7 +1272,7 @@
                       )));
               });
             else if (f.type === ee.SubscriptionTypes.GUILD) {
-              let e = v.default.get(f.items[0].planId);
+              let e = b.default.get(f.items[0].planId);
               d(
                 null != e,
                 "Guild subscription plan should already have been loaded"
@@ -1283,7 +1283,7 @@
                   : ea.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
               s.push(t.format({ planName: e.name })), (a = e.skuId);
             } else if (f.type === ee.SubscriptionTypes.APPLICATION) {
-              let e = v.default.get(f.items[0].planId);
+              let e = b.default.get(f.items[0].planId);
               d(
                 null != e,
                 "Application subscription plan should already have been loaded"
@@ -1569,13 +1569,13 @@
             gameApplication: _,
             paymentSources: m,
           } = (0, p.useStateFromStoresObject)(
-            [O.default, b.default, S.default],
+            [O.default, v.default, S.default],
             () => {
               var e, t;
               return {
                 applicationStatistics:
                   null != d
-                    ? b.default.getCurrentUserStatisticsForApplication(d)
+                    ? v.default.getCurrentUserStatisticsForApplication(d)
                     : null,
                 gameApplication:
                   null !== (t = S.default.getApplication(null != d ? d : "")) &&
@@ -1920,8 +1920,8 @@
         N = s("685665"),
         S = s("619935"),
         T = s("10514"),
-        C = s("145131"),
-        P = s("599110"),
+        P = s("145131"),
+        C = s("599110"),
         R = s("745279"),
         A = s("701909"),
         M = s("719923"),
@@ -1933,8 +1933,8 @@
         D = s("471131"),
         U = s("398309"),
         O = s("249718"),
-        v = s("360262"),
-        b = s("177998"),
+        b = s("360262"),
+        v = s("177998"),
         B = s("146163"),
         j = s("510928"),
         G = s("661128"),
@@ -2002,7 +2002,7 @@
           [c, E] = l.useState(!1),
           [p, I] = l.useState(!1),
           T = (0, m.default)(),
-          { analyticsLocations: P } = (0, N.default)(),
+          { analyticsLocations: C } = (0, N.default)(),
           R = null;
         switch (s.status) {
           case w.SubscriptionStatusTypes.PAST_DUE:
@@ -2080,7 +2080,7 @@
                     onClose: r,
                     premiumSubscription: s,
                     setIsCancelling: E,
-                    analyticsLocations: P,
+                    analyticsLocations: C,
                     analyticsLocation: o,
                   });
                 },
@@ -2139,7 +2139,7 @@
               ],
             }),
             (0, i.jsxs)(_.ModalFooter, {
-              justify: C.default.Justify.START,
+              justify: P.default.Justify.START,
               children: [g, y],
             }),
           ],
@@ -2243,8 +2243,8 @@
               ],
             }),
             (0, i.jsxs)(_.ModalFooter, {
-              align: C.default.Align.CENTER,
-              justify: C.default.Justify.BETWEEN,
+              align: P.default.Align.CENTER,
+              justify: P.default.Justify.BETWEEN,
               children: [
                 (0, i.jsx)(_.Button, {
                   color: _.Button.Colors.RED,
@@ -2266,7 +2266,7 @@
                       ),
                     }),
                 }),
-                (0, i.jsx)(b.default, { onClick: a }),
+                (0, i.jsx)(v.default, { onClick: a }),
               ],
             }),
           ],
@@ -2306,8 +2306,8 @@
           } = e,
           p = l.useRef(new o.Environment()),
           [S, T] = l.useState(null),
-          C = (0, y.useFreeBoostUserTenureReward)(),
-          A = (null == C ? void 0 : C.showNotification) === !0,
+          P = (0, y.useFreeBoostUserTenureReward)(),
+          A = (null == P ? void 0 : P.showNotification) === !0,
           h =
             null === (t = (0, M.getPremiumPlanItem)(a)) || void 0 === t
               ? void 0
@@ -2316,13 +2316,13 @@
         c(null != L, "Should not be cancelling Nitro without premiumType");
         let x = (0, m.default)();
         l.useEffect(() => {
-          P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a));
+          C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a));
         }, [a]);
-        let b =
+        let v =
           L === k.PremiumTypes.TIER_0 ||
           L === k.PremiumTypes.TIER_1 ||
           L === k.PremiumTypes.TIER_2;
-        null == E && (E = b ? 1 : 2);
+        null == E && (E = v ? 1 : 2);
         let { analyticsLocations: B } = (0, N.default)(
             u,
             I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL
@@ -2333,7 +2333,7 @@
               [u] = l.useState(Date.now()),
               o = l.useCallback(
                 e => {
-                  P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+                  C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
                     from_step: X[a],
                     to_step: X[e],
                     step_duration_ms: Date.now() - i,
@@ -2352,7 +2352,7 @@
         (0, G.useUnsupportedExternalSubscriptionModalHandler)(a, r, !1);
         let $ = e => {
             r(),
-              P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+              C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
                 from_step: X[e],
                 to_step: null,
                 step_duration_ms: Date.now() - K,
@@ -2417,7 +2417,7 @@
             });
             break;
           case 1:
-            s = (0, i.jsx)(v.default, {
+            s = (0, i.jsx)(b.default, {
               premiumType: L,
               titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
               subtitleText: A
@@ -2470,7 +2470,7 @@
               premiumType: L,
               setStep: W,
               onClose: () => $(j),
-              whatYouLoseExperienceEnabled: b,
+              whatYouLoseExperienceEnabled: v,
               analyticsLocation: d,
             });
             break;
@@ -2522,7 +2522,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return P;
+            return C;
           },
         }),
         s("222007");
@@ -2544,13 +2544,13 @@
         N = s("782340"),
         S = s("893643"),
         T = s("940420"),
-        C = s("591726"),
-        P = function (e) {
+        P = s("591726"),
+        C = function (e) {
           let {
               premiumSubscription: t,
               premiumType: s,
               onClose: i,
-              onConfirm: P,
+              onConfirm: C,
               userDiscountOffer: R,
             } = e,
             [A, M] = n.useState(!1),
@@ -2563,14 +2563,14 @@
                     url: I.Endpoints.USER_OFFER_REDEEM,
                     body: { user_discount_offer_id: e },
                   }),
-                  P();
+                  C();
               } catch (e) {
                 M(!0);
               }
               L(!1);
             },
             y = (0, d.default)(),
-            x = (0, u.isThemeDark)(y) ? T : C,
+            x = (0, u.isThemeDark)(y) ? T : P,
             D = (0, _.useChurnDiscountedPrice)(
               t,
               m.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
@@ -2709,8 +2709,8 @@
             premiumSubscription: t,
             premiumType: s,
             onClose: T,
-            confettiCanvas: C,
-            userWasChurned: P = !1,
+            confettiCanvas: P,
+            userWasChurned: C = !1,
             userDiscountOffer: R,
           } = e,
           A = (0, u.default)(),
@@ -2743,7 +2743,7 @@
                 regularPrice: D,
               }
             ),
-          v = (0, a.jsx)("div", {
+          b = (0, a.jsx)("div", {
             className: I.whatYouLoseButtonContainer,
             children: (0, a.jsx)(r.Button, {
               color: r.Button.Colors.BRAND,
@@ -2776,7 +2776,7 @@
                               }),
                               (0, a.jsx)(r.Heading, {
                                 variant: "heading-xl/bold",
-                                children: P
+                                children: C
                                   ? m.default.Messages
                                       .PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK
                                   : m.default.Messages
@@ -2788,7 +2788,7 @@
                             className: I.bodyString,
                             children: O,
                           }),
-                          v,
+                          b,
                         ],
                       })
                     : (0, a.jsx)(r.Spinner, {}),
@@ -2798,7 +2798,7 @@
               L &&
               (0, a.jsx)(d.default, {
                 confettiTarget: h.current,
-                confettiCanvas: C,
+                confettiCanvas: P,
                 confettiVelocityMultiplier: 0.75,
               }),
           ],
@@ -2813,7 +2813,7 @@
             return T;
           },
           PremiumSubscriptionPauseModalConfirm: function () {
-            return C;
+            return P;
           },
         }),
         s("424973"),
@@ -2937,7 +2937,7 @@
           ],
         });
       }
-      function C(e) {
+      function P(e) {
         let {
             premiumSubscription: t,
             premiumType: s,
@@ -2946,8 +2946,8 @@
             analyticsLocation: d,
           } = e,
           [_, T] = n.useState(!1),
-          { analyticsLocations: C } = (0, E.default)(),
-          [P, R] = n.useState(!1),
+          { analyticsLocations: P } = (0, E.default)(),
+          [C, R] = n.useState(!1),
           A = (0, c.default)(),
           M = null,
           h = null,
@@ -3013,7 +3013,7 @@
                   children: [
                     (0, a.jsx)(o.Button, {
                       color: o.Button.Colors.RED,
-                      disabled: P || null == r,
+                      disabled: C || null == r,
                       onClick: async () => {
                         await S({
                           premiumSubscription: t,
@@ -3021,7 +3021,7 @@
                           setIsCancelling: R,
                           setHasError: T,
                           onClose: i,
-                          analyticsLocations: C,
+                          analyticsLocations: P,
                           analyticsLocation: d,
                         });
                       },
@@ -3080,8 +3080,8 @@
         N = s("649844"),
         S = s("797647"),
         T = s("697218"),
-        C = s("145131"),
-        P = s("953109"),
+        P = s("145131"),
+        C = s("953109"),
         R = s("423487"),
         A = s("599110"),
         M = s("701909"),
@@ -3093,8 +3093,8 @@
         D = s("541554"),
         U = s("690679"),
         O = s("95637"),
-        v = s("49111"),
-        b = s("782340"),
+        b = s("49111"),
+        v = s("782340"),
         B = s("809432");
       function j(e) {
         let t,
@@ -3154,9 +3154,9 @@
                     (0, a.jsx)(x.default, {
                       color: f.Button.Colors.BRAND,
                       onClick: () =>
-                        _.default.open(v.UserSettingsSections.GUILD_BOOSTING),
+                        _.default.open(b.UserSettingsSections.GUILD_BOOSTING),
                       children:
-                        b.default.Messages
+                        v.default.Messages
                           .PREMIUM_GUILD_PERKS_MODAL_MANAGE_YOUR_SUBSCRIPTIONS,
                     }),
                 ],
@@ -3166,7 +3166,7 @@
                   className: B.boostingDesktopAppBlurb,
                   variant: "text-sm/normal",
                   children:
-                    b.default.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format(
+                    v.default.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format(
                       { openAppHook: () => (0, I.default)("app") }
                     ),
                 }),
@@ -3177,7 +3177,7 @@
       function G() {
         return (
           n.useEffect(() => {
-            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_missing_payment_method",
             });
           }, []),
@@ -3191,7 +3191,7 @@
               (0, a.jsx)(f.Text, {
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
-                children: b.default.Messages.MISSING_PAYMENT_METHOD_BANNER,
+                children: v.default.Messages.MISSING_PAYMENT_METHOD_BANNER,
               }),
             ],
           })
@@ -3200,7 +3200,7 @@
       function F() {
         return (
           n.useEffect(() => {
-            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
@@ -3214,7 +3214,7 @@
               (0, a.jsx)(f.Text, {
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
-                children: b.default.Messages.INVALID_PAYMENT_METHOD_BANNER,
+                children: v.default.Messages.INVALID_PAYMENT_METHOD_BANNER,
               }),
             ],
           })
@@ -3227,7 +3227,7 @@
           );
         return (
           n.useEffect(() => {
-            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
@@ -3242,7 +3242,7 @@
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
                 children:
-                  b.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format(
+                  v.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format(
                     {
                       daysPastDue: t,
                       paymentModalRedirect: () => {
@@ -3267,7 +3267,7 @@
             (0, a.jsx)(f.FormTitle, {
               tag: "h3",
               className: B.detailBlockHeader,
-              children: b.default.Messages.PREMIUM_SETTINGS_BILLING_INFO,
+              children: v.default.Messages.PREMIUM_SETTINGS_BILLING_INFO,
             }),
             (0, a.jsx)("div", {
               children: h.default.getBillingInformationString(t, s),
@@ -3283,26 +3283,26 @@
             (0, a.jsx)(f.FormTitle, {
               className: B.sectionTitle,
               tag: "h1",
-              children: b.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
+              children: v.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
             }),
             (0, a.jsx)("p", {
               className: B.sectionDescription,
-              children: b.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
+              children: v.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
             }),
             (0, a.jsx)(f.Card, {
               className: B.noItemsCard,
               type: f.Card.Types.CUSTOM,
-              children: (0, a.jsxs)(C.default, {
-                align: C.default.Align.CENTER,
+              children: (0, a.jsxs)(P.default, {
+                align: P.default.Align.CENTER,
                 children: [
-                  (0, a.jsx)(P.default, {
+                  (0, a.jsx)(C.default, {
                     game: null,
-                    size: P.default.Sizes.SMALL,
+                    size: C.default.Sizes.SMALL,
                     className: B.noItemsIcon,
                   }),
                   (0, a.jsx)("span", {
                     className: B.cardText,
-                    children: b.default.Messages.USER_SETTINGS_NO_SUBSCRIPTIONS,
+                    children: v.default.Messages.USER_SETTINGS_NO_SUBSCRIPTIONS,
                   }),
                 ],
               }),
@@ -3373,7 +3373,7 @@
                   children: (0, a.jsx)(f.HeadingLevel, {
                     component: (0, a.jsx)(f.FormTitle, {
                       tag: "h5",
-                      children: b.default.Messages.BILLING_STEP_PAYMENT,
+                      children: v.default.Messages.BILLING_STEP_PAYMENT,
                     }),
                     children: (0, a.jsxs)("div", {
                       className: B.details,
@@ -3396,15 +3396,15 @@
                                   children:
                                     t.isPurchasedExternally &&
                                     null != t.paymentGateway
-                                      ? b.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format(
+                                      ? v.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format(
                                           {
                                             paymentGatewayName:
-                                              v.PaymentGatewayToFriendlyName[
+                                              b.PaymentGatewayToFriendlyName[
                                                 t.paymentGateway
                                               ],
                                           }
                                         )
-                                      : b.default.Messages
+                                      : v.default.Messages
                                           .BILLING_PAY_FOR_IT_WITH,
                                 }),
                                 (0, a.jsx)(U.default, {
@@ -3427,16 +3427,16 @@
             });
       }
       let W = new Set([
-        v.SubscriptionStatusTypes.ACTIVE,
-        v.SubscriptionStatusTypes.PAST_DUE,
-        v.SubscriptionStatusTypes.CANCELED,
-        v.SubscriptionStatusTypes.PAUSE_PENDING,
-        v.SubscriptionStatusTypes.PAUSED,
+        b.SubscriptionStatusTypes.ACTIVE,
+        b.SubscriptionStatusTypes.PAST_DUE,
+        b.SubscriptionStatusTypes.CANCELED,
+        b.SubscriptionStatusTypes.PAUSE_PENDING,
+        b.SubscriptionStatusTypes.PAUSED,
       ]);
       function V() {
         return (
           n.useEffect(() => {
-            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_duplicate_subscriptions",
             });
           }, []),
@@ -3450,9 +3450,9 @@
                 className: B.duplicateSubscriptionsBannerText,
                 variant: "text-sm/normal",
                 children:
-                  b.default.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
+                  v.default.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
                     helpCenterLink: M.default.getArticleURL(
-                      v.HelpdeskArticles.NITRO
+                      b.HelpdeskArticles.NITRO
                     ),
                   }),
               }),
@@ -3483,14 +3483,14 @@
             analyticsLocations: _,
             analyticsLocation: E,
           }),
-          [C] = (0, g.useSubscriptionInvoicePreview)({
+          [P] = (0, g.useSubscriptionInvoicePreview)({
             subscriptionId: n.id,
             renewal: !0,
             applyEntitlements: !0,
             analyticsLocations: _,
             analyticsLocation: E,
           }),
-          P = (0, c.useStateFromStores)([T.default], () => {
+          C = (0, c.useStateFromStores)([T.default], () => {
             var e;
             return null === (e = T.default.getCurrentUser()) || void 0 === e
               ? void 0
@@ -3499,32 +3499,32 @@
           R = d(n.currentPeriodEnd),
           A = null != n.paymentSourceId,
           M =
-            null !== (t = null == C ? void 0 : C.total) && void 0 !== t ? t : 0,
+            null !== (t = null == P ? void 0 : P.total) && void 0 !== t ? t : 0,
           h = null == l ? void 0 : l.invalid,
           L =
             !A &&
             M > 0 &&
             (7 >= R.diff(d(), "days") ||
-              n.status === v.SubscriptionStatusTypes.PAST_DUE) &&
-            !P &&
+              n.status === b.SubscriptionStatusTypes.PAST_DUE) &&
+            !C &&
             !n.isPurchasedExternally,
           x =
             h &&
-            n.status === v.SubscriptionStatusTypes.PAST_DUE &&
-            !P &&
+            n.status === b.SubscriptionStatusTypes.PAST_DUE &&
+            !C &&
             !n.isPurchasedExternally,
           D = (0, y.useIsPrepaidPaymentPastDue)(),
-          U = !P && D,
+          U = !C && D,
           j =
             (null == n ? void 0 : n.status) ===
-            v.SubscriptionStatusTypes.PAST_DUE
+            b.SubscriptionStatusTypes.PAST_DUE
               ? d().diff(d(n.currentPeriodStart), "days")
               : 0,
           [w] = (0, g.useGetSubscriptionInvoice)({
             subscriptionId: n.id,
             preventFetch: !U,
           });
-        return null == N || null == C
+        return null == N || null == P
           ? (0, a.jsx)(f.Spinner, {})
           : (null != n.renewalMutations &&
               ((n.renewalMutations.planId !== n.planId &&
@@ -3543,7 +3543,7 @@
                   className: B.sectionTitle,
                   tag: "h1",
                   children:
-                    b.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
+                    v.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
                 }),
                 children: [
                   L ? (0, a.jsx)(G, {}) : null,
@@ -3560,7 +3560,7 @@
                     children: (0, a.jsx)("p", {
                       className: B.sectionDescription,
                       children:
-                        b.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
+                        v.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
                     }),
                   }),
                   (0, a.jsxs)("div", {
@@ -3579,7 +3579,7 @@
                           showNoPaymentMethod: L,
                           showInvalidPaymentMethod: x,
                           fetchedCurrentInvoicePreview: N,
-                          fetchedRenewalInvoicePreview: C,
+                          fetchedRenewalInvoicePreview: P,
                         }),
                       }),
                       I.map((e, t) =>
@@ -3647,8 +3647,8 @@
         N = s("745279"),
         S = s("719923"),
         T = s("713518"),
-        C = s("380186"),
-        P = s("182650"),
+        P = s("380186"),
+        C = s("182650"),
         R = s("70578"),
         A = s("154889"),
         M = s("892843"),
@@ -3664,11 +3664,11 @@
           section: y.AnalyticsSections.SETTINGS_PREMIUM,
           object: y.AnalyticsObjects.CARD,
         },
-        v = [
+        b = [
           y.SubscriptionStatusTypes.PAUSED,
           y.SubscriptionStatusTypes.PAUSE_PENDING,
         ];
-      function b(e) {
+      function v(e) {
         let {
           wordMark: t,
           subscriptionInfo: s,
@@ -3776,7 +3776,7 @@
         let { analyticsLocations: e } = (0, c.default)(
           d.default.ACCOUNT_CREDIT_BANNER
         );
-        return (0, a.jsx)(b, {
+        return (0, a.jsx)(v, {
           wordMark: (0, a.jsx)(j, {}),
           subscriptionInfo: (0, a.jsx)("div", {
             className: D.planInfo,
@@ -3818,8 +3818,8 @@
               : null === (t = H.discount) || void 0 === t
                 ? void 0
                 : t.amount,
-          W = (0, P.useHasDiscountApplied)(),
-          V = (0, P.useActiveDiscountInfo)(),
+          W = (0, C.useHasDiscountApplied)(),
+          V = (0, C.useActiveDiscountInfo)(),
           K = () => {
             (l.status === y.SubscriptionStatusTypes.ACTIVE ||
               l.status === y.SubscriptionStatusTypes.PAST_DUE ||
@@ -3873,7 +3873,7 @@
             }
           },
           q = () => {
-            if (!v.includes(l.status) || null == l.pauseEndsAt) {
+            if (!b.includes(l.status) || null == l.pauseEndsAt) {
               (0, N.captureBillingException)(
                 Error("Invalid subscription to resume"),
                 {
@@ -3931,7 +3931,7 @@
               "aria-label": x.default.Messages.PREMIUM_TITLE,
             });
         }
-        let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : b;
+        let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : v;
         return (0, a.jsx)(en, {
           wordMark: ea,
           subscriptionInfo:
@@ -4002,7 +4002,7 @@
                 ],
               });
             if (e === y.SubscriptionStatusTypes.PAUSED) {
-              let { durations: e } = (0, C.getSubscriptionPauseDurations)(l);
+              let { durations: e } = (0, P.getSubscriptionPauseDurations)(l);
               return (0, a.jsxs)("div", {
                 className: D.toolsButtons,
                 children: [
@@ -4141,8 +4141,8 @@
         N = s("357957"),
         S = s("10514"),
         T = s("719923"),
-        C = s("713518"),
-        P = s("380186"),
+        P = s("713518"),
+        C = s("380186"),
         R = s("809071"),
         A = s("49111"),
         M = s("782340"),
@@ -4162,13 +4162,13 @@
             [I.default],
             () => I.default.hidePersonalInformation
           ),
-          [v, b] = (0, o.useStateFromStoresArray)([N.default], () => [
+          [b, v] = (0, o.useStateFromStoresArray)([N.default], () => [
             N.default.paymentSources,
             N.default.hasFetchedPaymentSources,
           ]),
-          B = (0, m.useSubscriptionPlansLoaded)((0, P.getSubscriptionSKUs)(t)),
+          B = (0, m.useSubscriptionPlansLoaded)((0, C.getSubscriptionSKUs)(t)),
           { analyticsLocations: j } = (0, p.default)(),
-          G = n.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]),
+          G = n.useMemo(() => Object.values(b).filter(e => !e.invalid), [b]),
           [F, k] = n.useState(!1),
           [w, H] = n.useState(t.currency),
           Y = async (e, s) => {
@@ -4207,7 +4207,7 @@
             let s = S.default.get(t.planIdForCurrencies);
             u(null != e, "paymentSource not specified for change"),
               u(null != s, "Unable to fetch plan");
-            let a = (0, C.getCurrencies)(s.id, e.id, !1),
+            let a = (0, P.getCurrencies)(s.id, e.id, !1),
               n = a.length > 0 ? a[0] : A.CurrencyCodes.USD;
             return n;
           },
@@ -4215,9 +4215,9 @@
             null != e && W(e, V(e), Y);
           },
           z = e => {
-            (0, C.fetchSubscriptionPlansOnNewPaymentSource)(
+            (0, P.fetchSubscriptionPlansOnNewPaymentSource)(
               e.id,
-              (0, P.getSubscriptionSKUs)(t)
+              (0, C.getSubscriptionSKUs)(t)
             ).then(() => {
               W(e, V(e), Y);
             }),
@@ -4266,7 +4266,7 @@
               }),
             });
           })(t);
-        if (!b || !B) return (0, a.jsx)(d.Spinner, {});
+        if (!v || !B) return (0, a.jsx)(d.Spinner, {});
         if (!(G.length > 0))
           return (0, a.jsx)(d.Button, {
             fullWidth: !0,
@@ -4278,7 +4278,7 @@
         else {
           let e = S.default.get(t.planIdForCurrencies);
           u(null != e, "Unable to fetch plan");
-          let s = (0, C.getCurrencies)(e, t.paymentSourceId, !1);
+          let s = (0, P.getCurrencies)(e, t.paymentSourceId, !1);
           return (0, a.jsxs)(a.Fragment, {
             children: [
               (() => {
@@ -4376,8 +4376,8 @@
         N = s("145131"),
         S = s("423487"),
         T = s("719923"),
-        C = s("153160"),
-        P = s("782340"),
+        P = s("153160"),
+        C = s("782340"),
         R = s("264188");
       function A(e) {
         let {
@@ -4400,15 +4400,15 @@
             paymentSourceId: t.paymentSourceId,
             currency: t.currency,
           }),
-          L = (0, C.formatRate)(
-            (0, C.formatPrice)(h.amount, h.currency),
+          L = (0, P.formatRate)(
+            (0, P.formatPrice)(h.amount, h.currency),
             M.interval,
             M.intervalCount
           );
         return (0, a.jsxs)(c.ModalRoot, {
           transitionState: n,
           "aria-label":
-            P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+            C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
           children: [
             (0, a.jsxs)(c.ModalHeader, {
               justify: N.default.Justify.BETWEEN,
@@ -4417,7 +4417,7 @@
                 (0, a.jsx)(c.FormTitle, {
                   tag: c.FormTitleTags.H4,
                   children:
-                    P.default.Messages
+                    C.default.Messages
                       .PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
                 }),
                 (0, a.jsx)(c.ModalCloseButton, { onClick: i }),
@@ -4426,13 +4426,13 @@
             (0, a.jsx)(c.ModalContent, {
               className: R.modalBody,
               children: (0, m.isNoneSubscription)(t.planId)
-                ? P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format(
+                ? C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format(
                     {
                       downgradedPlan: T.default.getDisplayName(s.planId),
                       existingRate: L,
                     }
                   )
-                : P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format(
+                : C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format(
                     {
                       existingPlan: T.default.getDisplayName(t.planId),
                       downgradedPlan: T.default.getDisplayName(s.planId),
@@ -4445,7 +4445,7 @@
                 (0, a.jsx)(c.Button, {
                   onClick: A,
                   children:
-                    P.default.Messages
+                    C.default.Messages
                       .PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON,
                 }),
                 (0, a.jsx)(c.Button, {
@@ -4454,7 +4454,7 @@
                     ? c.Button.Colors.PRIMARY
                     : c.Button.Colors.WHITE,
                   onClick: i,
-                  children: P.default.Messages.NEVERMIND,
+                  children: C.default.Messages.NEVERMIND,
                 }),
               ],
             }),
@@ -4476,7 +4476,7 @@
             (0, a.jsx)("div", {
               className: R.text,
               children:
-                P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
+                C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
                   planName: t.hasExternalPlanChange
                     ? (0, T.getExternalPlanDisplayName)(s)
                     : T.default.getDisplayName(s.planId),
@@ -4490,7 +4490,7 @@
                     o(!0), e.preventDefault();
                   },
                   className: R.cancelLink,
-                  children: P.default.Messages.CANCEL,
+                  children: C.default.Messages.CANCEL,
                 }),
             u
               ? (0, a.jsx)(c.Modal, {
@@ -4610,20 +4610,23 @@
           fetchWebAuthnConditionalChallenge: function () {
             return l;
           },
-          fetchWebAuthnCredentials: function () {
+          fetchWebAuthnPasswordlessChallenge: function () {
             return r;
           },
-          deleteWebAuthnCredential: function () {
+          fetchWebAuthnCredentials: function () {
             return u;
           },
-          editWebAuthnCredential: function () {
+          deleteWebAuthnCredential: function () {
             return o;
           },
-          startRegisterWebAuthnCredential: function () {
+          editWebAuthnCredential: function () {
             return d;
           },
-          finishRegisterWebAuthnCredential: function () {
+          startRegisterWebAuthnCredential: function () {
             return c;
+          },
+          finishRegisterWebAuthnCredential: function () {
+            return E;
           },
         });
       var a = s("872717"),
@@ -4635,7 +4638,11 @@
         );
         return e.body;
       }
-      function r() {
+      async function r() {
+        let e = await a.HTTP.post(i.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE);
+        return e.body;
+      }
+      function u() {
         n.default.dispatch({ type: "MFA_WEBAUTHN_CREDENTIALS_LOADING" }),
           a.HTTP.get(i.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
             n.default.dispatch({
@@ -4644,12 +4651,12 @@
             });
           });
       }
-      function u(e) {
+      function o(e) {
         a.HTTP.del(i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
           n.default.dispatch({ type: "AUTHENTICATOR_DELETE", credential: e });
         });
       }
-      async function o(e, t) {
+      async function d(e, t) {
         let s = await a.HTTP.patch({
           url: i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e),
           body: { name: t },
@@ -4659,7 +4666,7 @@
           credential: s.body,
         });
       }
-      async function d() {
+      async function c() {
         let {
           body: { ticket: e, challenge: t },
         } = await a.HTTP.post({
@@ -4668,7 +4675,7 @@
         });
         return { ticket: e, challenge: t };
       }
-      async function c(e, t, s) {
+      async function E(e, t, s) {
         let l = await a.HTTP.post({
           url: i.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
           body: { name: e, ticket: t, credential: s },
@@ -5054,4 +5061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4051.a171881728346dbdbfbc.js.map
+//# sourceMappingURL=4051.39e888aace6495c6a709.js.map

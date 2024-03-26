@@ -1906,6 +1906,7 @@
                 a &&
                   (0, S.getPlatform)() !== S.PlatformTypes.OSX &&
                   (0, i.jsx)(E.Button, {
+                    size: E.ButtonSizes.XLARGE,
                     look: E.ButtonLooks.LINK,
                     color: E.ButtonColors.LINK,
                     onClick: () => y(r),
@@ -6041,4 +6042,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30341.a31b2d89ff85ac32bc21.js.map
+//# sourceMappingURL=30341.000f602a47a8b53fa202.js.map

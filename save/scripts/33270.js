@@ -1697,7 +1697,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278660",
+                  buildNumber: "278668",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -46464,44 +46464,16 @@
         },
       };
     },
-    555898: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          useCanCustomizeGuildCollectibleItem: function () {
-            return l;
-          },
-        });
-      var a = n("862205");
-      let s = (0, a.createExperiment)({
-        kind: "user",
-        id: "2024-01_per_guild_pfx",
-        label: "Per-guild Profile Effects / Avatar Decoration Experiment",
-        defaultConfig: { isEnabled: !1 },
-        treatments: [{ id: 1, label: "Enabled", config: { isEnabled: !0 } }],
-      });
-      function l(e) {
-        let { location: t } = e;
-        return s.useExperiment({ location: t }).isEnabled;
-      }
-    },
     250659: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return s;
           },
         });
       var a = n("719923"),
-        s = n("555898"),
-        l = e => {
-          let t = a.default.canUsePremiumGuildMemberProfile(e),
-            n = (0, s.useCanCustomizeGuildCollectibleItem)({
-              location: "useCanSeePerGuildCollectiblesCustomizationCoachmark",
-            });
-          return t && n;
-        };
+        s = e => a.default.canUsePremiumGuildMemberProfile(e);
     },
     365114: function (e, t, n) {
       "use strict";
@@ -53164,4 +53136,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3e1bc78a10f76e6403ef.js.map
+//# sourceMappingURL=0603df8934840f9cbc0a.js.map

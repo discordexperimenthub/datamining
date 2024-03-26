@@ -26566,8 +26566,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278823", ", Version Hash: ")
-          .concat("8455cd9f92438777be313d933b1a10e350cb65c8")
+          .concat("278838", ", Version Hash: ")
+          .concat("24a9920f7cb6f950771580e3c0cfb74f4c6c810c")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29698,12 +29698,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278823"), "278823"));
+        let _ = parseInt(((e = "278838"), "278838"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278823"
+                "278838"
               )
             ),
             (_ = 0)),
@@ -30690,8 +30690,8 @@
         });
       function r(e) {
         n.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-          a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-          i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+          i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+          a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
         let { enabled: _ } = o.getCurrentConfig(
           { location: e },
           { autoTrackExposure: !0 }
@@ -30701,14 +30701,14 @@
       let a = (0, t.createExperiment)({
           kind: "user",
           id: "2024-03_holdout_bug_main_wrong_way",
-          label: "Holdout Bug Experiment Right Way (pls ignore)",
+          label: "Holdout Bug Experiment Wrong Way (pls ignore)",
           defaultConfig: {},
           treatments: [{ id: 1, label: "Treament", config: {} }],
         }),
         i = (0, t.createExperiment)({
           kind: "user",
           id: "2024-03_holdout_bug_main_right_way",
-          label: "Holdout Bug Experiment Wrong Way (pls ignore)",
+          label: "Holdout Bug Experiment Right Way (pls ignore)",
           defaultConfig: {},
           treatments: [{ id: 1, label: "Treament", config: {} }],
         });
@@ -52965,4 +52965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.0ed55e875070332fc90a.js.map
+//# sourceMappingURL=47513.c22125eb9bc4bf9a1637.js.map

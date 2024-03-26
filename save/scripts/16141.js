@@ -441,7 +441,7 @@
         c = n("685665"),
         f = n("252063"),
         h = n("506885"),
-        m = n("981601"),
+        m = n("340906"),
         p = n("824563"),
         E = n("27618"),
         g = n("191542"),
@@ -498,7 +498,12 @@
         return (0, a.jsx)(r.Popout, {
           preload: () => (0, h.default)(t.id, t.getAvatarURL(void 0, 80)),
           renderPopout: e =>
-            (0, a.jsx)(m.default, { ...e, userId: t.id, channelId: l.id }),
+            (0, a.jsx)(m.default, {
+              ...e,
+              location: "PrivateChannelRecipients",
+              userId: t.id,
+              channelId: l.id,
+            }),
           position: s.isMobile ? "window_center" : "left",
           spacing: 16,
           onShiftClick: () => {
@@ -559,7 +564,12 @@
           ? (0, a.jsx)(r.Popout, {
               preload: () => (0, h.default)(c.id, f),
               renderPopout: e =>
-                (0, a.jsx)(m.default, { ...e, userId: c.id, channelId: o.id }),
+                (0, a.jsx)(m.default, {
+                  ...e,
+                  location: "PrivateChannelRecipients",
+                  userId: c.id,
+                  channelId: o.id,
+                }),
               position: s.isMobile ? "window_center" : "left",
               spacing: 16,
               children: e =>
@@ -815,7 +825,7 @@
         _ = n("256648"),
         I = n("593752"),
         T = n("506885"),
-        v = n("981601"),
+        v = n("340906"),
         x = n("373469"),
         N = n("26989"),
         A = n("305961"),
@@ -942,6 +952,7 @@
             renderPopout: e =>
               (0, a.jsx)(v.default, {
                 ...e,
+                location: "ThreadMembers",
                 userId: g.id,
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -7921,7 +7932,7 @@
         R = n("405645"),
         j = n("12896"),
         L = n("506885"),
-        y = n("981601"),
+        y = n("340906"),
         O = n("19766"),
         P = n("305961"),
         D = n("191542"),
@@ -8049,6 +8060,7 @@
             (this.renderUserPopout = e =>
               (0, a.jsx)(y.default, {
                 ...e,
+                location: "ChannelMembers",
                 userId: this.props.user.id,
                 guildId: this.props.guildId,
                 channelId: this.props.channel.id,
@@ -19906,7 +19918,7 @@
         _ = n("264429"),
         I = n("930291"),
         T = n("506885"),
-        v = n("981601"),
+        v = n("340906"),
         x = n("271938"),
         N = n("305961"),
         A = n("957255"),
@@ -20076,6 +20088,7 @@
               let { channel: t, user: n } = this.props,
                 l = t.getGuildId();
               return (0, a.jsx)(v.default, {
+                location: "VoiceUser",
                 userId: n.id,
                 guildId: null != l ? l : void 0,
                 channelId: t.id,
@@ -27082,7 +27095,7 @@
         f = n("272030"),
         h = n("244201"),
         m = n("506885"),
-        p = n("981601"),
+        p = n("340906"),
         E = n("26989"),
         g = n("328275"),
         S = n("118503"),
@@ -27209,6 +27222,7 @@
             e =>
               (0, a.jsx)(p.default, {
                 ...e,
+                location: "AudienceTile",
                 guildId: g,
                 channelId: s.id,
                 userId: r.id,
@@ -27527,7 +27541,7 @@
         m = n("308289"),
         p = n("750560"),
         E = n("506885"),
-        g = n("981601"),
+        g = n("340906"),
         S = n("26989"),
         C = n("957255"),
         _ = n("824563"),
@@ -27625,6 +27639,7 @@
                 renderPopout: e =>
                   (0, s.jsx)(g.default, {
                     ...e,
+                    location: "RequestToSpeakSidebar",
                     userId: a.user.id,
                     guildId: C,
                     channelId: t.id,
@@ -29617,7 +29632,7 @@
         o = n("899633"),
         d = n("244201"),
         c = n("506885"),
-        f = n("981601"),
+        f = n("340906"),
         h = n("533403"),
         m = n("315102"),
         p = n("893127");
@@ -29660,6 +29675,7 @@
           renderPopout: e =>
             (0, a.jsx)(f.default, {
               ...e,
+              location: "StageSpeakerSummary",
               guildId: t.guild_id,
               channelId: t.id,
               userId: s.id,
@@ -29729,7 +29745,7 @@
         p = n("374014"),
         E = n("223913"),
         g = n("506885"),
-        S = n("981601"),
+        S = n("340906"),
         C = n("373469"),
         _ = n("305961"),
         I = n("957255"),
@@ -29771,6 +29787,7 @@
             renderPopout: e =>
               (0, a.jsx)(S.default, {
                 ...e,
+                location: "StageTile",
                 guildId: i,
                 channelId: s.id,
                 userId: r.id,
@@ -43904,4 +43921,4 @@
     },
   },
 ]);
-//# sourceMappingURL=402655871c8b9f1c8dbf.js.map
+//# sourceMappingURL=f73005c18a0a0637dfde.js.map

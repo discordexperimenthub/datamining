@@ -974,7 +974,7 @@
         l = s("77078"),
         o = s("812204"),
         u = s("506885"),
-        d = s("981601"),
+        d = s("340906"),
         c = s("280174"),
         _ = s("533403"),
         E = s("158998"),
@@ -1059,6 +1059,7 @@
               renderPopout: t =>
                 (0, a.jsx)(d.default, {
                   ...t,
+                  location: "ApplicationRecommendationActivity",
                   userId: e.id,
                   newAnalyticsLocations: [o.default.USERNAME],
                 }),
@@ -1126,6 +1127,7 @@
                       renderPopout: t =>
                         (0, a.jsx)(d.default, {
                           ...t,
+                          location: "ApplicationRecommendationActivity",
                           userId: e.id,
                           newAnalyticsLocations: [o.default.AVATAR],
                         }),
@@ -10212,4 +10214,4 @@
     },
   },
 ]);
-//# sourceMappingURL=591a6c71b79290b2c056.js.map
+//# sourceMappingURL=a5a0ce147d054eac06e8.js.map

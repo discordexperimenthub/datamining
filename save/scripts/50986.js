@@ -4499,7 +4499,7 @@
         c = s("812204"),
         E = s("679653"),
         _ = s("506885"),
-        I = s("981601"),
+        I = s("340906"),
         T = s("242020"),
         S = s("27618"),
         f = s("697218"),
@@ -4528,6 +4528,7 @@
             renderPopout: t =>
               (0, a.jsx)(I.default, {
                 ...t,
+                location: "GuildSettingsAuditLogEntry",
                 userId: e.id,
                 guildId: l,
                 newAnalyticsLocations: [c.default.USERNAME],
@@ -4945,6 +4946,7 @@
                         renderPopout: e =>
                           (0, a.jsx)(I.default, {
                             ...e,
+                            location: "GuildSettingsAuditLogEntry",
                             userId: t.userId,
                             guildId: r,
                             newAnalyticsLocations: [c.default.AVATAR],
@@ -20490,7 +20492,7 @@
         E = s("812204"),
         _ = s("679653"),
         I = s("506885"),
-        T = s("981601"),
+        T = s("340906"),
         S = s("161778"),
         f = s("27618"),
         m = s("697218"),
@@ -20620,6 +20622,7 @@
               renderPopout: e =>
                 (0, a.jsx)(T.default, {
                   ...e,
+                  location: "GuildSettingsAuditLogEntry",
                   userId: n,
                   guildId: t,
                   newAnalyticsLocations: [E.default.AVATAR],
@@ -29495,7 +29498,7 @@
         E = s("812204"),
         _ = s("685665"),
         I = s("506885"),
-        T = s("981601"),
+        T = s("340906"),
         S = s("697218"),
         f = s("555158"),
         m = s("810567"),
@@ -29596,6 +29599,7 @@
             children: (0, a.jsx)(o.Popout, {
               renderPopout: e =>
                 (0, a.jsx)(T.default, {
+                  location: "GuildSettingsRolesEditMembers",
                   guildId: n,
                   userId: t.id,
                   roleId: r,
@@ -47832,4 +47836,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f492be03480ce24fdcfd.js.map
+//# sourceMappingURL=1662403e5cd0d044dd12.js.map

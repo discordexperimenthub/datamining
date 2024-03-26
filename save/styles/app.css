@@ -15892,6 +15892,136 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
 .biteSizeHeaderContainer__8cc75 {
   padding-bottom: 12px;
 }
+.container__4f3ff {
+  padding: 12px;
+}
+.section__1a609 {
+  position: relative;
+}
+.messageInputContainer__43b63 {
+  border: 1px solid var(--profile-message-input-border-color);
+  border-radius: var(--radius-xs);
+}
+.messageInput__7c503 {
+  background-color: transparent;
+}
+.container__6c25f {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.spinnerContainer__581dd {
+  justify-content: center;
+}
+.spinner__08aae {
+  height: 16px;
+}
+.dotSpacer_a31772 {
+  justify-content: center;
+  padding: 6px;
+  color: var(--background-modifier-accent);
+}
+.mutualFriendsText__8c51b {
+  padding-left: 6px;
+}
+.bottomPadding__5993a {
+  padding-bottom: 12px;
+}
+.container__93d86 {
+  display: flex;
+  justify-content: space-between;
+}
+.copiableField__0d59f {
+  padding-right: 8px;
+}
+.userText__007e7 {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+.nickname_c1726e {
+  word-break: break-word;
+}
+.pronouns_f46d1f {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding-top: 2px;
+}
+.flex__2a991 {
+  display: flex;
+  flex-direction: row;
+}
+.biteSizePronouns_d88a27 {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background-color: var(--bg-mod-faint);
+  margin-left: 4px;
+  line-height: 16px;
+}
+.copiableNameTag_a567a2:hover {
+  color: var(--interactive-active);
+}
+.copiableNameTag_a567a2:hover .copyIcon__6d617 {
+  color: var(--interactive-active);
+}
+.userTag__6d45e {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  font-family: var(--font-display);
+}
+.userTagWithNickname_d0e991 {
+  font-family: var(--font-primary);
+  line-height: 18px;
+}
+.userTagNoNickname__4f3a9 {
+  font-size: 20px;
+  line-height: 24px;
+  word-break: break-word;
+  white-space: normal;
+  align-items: flex-end;
+}
+.userTagUsernameBase__0d94d {
+  overflow: auto;
+  word-break: break-all;
+  text-overflow: clip;
+  white-space: normal;
+  color: var(--header-primary);
+  vertical-align: top;
+  display: inline;
+}
+.userTagUsernameNoNickname_c9a111 {
+  color: var(--interactive-active);
+  font-weight: 600;
+}
+.discrimBase_f68848 {
+  color: var(--header-primary);
+  vertical-align: top;
+}
+.userTagDiscriminatorNoNickname_d6e077 {
+  font-weight: 600;
+}
+.headerBotTag_c7503d {
+  margin-top: 5px !important;
+  vertical-align: top;
+  display: inline-flex;
+  line-height: 15px;
+}
+.headerBotTagWithNickname__09c9f {
+  margin-bottom: 2px !important;
+  display: inline-flex;
+  line-height: 15px;
+}
+.usernameSection_b71f3e {
+  padding: 12px;
+}
 .roleDot_ee4aa4 {
   margin-right: 2px;
   margin-left: -2px;
@@ -39801,8 +39931,8 @@ html .invoiceCancelRow_c1bfe7 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -111221,4 +111351,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.19b791bca4ceb395c657.css.map*/
+/*# sourceMappingURL=app.ac242a7d1dba7bd38f79.css.map*/

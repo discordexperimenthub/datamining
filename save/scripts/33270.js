@@ -1717,7 +1717,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278823",
+                  buildNumber: "278838",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -11249,7 +11249,7 @@
         L = n("834052"),
         M = n("160870"),
         P = n("506885"),
-        y = n("981601"),
+        y = n("340906"),
         D = n("957255"),
         x = n("697218"),
         b = n("945330"),
@@ -11633,6 +11633,7 @@
                             renderPopout: t =>
                               (0, l.jsx)(y.default, {
                                 ...t,
+                                location: "LiveChannelNotice",
                                 userId: e.id,
                                 newAnalyticsLocations: [E.default.AVATAR],
                               }),
@@ -30297,7 +30298,7 @@
         h = n("899633"),
         _ = n("835040"),
         C = n("506885"),
-        S = n("981601"),
+        S = n("340906"),
         I = n("271938"),
         m = n("42887"),
         p = n("211248"),
@@ -30444,6 +30445,7 @@
           position: "top",
           renderPopout: e =>
             (0, a.jsx)(S.default, {
+              location: "RTCConnectionVoiceUsers",
               userId: o.id,
               guildId: A,
               channelId: l.id,
@@ -51937,7 +51939,7 @@
         u = n("77078"),
         d = n("812204"),
         c = n("506885"),
-        f = n("981601"),
+        f = n("340906"),
         E = n("145131"),
         h = n("533403"),
         _ = n("945330"),
@@ -52043,6 +52045,7 @@
                       o(null != e, ""),
                       (0, a.jsx)(f.default, {
                         ...t,
+                        location: "ListeningAlong",
                         userId: e.id,
                         newAnalyticsLocations: [d.default.AVATAR],
                       })
@@ -53222,4 +53225,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ff5c2859d71e20e53042.js.map
+//# sourceMappingURL=f80670afe1e1166636c0.js.map

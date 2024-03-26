@@ -1800,7 +1800,7 @@
         I = n("769791"),
         m = n("662285"),
         N = n("866253"),
-        p = n("981601"),
+        p = n("340906"),
         S = n("671071"),
         C = n("766274"),
         A = n("86878"),
@@ -1934,6 +1934,7 @@
                 ? null
                 : (0, s.jsx)(p.default, {
                     ...t,
+                    location: "ActivityInviteEmbed",
                     userId: e.id,
                     guildId: null != a ? a : void 0,
                     channelId: n,
@@ -11808,7 +11809,7 @@
         S = n("380986"),
         C = n("969706"),
         A = n("506885"),
-        h = n("981601"),
+        h = n("340906"),
         g = n("845579"),
         M = n("26989"),
         O = n("697218"),
@@ -11920,6 +11921,7 @@
             ),
             (0, s.jsx)(h.default, {
               ...e,
+              location: "MediaPostEmbed",
               userId: w.authorId,
               guildId: w.guildId,
               channelId: F.id,
@@ -15357,7 +15359,7 @@
         i = n("246060"),
         r = n("730541"),
         o = n("407972"),
-        u = n("981601"),
+        u = n("340906"),
         d = n("42203"),
         c = n("25116");
       function E(e, t) {
@@ -15382,6 +15384,7 @@
           l(null != n, "renderUserGuildPopout: channel should never be null"),
           (0, s.jsx)(u.default, {
             ...e,
+            location: "renderUserGuildPopout",
             channelId: t.channel_id,
             messageId: t.id,
             guildId: n.guild_id,
@@ -17274,7 +17277,7 @@
         r = n("86621"),
         o = n("812204"),
         u = n("506885"),
-        d = n("981601"),
+        d = n("340906"),
         c = n("479020"),
         E = n("449008"),
         f = n("49111"),
@@ -17300,6 +17303,7 @@
             renderPopout: e =>
               (0, s.jsx)(d.default, {
                 ...e,
+                location: "PartyAvatars",
                 userId: t.id,
                 analyticsParams: r,
                 newAnalyticsLocations: [o.default.AVATAR],
@@ -21529,7 +21533,7 @@
         r = n("574073"),
         o = n("232259"),
         u = n("506885"),
-        d = n("981601"),
+        d = n("340906"),
         c = n("697218"),
         E = n("304198"),
         f = n("315102"),
@@ -21580,6 +21584,7 @@
                     renderPopout: n =>
                       (0, s.jsx)(d.default, {
                         ...n,
+                        location: "PrivateChannelIntegrationSystemMessage",
                         userId: S.id,
                         guildId: e.guild_id,
                         channelId: e.id,
@@ -28683,7 +28688,7 @@
         m = n("996554"),
         N = n("574073"),
         p = n("38600"),
-        S = n("981601"),
+        S = n("340906"),
         C = n("64791"),
         A = n("315102"),
         h = n("888400"),
@@ -28730,6 +28735,7 @@
               ),
               (0, s.jsx)(S.default, {
                 ...e,
+                location: "ExecutedCommand",
                 channelId: r.id,
                 messageId: l.id,
                 guildId: r.guild_id,
@@ -29983,7 +29989,7 @@
         h = n("702873"),
         g = n("592407"),
         M = n("380986"),
-        O = n("981601"),
+        O = n("340906"),
         R = n("106435"),
         L = n("42203"),
         v = n("26989"),
@@ -30103,6 +30109,7 @@
                             ? (0, s.jsx)(s.Fragment, {})
                             : (0, s.jsx)(O.default, {
                                 ...e,
+                                location: "AutomodNotification",
                                 userId: i.id,
                                 user: i,
                                 guildId: r,
@@ -33043,4 +33050,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a023865a3277164b1b4c.js.map
+//# sourceMappingURL=c412c3d383f0e0c559b8.js.map

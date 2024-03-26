@@ -2332,7 +2332,7 @@
         o = i("812204"),
         s = i("685665"),
         r = i("506885"),
-        u = i("981601"),
+        u = i("340906"),
         c = i("42203"),
         d = i("441823");
       function h(e) {
@@ -2387,6 +2387,7 @@
                         renderPopout: t =>
                           (0, n.jsx)(u.default, {
                             ...t,
+                            location: "useUsernameHook",
                             userId: h.id,
                             guildId: f,
                             channelId: m,
@@ -2726,4 +2727,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5d04f8ce7dfbfbb3a849.js.map
+//# sourceMappingURL=52250c014ade4dae21a4.js.map

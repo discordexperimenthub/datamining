@@ -24537,8 +24537,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Bảng thăm d\xf2 \xfd kiến sẽ duy tr\xec trong",
         CREATE_POLL_DURATION_LABEL: "Khoảng thời gian",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 giờ} other {{num} giờ}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ng\xe0y",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tuần",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24659,10 +24657,6 @@
           "Bạn đ\xe3 ho\xe0n th\xe0nh một Nhiệm Vụ!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} đang quảng b\xe1 {gameTitle} tr\xean Discord bằng c\xe1ch hợp t\xe1c với ch\xfang t\xf4i để đưa ra Nhiệm Vụ n\xe0y. Nhiệm Vụ n\xe0y c\xf3 sẵn trong kho qu\xe0 tặng cho tất cả người d\xf9ng.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} đang muốn hướng đến một số đối tượng người d\xf9ng Discord nhất định. Dựa tr\xean những th\xf4ng tin m\xe0 bạn đ\xe3 cung cấp cho ch\xfang t\xf4i hoặc những th\xf4ng tin kh\xe1c m\xe0 ch\xfang t\xf4i đ\xe3 thu thập được, ch\xfang t\xf4i cho rằng bạn ph\xf9 hợp với những nh\xf3m sau:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[T\xecm hiểu th\xeam]({privacySettingsUrl}) về Nhiệm Vụ tr\xean Discord v\xe0 c\xe1ch để quản l\xfd C\xe0i Đặt Bảo Mật của bạn.",
         QUESTS_DISCLOSURE_LOCATION: "Thư mục",
         QUESTS_DISCLOSURE_AGE: "Tuổi",
         QUESTS_DISCLOSURE_ACTIVITY: "Hoạt động: Chơi game li\xean quan",
@@ -24676,6 +24670,7 @@
           "Chọn {gameTitle} để tăng tiến tr\xecnh cho Nhiệm Vụ của bạn!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Bạn phải chọn ứng dụng, chứ kh\xf4ng phải to\xe0n bộ m\xe0n h\xecnh.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Bạn l\xe0m được rồi!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Gi\xfap th\xe0nh vi\xean tr\xf2 chuyện sau khi k\xeanh n\xe0y đ\xe3 kh\xf4ng hoạt động trong một thời gian.",
         PROMPT_CAMERA_LOADING_TITLE: "Bạn đang nh\xecn g\xec vậy?",

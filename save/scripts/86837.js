@@ -24784,8 +24784,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Le sondage sera disponible pendant",
         CREATE_POLL_DURATION_LABEL: "Dur\xe9e",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1\xa0heure} other {{num}\xa0heures}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3\xa0jours",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0semaine",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24923,10 +24921,6 @@
           "Tu as termin\xe9 une qu\xeate\xa0!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} fait la promotion de {gameTitle} sur Discord en s'associant \xe0 nous afin de proposer cette qu\xeate. Cette qu\xeate est disponible dans l'inventaire des cadeaux de tous les utilisateurs.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} essaie de toucher certains types d'utilisateurs Discord. En nous basant sur ce que tu nous as dit ou sur d'autres informations que nous avons collect\xe9es, nous pensons que tu corresponds \xe0 certains de ces groupes\xa0:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Pour en savoir plus]({privacySettingsUrl}) sur les qu\xeates sur Discord et comment g\xe9rer tes param\xe8tres de confidentialit\xe9, clique ici.",
         QUESTS_DISCLOSURE_LOCATION: "Emplacement",
         QUESTS_DISCLOSURE_AGE: "\xc2ge",
         QUESTS_DISCLOSURE_ACTIVITY: "Activit\xe9\xa0: jeu pertinent",
@@ -24940,6 +24934,7 @@
           "S\xe9lectionne {gameTitle} pour avancer dans ta qu\xeate\xa0!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Tu dois s\xe9lectionner l'application, pas l'int\xe9gralit\xe9 de l'\xe9cran.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "C'est fait\xa0!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Incite les membres du chat \xe0 discuter lorsque ce salon reste inactif trop longtemps.",
         PROMPT_CAMERA_LOADING_TITLE: "Qu'est-ce que tu regardes\xa0?",
@@ -25021,8 +25016,6 @@
           "{minutes, plural, =-1 {} other {{minutes}\xa0: }}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Premi\xe8re fois",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "A regard\xe9 **{mediaTitle}**",
-        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
-          "{userName} a regard\xe9 **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activit\xe9",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Compris\xa0!",
         RECENT_GAMES: "Jeux r\xe9cents",

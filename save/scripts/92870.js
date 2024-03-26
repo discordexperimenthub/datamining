@@ -23829,8 +23829,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Voeg nog een antwoord toe",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "De peiling duurt:",
         CREATE_POLL_DURATION_LABEL: "Duur",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 uur} other {{num} uur}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagen",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23949,10 +23947,6 @@
           "Je hebt een missie voltooid!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} maakt reclame voor {gameTitle} door deze missie aan te bieden, in samenwerking met Discord. Deze missie is te vinden in de cadeau-inventaris van alle gebruikers.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} probeert een bepaald soort Discord-gebruiker te bereiken. Afgaande op wat je ons hebt verteld of andere informatie die we hebben verzameld, denken dat we dat deze groepen bij je passen:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Meer informatie]({privacySettingsUrl}) over missies op Discord en hoe je je privacy-instellingen kunt beheren.",
         QUESTS_DISCLOSURE_LOCATION: "Locatie",
         QUESTS_DISCLOSURE_AGE: "Leeftijd",
         QUESTS_DISCLOSURE_ACTIVITY: "Activiteit: relevante game-ervaring",
@@ -23966,6 +23960,7 @@
           "Selecteer {gameTitle} om verder te gaan met je missie!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Je moet de applicatie selecteren, niet het hele scherm.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Het is je gelukt!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Spoor leden aan om te chatten omdat er in dit kanaal al een tijdje geen activiteit is.",
         PROMPT_CAMERA_LOADING_TITLE: "Waar kijk je naar?",

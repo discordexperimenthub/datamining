@@ -23490,8 +23490,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "別の回答を追加",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票有効期間：",
         CREATE_POLL_DURATION_LABEL: "期間",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1時間} other {{num}時間}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3日間",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 週間",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票有効期間：{duration}",
@@ -23602,10 +23600,6 @@
         QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL: "クエストクリア！",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "このクエストは、{gamePublisher}が{gameTitle}のプロモーションとしてDiscordと提携して提供しています。このクエストは、全てのユーザーのギフトインベントリで利用可能です。",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher}のプロモーションは所定の性向のDiscordユーザーをターゲットとしたものです。あなたがDiscordに提供した情報やDiscordが収集した情報に基づき、Discordはあなたがこれらのグループに適合すると判断しました：",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discordのクエスト、およびプライバシー設定の管理方法について、[詳細はこちら]({privacySettingsUrl})。",
         QUESTS_DISCLOSURE_LOCATION: "場所",
         QUESTS_DISCLOSURE_AGE: "年齢",
         QUESTS_DISCLOSURE_ACTIVITY: "アクティビティ：関連ゲーム",
@@ -23619,6 +23613,7 @@
           "{gameTitle}を選択してクエストを進めましょう！",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "画面全体ではなく、アプリケーションを選択する必要があります。",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "完了です！",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "このチャンネルが一定期間休止したあとメンバーにチャットするよう促す",
         PROMPT_CAMERA_LOADING_TITLE: "何見てるの？",

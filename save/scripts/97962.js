@@ -23681,8 +23681,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "एक और जवाब ऐड करें",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "के लिए पोल लाइव होगा",
         CREATE_POLL_DURATION_LABEL: "अवधि",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 घंटा} other {{num} घंटे}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 दिन",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 हफ्ता",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23801,10 +23799,6 @@
           "आपने क्वेस्ट पूरा कर लिया!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} इस समय Discord पर {gameTitle} को प्रमोट कर रहे हैं और हमारे साथ पार्टनरशिप में यह क्वेस्ट ऑफ़र कर रहे हैं. यह क्वेस्ट सभी यूज़र के लिए गिफ़्ट इन्वेंटरी में उपलब्ध है.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} कुछ खास तरह के Discord यूज़र से संपर्क करना चाहते हैं. आपने हमें जो कुछ बताया है या हमने जो जानकारी इकट्ठा की है, उसके आधार पर हमें लगता है कि आप इनमें से कुछ ग्रुप में फ़िट बैठते हैं :",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord पर क्वेस्ट के बारे में और अपनी प्राइवेसी सेटिंग को मैनेज करने के बारे में [ज़्यादा जानकारी]({privacySettingsUrl}) पाएं.",
         QUESTS_DISCLOSURE_LOCATION: "लोकेशन",
         QUESTS_DISCLOSURE_AGE: "उम्र",
         QUESTS_DISCLOSURE_ACTIVITY: "एक्टिविटी : गेमिंग-संबंधी",
@@ -23818,6 +23812,7 @@
           "अपनी क्वेस्ट में प्रोग्रेस करने के लिए {gameTitle} सलेक्ट करें!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "आपको पूरी स्क्रीन के बजाय ऐप्लिकेशन सलेक्ट करनी चाहिए.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "आपने कर लिया!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "इस चैनल के कुछ समय तक एक्टिव न रहने के बाद मेंबर्स को चैट करने के लिए प्रेरित करें.",
         PROMPT_CAMERA_LOADING_TITLE: "आप क्या देखना चाहते हैं?",

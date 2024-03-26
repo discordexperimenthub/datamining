@@ -23784,8 +23784,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Dodaj još jedan odgovor",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anketa će biti aktivna",
         CREATE_POLL_DURATION_LABEL: "Trajanje",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 sat} other {{num} sata} other {{num} sati}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dana",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tjedan",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23904,10 +23902,6 @@
           "Dovršio/la si zadatak!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} promovira {gameTitle} na Discordu partnerskom suradnjom s nama putem koje ti je na raspolaganje stavljen ovaj zadatak. Ovaj je zadatak dostupan na popisu darova svih korisnika.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} pokušava pristupiti određenim vrstama korisnika Discorda. Vodeći se onime što si nam sam kazao/la ili na temelju drugih prikupljenih informacija, smatramo da upadaš u neke od sljedećih skupina:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Doznaj više]({privacySettingsUrl}) o questovima na Discordu i načinu upravljanja postavkama privatnosti.",
         QUESTS_DISCLOSURE_LOCATION: "Mjesto",
         QUESTS_DISCLOSURE_AGE: "Dob",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivnost: relevantno igranje",
@@ -23921,6 +23915,7 @@
           "Odaberi {gameTitle} da možeš napredovati u svojem questu!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Moraš odabrati aplikaciju, ne cijeli zaslon.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "To je to!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Potakni članove na chat nakon što je ovaj kanal neko vrijeme bio neaktivan.",
         PROMPT_CAMERA_LOADING_TITLE: "Što gledaš?",

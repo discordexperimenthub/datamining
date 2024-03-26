@@ -23999,8 +23999,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Добави друг отговор",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Анкетата ще е активна",
         CREATE_POLL_DURATION_LABEL: "Продължителност",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 час} other {{num} часа}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дни",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 седмица",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24121,10 +24119,6 @@
         QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL: "Ти завърши куест!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} промотира {gameTitle} в Discord, като си партнира с нас, за да предлагаме този куест. Този куест е достъпен за всички потребители в инвентара с подаръци.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} се опитва да достигне до определен брой потребители в Discord. Въз основа на това, което ни каза, или на друга информация, която сме събрали, смятаме, че попадаш в някои от тези групи:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Научи повече]({privacySettingsUrl}) за куестовете в Discord и как да управляваш настройките си за поверителност.",
         QUESTS_DISCLOSURE_LOCATION: "Място",
         QUESTS_DISCLOSURE_AGE: "Възраст",
         QUESTS_DISCLOSURE_ACTIVITY:
@@ -24139,6 +24133,7 @@
           "Избери {gameTitle}, за да напреднеш в куеста си!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Трябва да избереш приложението, не целия екран.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Успя!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Подсети членовете да чатят, ако този чат е бил неактивен от известно време.",
         PROMPT_CAMERA_LOADING_TITLE: "Какво гледаш?",

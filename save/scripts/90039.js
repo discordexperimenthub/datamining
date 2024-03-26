@@ -23721,8 +23721,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Meningsm\xe5lingen ligger ute i",
         CREATE_POLL_DURATION_LABEL: "Varighet",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 time} other {{num} timer}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dager",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 uke",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23840,10 +23838,6 @@
           "Du fullf\xf8rte et oppdrag!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} samarbeider med oss om \xe5 tilby dette oppdraget for \xe5 promotere {gameTitle} p\xe5 Discord. Oppdraget er tilgjengelig i alle brukernes gavebeholdning.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} pr\xf8ver \xe5 n\xe5 visse typer Discord-brukere. Ut ifra det du har fortalt oss, eller ut ifra annen informasjon vi har samlet, tror vi du passer i disse gruppene:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Finn ut mer]({privacySettingsUrl}) om oppdrag p\xe5 Discord og hvordan vi h\xe5ndterer personverninnstillingene dine, her.",
         QUESTS_DISCLOSURE_LOCATION: "Posisjon",
         QUESTS_DISCLOSURE_AGE: "Alder",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivitet: relevant spilling",
@@ -23857,6 +23851,7 @@
           "Velg {gameTitle} for \xe5 f\xe5 fremdrift i oppdraget!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Du m\xe5 velge appen, ikke hele skjermen.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Du klarte det!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Oppfordre medlemmene til \xe5 chatte etter at denne kanalen har v\xe6rt inaktiv en stund.",
         PROMPT_CAMERA_LOADING_TITLE: "Hva er det du ser p\xe5?",

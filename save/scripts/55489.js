@@ -21783,8 +21783,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "添加另一个答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票将持续",
         CREATE_POLL_DURATION_LABEL: "持续时间",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 小时} other {{num} 小时}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票将持续 {duration}",
@@ -21885,10 +21883,6 @@
           "您已完成一项任务！",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} 与我们合作，在 Discord 上推广 {gameTitle}，因而设置了此项任务。所有用户的礼物库中都有这项任务。",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} 正在尝试接触特定的 Discord 用户。根据您告诉我们的情况或我们收集到的其他信息，我们认为您属于其中的部分群组：",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[进一步了解]({privacySettingsUrl}) Discord 上的任务，以及如何管理您的隐私设置。",
         QUESTS_DISCLOSURE_LOCATION: "位置",
         QUESTS_DISCLOSURE_AGE: "年龄",
         QUESTS_DISCLOSURE_ACTIVITY: "动态：游戏相关",
@@ -21902,6 +21896,7 @@
           "选择 {gameTitle}，推进任务进度！",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "您必须选择应用程序，而非整个屏幕。",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "您搞定了！",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "在此频道不活跃一段时间后，提示成员交流聊天。",
         PROMPT_CAMERA_LOADING_TITLE: "您瞅啥？",

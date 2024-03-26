@@ -24023,8 +24023,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Il sondaggio sar\xe0 attivo per",
         CREATE_POLL_DURATION_LABEL: "Durata",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 ora} other {{num} ore}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 giorni",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 settimana",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24157,10 +24155,6 @@
           "Hai completato una missione!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "Per promuovere {gameTitle}, {gamePublisher} offre questa missione in collaborazione con Discord. Questa missione \xe8 disponibile nell'inventario regali di tutti gli utenti.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} sta cercando di raggiungere alcune categorie di utenti di Discord. In base a ci\xf2 che ci hai comunicato o ad altre informazioni che abbiamo raccolto, potrebbero interessarti alcuni di questi gruppi:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Scopri di pi\xf9]({privacySettingsUrl}) sulle missioni di Discord e su come gestire le tue impostazioni privacy.",
         QUESTS_DISCLOSURE_LOCATION: "Posizione",
         QUESTS_DISCLOSURE_AGE: "Et\xe0",
         QUESTS_DISCLOSURE_ACTIVITY: "Attivit\xe0: videogiochi pertinenti",
@@ -24174,6 +24168,7 @@
           "Seleziona {gameTitle} per fare progressi nella missione!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Devi selezionare l'applicazione, non tutto lo schermo.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Ce l'hai fatta!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Suggerisci ai membri di chattare dopo che questo canale \xe8 rimasto inattivo per un po'.",
         PROMPT_CAMERA_LOADING_TITLE: "Cosa stai guardando?",
@@ -24252,8 +24247,6 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima volta",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Ha guardato **{mediaTitle}**",
-        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
-          "{userName} ha guardato **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Attivit\xe0",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Capito!",
         RECENT_GAMES: "Giochi recenti",

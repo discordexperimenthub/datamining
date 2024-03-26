@@ -21815,8 +21815,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "新增另一個答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票持續時間：",
         CREATE_POLL_DURATION_LABEL: "期間",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 小時} other {{num} 小時}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票持續時間：{duration}",
@@ -21919,10 +21917,6 @@
           "您已完成一項任務！",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} 目前正在 Discord 上推廣 {gameTitle}，並與我們合作推出這項任務。所有使用者皆可在「禮物庫存」找到這項任務。",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} 正在嘗試接觸特定類型的 Discord 使用者。根據您提供給的資訊或我們收集到的其他資訊，我們認為這些群組應該很適合您：",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[進一步瞭解]({privacySettingsUrl}) Discord 上的任務，以及如何管理您的「隱私設定」。",
         QUESTS_DISCLOSURE_LOCATION: "位置",
         QUESTS_DISCLOSURE_AGE: "年齡",
         QUESTS_DISCLOSURE_ACTIVITY: "活動：相關遊戲",
@@ -21936,6 +21930,7 @@
           "選擇 {gameTitle}，以在您的「任務」中取得進展！",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "您必須選擇申請，而非整個畫面。",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "完成了！",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "此頻道不活躍一段時間後，提醒成員開始聊天。",
         PROMPT_CAMERA_LOADING_TITLE: "您在看什麼？",

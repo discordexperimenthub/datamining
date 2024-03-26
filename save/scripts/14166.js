@@ -23946,8 +23946,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Додайте іншу відповідь",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Голосування триватиме:",
         CREATE_POLL_DURATION_LABEL: "Тривалість",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 година} few {{num} години} other {{num} годин}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дні",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0тиждень",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24065,10 +24063,6 @@
           "Ви завершили квест!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} просуває {gameTitle} у Discord, співпрацюючи з нами, щоб запропонувати цей квест. Квест доступний у переліку подарунків усіх користувачів.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} намагається охопити певний тип користувачів Discord. На основі того, що ви нам розказали, або на основі іншої зібраної інформації нам здається, ви підходите до цих груп:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "Більше про завдання в Discord і керування налаштуваннями конфіденційності можна дізнатися [тут]({privacySettingsUrl}).",
         QUESTS_DISCLOSURE_LOCATION: "Місце розташування",
         QUESTS_DISCLOSURE_AGE: "Вік",
         QUESTS_DISCLOSURE_ACTIVITY: "Діяльність: актуальні ігри",
@@ -24082,6 +24076,7 @@
           "Виберіть {gameTitle}, щоби просунутися в завданні!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Треба вибрати програму, а не весь екран.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "У вас вийшло!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Запропонувати учасникам каналу поспілкуватися в чаті після певного періоду неактивності.",
         PROMPT_CAMERA_LOADING_TITLE: "Посміхніться!",

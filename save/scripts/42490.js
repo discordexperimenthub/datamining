@@ -24091,8 +24091,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Adaugă alt răspuns",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Sondajul va fi deschis",
         CREATE_POLL_DURATION_LABEL: "Durată",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 oră} other {{num} ore}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 zile",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 săptăm\xe2nă",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24212,10 +24210,6 @@
           "Ai \xeencheiat o misiune!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} promovează {gameTitle} pe Discord intr\xe2nd \xeen parteneriat cu noi pentru a oferi această misiune. Misiunea este disponibilă \xeen inventarul de cadouri al tuturor utilizatorilor.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} \xeencearcă să abordeze anumite tipuri de utilizatori Discord. \xcen funcție de ce ne-ai spus tu sau de alte informații pe care le-am colectat, credem că faci parte din unele dintre aceste grupuri:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Află mai multe]({privacySettingsUrl}) despre misiunile de pe Discord și despre cum să-ți gestionezi setările de confidențialitate.",
         QUESTS_DISCLOSURE_LOCATION: "Locație",
         QUESTS_DISCLOSURE_AGE: "V\xe2rstă",
         QUESTS_DISCLOSURE_ACTIVITY: "Activitate: gaming relevant",
@@ -24229,6 +24223,7 @@
           "Selectează {gameTitle} pentru a progresa \xeen cadrul misiunii!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Trebuie să selectezi aplicația, nu \xeentregul ecran.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Ai reușit!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Invită membrii să discute după ce canalul a fost inactiv o vreme.",
         PROMPT_CAMERA_LOADING_TITLE: "La ce te uiți?",

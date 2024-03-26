@@ -23180,8 +23180,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "เพิ่มอีกคำตอบ",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "โพลล์จะอยู่นาน",
         CREATE_POLL_DURATION_LABEL: "ระยะเวลา",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 ชั่วโมง} other {{num} ชั่วโมง}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 วัน",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 สัปดาห์",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "โพลล์จะอยู่นาน {duration}",
@@ -23289,10 +23287,6 @@
           "คุณทำภารกิจเสร็จสมบูรณ์แล้ว!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} กำลังโปรโมท {gameTitle} บน Discord ด้วยการร่วมมือกับเราเพื่อมอบภารกิจนี้ ภารกิจนี้อยู่ในห้องเก็บของขวัญของผู้ใช้ทุกคน",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} พยายามเข้าถึงผู้ใช้ Discord บางประเภท จากสิ่งที่คุณบอกเราและข้อมูลอื่นที่เราเก็บรวบรวม เราคิดว่าคุณอยู่ในบางกลุ่มดังนี้:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[เรียนรู้เพิ่มเติม]({privacySettingsUrl})เกี่ยวกับภารกิจบน Discord และวิธีจัดการการตั้งค่าความเป็นส่วนตัวของคุณ",
         QUESTS_DISCLOSURE_LOCATION: "ตำแหน่ง",
         QUESTS_DISCLOSURE_AGE: "อายุ",
         QUESTS_DISCLOSURE_ACTIVITY: "กิจกรรม: การเล่นเกมที่เกี่ยวข้อง",
@@ -23306,6 +23300,7 @@
           "เลือก {gameTitle} เพื่อทำภารกิจของคุณให้คืบหน้า!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "คุณต้องเลือกแอปพลิเคชัน ไม่ใช่ทั้งหน้าจอ",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "คุณทำสำเร็จ!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "ชวนให้สมาชิกมาแชทกันหลังจากที่ช่องนี้ไม่มีการใช้งานมาสักระยะหนึ่ง",
         PROMPT_CAMERA_LOADING_TITLE: "คุณมองอะไร",

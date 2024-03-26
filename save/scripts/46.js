@@ -24515,10 +24515,6 @@
           "\xa1Completaste una misi\xf3n!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} est\xe1 promocionando {gameTitle} en Discord asoci\xe1ndose con nosotros para ofrecer esta misi\xf3n. Esta misi\xf3n se encuentra disponible en el inventario de regalos de todos los usuarios.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} est\xe1 intentando atraer a ciertos tipos de usuarios de Discord. Bas\xe1ndonos en la informaci\xf3n que tenemos y en lo que nos has contado, creemos que algunos de estos grupos podr\xedan interesarte:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[M\xe1s informaci\xf3n]({privacySettingsUrl}) sobre las misiones en Discord y c\xf3mo gestionar tus ajustes de privacidad.",
         QUESTS_DISCLOSURE_LOCATION: "Ubicaci\xf3n",
         QUESTS_DISCLOSURE_AGE: "Edad",
         QUESTS_DISCLOSURE_ACTIVITY: "Actividad: Videojuegos relevantes",
@@ -24532,6 +24528,7 @@
           "\xa1Selecciona {gameTitle} para progresar en tu misi\xf3n!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Debes seleccionar la aplicaci\xf3n, no la pantalla completa.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "\xa1Lo lograste!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Este canal ha estado inactivo por un tiempo. Invita a los dem\xe1s miembros a chatear.",
         PROMPT_CAMERA_LOADING_TITLE: "\xbfQu\xe9 est\xe1s mirando?",
@@ -24601,8 +24598,6 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "hace {count}\xa0s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Por primera vez",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Has visto **{mediaTitle}**",
-        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
-          "{userName} vio **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Actividad",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "\xa1Entendido!",
         RECENT_GAMES: "Juegos recientes",

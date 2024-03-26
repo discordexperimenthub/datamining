@@ -23990,8 +23990,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Добавить ещё один ответ",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Опрос будет длиться",
         CREATE_POLL_DURATION_LABEL: "Срок",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 час} few {{num} часа} other {{num} часов}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дня",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0неделю",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24109,10 +24107,6 @@
           "Вы успешно выполнили задание!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "Издатель {gamePublisher}, продвигающий в Discord игру {gameTitle}, предлагает вам это задание. Оно расположено на складе подарков и доступно всем пользователям.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "Издатель {gamePublisher} хочет охватить определённую категорию пользователей Discord. Исходя из информации, которой вы с нами поделились, а также собранных нами данных, мы пришли к выводу, что вы входите в следующие группы:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Узнайте больше]({privacySettingsUrl}) о заданиях в Discord и о том, как управлять вашими настройками конфиденциальности.",
         QUESTS_DISCLOSURE_LOCATION: "Место",
         QUESTS_DISCLOSURE_AGE: "Возраст",
         QUESTS_DISCLOSURE_ACTIVITY: "Деятельность: актуальные игры",
@@ -24126,6 +24120,7 @@
           "Выберите {gameTitle}, чтобы продвинуться в задании!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Необходимо выделить приложение, а не весь экран.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Есть!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Зовите участников общаться, если на канале долго ничего не происходит.",
         PROMPT_CAMERA_LOADING_TITLE: "Улыбочку!",

@@ -25301,8 +25301,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "A szavaz\xe1s ennyi ideig lesz el\xe9rhető:",
         CREATE_POLL_DURATION_LABEL: "Időtartam",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 \xf3ra} other {{num} \xf3ra}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 napos",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 h\xe9t",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -25430,10 +25428,6 @@
           "Teljes\xedtett\xe9l egy k\xfcldet\xe9st!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "A(z) {gamePublisher} a(z) {gameTitle} j\xe1t\xe9kot n\xe9pszerűs\xedti a Discordon a k\xfcldet\xe9s k\xf6z\xf6s felk\xedn\xe1l\xe1s\xe1val. Ez a k\xfcldet\xe9s valamennyi felhaszn\xe1l\xf3 sz\xe1m\xe1ra el\xe9rhető az aj\xe1nd\xe9klelt\xe1rban.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "A(z) {gamePublisher} megpr\xf3b\xe1l el\xe9rni bizonyos t\xedpus\xfa Discord-felhaszn\xe1l\xf3kat. Az \xe1ltalad megadott vagy \xe1ltalunk gyűjt\xf6tt egy\xe9b inform\xe1ci\xf3k alapj\xe1n \xfagy gondoljuk, hogy beletartozhatsz e csoportok egyik\xe9be:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Itt tal\xe1lsz tov\xe1bbi t\xe1j\xe9koztat\xe1st]({privacySettingsUrl}) a Discordon el\xe9rhető k\xfcldet\xe9sekről, valamint az adatv\xe9delmi be\xe1ll\xedt\xe1said kezel\xe9s\xe9ről.",
         QUESTS_DISCLOSURE_LOCATION: "Hely",
         QUESTS_DISCLOSURE_AGE: "\xc9letkor",
         QUESTS_DISCLOSURE_ACTIVITY:
@@ -25448,6 +25442,7 @@
           "V\xe1laszd a(z) {gameTitle} j\xe1t\xe9kot, ha haladni szeretn\xe9l a k\xfcldet\xe9seddel!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Az alkalmaz\xe1st kell kiv\xe1lasztanod, nem a teljes k\xe9pernyőt.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Megcsin\xe1ltad!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Ez a csatorna m\xe1r inakt\xedv egy ideje – \xf6szt\xf6n\xf6zd cseveg\xe9sre a tagokat!",
         PROMPT_CAMERA_LOADING_TITLE: "Mit n\xe9zel?",

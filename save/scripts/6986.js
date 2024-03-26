@@ -22845,8 +22845,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "다른 응답 추가하기",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "투표 진행 기간:",
         CREATE_POLL_DURATION_LABEL: "지속 시간",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1시간} other {{num}시간}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3일",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1주일",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "투표 진행 기간: {duration}",
@@ -22958,10 +22956,6 @@
           "퀘스트를 완료하셨어요!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher}에서 당사와 협력으로 이 퀘스트를 제공하여 Discord에서 {gameTitle} 홍보 중이에요. 이 퀘스트는 모든 사용자의 선물 인벤토리에서 이용 가능해요.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher}에서 특정 유형의 Discord 사용자들에게 접근하려고 하고 있어요. 회원님께서 알려주신 사항 또는 당사가 수집한 다른 정보를 바탕으로, 회원님이 다음 그룹에 적합하다고 생각합니다.",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord 퀘스트와 개인정보 보호 설정 관리법에 대해 여기에서 [자세히 알아보세요.]({privacySettingsUrl})",
         QUESTS_DISCLOSURE_LOCATION: "위치",
         QUESTS_DISCLOSURE_AGE: "나이",
         QUESTS_DISCLOSURE_ACTIVITY: "활동: 관련 게임",
@@ -22975,6 +22969,7 @@
           "{gameTitle}을(를) 선택해서 퀘스트를 진행하세요!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "화면 전체가 아닌, 애플리케이션을 선택해야 해요.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "완료하셨어요!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "채널이 오랫동안 비활성화되면 멤버들에게 채팅하라는 메시지가 표시돼요.",
         PROMPT_CAMERA_LOADING_TITLE: "무엇을 보고 있나요?",

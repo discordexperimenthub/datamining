@@ -23198,8 +23198,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Add another answer",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Poll will be live for",
         CREATE_POLL_DURATION_LABEL: "Duration",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 hour} other {{num} hours}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 days",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23311,10 +23309,6 @@
           "You completed a Quest!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} is promoting {gameTitle} on Discord by partnering with us to offer this Quest. This Quest is available in the gift inventory of all users.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, we think you fit some of these groups:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Learn more]({privacySettingsUrl}) about Quests on Discord and how to manage your Privacy Settings.",
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
@@ -23328,6 +23322,7 @@
           "Select {gameTitle} to make progress on your Quest!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "You must select the application, not the whole screen.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "You did it!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",

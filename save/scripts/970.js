@@ -24244,8 +24244,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Die Umfrage wird live sein f\xfcr",
         CREATE_POLL_DURATION_LABEL: "Dauer",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1\xa0Stunde} other {{num}\xa0Stunden}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3\xa0Tage",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0Woche",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24378,10 +24376,6 @@
           "Du hast eine Quest abgeschlossen!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} bewirbt {gameTitle} auf Discord durch eine Partnerschaft mit uns, um diese Quest anzubieten. Diese Quest ist im Geschenkinventar aller Benutzer verf\xfcgbar.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} versucht, bestimmte Arten von Discord-Benutzern zu erreichen. Basierend auf dem, was du uns erz\xe4hlt hast oder anderen Informationen, die wir gesammelt haben, denken wir, dass du in einige dieser Gruppen passt:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Erfahre mehr]({privacySettingsUrl}) \xfcber Quests auf Discord und wie du deine Privatsph\xe4reeinstellungen verwalten kannst.",
         QUESTS_DISCLOSURE_LOCATION: "Verzeichnis",
         QUESTS_DISCLOSURE_AGE: "Alter",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivit\xe4t: Relevante Spiele",
@@ -24395,6 +24389,7 @@
           "W\xe4hle {gameTitle}, um Fortschritte in deiner Quest zu erzielen!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Du musst die Anwendung ausw\xe4hlen, nicht den ganzen Bildschirm.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Du hast es geschafft!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Fordere Mitglieder auf, zu chatten, nachdem dieser Kanal eine Weile inaktiv war.",
         PROMPT_CAMERA_LOADING_TITLE: "Was guckst du so?",
@@ -24473,8 +24468,6 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Erstes Mal",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "**{mediaTitle}** angeschaut",
-        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
-          "{userName} hat **{mediaTitle}** angeschaut",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe4t",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Alles klar!",
         RECENT_GAMES: "K\xfcrzlich gespielte Spiele",

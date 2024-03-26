@@ -24361,8 +24361,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Kyselyn voimassaoloaika",
         CREATE_POLL_DURATION_LABEL: "Kesto",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 tunti} other {{num} tuntia}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 p\xe4iv\xe4\xe4",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 viikko",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24483,10 +24481,6 @@
           "Suoritit teht\xe4v\xe4n!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} tarjoaa t\xe4m\xe4n teht\xe4v\xe4n peliss\xe4 {gameTitle} yhteisty\xf6ss\xe4 Discordin kanssa. Teht\xe4v\xe4 on kaikkien k\xe4ytt\xe4jien valittavissa lahjaluettelosta.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} yritt\xe4\xe4 tavoittaa tiettyj\xe4 Discord-k\xe4ytt\xe4ji\xe4. Kertomasi ja muiden ker\xe4\xe4miemme tietojen perusteella uskomme, ett\xe4 kuulut johonkin n\xe4ist\xe4 ryhmist\xe4:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Katso lis\xe4tietoja]({privacySettingsUrl}) Discordin teht\xe4vist\xe4 ja yksityisyysasetustesi k\xe4yt\xf6st\xe4.",
         QUESTS_DISCLOSURE_LOCATION: "Sijainti",
         QUESTS_DISCLOSURE_AGE: "Ik\xe4",
         QUESTS_DISCLOSURE_ACTIVITY: "Toiminta: Pelaamiseen liittyv\xe4",
@@ -24500,6 +24494,7 @@
           "Valitse {gameTitle}, jotta edistyt teht\xe4v\xe4ss\xe4si!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Sinun on valittava sovellus, ei koko n\xe4ytt\xf6\xe4.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Teit sen!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Kannusta j\xe4seni\xe4 keskustelemaan, kun t\xe4m\xe4 kanava on ollut hiljainen jonkin aikaa.",
         PROMPT_CAMERA_LOADING_TITLE: "Mit\xe4 etsit?",

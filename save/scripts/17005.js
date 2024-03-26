@@ -24056,8 +24056,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Unders\xf6kningen p\xe5g\xe5r i",
         CREATE_POLL_DURATION_LABEL: "Varaktighet",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 timme} other {{num} timmar}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagar",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 vecka",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24175,10 +24173,6 @@
           "Du har slutf\xf6rt ett uppdrag!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} marknadsf\xf6r {gameTitle} p\xe5 Discord genom att samarbeta med oss och erbjuder det h\xe4r uppdraget. Det h\xe4r uppdraget finns tillg\xe4ngligt f\xf6r alla anv\xe4ndare i g\xe5volagret.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} f\xf6rs\xf6ker n\xe5 ut till en viss typ av Discord-anv\xe4ndare. Baserat p\xe5 vad du har ber\xe4ttat f\xf6r oss eller annan information vi har samlat in, tror vi att du passar in i n\xe5gra av de h\xe4r grupperna:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[L\xe4s mer]({privacySettingsUrl}) om uppdrag p\xe5 Discord och hur man anv\xe4nder sekretessinst\xe4llningar.",
         QUESTS_DISCLOSURE_LOCATION: "Plats",
         QUESTS_DISCLOSURE_AGE: "\xc5lder",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivitet: Relevant gaming",
@@ -24192,6 +24186,7 @@
           "V\xe4lj {gameTitle} f\xf6r att g\xf6ra framsteg p\xe5 ditt uppdrag!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Du m\xe5ste v\xe4lja applikationen, inte hela sk\xe4rmen.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Du klarade det!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Uppmana medlemmar att chatta n\xe4r den h\xe4r kanalen har varit inaktiv ett tag.",
         PROMPT_CAMERA_LOADING_TITLE: "Vad tittar du p\xe5?",

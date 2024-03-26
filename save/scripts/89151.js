@@ -23916,8 +23916,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Başka bir yanıt ekle",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anket s\xfcresi",
         CREATE_POLL_DURATION_LABEL: "S\xfcre",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 saat} other {{num} saat}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 g\xfcn",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 hafta",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24037,10 +24035,6 @@
           "G\xf6revi tamamladın!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher}, bu G\xf6revi sunmak i\xe7in bizimle ortak olarak Discord'da {gameTitle} oyununu tanıtıyor. Bu G\xf6rev t\xfcm kullanıcıların hediye envanterinde mevcut.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} bazı belirli Discord kullanıcılarına ulaşmaya \xe7alışıyor. Senin bize s\xf6ylediklerine veya topladığımız diğer bilgilere g\xf6re bu gruplardan bazılarına uyduğunu d\xfcş\xfcn\xfcyoruz:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord'daki G\xf6revler ve Gizlilik Ayarlarını nasıl y\xf6neteceğin hakkında [daha fazla bilgi al]({privacySettingsUrl}).",
         QUESTS_DISCLOSURE_LOCATION: "Konum",
         QUESTS_DISCLOSURE_AGE: "Yaş",
         QUESTS_DISCLOSURE_ACTIVITY: "Etkinlik: Alakalı oyun",
@@ -24054,6 +24048,7 @@
           "G\xf6revinde ilerlemek i\xe7in bir {gameTitle} se\xe7!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "T\xfcm ekranı değil, yalnızca uygulamayı se\xe7men gerekiyor.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Başardın!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Bu kanal belirli bir s\xfcreliğine aktif olmazsa \xfcyeleri sohbet etmeye \xe7ağır.",
         PROMPT_CAMERA_LOADING_TITLE: "Neye bakıyorsun?",

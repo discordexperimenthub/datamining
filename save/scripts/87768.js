@@ -24304,8 +24304,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Η ψηφοφορία θα διαρκέσει",
         CREATE_POLL_DURATION_LABEL: "Διάρκεια",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 ώρα} other {{num} ώρες}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ημέρες",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 εβδομάδα",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24425,10 +24423,6 @@
           "Ολοκλήρωσες μια Αποστολή!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "Η {gamePublisher} συνεργάζεται μαζί μας για την προώθηση του {gameTitle} στο Discord ώστε να προσφέρουμε αυτή την Αποστολή. Αυτή η Αποστολή είναι διαθέσιμη στο απόθεμα δώρων για όλους τους χρήστες.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "Η {gamePublisher} προσπαθεί να προσεγγίσει ορισμένους τύπους χρηστών του Discord. Με βάση αυτά που μας είπες ή άλλες πληροφορίες που συλλέξαμε, πιστεύουμε ότι ταιριάζεις σε κάποιες από αυτές τις ομάδες:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Μάθε περισσότερα]({privacySettingsUrl}) σχετικά με τις Αποστολές στο Discord και το πώς να διαχειρίζεσαι τις Ρυθμίσεις Απορρήτου σου.",
         QUESTS_DISCLOSURE_LOCATION: "Τοποθεσία",
         QUESTS_DISCLOSURE_AGE: "Ηλικία",
         QUESTS_DISCLOSURE_ACTIVITY: "Δραστηριότητα: Σχετική με το gaming",
@@ -24442,6 +24436,7 @@
           "Επίλεξε {gameTitle} για να σημειώσεις πρόοδο στην Αποστολή σου!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Πρέπει να επιλέξεις την εφαρμογή, όχι ολόκληρη την οθόνη.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Τα κατάφερες!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Παρακίνησε τα μέλη να συνομιλήσουν αφού αυτό το κανάλι είναι ανενεργό εδώ και λίγο καιρό.",
         PROMPT_CAMERA_LOADING_TITLE: "Τι κοιτάς;",

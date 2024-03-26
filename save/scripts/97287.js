@@ -24349,8 +24349,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Doba dostupnosti průzkumu:",
         CREATE_POLL_DURATION_LABEL: "Trv\xe1n\xed",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1\xa0hodina} few {{num}\xa0hodiny} other {{num}\xa0hodin}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dny",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0t\xfdden",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24470,10 +24468,6 @@
           "\xdakol je splněn!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "Tento \xfakol ti přin\xe1š\xedme ve spolupr\xe1ci s\xa0vydavatelem {gamePublisher}, kter\xfd s\xa0n\xe1mi nav\xe1zal partnerstv\xed v\xa0r\xe1mci propagace hry {gameTitle} na Discordu. Tento \xfakol můžou naj\xedt všichni uživatel\xe9 v\xa0invent\xe1ři d\xe1rků.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} c\xedl\xed na určitou sortu uživatelů Discordu. Na z\xe1kladě informac\xed, kter\xe9 jsi n\xe1m sdělil/a nebo kter\xe9 jsme shrom\xe1ždili, si mysl\xedme, že někter\xe1 z\xa0n\xe1sleduj\xedc\xedch skupin by pro tebe mohla b\xfdt ta prav\xe1:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Dalš\xed informace]({privacySettingsUrl}) o\xa0\xfakolech na Discordu a\xa0o\xa0nastaven\xed soukrom\xed.",
         QUESTS_DISCLOSURE_LOCATION: "Um\xedstěn\xed",
         QUESTS_DISCLOSURE_AGE: "Věk",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivita: Relevantn\xed hry",
@@ -24487,6 +24481,7 @@
           "Zvol {gameTitle} a\xa0dostaň se bl\xedže ke splněn\xed sv\xe9ho \xfakolu!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Mus\xedš vybrat aplikaci, ne celou obrazovku.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "M\xe1š to v\xa0kapse!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Pož\xe1dat členy, aby začali chatovat, když bude tento kan\xe1l nějakou dobu neaktivn\xed.",
         PROMPT_CAMERA_LOADING_TITLE: "Na co kouk\xe1š?",

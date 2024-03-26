@@ -23862,8 +23862,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Apklausa veikimo laikas",
         CREATE_POLL_DURATION_LABEL: "Trukmė",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 val.} other {{num} val.}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dienos",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 sav.",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23980,10 +23978,6 @@
         QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL: "Įvykdei misiją!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} reklamuoja {gameTitle} Discord platformoje ir bendradarbiaudami su mumis siūlo šią misiją. Ši misija visiems naudotojams prieinama dovanų atsargose.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} stengiasi pasiekti tam tikrų tipų Discord naudotojus. Atsižvelgdami į tai, ką mums sakei ir kitą mūsų surinktą informaciją, manome, kad tinki į keletą šių grupių:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Sužinoti daugiau]({privacySettingsUrl}) apie misijas Discord platformoje ir kaip valdyti savo privatumo nustatymus.",
         QUESTS_DISCLOSURE_LOCATION: "Vieta",
         QUESTS_DISCLOSURE_AGE: "Amžius",
         QUESTS_DISCLOSURE_ACTIVITY: "Veikla: aktualūs žaidimai",
@@ -23997,6 +23991,7 @@
           "Pasirink {gameTitle}, kad tavo misijos pažanga didėtų!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Turi pasirinkti programėlę, o ne visą ekraną.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Tau pavyko!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Paskatink narius bendrauti, nes šis kanalas kurį laiką yra neaktyvus.",
         PROMPT_CAMERA_LOADING_TITLE: "Ką gero matai?",

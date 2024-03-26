@@ -24060,8 +24060,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Ankieta będzie aktywna przez",
         CREATE_POLL_DURATION_LABEL: "Czas trwania",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 godzinę} few {{num} godziny} other {{num} godzin}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dni",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tydzień",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24178,10 +24176,6 @@
           "Ukończono zadanie!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} promuje grę {gameTitle} na Discordzie, oferując to zadanie we wsp\xf3łpracy z nami. To zadanie jest dostępne w ekwipunku prezent\xf3w dla wszystkich użytkownik\xf3w.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} pr\xf3buje dotrzeć do określonych typ\xf3w użytkownik\xf3w Discorda. Na podstawie otrzymanych od Ciebie lub zgromadzonych w inny spos\xf3b informacji uważamy, że pasujesz do tych grup:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Dowiedz się więcej]({privacySettingsUrl}) na temat zadań na Discordzie i tego, jak zarządzać ustawieniami prywatności.",
         QUESTS_DISCLOSURE_LOCATION: "Lokalizacja",
         QUESTS_DISCLOSURE_AGE: "Wiek",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktywność: Związana z grami",
@@ -24195,6 +24189,7 @@
           "Wybierz {gameTitle}, aby uczynić postępy w zadaniu!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Musisz wybrać aplikację, a nie cały ekran.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Gotowe!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Zaproś członk\xf3w do rozmowy, gdy kanał jest nieaktywny od dłuższego czasu.",
         PROMPT_CAMERA_LOADING_TITLE: "Na co patrzysz?",

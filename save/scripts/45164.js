@@ -23798,8 +23798,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Afstemningen l\xf8ber i",
         CREATE_POLL_DURATION_LABEL: "Varighed",
-        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 time} other {{num} timer}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dage",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 uge",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23918,10 +23916,6 @@
           "Du gennemf\xf8rte en mission!",
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} promoverer {gameTitle} p\xe5 Discord ved at tilbyde denne mission i samarbejde med os. Denne mission kan findes af alle brugere i gaveinventaret.",
-        QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} fors\xf8ger at n\xe5 ud til visse typer Discord-brugere. Baseret p\xe5 det, du har fortalt os, eller andre oplysninger, vi har indsamlet, tror vi, at du passer til nogle af disse grupper:",
-        QUESTS_DISCLOSURE_LEARN_MORE:
-          "[F\xe5 mere at vide]({privacySettingsUrl}) om missioner p\xe5 Discord, og hvordan du administrerer dine privatlivsindstillinger.",
         QUESTS_DISCLOSURE_LOCATION: "Sted",
         QUESTS_DISCLOSURE_AGE: "Alder",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivitet: relevant gaming",
@@ -23935,6 +23929,7 @@
           "V\xe6lg {gameTitle} for at komme i gang med din mission!",
         QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
           "Du skal v\xe6lge applikationen, ikke hele sk\xe6rmen.",
+        QUESTS_MEMBERS_LIST_CLAIM_REWARD: "Du gjorde det!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Du kan opfordre medlemmerne til at chatte, n\xe5r denne kanal har v\xe6ret inaktiv i et stykke tid.",
         PROMPT_CAMERA_LOADING_TITLE: "Hvad ser du p\xe5?",

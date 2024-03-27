@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["67407"],
+  ["85206"],
   {
     397613: function (e, t, r) {
       "use strict";
@@ -108,29 +108,29 @@
         return (e = String(e).toLowerCase()).length < 3
           ? e
           : (121 === e.charCodeAt(0) && ((t = !0), (e = "Y" + e.substr(1))),
-            S.test(e)
+            T.test(e)
               ? (e = e.substr(0, e.length - 2))
-              : R.test(e) && (e = e.substr(0, e.length - 1)),
-            (r = v.exec(e))
+              : y.test(e) && (e = e.substr(0, e.length - 1)),
+            (r = g.exec(e))
               ? u.test(r[1]) && (e = e.substr(0, e.length - 1))
-              : (r = h.exec(e)) &&
+              : (r = v.exec(e)) &&
                 c.test(r[1]) &&
                 ((e = r[1]),
-                T.test(e)
+                m.test(e)
                   ? (e += "e")
-                  : g.test(e)
+                  : A.test(e)
                     ? (e = e.substr(0, e.length - 1))
                     : f.test(e) && (e += "e")),
-            (r = p.exec(e)) && c.test(r[1]) && (e = r[1] + "i"),
-            (r = N.exec(e)) && u.test(r[1]) && (e = r[1] + n[r[2]]),
-            (r = A.exec(e)) && u.test(r[1]) && (e = r[1] + i[r[2]]),
-            (r = I.exec(e))
+            (r = _.exec(e)) && c.test(r[1]) && (e = r[1] + "i"),
+            (r = b.exec(e)) && u.test(r[1]) && (e = r[1] + n[r[2]]),
+            (r = I.exec(e)) && u.test(r[1]) && (e = r[1] + i[r[2]]),
+            (r = C.exec(e))
               ? d.test(r[1]) && (e = r[1])
-              : (r = m.exec(e)) && d.test(r[1]) && (e = r[1]),
-            (r = _.exec(e)) &&
+              : (r = h.exec(e)) && d.test(r[1]) && (e = r[1]),
+            (r = E.exec(e)) &&
               (d.test(r[1]) || (o.test(r[1]) && !f.test(r[1]))) &&
               (e = r[1]),
-            E.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)),
+            p.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)),
             t && (e = "y" + e.substr(1)),
             e);
       };
@@ -174,21 +174,21 @@
         d = RegExp("^" + l + "?(" + a + l + "){2,}"),
         c = RegExp("^" + l + "?" + s),
         f = RegExp("^" + l + s + "[^aeiouwxy]$"),
-        E = /ll$/,
-        _ = /^(.+?)e$/,
-        p = /^(.+?)y$/,
-        m = /^(.+?(s|t))(ion)$/,
-        h = /^(.+?)(ed|ing)$/,
-        T = /(at|bl|iz)$/,
-        v = /^(.+?)eed$/,
-        R = /^.+?[^s]s$/,
-        S = /^.+?(ss|i)es$/,
-        g = /([^aeiouylsz])\1$/,
-        N = RegExp(
+        p = /ll$/,
+        E = /^(.+?)e$/,
+        _ = /^(.+?)y$/,
+        h = /^(.+?(s|t))(ion)$/,
+        v = /^(.+?)(ed|ing)$/,
+        m = /(at|bl|iz)$/,
+        g = /^(.+?)eed$/,
+        y = /^.+?[^s]s$/,
+        T = /^.+?(ss|i)es$/,
+        A = /([^aeiouylsz])\1$/,
+        b = RegExp(
           "^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"
         ),
-        A = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-        I = RegExp(
+        I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+        C = RegExp(
           "^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$"
         );
     },
@@ -313,7 +313,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return _;
+            return E;
           },
         }),
         r("222007");
@@ -327,7 +327,7 @@
         d = r("49111"),
         c = r("782340"),
         f = r("44026");
-      class E extends i.Component {
+      class p extends i.Component {
         render() {
           return (0, n.jsxs)("div", {
             className: f.streamerModeEnabled,
@@ -352,8 +352,8 @@
             });
         }
       }
-      E.defaultProps = { disableButton: !1 };
-      var _ = E;
+      p.defaultProps = { disableButton: !1 };
+      var E = p;
     },
     7037: function (e, t, r) {
       "use strict";
@@ -386,459 +386,6 @@
                 ? e.application_id
                 : null;
       }
-    },
-    359499: function (e, t, r) {
-      "use strict";
-      r.r(t),
-        r.d(t, {
-          useFreeBoostUserTenureReward: function () {
-            return A;
-          },
-          useFreeBoostTenureRewardEntitlement: function () {
-            return C;
-          },
-          useTenureRewardBadgeDescription: function () {
-            return y;
-          },
-          useShouldShowConfettiAndGlow: function () {
-            return w;
-          },
-          useClearTenureBadge: function () {
-            return P;
-          },
-          useFetchEntitlementsForTenureReward: function () {
-            return O;
-          },
-        }),
-        r("222007");
-      var n = r("884691"),
-        i = r("866227"),
-        s = r.n(i),
-        l = r("446674"),
-        a = r("151426"),
-        u = r("316718"),
-        o = r("10641"),
-        d = r("235145"),
-        c = r("384997"),
-        f = r("697218"),
-        E = r("625634"),
-        _ = r("437712"),
-        p = r("599110"),
-        m = r("449008"),
-        h = r("764364"),
-        T = r("908309"),
-        v = r("53641"),
-        R = r("485426"),
-        S = r("646718"),
-        g = r("511143"),
-        N = r("49111");
-      function A() {
-        let e = (function () {
-            var e;
-            let t = (0, l.useStateFromStoresObject)([v.default], () =>
-              v.default.getState()
-            );
-            if (null != t && t.fetchState === v.FetchState.FETCHED)
-              return null !==
-                (e =
-                  t.userTenureRewardStatusByRewardId[
-                    g.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
-                  ]) && void 0 !== e
-                ? e
-                : t.userTenureRewardStatusByRewardId[
-                    g.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
-                  ];
-          })(),
-          t = C(),
-          r = (0, l.useStateFromStores)(
-            [E.default],
-            () => E.default.boostSlots
-          ),
-          i = n.useMemo(() => {
-            let e = Object.values(r);
-            return e.some(e => null == e.premiumGuildSubscription);
-          }, [r]),
-          a = null != t,
-          u = {
-            redeemableAt: null == e ? void 0 : e.redeemable_at,
-            tenureRewardStatusId: null == e ? void 0 : e.id,
-          };
-        if (a && !1 === i)
-          return {
-            ...u,
-            nitroTenureStatus: g.NitroRewardStatus.REDEEMED,
-            tenureRewardSkuId: t.skuId,
-            showNotification: !0,
-          };
-        if (a)
-          return {
-            ...u,
-            nitroTenureStatus: g.NitroRewardStatus.REDEEMABLE,
-            tenureRewardSkuId: t.skuId,
-            showNotification: !0,
-          };
-        if (!(null != e && (0, R.isUserTenureRewardStatusActive)(e)))
-          return null;
-        else {
-          if (null == e.redeemable_at || null == e.next_tenure_reward_id)
-            return null;
-          let t = s(e.redeemable_at).diff(s.utc(), "days");
-          if (t < 0) return null;
-          let r =
-              e.next_tenure_reward_id ===
-                g.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH &&
-              t <= g.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
-            n =
-              e.next_tenure_reward_id ===
-                g.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS &&
-              t <= g.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
-          return {
-            ...u,
-            nitroTenureStatus: g.NitroRewardStatus.PENDING,
-            tenureRewardSkuId: e.next_tenure_reward_id,
-            redeemableInDays: 0 === t ? 1 : t,
-            showNotification: n || r,
-          };
-        }
-      }
-      let I = new Set();
-      function C() {
-        let e = (0, l.useStateFromStores)(
-            [_.default],
-            () => {
-              var e;
-              return null !==
-                (e = _.default.getForApplication(
-                  S.PREMIUM_SUBSCRIPTION_APPLICATION
-                )) && void 0 !== e
-                ? e
-                : I;
-            },
-            [],
-            m.areSetsEqual
-          ),
-          t = (0, R.getPremiumTier2Entitlement)(e);
-        if (null == t) return;
-        let r = (0, R.getTenureRewardEntitlement)(
-          [
-            g.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
-            g.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
-          ],
-          e
-        );
-        return r;
-      }
-      let b = e => {
-          switch (e) {
-            case g.NitroRewardStatus.PENDING:
-              return [a.DismissibleContent.TENURE_REWARD_PENDING];
-            case g.NitroRewardStatus.REDEEMABLE:
-              return [a.DismissibleContent.TENURE_REWARD_REDEEMABLE];
-            default:
-              return [];
-          }
-        },
-        y = () => {
-          let e = A(),
-            t = null == e ? void 0 : e.nitroTenureStatus,
-            [r, i] = n.useState(b(t)),
-            s = (0, T.useUserEligibleForNitroTenureRewardCard)({
-              location: "Home",
-            });
-          n.useEffect(() => {
-            i(b(t));
-          }, [t]);
-          let [l] = (0, c.useSelectedDismissibleContent)(r);
-          return s
-            ? null != e &&
-              !0 === e.showNotification &&
-              (l === a.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
-                l === a.DismissibleContent.TENURE_REWARD_PENDING)
-              ? (0, R.getTenureRewardBadgeDescription)(e.nitroTenureStatus)
-              : null
-            : null;
-        },
-        w = () => {
-          var e;
-          let t =
-              null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            r = (0, T.useUserEligibleForNitroTenureRewardCard)({
-              location: "Home",
-            }),
-            [n] = (0, c.useSelectedDismissibleContent)([
-              a.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI,
-            ]);
-          return (
-            !!r &&
-            null != t &&
-            t === g.NitroRewardStatus.REDEEMABLE &&
-            n === a.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
-          );
-        },
-        P = () => {
-          let e = A(),
-            t = null == e ? void 0 : e.nitroTenureStatus,
-            r = b(t),
-            [i] = (0, d.useGetDismissibleContent)(r),
-            s = n.useRef(!1),
-            l = n.useCallback(() => {
-              null != e &&
-                !0 === e.showNotification &&
-                (i === a.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
-                  i === a.DismissibleContent.TENURE_REWARD_PENDING) &&
-                ((0, o.markDismissibleContentAsDismissed)(i),
-                i === a.DismissibleContent.TENURE_REWARD_PENDING &&
-                  !1 === s.current &&
-                  (p.default.track(
-                    N.AnalyticEvents.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED,
-                    {
-                      user_tenure_reward_id:
-                        null == e ? void 0 : e.tenureRewardStatusId,
-                      tenure_reward_id: e.tenureRewardSkuId,
-                      reward_type: g.NitroRewardType.SERVER_BOOST,
-                      redeemable_at: null == e ? void 0 : e.redeemableAt,
-                    }
-                  ),
-                  (s.current = !0)));
-            }, [e, i]);
-          return l;
-        };
-      function O() {
-        let {
-            hasFetchedPremiumApplicationEntitlements: e,
-            isFetchingPremiumApplicationEntitlements: t,
-          } = (0, l.useStateFromStoresObject)([_.default], () => ({
-            hasFetchedPremiumApplicationEntitlements:
-              _.default.isFetchedForApplication(
-                S.PREMIUM_SUBSCRIPTION_APPLICATION
-              ),
-            isFetchingPremiumApplicationEntitlements:
-              _.default.isFetchingForApplication(
-                S.PREMIUM_SUBSCRIPTION_APPLICATION
-              ),
-          })),
-          r = (0, l.useStateFromStores)([f.default], () => {
-            let e = f.default.getCurrentUser();
-            return (
-              null != e && (0, h.isPremiumExactly)(e, S.PremiumTypes.TIER_2)
-            );
-          }),
-          i = n.useRef(!1);
-        n.useEffect(() => {
-          !1 === e &&
-            !1 === t &&
-            !0 === r &&
-            !1 === i.current &&
-            (u.fetchUserEntitlementsForApplication(
-              S.PREMIUM_SUBSCRIPTION_APPLICATION
-            ),
-            (i.current = !0));
-        }, [e, t, r]);
-      }
-    },
-    672950: function (e, t, r) {
-      "use strict";
-      r.r(t),
-        r.d(t, {
-          default: function () {
-            return s;
-          },
-        });
-      var n = r("37983");
-      r("884691");
-      var i = r("75196"),
-        s = e => {
-          let {
-            className: t,
-            backgroundColor: r,
-            backgroundCircleSize: s,
-            ...l
-          } = e;
-          return (0, n.jsxs)("svg", {
-            width: "100%",
-            height: "100%",
-            viewBox: "0 0 100 100",
-            fill: "none",
-            style: { overflow: "visible" },
-            xmlns: "http://www.w3.org/2000/svg",
-            ...(0, i.default)({ ...l }),
-            children: [
-              (0, n.jsx)("circle", {
-                r: null != s ? s : "40%",
-                cx: "50%",
-                cy: "50%",
-                className: r,
-              }),
-              (0, n.jsxs)("g", {
-                transform: "translate(50, 50) scale(0.6) translate(-51, -52)",
-                children: [
-                  (0, n.jsx)("path", {
-                    d: "M52.0002 11.7556L28.3402 35.4156V68.6956L52.0002 92.3556L75.6602 68.6956V35.4156L52.0002 11.7556ZM63.8302 63.7556L52.0002 75.6289L40.1702 63.7989V40.3122L52.0002 28.4822L63.8302 40.3122V63.7556Z",
-                    fill: "#FF6BFA",
-                    className: t,
-                  }),
-                  (0, n.jsx)("path", {
-                    d: "M40.1702 40.3122V63.7989L52.0002 75.6289L63.8302 63.7989V40.3122L52.0002 28.4822L40.1702 40.3122Z",
-                    fill: "#FFDEF9",
-                  }),
-                  (0, n.jsx)("path", {
-                    d: "M52.0002 11.7556V28.4822L63.8302 40.3122L75.6602 35.4156L52.0002 11.7556Z",
-                    fill: "#FFB0FF",
-                  }),
-                ],
-              }),
-            ],
-          });
-        };
-    },
-    354588: function (e, t, r) {
-      "use strict";
-      r.r(t),
-        r.d(t, {
-          default: function () {
-            return E;
-          },
-        });
-      var n = r("37983");
-      r("884691");
-      var i = r("414456"),
-        s = r.n(i),
-        l = r("446674"),
-        a = r("206230"),
-        u = r("359499"),
-        o = r("672950"),
-        d = r("594455"),
-        c = r("511143"),
-        f = r("627887"),
-        E = e => {
-          let {
-              showAnimations: t = !0,
-              iconClassName: r,
-              staticPercentage: i,
-              innerCircleClassName: E,
-              progressCircleStrokeSize: _,
-              gemBackgroundCircleSize: p,
-            } = e,
-            m = (0, u.useFreeBoostUserTenureReward)(),
-            h = (0, l.useStateFromStores)(
-              [a.default],
-              () => a.default.useReducedMotion
-            ),
-            T = t && !h;
-          if (null == m) return null;
-          let { redeemableInDays: v = 0, tenureRewardSkuId: R } = m,
-            S =
-              c.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === R
-                ? c.NUM_DAYS_REQUIRED_1_MONTH_VARIANT
-                : c.NUM_DAYS_3_REQUIRED_MONTH_VARIANT,
-            g = Math.min(S, Math.max(S - v, 0)),
-            N = (100 * g) / S,
-            A = T ? (100 * Math.max(g - 0.25 * S, 0)) / S : N;
-          return (0, n.jsx)("div", {
-            className: s(f.gemProgressCircle, r),
-            children: (0, n.jsx)(d.default, {
-              animationClassName: s(f.activeProgressCircle, {
-                [f.activeProgressCircleAnimation]: T,
-              }),
-              progressCircleStrokeSize: _,
-              percentage: null != i ? i : N,
-              initialPercentage: null != i ? i : A,
-              children: (0, n.jsx)(o.default, {
-                className: T ? f.nitroGemAnimation : void 0,
-                backgroundColor: s(f.gemBackgroundFill, E),
-                backgroundCircleSize: p,
-              }),
-            }),
-          });
-        };
-    },
-    594455: function (e, t, r) {
-      "use strict";
-      r.r(t),
-        r.d(t, {
-          default: function () {
-            return l;
-          },
-        }),
-        r("222007");
-      var n = r("37983"),
-        i = r("884691"),
-        s = r("43837"),
-        l = e => {
-          let {
-              percentage: t = 0,
-              children: r,
-              animationClassName: l,
-              initialPercentage: a = 0,
-              progressCircleStrokeSize: u = 2,
-            } = e,
-            o = 43 + u / 2,
-            d = 2 * Math.PI * o,
-            [c, f] = i.useState(a);
-          return (
-            i.useEffect(() => {
-              let e = setTimeout(() => {
-                f(t);
-              }, 200);
-              return () => clearTimeout(e);
-            }, [t]),
-            (0, n.jsxs)("div", {
-              className: s.circleContainer,
-              children: [
-                (0, n.jsxs)("svg", {
-                  viewBox: "0 0 100 100",
-                  className: s.circleSVG,
-                  children: [
-                    (0, n.jsx)("circle", {
-                      className: s.baseProgressCircle,
-                      fill: "transparent",
-                      strokeWidth: u,
-                      r: "".concat(o),
-                      cx: "50%",
-                      cy: "50%",
-                    }),
-                    (0, n.jsx)("circle", {
-                      stroke: "url(#gradient)",
-                      strokeWidth: u,
-                      strokeLinecap: "round",
-                      strokeDasharray: "".concat(d, " ").concat(d),
-                      className: l,
-                      style: { strokeDashoffset: (1 - c / 100) * d },
-                      r: "".concat(o),
-                      cx: "50%",
-                      cy: "50%",
-                    }),
-                  ],
-                }),
-                (0, n.jsx)("svg", {
-                  width: "0",
-                  height: "0",
-                  children: (0, n.jsxs)("linearGradient", {
-                    id: "gradient",
-                    x1: "0%",
-                    y1: "0%",
-                    x2: "100%",
-                    y2: "100%",
-                    children: [
-                      (0, n.jsx)("stop", {
-                        offset: "0%",
-                        style: { stopColor: "#FFBDF2" },
-                      }),
-                      (0, n.jsx)("stop", {
-                        offset: "100%",
-                        style: { stopColor: "#E742E1" },
-                      }),
-                    ],
-                  }),
-                }),
-                (0, n.jsx)("div", {
-                  className: s.childrenContainer,
-                  children: r,
-                }),
-              ],
-            })
-          );
-        };
     },
     970366: function (e, t, r) {
       "use strict";
@@ -1135,7 +682,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return T;
+            return m;
           },
         });
       var n = r("446674"),
@@ -1148,16 +695,16 @@
       let d = !1,
         c = {},
         f = {};
-      function E(e) {
+      function p(e) {
         let t = !1;
         return (
           e.forEach(e => {
-            t = !1 !== p(e) || t;
+            t = !1 !== _(e) || t;
           }),
           t
         );
       }
-      function _(e) {
+      function E(e) {
         let t = f[e];
         if (null == t) return !1;
         let r = t.gameId;
@@ -1171,20 +718,20 @@
           !0
         );
       }
-      function p(e) {
+      function _(e) {
         let { user: t, activities: r } = e;
         if (null == t) return !1;
         let n = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-        if (0 === n.length) return _(t.id);
+        if (0 === n.length) return E(t.id);
         let i = !1;
         return (
           n.forEach(e => {
             (function (e, t) {
               var r, n, i, l;
               let a = (0, s.default)(e);
-              if (null == a) return _(t.id);
+              if (null == a) return E(t.id);
               let u = f[t.id];
-              null != u && u.gameId !== a && _(t.id);
+              null != u && u.gameId !== a && E(t.id);
               let o =
                   null !==
                     (n =
@@ -1209,7 +756,7 @@
           i
         );
       }
-      function m() {
+      function h() {
         let e = !1;
         if (!a.default.needsRefresh() && !d) {
           let t;
@@ -1220,15 +767,15 @@
               let r = u.default.getUser(e);
               null != r &&
                 (t =
-                  p({ user: r, activities: l.default.getActivities(e) }) || t);
+                  _({ user: r, activities: l.default.getActivities(e) }) || t);
             }),
             (e = t);
         }
         return (d = !a.default.needsRefresh()), e;
       }
-      class h extends n.default.Store {
+      class v extends n.default.Store {
         initialize() {
-          this.waitFor(a.default), this.syncWith([a.default], m);
+          this.waitFor(a.default), this.syncWith([a.default], h);
         }
         get games() {
           return c;
@@ -1246,8 +793,8 @@
           return f[e];
         }
       }
-      h.displayName = "NowPlayingStore";
-      var T = new h(i.default, {
+      v.displayName = "NowPlayingStore";
+      var m = new v(i.default, {
         CONNECTION_OPEN: function () {
           (c = {}), (f = {});
         },
@@ -1256,9 +803,9 @@
             n = !1;
           return (
             t.forEach(e => {
-              E(e.presences) && (n = !0);
+              p(e.presences) && (n = !0);
             }),
-            E(r) && (n = !0),
+            p(r) && (n = !0),
             n
           );
         },
@@ -1267,11 +814,11 @@
         },
         PRESENCE_UPDATES: function (e) {
           let { updates: t } = e;
-          return t.map(e => p(e)).some(e => e);
+          return t.map(e => _(e)).some(e => e);
         },
         PRESENCES_REPLACE: function (e) {
           let { presences: t } = e;
-          return E(t);
+          return p(t);
         },
       });
     },
@@ -1293,20 +840,20 @@
         d = r("446674"),
         c = r("407846"),
         f = r("913144"),
-        E = r("21121"),
-        _ = r("934306"),
-        p = r("288518"),
-        m = r("486503"),
-        h = r("233069"),
-        T = r("42203"),
-        v = r("305961"),
-        R = r("660478"),
-        S = r("282109"),
-        g = r("697218"),
-        N = r("299039"),
-        A = r("724210");
+        p = r("21121"),
+        E = r("934306"),
+        _ = r("288518"),
+        h = r("486503"),
+        v = r("233069"),
+        m = r("42203"),
+        g = r("305961"),
+        y = r("660478"),
+        T = r("282109"),
+        A = r("697218"),
+        b = r("299039"),
+        I = r("724210");
       ((a = l || (l = {})).DEFAULT = "DEFAULT"), (a.FAVORITE = "FAVORITE");
-      let I = new c.SecondaryIndexMap(
+      let C = new c.SecondaryIndexMap(
         e => {
           let { isRequest: t, isFavorite: r } = e;
           return t ? [] : [r ? "FAVORITE" : "DEFAULT"];
@@ -1316,7 +863,7 @@
           return -t;
         }
       );
-      function C(e) {
+      function S(e) {
         let t =
           arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
@@ -1325,7 +872,7 @@
                 let n =
                     null !==
                       (r =
-                        null !== (t = R.default.lastMessageId(e.id)) &&
+                        null !== (t = y.default.lastMessageId(e.id)) &&
                         void 0 !== t
                           ? t
                           : e.lastMessageId) && void 0 !== r
@@ -1334,8 +881,8 @@
                   i = e.isMessageRequestTimestamp;
                 if (null != i) {
                   let e = o(i).valueOf(),
-                    t = N.default.fromTimestamp(e);
-                  return N.default.compare(n, t) > 0 ? n : t;
+                    t = b.default.fromTimestamp(e);
+                  return b.default.compare(n, t) > 0 ? n : t;
                 }
                 return n;
               })(e);
@@ -1343,36 +890,36 @@
           channelId: e.id,
           lastMessageId: t,
           isFavorite:
-            S.default.isMessagesFavorite(e.id) &&
-            (0, E.isInMainTabsExperiment)(),
-          isRequest: p.default.isMessageRequest(e.id) || m.default.isSpam(e.id),
+            T.default.isMessagesFavorite(e.id) &&
+            (0, p.isInMainTabsExperiment)(),
+          isRequest: _.default.isMessageRequest(e.id) || h.default.isSpam(e.id),
         };
       }
-      function b() {
-        I.clear(),
-          Object.values(T.default.getMutablePrivateChannels()).forEach(e => {
-            I.set(e.id, C(e));
+      function N() {
+        C.clear(),
+          Object.values(m.default.getMutablePrivateChannels()).forEach(e => {
+            C.set(e.id, S(e));
           }),
-          (0, E.isInMainTabsExperiment)() &&
-            (0, _.isSplitMessagesTab)() &&
-            S.default.getAddedToMessages().forEach(e => {
-              let t = T.default.getChannel(e);
+          (0, p.isInMainTabsExperiment)() &&
+            (0, E.isSplitMessagesTab)() &&
+            T.default.getAddedToMessages().forEach(e => {
+              let t = m.default.getChannel(e);
               null != t &&
-                (0, h.isGuildTextChannelType)(t.type) &&
-                I.set(t.id, C(t));
+                (0, v.isGuildTextChannelType)(t.type) &&
+                C.set(t.id, S(t));
             });
       }
-      function y() {
-        let e = T.default.getMutablePrivateChannels();
-        for (let t in e) I.set(t, C(e[t]));
+      function P() {
+        let e = m.default.getMutablePrivateChannels();
+        for (let t in e) C.set(t, S(e[t]));
       }
-      let w =
+      let R =
         ((n = []),
         (i = []),
         (s = []),
         () => {
-          let e = I.values("FAVORITE"),
-            t = I.values("DEFAULT");
+          let e = C.values("FAVORITE"),
+            t = C.values("DEFAULT");
           return (
             (n !== e || i !== t) &&
               ((s = []),
@@ -1389,21 +936,21 @@
             s
           );
         });
-      class P extends d.default.Store {
+      class x extends d.default.Store {
         initialize() {
-          this.waitFor(T.default, v.default, g.default, p.default, S.default),
-            this.syncWith([S.default, p.default], b);
+          this.waitFor(m.default, g.default, A.default, _.default, T.default),
+            this.syncWith([T.default, _.default], N);
         }
         getPrivateChannelIds() {
-          return w();
+          return R();
         }
         getSortedChannels() {
-          return [I.values("FAVORITE"), I.values("DEFAULT")];
+          return [C.values("FAVORITE"), C.values("DEFAULT")];
         }
         serializeForOverlay() {
           let e = {};
           return (
-            I.values().forEach(t => {
+            C.values().forEach(t => {
               let { channelId: r, lastMessageId: n } = t;
               e[r] = n;
             }),
@@ -1411,44 +958,44 @@
           );
         }
       }
-      P.displayName = "PrivateChannelSortStore";
-      var O = new P(f.default, {
-        CONNECTION_OPEN: b,
-        CONNECTION_OPEN_SUPPLEMENTAL: b,
-        OVERLAY_INITIALIZE: b,
-        CACHE_LOADED: y,
-        CACHE_LOADED_LAZY: y,
+      x.displayName = "PrivateChannelSortStore";
+      var O = new x(f.default, {
+        CONNECTION_OPEN: N,
+        CONNECTION_OPEN_SUPPLEMENTAL: N,
+        OVERLAY_INITIALIZE: N,
+        CACHE_LOADED: P,
+        CACHE_LOADED_LAZY: P,
         CHANNEL_UPDATES: function (e) {
           let { channels: t } = e;
           t.forEach(e => {
-            ((0, h.isPrivate)(e.type) || I.has(e.id)) && I.set(e.id, C(e));
+            ((0, v.isPrivate)(e.type) || C.has(e.id)) && C.set(e.id, S(e));
           });
         },
         CHANNEL_CREATE: function (e) {
           let { channel: t } = e;
           if (
-            !(0, h.isPrivate)(t.type) ||
-            t.id === A.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
+            !(0, v.isPrivate)(t.type) ||
+            t.id === I.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
           )
             return !1;
-          I.set(t.id, C(t));
+          C.set(t.id, S(t));
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          return I.delete(t.id);
+          return C.delete(t.id);
         },
         MESSAGE_CREATE: function (e) {
           let { channelId: t, message: r } = e;
-          if (!I.has(t)) return !1;
-          let n = T.default.getChannel(t);
-          return null != n && I.set(t, C(n, r.id));
+          if (!C.has(t)) return !1;
+          let n = m.default.getChannel(t);
+          return null != n && C.set(t, S(n, r.id));
         },
         GUILD_CREATE: function (e) {
           let t = e.guild.id;
-          return I.delete(t);
+          return C.delete(t);
         },
         LOGOUT: function () {
-          I.clear();
+          C.clear();
         },
       });
     },
@@ -1526,8 +1073,8 @@
                   separatorClassName: c,
                 } = this.props,
                 f = e.id === r,
-                E = t === s.length - 1,
-                _ =
+                p = t === s.length - 1,
+                E =
                   null != u
                     ? u(e, f)
                     : (0, n.jsx)("span", {
@@ -1541,7 +1088,7 @@
                 "div",
                 {
                   className: l(d.breadcrumbWrapper, {
-                    [d.breadcrumbFinalWrapper]: E,
+                    [d.breadcrumbFinalWrapper]: p,
                   }),
                   children: [
                     null != i
@@ -1549,10 +1096,10 @@
                           tag: "span",
                           onClick: () => this.handleClick(e),
                           className: d.breadcrumbClickWrapper,
-                          children: _,
+                          children: E,
                         })
-                      : _,
-                    E
+                      : E,
+                    p
                       ? null
                       : (0, n.jsx)(o.default, {
                           className: l(d.breadcrumbArrow, c),
@@ -1697,4 +1244,4 @@
     },
   },
 ]);
-//# sourceMappingURL=744d05400cb9281f1d8b.js.map
+//# sourceMappingURL=35e9dcd902b9841973f7.js.map

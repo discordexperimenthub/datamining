@@ -39931,8 +39931,8 @@ html .invoiceCancelRow_c1bfe7 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -111420,4 +111420,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.509344892a04240966f5.css.map*/
+/*# sourceMappingURL=app.9d714a7b90a832cec920.css.map*/

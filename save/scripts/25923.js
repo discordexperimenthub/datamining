@@ -19198,6 +19198,7 @@
               theme: m.ThemeTypes.DARK,
               children: (0, l.jsx)(f.default, {
                 text: S,
+                tooltipClass: g.tooltip,
                 children: (0, l.jsx)(r.ThemeContextProvider, {
                   theme: _,
                   children: (0, l.jsx)(r.BlobMask, {
@@ -19268,22 +19269,20 @@
       let i = {
           key: "valorant-user",
           type: "user",
-          title: "Find new people to play Valorant with on Discord",
+          title: "Preview new features for Valorant players on Discord",
           subtitle:
-            "Sign up for early access to matchmaking tools that help you find other players based on playstyle and interests.",
-          tooltipHeader: "Find new people to play Valorant with on Discord!",
-          question: "Which one are you interested in the most?",
+            "Get notified about new features we're building to help Valorant players connect and play together on Discord.",
+          tooltipHeader: "Want a preview of new features for Valorant players?",
+          question: "Which feature are you interested in the most?",
           backgroundAssetUrl:
             "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
-          upsellIconUrl:
-            "https://cdn.discordapp.com/assets/signups/Valorant_Guild_Icon.png",
           options: [
             {
               key: "clan",
               icon: "compass",
-              title: "Clans",
+              title: "Gaming Guilds",
               description:
-                "Find other servers that also play Valorant regularly and shares the same playstyle (ex. Casual -vs- Hardcore).",
+                "Small, organized groups with similar vibes, play styles, or skill levels who hang out and play regularly.",
               type: "email",
             },
             {
@@ -19291,7 +19290,7 @@
               icon: "gamepad",
               title: "Missions",
               description:
-                "Party up with other players based on what you want to do in-game and interests (ex. Lv100 Raids)",
+                "Party up with players who are trying to achieve the same goal as you, like ranking up.",
               type: "email",
             },
             {
@@ -19299,7 +19298,7 @@
               icon: "controller",
               title: "Game Nights",
               description:
-                "Tell us what you are looking for, and we’ll match you with people that matches your criteria.",
+                "Scheduled sessions with other players that match a specific criteria, like play style or skill level.",
               type: "email",
             },
           ],
@@ -19307,22 +19306,19 @@
         r = {
           key: "valorant-admin",
           type: "guild",
-          title: "Find new people to play Valorant with on Discord",
+          title: "Preview new features for Valorant players on Discord",
           subtitle:
-            "Sign up for early access to matchmaking tools that help you find other players based on playstyle and interests.",
-          tooltipHeader: "Find new people to play Valorant with on Discord!",
-          question: "Which one are you interested in the most?",
+            "Get notified about new features we're building to help Valorant players connect and play together on Discord.",
+          question: "Which feature are you interested in the most?",
           backgroundAssetUrl:
             "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
-          upsellIconUrl:
-            "https://cdn.discordapp.com/assets/signups/Valorant_Guild_Icon.png",
           options: [
             {
               key: "clan",
               icon: "compass",
-              title: "Clans",
+              title: "Gaming Guilds",
               description:
-                "Find other servers that also play Valorant regularly and shares the same playstyle (ex. Casual -vs- Hardcore).",
+                "Small, organized groups with similar vibes, play styles, or skill levels who hang out and play regularly.",
               type: "clan",
             },
             {
@@ -19330,7 +19326,7 @@
               icon: "gamepad",
               title: "Missions",
               description:
-                "Party up with other players based on what you want to do in-game and interests (ex. Lv100 Raids)",
+                "Party up with players who are trying to achieve the same goal as you, like ranking up.",
               type: "email",
             },
             {
@@ -19338,7 +19334,7 @@
               icon: "controller",
               title: "Game Nights",
               description:
-                "Tell us what you are looking for, and we’ll match you with people that matches your criteria.",
+                "Scheduled sessions with other players that match a specific criteria, like play style or skill level.",
               type: "email",
             },
           ],
@@ -23895,4 +23891,4 @@
     },
   },
 ]);
-//# sourceMappingURL=96d1b4350f6fb488d299.js.map
+//# sourceMappingURL=78f3b5743e757d22d546.js.map

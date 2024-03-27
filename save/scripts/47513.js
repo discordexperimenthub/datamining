@@ -21925,6 +21925,13 @@
         COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Usually {price}",
         COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
           "By Clicking '{buyButtonLabel}' you agree to the [Paid Service Terms]({paidServiceTermURL}). Once you complete your purchase, the item will be added to your collection and can be used anytime. Note that Nitro subscriptions become non-refundable once you've purchased an item.",
+        COLLECTIBLES_MOBILE_SHOP_MARKETING_COACHTIP_TITLE: "See what's in Shop",
+        COLLECTIBLES_MOBILE_SHOP_MARKETING_COACHTIP_DESCRIPTION:
+          "Personalize your profile with Anime, Cyberpunk, Fantasy decorations and more.",
+        COLLECTIBLES_MOBILE_SHOP_MARKETING_SHEET_USER_DESCRIPTION_1:
+          "Super Smash Toads Champ 2024",
+        COLLECTIBLES_MOBILE_SHOP_MARKETING_SHEET_USER_DESCRIPTION_2:
+          "GM, protector of the Enchanted Lake",
         COLLECTIBLES_DAYS_LEFT_IN_SHOP: "{days} days left in Shop",
         COLLECTIBLES_DAYS_LEFT: "{days} days left",
         COLLECTIBLES_LAST_DAY: "Last day to buy",
@@ -26578,8 +26585,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278947", ", Version Hash: ")
-          .concat("3aede5cc3970f91b683bd5aad9e97afb112d54af")
+          .concat("278967", ", Version Hash: ")
+          .concat("1b3411a922077cadbb2714398fc788521946a06f")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29710,12 +29717,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278947"), "278947"));
+        let _ = parseInt(((e = "278967"), "278967"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278947"
+                "278967"
               )
             ),
             (_ = 0)),
@@ -53040,4 +53047,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.16b5000d6d73c504eabd.js.map
+//# sourceMappingURL=47513.0470e87473d49915223c.js.map

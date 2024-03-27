@@ -167,7 +167,9 @@
         PAGINATION_PAGE_LABEL: "Pagina {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Slide {pageNumber}",
         MUTE: "Oprește sunetul",
+        MUTE_ALT: "Oprește microfonul",
         UNMUTE: "Pornește sunetul",
+        UNMUTE_ALT: "Pornește microfonul",
         DEAFEN: "Dezactivează sunetul",
         UNDEAFEN: "Reactivează sunetul",
         SEARCH: "Caută",
@@ -1282,6 +1284,8 @@
           "Această aplicație nu este creată de Discord. Testează numai aplicații de la dezvoltatori \xeen care ai \xeencredere.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Află mai multe despre aplicațiile private.",
+        APPLICATION_ICON_A11Y_LABEL: "Pictograma aplicației {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Pictograma aplicației",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) a \xeenceput o activitate",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4882,8 +4886,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Activează sau dezactivează o scurtătură",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Rezultate",
+        SHOW_CURRENT_ACTIVITY: "Arată-le altora ce faci.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord \xeeți va actualiza automat statusul dacă participi la un podium public.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "C\xe2nd ai o activitate detectabilă (de ex., c\xe2nd joci un joc sau asculți muzică), Discord poate afișa informații despre acele activități, inclusiv c\xe2nd sau cum ai făcut acea activitate.",
         GAME_DETECTION_SERVICE: "Serviciu de detectare jocuri",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locații de instalare",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Adaugă locație de instalare",
@@ -5201,6 +5208,7 @@
         SUB_ENABLED_SERVERS: "Servere pentru abonați",
         AUTHORIZATION: "Autorizare",
         AUTHORIZED_APPS: "Aplicații autorizate",
+        MANAGE_AUTHORIZED_APP: "Gestionează aplicația autorizată",
         DEAUTHORIZE: "Elimină autorizarea",
         DEAUTHORIZE_APP: "Elimină autorizarea aplicației",
         ABOUT_THIS_APP: "Despre această aplicație",
@@ -6462,7 +6470,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Selectează un server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Pentru a putea face asta, trebuie să ai permisiunea **Gestionează server-ul** pe server.",
+        OAUTH2_INTEGRATION_SELECT_USER: "\xcencearcă acum",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "Folosește aplicația asta oriunde!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Adaugă pe server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Personalizează-ți serverul adăug\xe2nd această aplicație",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Această aplicație poate fi folosită oriunde pe Discord. \xcen timpul versiunii beta, răspunsurile sunt vizibile doar pentru tine \xeen serverele cu peste {betaUserLimit} membri. [Află mai multe]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Solicitare nevalidă. Lipsește parametrul **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Domeniu nevalid **{scope}**",
@@ -6511,6 +6526,7 @@
           "Conectarea la voce \xeen numele tău și vizualizarea utilizatorilor aflați \xeen orice canal de voce sau apel",
         SCOPE_DM_CHANNELS_READ:
           "Vizualizarea informațiilor despre mesajele directe și mesajele directe de grup la care participi",
+        SCOPE_DM_YOU: "Trimiterea mesajelor directe",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Actualizează-ți conexiunea și metadatele pentru această aplicație",
         SCOPE_WEBHOOK_INCOMING: "Să adauge un webhook la un canal",
@@ -6861,12 +6877,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Blochează automat mesajele directe care ar putea conține imagini explicite. [Află mai multe despre această setare de aici.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Permite-le prietenilor să se alăture jocului tău.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Această setare le permite prietenilor să se alăture jocului tău fără să trimită vreo solicitare.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Permite-le participanților la canalul de voce să se alăture jocului tău.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Această setare le permite persoanelor de pe același canal de voce cu tine să se alăture jocului tău fără să trimită vreo solicitare. Funcția este disponibilă doar pe serverele care nu sunt comunitare.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6923,6 +6935,12 @@
         DATA_PRIVACY_CONTROLS: "Cum \xeeți folosim datele",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Folosește date pentru a \xeembunătăți Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Această setare ne permite să-ți folosim și să-ți procesăm informațiile pentru a ne \xeențelege și \xeembunătății serviciile. [Află mai multe de aici.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Folosirea datelor pentru a-mi personaliza experiența Discord",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Această setare ne permite să utilizăm informații, de exemplu persoanele cu care vorbești și jocurile pe care le joci, cu scopul de a-ți personaliza Discord. [Află mai multe aici.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Folosește date pentru a face ca Discord să funcționeze",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Solicită toate datele mele",
@@ -6959,9 +6977,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Permite mesaje directe de la membrii serverului",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Recompense din jocuri (adică misiuni)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Folosește informațiile despre cum folosești Discord, de exemplu despre ce jocuri joci, pentru a-ți spune despre misiuni sau alte oportunități de a primi recompense \xeen joc. [Află mai multe de aici.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Confidențialitate server",
         USER_DM_SETTINGS_DESCRIPTION:
           "Vrei să aplici schimbarea pentru toate celelalte servere? Poți dezactiva mesajele directe și pentru servere individuale, vizit\xe2nd pagina de setări a serverului respectiv.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Misiunile sunt disponibile momentan \xeen varianta beta – vrem să aflăm mai multe despre motivele pentru care le-ai dezactivat. [Sondaj pentru feedback]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Misiunile sunt disponibile momentan \xeen varianta beta – mulțumim pentru participare, așteptăm impresii! [Sondaj pentru feedback]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Probabil cauți misiunile Discord! Dacă vezi acest mesaj, trebuie să ajustăm niște setări. Pentru a le activa, trebuie să accesezi Setări -> Confidențialitate și securitate, apoi să activezi at\xe2t „Folosește date pentru a personaliza experiența mea pe Discord”, c\xe2t și „Recompense \xeen joc (adică misiuni)”.\n\n[Citește mai multe \xeen \xcentrebările frecvente]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "\xcenscrie-te acum",
@@ -10287,6 +10313,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Abonament actual",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Total nou abonament",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Abonament {planName} anulat",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Ajustarea include tarifele fracționare, reducerile, taxele aplicabile și rambursările.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**De ce văd asta?**\n\nEști pe cale să achiziționezi o modificare a abonamentului. Boost-urile tale pentru server se actualizează \xeen consecință.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10996,7 +11024,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Plătește doar **{discountedPrice}** pe lună \xeen primele **3 luni** de abonament Nitro. Plătește {regularPrice} pe lună după \xeencheierea perioadei de 3 luni \xeen care se aplică reducerea.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Plătește doar **{discountedPrice}** pe lună \xeen **{numMonths, plural, one {prima lună} other {primele {numMonths} luni}}** de abonament Nitro. Plătește {regularPrice} pe lună după \xeencheierea perioadei \xeen care se aplică reducerea.",
+          "{numMonths, plural, one {Prima lună} other {Primele {numMonths} luni}} de Nitro lunar {numMonths, plural, one {costă} other {costă}} **{discountedPrice}**. După terminarea reducerii, vei plăti {regularPrice} pe lună",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/lună timp de 3 luni\n\n{regularPrice}/lună după cele 3 luni",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -11037,6 +11065,8 @@
           "Tocmai ți-am trimis un e-mail. Dă clic pe linkul de verificare din e-mail pentru a autoriza achiziția.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continuă",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Nu ai primit nimic?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Retrimite e-mail-ul",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13458,8 +13488,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Sau \xeeți poți [crea propriul server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Ne pare rău pentru asta",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Oprești folosirea datelor pentru a \xeembunătăți Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Dacă dezactivezi opțiunea asta, nu vom mai prelucra date noi pentru analiză. Vei pierde accesul la funcțiile noi experimentale și la \xeembunătățirile bazate pe utilizare pe care le aducem funcțiilor precum chat-ul vocal. Dacă vrei să \xeeți exerciți \xeen continuare dreptul de a obiecta la prelucrarea de către noi a datelor tale cu caracter personal, trimite un e-mail la privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Da, sunt sigur",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nu, du-mă \xeenapoi!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Dezactivezi personalizarea?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Dezactiv\xe2nd asta vei pierde accesul la unele lucruri, cum ar fi sugestiile și recomandările personalizate. Nu vei mai putea să le recuperezi \xeen viitor!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Da, sunt sigur",
@@ -13793,18 +13828,31 @@
           "{count, plural, =0 {0 prieteni comuni} one {1 prieten comun} other {{count} prieteni comuni}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 servere comune} one {1 server comun} other {{count} servere comune}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 prieteni} one {1 prieten} other {{count} prieteni}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 servere} one {1 server} other {{count} servere}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "prieten/ă cu **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "prieten/ă cu **{usernameOne}** și **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "prieten/ă cu **{usernameOne}**, **{usernameTwo}** și **{count} alții**",
+          "prieten/ă cu **{usernameOne}**, **{usernameTwo}** și \xeencă {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "prieten/ă cu **{usernameOne}** și \xeencă {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "prieteni/ă cu {count, plural, =0 {0 persoane} one {1 persoană} other {{count} persoane}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "face parte din **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "face parte din **{guildNameOne}** și **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "face parte din **{guildNameOne}**, **{guildNameTwo}** și **\xeencă {count}**",
+          "face parte din **{guildNameOne}**, **{guildNameTwo}** și \xeencă {count}",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "face parte din {count, plural, =0 {0 servere} one {1 server} other {{count} servere}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Prieteni comuni",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Servere comune",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Vezi toți prietenii comuni",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Vezi toate serverele comune",
+        USER_PROFILE_MUTUALS_TITLE: "\xcen comun",
         PROFILE_IN_VOICE_CALL: "\xcentr-un apel vocal",
         PROFILE_OPEN_VOICE_CHANNEL: "Deschide canal de voce",
         IOS_PROFILE_IN_VOICE_CALL: "\xcentr-un apel vocal",
@@ -13946,6 +13994,10 @@
           "Dăruiește {count, plural, one {# lună} other {# luni}} de {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Dăruiește {count, plural, one {# an} other {# ani}} de {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Dăruiește-i {count, plural, one {# lună} other {# luni}} de {nitroTierName} lui {username}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Dăruiește-i {count, plural, one {# an} other {# ani}} de {nitroTierName} lui {username}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Ating\xe2nd „Cumpără cadou”, ești de acord cu [Condițiile de prestare a serviciilor plătite.]({paidURL}) Aceasta este o plată unică, valabilă pentru perioada de timp aleasă.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Cadoul tău e pe drum!",
@@ -14794,8 +14846,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Elimini mesajul?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Se pare că ai scris deja ceva. Vrei să elimini ce ai scris și să folosești o comandă?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Poți folosi această aplicație oriunde pe Discord. Răspunsurile sunt vizibile doar pentru tine \xeen serverele cu peste {betaUserLimit} membri.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Aplicația \xeeți va răspunde \xeen privat",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Numai tu poți vedea acest mesaj \xeen versiunea beta.\n\n[De ce văd asta?]({learnMoreUrl}) • [Ignoră](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Numai tu poți vedea acest mesaj \xeen versiunea beta • [Ignoră](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Vezi articolul de ajutor",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Află mai multe]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Tastează „$[command](commandHook)” pentru a folosi Midjourney. Sfat: Creează un server ca să-l testezi doar cu prietenii.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17632,6 +17694,8 @@
           "Dacă anulezi, **pierzi următoarele avantaje:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Lasă, păstrează Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Lasă, păstrează Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Dacă anulezi, \xeeți vei pierde progresul și toate aceste recompense:",
         PREMIUM_PAUSE_INSTEAD: "Pune pe pauză",
         PREMIUM_PAUSE_SELECT_TITLE: "Pune pe pauză sau anulează abonamentul",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19329,6 +19393,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "chiar \xeen momentul ăsta",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "acum {count} {count, plural, =1 {minut} other {minute}}",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {oră} other {ore}} săptăm\xe2na asta",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "cu {count} {count, plural, =1 {zi} other {zile}} \xeen urmă",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19420,6 +19486,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Membrul care a inițiat această acțiune.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Permisiuni moderatori",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Caută numele, categoria sau descrierea permisiunii...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Toate ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# rol} other {# roluri}}",
@@ -19428,7 +19496,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Nu există permisiuni pentru moderatori",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Oferită de",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Ridicată) Oferită de",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Ridicată",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Permisiunile ridicate oferă un nivel mai \xeenalt de acces la setările serverului și ar trebui oferite doar moderatorilor \xeen care ai foarte multă \xeencredere.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permisiune oferită de aceste roluri",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Cel mai important rol",
@@ -22100,6 +22173,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Vezi toate",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Trimite un cadou",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Revizuiește-ți cadoul",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Fă cumpărături oriunde, oric\xe2nd",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Cumpără decorațiuni pentru avatar și efecte pentru profil pentru a-ți personaliza profilul.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Stilurile populare includ anime, fantasy, cyberpunk și nu numai.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Membrii Nitro primesc reduceri la toate articolele din magazin.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Alegerile personalului",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Creații indie",
@@ -23838,6 +23919,8 @@
           "Discord ia \xeen serios siguranța adolescenților. C\xe2nd detectăm un posibil risc la adresa siguranței \xeentr-o conversație, \xeeți dăm de știre. [Află mai multe despre alertele de siguranță.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Accesează Setările",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Ignoră",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Am făcut o greșeală? $[Dă-ne de știre](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "\xceți mulțumim pentru feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blochează",
@@ -24049,6 +24132,8 @@
         POLL_COACHMARK_TITLE: "NOU! Au sosit sondajele.",
         POLL_COACHMARK_SUBTITLE:
           "Planifică evenimente, adună opinii sau pune o \xeentrebare năstrușnică pe chat.",
+        POLL_COACHMARK_CTA: "Pornește un sondaj acum!",
+        POLL_COACHMARK_DISMISS: "Poate mai t\xe2rziu.",
         POLL_NOT_INTERACTIVE: "Vezi mesajul original pentru a interacționa",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nimic interesant",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Nu există voturi pentru acest răspuns.",
@@ -24152,6 +24237,7 @@
         QUESTS: "Misiuni",
         QUEST: "Misiune {questName}",
         QUESTS_SEE_CODE: "Vezi codul",
+        QUESTS_CLAIM_REWARD: "Revendică recompensa",
         QUESTS_ACCEPT: "Acceptă misiunea",
         QUESTS_COMPLETE_TOOLTIP:
           "Revendică pentru a-ți primi codul de recompensă!",
@@ -24168,13 +24254,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Hopa! N-am reușit să-ți trimitem e-mailul de verificare.",
         QUEST_REWARD: "Primește {reward}",
+        QUEST_REWARD_COMPLETED: "Ai deblocat {reward} pe {date}",
+        QUESTS_REWARD_CODE_HEADER: "Codul tău de recompensă",
         QUESTS_REWARD_CODE_CONGRATS: "Felicitări!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Care este platforma ta favorită?",
         QUESTS_REWARD_CODE_ERROR:
           "Hopa! Ceva nu a mers bine. \xcencearcă din nou mai t\xe2rziu",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Alege o platformă",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
+          "Selectează o platformă",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Vom genera un cod specific unei anumite platforme pentru {rewardName}. **Nu-ți vei putea schimba selecția după ce apeși Obține codul.**",
         QUESTS_REWARD_CODE_DONE: "Gata",
+        QUESTS_REWARD_CODE_GET_CODE: "Obține codul",
         QUESTS_REWARD_CODE_TRY_AGAIN: "\xcencearcă din nou",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Revendică",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Ai revendicat asta",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multi-platformă",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24182,11 +24278,14 @@
         QUESTS_SPONSORED: "Sponsorizare",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Află mai multe",
+        QUESTS_LEARN_MORE_STACKED: "Află\n\nmai multe",
+        QUESTS_LEARN_MORE_LINK: "[Află mai multe]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Acceptă misiunea",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Fă streaming la {gameTitle} pentru un prieten timp de {streamingDurationRequirement, number} minute și c\xe2știgă {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Misiune acceptată!** Fă streaming la {gameTitle} pentru un prieten timp de {streamingDurationRequirement, number} minute și c\xe2știgă {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Urmărește-ți progresul",
         QUESTS_TITLE: "Misiune {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hopa!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24196,6 +24295,8 @@
           "Intră \xeen aplicația Discord pentru desktop sau \xeen browser, mergi la \nSetări utilizator > Inventar cadouri și acceptă misiunea de acolo.",
         QUESTS_GET_THIS_GAME: "Obține joc",
         QUESTS_DISCLOSURE_LABEL: "De ce văd asta?",
+        QUESTS_SHARE_LINK: "Copiază linkul de partajare",
+        QUESTS_HIDE_THIS: "Ascunde asta",
         QUESTS_FIND_QUEST:
           "O poți găsi din nou \xeen Setări utilizator > Inventar cadouri",
         QUESTS_CLAIM_BY: "Revendică p\xe2nă pe {expirationDate}.",
@@ -24236,6 +24337,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! și {count, plural, one {\xeencă 1} other {\xeencă {count}}}",
         STOREFRONT: "Magazin",
+        STOREFRONT_TITLE: "Magazin {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonamente",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Cumpără abonamente de la {appName}",
         STOREFRONT_APP_PRODUCTS: "Produse",
@@ -24300,15 +24402,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima dată",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "A urmărit **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} a urmărit **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activitate",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Am \xeențeles!",
+        RECENT_GAMES: "Jocuri recente",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "acum {count} {count, plural, =1 {săptăm\xe2nă} other {săptăm\xe2ni}}",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "cu {count} {count, plural, =1 {zi} other {zile}} \xeen urmă",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "acum {count} {count, plural, =1 {oră} other {ore}}",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "acum {count} {count, plural, =1 {minut} other {minute}}",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "acum {count} {count, plural, =1 {secundă} other {secunde}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "acum {count} săpt",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "acum {count} z",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "acum {count} o",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "acum {count} m",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "acum {count}s",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {oră} other {ore}} săptăm\xe2na asta",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} săptăm\xe2na asta",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sec} other {sec}} săptăm\xe2na asta",
       };
     },
   },

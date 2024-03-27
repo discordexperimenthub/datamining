@@ -171,7 +171,9 @@
         PAGINATION_PAGE_LABEL: "Sivu {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Sivu {pageNumber}",
         MUTE: "Mykist\xe4",
+        MUTE_ALT: "Kytke mikrofoni pois p\xe4\xe4lt\xe4",
         UNMUTE: "Poista mykistys",
+        UNMUTE_ALT: "Kytke mikrofoni p\xe4\xe4lle",
         DEAFEN: "Hiljenn\xe4",
         UNDEAFEN: "Poista hiljennys",
         SEARCH: "Hae",
@@ -1291,6 +1293,8 @@
           "T\xe4m\xe4 sovellus ei ole Discordin valmistama. Testaa vain sellaisten kehitt\xe4jien sovelluksia, joihin luotat.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Lis\xe4tietoja yksityisist\xe4 sovelluksista.",
+        APPLICATION_ICON_A11Y_LABEL: "Sovelluksen {applicationName} kuvake",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Sovelluksen kuvake",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) aloitti toiminnan",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4940,8 +4944,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Ota n\xe4pp\xe4inkomento k\xe4ytt\xf6\xf6n tai poista se k\xe4yt\xf6st\xe4",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Tulokset",
+        SHOW_CURRENT_ACTIVITY: "Jaa toimintasi muiden kanssa.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord p\xe4ivitt\xe4\xe4 tilasi automaattisesti, jos olet mukana julkisessa esityksess\xe4.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Kun harjoitat jotakin tunnistettavaa toimintaa (esimerkiksi pelaat peli\xe4 tai kuuntelet musiikkia), Discord voi n\xe4ytt\xe4\xe4 toimintaasi koskevia tietoja, esimerkiksi toiminnan ajankohdan ja tavan.",
         GAME_DETECTION_SERVICE: "Pelintunnistuspalvelu",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Asennussijainnit",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Lis\xe4\xe4 asennussijainti",
@@ -5264,6 +5271,7 @@
         SUB_ENABLED_SERVERS: "Tilaajille k\xe4yt\xf6ss\xe4 olevat palvelimet",
         AUTHORIZATION: "Tunnistautuminen",
         AUTHORIZED_APPS: "Valtuutetut sovellukset",
+        MANAGE_AUTHORIZED_APP: "Hallinnoi valtuutettua sovellusta",
         DEAUTHORIZE: "Poista valtuutus",
         DEAUTHORIZE_APP: "Poista sovelluksen valtuutus",
         ABOUT_THIS_APP: "Tietoa t\xe4st\xe4 sovelluksesta",
@@ -6552,7 +6560,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Valitse palvelin",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "T\xe4m\xe4 edellytt\xe4\xe4, ett\xe4 sinulla on **hallintaoikeudet** palvelimelle.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Kokeile sit\xe4 nyt",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "K\xe4yt\xe4 t\xe4t\xe4 sovellusta kaikkialla!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Lis\xe4\xe4 palvelimelle",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Mukauta palvelintasi lis\xe4\xe4m\xe4ll\xe4 t\xe4m\xe4 sovellus",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "T\xe4t\xe4 sovellusta voi k\xe4ytt\xe4\xe4 kaikkialla Discordissa. Beetan aikana vastaukset n\xe4kyv\xe4t vain sinulle palvelimilla, joilla on yli {betaUserLimit} henkil\xf6\xe4. [Lis\xe4tietoja]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Virheellinen pyynt\xf6. Parametri **{param}** puuttuu",
         OAUTH2_REQUEST_INVALID_SCOPE: "Virheellinen laajuus **{scope}**",
@@ -6601,6 +6616,7 @@
           "Muodosta puhekanavayhteys puolestasi ja n\xe4e kaikki puhekanavalla tai puhelussa olevat",
         SCOPE_DM_CHANNELS_READ:
           "N\xe4e tiedot yksityis- ja ryhm\xe4viesteist\xe4si",
+        SCOPE_DM_YOU: "Yksityisviestien l\xe4hetys sinulle",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "P\xe4ivit\xe4 yhteytesi ja metatietosi t\xe4lle sovellukselle",
         SCOPE_WEBHOOK_INCOMING: "Webhookin lis\xe4\xe4minen kanavalle",
@@ -6952,11 +6968,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Est\xe4 automaattisesti yksityisviestit, joissa on mahdollisesti arveluttavia kuvia. [Lis\xe4tietoja t\xe4st\xe4 asetuksesta on t\xe4\xe4ll\xe4]({appealLink}).",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Salli kaverien liitty\xe4 peliisi.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "T\xe4ll\xe4 asetuksella voit sallia kavereidesi liittymisen peliisi ilman kutsua.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Salli puhekanavan osallistujien liitty\xe4 peliisi.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "T\xe4ll\xe4 asetuksella voit sallia kanssasi samalla puhekanavalla olevien henkil\xf6iden liittymisen peliisi ilman kutsua. T\xe4m\xe4 ominaisuus toimii vain palvelimilla, jotka eiv\xe4t ole yhteis\xf6palvelimia.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -7014,6 +7027,12 @@
         DATA_PRIVACY_CONTROLS: "Kuinka k\xe4yt\xe4mme tietojasi",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Datan k\xe4ytt\xf6 Discordin parantamiseen",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "T\xe4t\xe4 asetusta k\xe4ytett\xe4ess\xe4 voimme k\xe4ytt\xe4\xe4 ja k\xe4sitell\xe4 tietojasi, jotta voimme ymm\xe4rt\xe4\xe4 palvelujamme paremmin ja parantaa niit\xe4. [Katso lis\xe4tietoja t\xe4\xe4lt\xe4.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Discord-k\xe4ytt\xf6kokemuksen mukautus datan perusteella",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "T\xe4t\xe4 asetusta k\xe4ytett\xe4ess\xe4 voimme k\xe4ytt\xe4\xe4 tietoja esimerkiksi keskustelukumppaneistasi ja pelaamistasi peleist\xe4 ja mukauttaa Discordia niiden perusteella sinua varten. [Katso lis\xe4tietoja t\xe4\xe4lt\xe4.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Datan k\xe4ytt\xf6 Discordin yll\xe4pit\xe4miseen",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7050,9 +7069,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Salli yksityisviestit palvelimen j\xe4senilt\xe4",
         USER_DROPS_SETTINGS: "Promoasetukset",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Pelinsis\xe4iset palkinnot (eli teht\xe4v\xe4t)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Tietoja tavastasi k\xe4ytt\xe4\xe4 Discordia, kuten tietoja pelaamistasi peleist\xe4, voidaan k\xe4ytt\xe4\xe4, jotta sinulle voidaan kertoa teht\xe4vist\xe4 tai muista pelinsis\xe4isist\xe4 palkinnonsaantimahdollisuuksista. [Katso lis\xe4tietoja t\xe4\xe4lt\xe4.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Palvelimen tietoturva",
         USER_DM_SETTINGS_DESCRIPTION:
           "Haluatko t\xe4m\xe4n muutoksen vaikuttavan my\xf6s kaikkiin olemassa oleviin palvelimiisi? Voit poistaa yksityisviestipyynn\xf6t k\xe4yt\xf6st\xe4 yksitt\xe4iselt\xe4 palvelimelta palvelinkohtaisella asetussivulla.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Teht\xe4v\xe4t ovat t\xe4ll\xe4 hetkell\xe4 beetavaiheessa – haluaisimme lis\xe4tietoja siit\xe4, miksi poistit ne k\xe4yt\xf6st\xe4. [Palautekysely]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Teht\xe4v\xe4t ovat t\xe4ll\xe4 hetkell\xe4 beetavaiheessa – kiitos niiden k\xe4ytt\xe4misest\xe4! Kuulisimme mielell\xe4mme, mit\xe4 mielt\xe4 olet t\xe4st\xe4 ominaisuudesta. [Palautekysely]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Etsit varmasti Discord-teht\xe4vi\xe4! Jos n\xe4et t\xe4m\xe4n viestin, joitakin asetuksiasi on muutettava. Jos haluat ottaa sen k\xe4ytt\xf6\xf6n, valitse Asetukset -> Yksityisyys ja turvallisuus ja ota sek\xe4 Datan k\xe4ytt\xf6 Discord-kokemuksen mukauttamiseen- ett\xe4 Pelinsis\xe4iset palkinnot (eli teht\xe4v\xe4t) ‑asetus k\xe4ytt\xf6\xf6n.\n\n[Katso lis\xe4tietoja usein kysytyist\xe4 kysymyksist\xe4mme]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Rekister\xf6idy nyt",
@@ -9652,7 +9679,7 @@
           "S\xe4\xe4st\xe4 !!{percent, number}!! % Nitrosta",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "S\xe4\xe4st\xe4 Nitrosta",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Maksat vain **{discountedPrice}** **{numMonths, plural, one {kuukauden ajan!} other {{numMonths} kuukauden ajan!}}** Sen j\xe4lkeen hinta on {regularPrice}.",
+          "Maksa vain **{discountedPrice}** **{numMonths, plural, one {1 kuukauden ajan!} other {{numMonths} kuukauden ajan!}}** Sen j\xe4lkeen hinta on {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!\xa0%:n alennuksesi p\xe4\xe4ttyy {numMonths, plural, one {kuukausi} other {{numMonths} kuukautta}} oston j\xe4lkeen. T\xe4m\xe4n j\xe4lkeen sinulta veloitetaan {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10385,6 +10412,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Nykyinen tilaus",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Uuden tilauksen summa",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} peruttu",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "T\xe4h\xe4n muutokseen sis\xe4ltyy arvonsiirtoja, alennuksia, sovellettavia veroja ja hyvityksi\xe4.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Miksi t\xe4m\xe4 n\xe4kyy minulle?**\n\nOlet ostamassa tilausmallin muutoksen. Palvelimen nostatukset p\xe4ivitet\xe4\xe4n sen mukaisesti.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -11102,7 +11131,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Maksa Nitrosta vain **{discountedPrice}** kuukaudessa ensimm\xe4isen **3 kuukauden** ajan! Kolmen kuukauden alennuskauden j\xe4lkeen maksat {regularPrice} kuukaudessa.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Maksa Nitrosta vain **{discountedPrice}** kuukaudessa ensimm\xe4isen **{numMonths, plural, one {kuukauden} other {{numMonths} kuukauden}}** ajan. Alennuskauden j\xe4lkeen maksat {regularPrice} kuukaudessa.",
+          "Nitron kuukausitilauksen {numMonths, plural, one {ensimm\xe4isen kuukauden} other {ensimm\xe4isten {numMonths} kuukauden}} kuukausihinta {numMonths, plural, one {on} other {on}} **{discountedPrice}**. Kuukausihinta alennusjakson j\xe4lkeen on {regularPrice}",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}\xa0/\xa0kk kolmen kuukauden ajan\n\n{regularPrice}\xa0/\xa0kuukausi kolmen kuukauden j\xe4lkeen",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -11142,6 +11171,8 @@
           "Olemme l\xe4hett\xe4neet s\xe4hk\xf6postiisi viestin. Valtuuta ostos napsauttamalla siin\xe4 olevaa linkki\xe4.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Jatka",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Etk\xf6 saanut mit\xe4\xe4n?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "L\xe4het\xe4 s\xe4hk\xf6posti uudelleen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13582,8 +13613,14 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Voit my\xf6s [pist\xe4\xe4 pystyyn oman palvelimesi](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Valitan",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Poistetaanko datan k\xe4ytt\xf6 Discordin parantamiseen k\xe4yt\xf6st\xe4?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Jos poistat t\xe4m\xe4n k\xe4yt\xf6st\xe4, lopetamme uusien tietojesi k\xe4sittelyn analyysitarkoituksessa. Menet\xe4t p\xe4\xe4syn uusiin kokeellisiin toimintoihin ja puhekeskustelun kaltaisten toimintojen k\xe4ytt\xf6pohjaisiin parannuksiin. Jos haluat k\xe4ytt\xe4\xe4 muita tietojesi k\xe4sittelyyn liittyvi\xe4 oikeuksiasi, l\xe4het\xe4 s\xe4hk\xf6postia osoitteeseen privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Kyll\xe4, haluan niin",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ei, vie minut takaisin!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE:
+          "Poistetaanko mukautus k\xe4yt\xf6st\xe4?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Poistamalla t\xe4m\xe4n k\xe4yt\xf6st\xe4 menet\xe4t p\xe4\xe4syn mukautettujen ehdotusten kaltaisiin toimintoihin. Et voi saada niit\xe4 takaisin my\xf6hemmin!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Kyll\xe4, haluan niin",
@@ -13921,19 +13958,34 @@
           "{count, plural, =0 {0 yhteist\xe4 kaveria} one {1 yhteinen kaveri} other {{count} yhteist\xe4 kaveria}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 yhteist\xe4 palvelinta} one {1 yhteinen palvelin} other {{count} yhteist\xe4 palvelinta}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 kaveria} one {1 kaveri} other {{count} kaveria}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 palvelinta} one {1 palvelin} other {{count} palvelinta}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** kaverina",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "**{usernameOne}** ja **{usernameTwo}** kavereina",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "**{usernameOne}**, **{usernameTwo}** ja **{count} muuta kavereina**",
+          "**{usernameOne}**, **{usernameTwo}** ja {count} muuta kavereina",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "**{usernameOne}** ja {count} muuta kaverina",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0 henkil\xf6\xe4} one {1 henkil\xf6} other {{count} henkil\xf6\xe4}} kaverina",
         USER_PROFILE_MUTUAL_GUILDS_ONE:
           "j\xe4senen\xe4 palvelimella **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "j\xe4senen\xe4 palvelimilla **{guildNameOne}** ja **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "j\xe4senen\xe4 palvelimilla **{guildNameOne}** ja **{guildNameTwo}** sek\xe4 **{count} muussa**",
+          "j\xe4senen\xe4 palvelimilla **{guildNameOne}** ja **{guildNameTwo}** sek\xe4 {count} muussa",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "j\xe4senen\xe4 {count, plural, =0 {0 palvelimella} one {1 palvelimella} other {{count} palvelimella}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Yhteiset kaverit",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Yhteiset palvelimet",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP:
+          "N\xe4yt\xe4 kaikki yhteiset kaverit",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP:
+          "N\xe4yt\xe4 kaikki yhteiset palvelimet",
+        USER_PROFILE_MUTUALS_TITLE: "Yhteiset",
         PROFILE_IN_VOICE_CALL: "Puhelu k\xe4ynniss\xe4",
         PROFILE_OPEN_VOICE_CHANNEL: "Avaa puhekanava",
         IOS_PROFILE_IN_VOICE_CALL: "Puhelu k\xe4ynniss\xe4",
@@ -14079,6 +14131,10 @@
           "Anna {nitroTierName} lahjaksi {count, plural, one {# kuukaudeksi} other {# kuukaudeksi}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Anna {nitroTierName} lahjaksi {count, plural, one {# vuodeksi} other {# vuodeksi}}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Lahjoita {nitroTierName} k\xe4ytt\xe4j\xe4lle {username} {count, plural, one {# kuukaudeksi} other {# kuukaudeksi}}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Lahjoita {nitroTierName} k\xe4ytt\xe4j\xe4lle {username}{count, plural, one {# vuodeksi} other {# vuodeksi}}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Valitsemalla ”Osta lahja” hyv\xe4ksyt [maksullisten palvelujen ehdot]({paidURL}). T\xe4m\xe4 on valitsemasi keston mukainen kertaveloitus.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Lahjasi on matkalla!",
@@ -14940,8 +14996,18 @@
           "Tyhjennet\xe4\xe4nk\xf6 viesti?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Olet n\xe4ht\xe4v\xe4sti kirjoittanut jo jotain. Haluatko tyhjent\xe4\xe4 sen ja k\xe4ytt\xe4\xe4 komentoa?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Voit k\xe4ytt\xe4\xe4 t\xe4t\xe4 sovellusta kaikkialla Discordissa. Vastaukset n\xe4kyv\xe4t vain sinulle palvelimilla, joilla on yli{betaUserLimit} henkil\xf6\xe4.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Sovellus vastaa sinulle yksityisesti",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "T\xe4m\xe4 viesti n\xe4kyy vain sinulle beetavaiheen aikana.\n\n[Miksi n\xe4en t\xe4m\xe4n?]({learnMoreUrl}) • [Hylk\xe4\xe4](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "T\xe4m\xe4 viesti n\xe4kyy vain sinulle beetavaiheen aikana • [Hylk\xe4\xe4](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "N\xe4yt\xe4 ohjeartikkeli",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Lis\xe4tietoja]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "K\xe4yt\xe4 Midjourneyta kirjoittamalla ”$[komento](commandHook)”. Vinkki: Luo palvelin, jossa voit kokeilla sit\xe4 kavereiden kesken.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17829,6 +17895,8 @@
           "Unohdetaan koko juttu, pid\xe4n Nitron",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Unohdetaan koko juttu, pid\xe4n Nitron",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Jos peruutat, menet\xe4t edistymisesi palkinnossa sek\xe4 kaikki seuraavat palkinnot:",
         PREMIUM_PAUSE_INSTEAD: "Keskeyt\xe4 sen sijaan",
         PREMIUM_PAUSE_SELECT_TITLE: "Keskeyt\xe4 tai peruuta tilaus",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19556,6 +19624,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "juuri nyt",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {min}} sitten",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {t} other {t}} t\xe4ll\xe4 viikolla",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {p\xe4iv\xe4} other {p\xe4iv\xe4\xe4}} sitten",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19652,6 +19722,8 @@
           "Toiminnon alkuun pannut j\xe4sen",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE:
           "Valvonnan k\xe4ytt\xf6oikeudet",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Etsi k\xe4ytt\xf6oikeuksien nimi\xe4, luokkia tai kuvauksia...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Kaikki ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# rooli} other {# roolia}}",
@@ -19660,7 +19732,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Ei valvonnan k\xe4ytt\xf6oikeuksia",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "My\xf6nt\xe4j\xe4",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Korotetut) My\xf6nt\xe4j\xe4",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Korotetut",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Valvoja",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Korotetut k\xe4ytt\xf6oikeudet antavat korkeamman tason k\xe4ytt\xf6oikeudet palvelinasetuksiin, joten niit\xe4 on syyt\xe4 my\xf6nt\xe4\xe4 vain eritt\xe4in luotetuille valvojille.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "N\xe4iden roolien antamat k\xe4ytt\xf6oikeudet",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Korkeimman tason rooli",
@@ -22382,6 +22459,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "N\xe4yt\xe4 kaikki",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "L\xe4het\xe4 lahja",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Arvioi lahjasi",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Shoppaile miss\xe4 ja milloin tahansa",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Mukauta profiiliasi ostamalla avatar-koristeita ja profiilitehosteita.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Suosittuja tyylej\xe4 ovat Anime, Fantasia, Kyberpunk ja monet muut.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro-j\xe4senet saavat alennusta kaupan kaikista tuotteista.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Henkil\xf6st\xf6n valinnat",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Pelaaminen",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie-esittely",
@@ -24103,6 +24188,8 @@
           "Discord ottaa teinien turvallisuuden vakavissaan. Ilmoitamme sinulle, jos havaitsemme mahdollisen turvallisuusriskin keskustelussa. [Katso lis\xe4tietoja turvallisuush\xe4lytyksist\xe4.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Siirry asetuksiin",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Sulje",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Olemmeko tehneet virheen? $[Kerro meille](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Kiitos palautteesta!",
         STRANGER_DANGER_BANNER_BLOCK: "Est\xe4",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Sulje",
@@ -24314,6 +24401,8 @@
         POLL_COACHMARK_TITLE: "UUTTA! Kyselyt ovat t\xe4\xe4ll\xe4.",
         POLL_COACHMARK_SUBTITLE:
           "Suunnittele tapahtumia, kartoita mielipiteet tai esit\xe4 vain hassu kysymys chatissa.",
+        POLL_COACHMARK_CTA: "K\xe4ynnist\xe4 kysely heti!",
+        POLL_COACHMARK_DISMISS: "Ehk\xe4 my\xf6hemmin.",
         POLL_NOT_INTERACTIVE:
           "K\xe4sittelem\xe4ll\xe4 katsomalla alkuper\xe4inen viesti",
         POLL_NO_VOTES_FOR_ANSWER_TITLE:
@@ -24423,6 +24512,7 @@
         QUESTS: "Teht\xe4v\xe4t",
         QUEST: "Teht\xe4v\xe4: {questName}",
         QUESTS_SEE_CODE: "Katso koodi",
+        QUESTS_CLAIM_REWARD: "Lunasta palkinto",
         QUESTS_ACCEPT: "Hyv\xe4ksy teht\xe4v\xe4",
         QUESTS_COMPLETE_TOOLTIP: "Hanki palkintokoodisi valitsemalla lunastus!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24437,13 +24527,25 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Vahvistuss\xe4hk\xf6postin l\xe4hett\xe4minen ep\xe4onnistui.",
         QUEST_REWARD: "Voita {reward}",
+        QUEST_REWARD_COMPLETED: "Avasit palkinnon {reward} {date}",
+        QUESTS_REWARD_CODE_HEADER: "Palkintokoodisi",
         QUESTS_REWARD_CODE_CONGRATS: "Onnittelut!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Mik\xe4 on ensisijainen j\xe4rjestelm\xe4si?",
         QUESTS_REWARD_CODE_ERROR:
           "Jokin meni pieleen. Yrit\xe4 uudelleen my\xf6hemmin",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Valitse j\xe4rjestelm\xe4",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
+          "Valitse j\xe4rjestelm\xe4",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Luomme palkintosi {rewardName} lunastamista varten j\xe4rjestelm\xe4kohtaisen koodin. **Et voi muuttaa en\xe4\xe4 valintaasi, kun olet valinnut Hanki koodi.**",
         QUESTS_REWARD_CODE_DONE: "Valmis",
+        QUESTS_REWARD_CODE_GET_CODE: "Hanki koodi",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Yrit\xe4 uudelleen",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER:
+          "Lunasta t\xe4m\xe4",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
+          "Olet lunastanut t\xe4m\xe4n",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Eri j\xe4rjestelmien v\xe4linen",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -24452,11 +24554,14 @@
         QUESTS_SPONSORED: "Sponsoroitu",
         QUESTS_PROMOTED: "Tuettu",
         QUESTS_LEARN_MORE_V2: "Lue lis\xe4\xe4",
+        QUESTS_LEARN_MORE_STACKED: "Lue\n\nlis\xe4\xe4",
+        QUESTS_LEARN_MORE_LINK: "[Lis\xe4tietoja]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Hyv\xe4ksy teht\xe4v\xe4",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Striimaa peli\xe4 {gameTitle} kaverille {streamingDurationRequirement, number} minuutin ajan, niin {questReward} on sinun.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Teht\xe4v\xe4 hyv\xe4ksytty!** Striimaa peli\xe4 {gameTitle} kaverille {streamingDurationRequirement, number} minuutin ajan, niin {questReward} on sinun.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Seuraa edistymist\xe4si",
         QUESTS_TITLE: "Teht\xe4v\xe4: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hups",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24467,6 +24572,8 @@
           "Voit ottaa teht\xe4vi\xe4 vastaan Discordin ty\xf6p\xf6yt\xe4- tai selainsovelluksessa \nvalitsemalla K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo.",
         QUESTS_GET_THIS_GAME: "Hanki peli",
         QUESTS_DISCLOSURE_LABEL: "Miksi n\xe4en t\xe4m\xe4n?",
+        QUESTS_SHARE_LINK: "Kopioi jakolinkki",
+        QUESTS_HIDE_THIS: "Piilota t\xe4m\xe4",
         QUESTS_FIND_QUEST:
           "Voit palata t\xe4nne uudelleen valitsemalla K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo",
         QUESTS_CLAIM_BY: "Lunasta {expirationDate} menness\xe4.",
@@ -24508,6 +24615,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ja {count, plural, one {1 muu} other {{count} muuta}}",
         STOREFRONT: "Kauppa",
+        STOREFRONT_TITLE: "Sovelluksen {appName} kauppa",
         STOREFRONT_APP_SUBSCRIPTIONS: "Tilaukset",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Osta tilauksia sovelluksessa {appName}",
@@ -24577,16 +24685,35 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}.}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Ensimm\xe4inen kerta",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA:
+          "Katsoi nimikkeen **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} katsoi nimikkeen **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Toiminta",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Asia ymm\xe4rretty!",
+        RECENT_GAMES: "Viimeaikaiset pelit",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {viikko} other {viikkoa}} sitten",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {p\xe4iv\xe4} other {p\xe4iv\xe4\xe4}} sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {tunti} other {tuntia}} sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minuutti} other {minuuttia}} sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {sekunti} other {sekuntia}} siten",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0vko sitten",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT:
           "{count} p\xe4iv\xe4\xe4 sitten",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} t sitten",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min sitten",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}\xa0s sitten",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {t} other {t}} t\xe4ll\xe4 viikolla",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} t\xe4ll\xe4 viikolla",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {s} other {s}} t\xe4ll\xe4 viikolla",
       };
     },
   },

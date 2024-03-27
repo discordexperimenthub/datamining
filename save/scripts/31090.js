@@ -174,7 +174,9 @@
         PAGINATION_PAGE_LABEL: "Trang {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Trang tr\xecnh chiếu {pageNumber}",
         MUTE: "Tắt \xe2m",
+        MUTE_ALT: "Tắt Micro",
         UNMUTE: "Bỏ tắt \xe2m",
+        UNMUTE_ALT: "Bật Micro",
         DEAFEN: "Tắt tiếng",
         UNDEAFEN: "Bỏ tắt tiếng",
         SEARCH: "Tìm ki\xeám",
@@ -1305,6 +1307,9 @@
           "Ứng dụng n\xe0y kh\xf4ng phải l\xe0 sản phẩm của Discord. Chỉ thử nghiệm những ứng dụng từ nh\xe0 ph\xe1t triển m\xe0 bạn tin tưởng.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "T\xecm hiểu th\xeam về c\xe1c ứng dụng c\xe1 nh\xe2n.",
+        APPLICATION_ICON_A11Y_LABEL:
+          "Biểu tượng ứng dụng cho {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Biểu tượng ứng dụng",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) đ\xe3 bắt đầu một hoạt động",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4966,8 +4971,11 @@
           "Chọn k\xeanh thoại để tham gia hoặc chuyển sang",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Bật hoặc tắt ph\xedm n\xf3ng",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Kết quả",
+        SHOW_CURRENT_ACTIVITY: "Chia sẻ hoạt động của bạn với người kh\xe1c.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord sẽ tự động cập nhật trạng th\xe1i của bạn nếu bạn đang tham gia S\xe2n khấu c\xf4ng khai.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Khi bạn tương t\xe1c với một hoạt động c\xf3 thể ph\xe1t hiện (v\xed dụ như chơi game hoặc nghe nhạc), Discord c\xf3 thể hiển thị th\xf4ng tin về những hoạt động n\xe0y, bao gồm cả thời gian v\xe0 c\xe1ch thức bạn tương t\xe1c.",
         GAME_DETECTION_SERVICE: "Dịch Vụ T\xecm Tr\xf2 Chơi",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Thư mục c\xe0i đặt",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Th\xeam Thư Mục C\xe0i Đặt",
@@ -5295,6 +5303,7 @@
         SUB_ENABLED_SERVERS: "M\xe1y Chủ Cho Ph\xe9p Theo D\xf5i",
         AUTHORIZATION: "Cho Ph\xe9p",
         AUTHORIZED_APPS: "Ứng Dụng Được Cho Ph\xe9p",
+        MANAGE_AUTHORIZED_APP: "Quản l\xfd ứng dụng được ph\xea duyệt",
         DEAUTHORIZE: "X\xf3a cho ph\xe9p",
         DEAUTHORIZE_APP: "X\xf3a Cho Ph\xe9p Của Ứng Dụng",
         ABOUT_THIS_APP: "Giới Thiệu Về Ứng Dụng N\xe0y",
@@ -6579,7 +6588,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Chọn m\xe1y chủ",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Thao t\xe1c n\xe0y y\xeau cầu bạn phải c\xf3 quyền **Quản L\xfd M\xe1y Chủ** của m\xe1y chủ n\xe0y.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Thử Ngay",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "D\xf9ng ứng dụng n\xe0y ở mọi nơi!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Th\xeam v\xe0o M\xe1y Chủ",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "T\xf9y chỉnh m\xe1y chủ của bạn bằng c\xe1ch th\xeam ứng dụng n\xe0y",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Ứng dụng n\xe0y c\xf3 thể được d\xf9ng ở mọi nơi tr\xean Discord. Trong thời gian beta, phản hồi sẽ chỉ hiển thị với bạn trong những m\xe1y chủ c\xf3 nhiều hơn {betaUserLimit} người. [T\xecm hiểu th\xeam]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Y\xeau cầu kh\xf4ng hợp lệ. Thiếu th\xf4ng số **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Phạm vi kh\xf4ng hợp lệ **{scope}**",
@@ -6628,6 +6644,7 @@
           "Thay mặt bạn kết nối \xe2m thanh v\xe0 xem những người đang tham gia k\xeanh thoại hoặc cuộc gọi bất kỳ",
         SCOPE_DM_CHANNELS_READ:
           "Xem th\xf4ng tin về DM v\xe0 GDM m\xe0 bạn đang tham gia",
+        SCOPE_DM_YOU: "Gửi bạn tin nhắn trực tiếp",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Cập nhật kết nối v\xe0 si\xeau dữ liệu của bạn cho ứng dụng n\xe0y",
         SCOPE_WEBHOOK_INCOMING: "Th\xeam webhook v\xe0o k\xeanh",
@@ -6984,12 +7001,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Tự động chặn c\xe1c tin nhắn trực tiếp c\xf3 khả năng chứa c\xe1c h\xecnh ảnh nhạy cảm. [T\xecm hiểu th\xeam về c\xe0i đặt n\xe0y tại đ\xe2y.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Cho ph\xe9p bạn b\xe8 tham gia v\xe0o tr\xf2 chơi của bạn.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "C\xe0i đặt n\xe0y cho ph\xe9p bạn b\xe8 tham gia v\xe0o tr\xf2 chơi của bạn m\xe0 kh\xf4ng cần phải gửi y\xeau cầu xin v\xe0o.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Cho ph\xe9p th\xe0nh vi\xean trong k\xeanh thoại tham gia v\xe0o tr\xf2 chơi của bạn.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "C\xe0i đặt n\xe0y cho ph\xe9p những người đang ở trong c\xf9ng một k\xeanh thoại với bạn tham gia v\xe0o tr\xf2 chơi của bạn m\xe0 kh\xf4ng cần phải gửi y\xeau cầu xin v\xe0o. T\xednh năng n\xe0y chỉ \xe1p dụng cho m\xe1y chủ kh\xf4ng phải m\xe1y chủ cộng đồng.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -7049,6 +7062,12 @@
           "C\xe1ch ch\xfang t\xf4i sử dụng dữ liệu của bạn",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Sử dụng dữ liệu để cải thiện Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "C\xe0i đặt n\xe0y cho ph\xe9p ch\xfang t\xf4i sử dụng v\xe0 xử l\xfd th\xf4ng tin của bạn để hiểu v\xe0 cải thiện sản phẩm của ch\xfang t\xf4i. [T\xecm hiểu th\xeam về c\xe0i đặt n\xe0y tại đ\xe2y.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Sử dụng dữ liệu để c\xe1 nh\xe2n h\xf3a trải nghiệm Discord",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "C\xe0i đặt n\xe0y cho ph\xe9p ch\xfang t\xf4i sử dụng c\xe1c th\xf4ng tin, v\xed dụ như người m\xe0 bạn n\xf3i chuyện hay tr\xf2 chơi m\xe0 bạn chơi, để c\xe1 nh\xe2n h\xf3a Discord cho bạn. [T\xecm hiểu th\xeam về c\xe0i đặt n\xe0y tại đ\xe2y.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Sử dụng dữ liệu để cải thiện Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7087,9 +7106,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Cho ph\xe9p th\xe0nh vi\xean trong m\xe1y chủ gửi tin nhắn trực tiếp",
         USER_DROPS_SETTINGS: "C\xe0i đặt quảng b\xe1",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Phần thưởng trong tr\xf2 chơi (hay c\xf2n gọi l\xe0 Nhiệm Vụ)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Sử dụng th\xf4ng tin về c\xe1ch bạn sử dụng Discord như những tr\xf2 chơi m\xe0 bạn chơi để th\xf4ng b\xe1o cho bạn về Nhiệm Vụ hoặc c\xe1c cơ hội nhận thưởng kh\xe1c trong tr\xf2 chơi. [T\xecm hiểu th\xeam về c\xe0i đặt n\xe0y tại đ\xe2y.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Bảo Mật M\xe1y Chủ",
         USER_DM_SETTINGS_DESCRIPTION:
           "Bạn c\xf3 muốn \xe1p dụng thay đổi n\xe0y cho tất cả c\xe1c m\xe1y chủ hiện tại của m\xecnh kh\xf4ng? Bạn cũng c\xf3 thể tắt tin nhắn trực tiếp cho từng m\xe1y chủ bằng c\xe1ch truy cập v\xe0o trang c\xe0i đặt của m\xe1y chủ đ\xf3.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Nhiệm Vụ hiện vẫn đang trong giai đoạn thử nghiệm - ch\xfang t\xf4i muốn hiểu r\xf5 hơn về nguy\xean do khiến bạn lại tắt t\xednh năng n\xe0y. [Khảo S\xe1t Phản Hồi]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Nhiệm Vụ hiện vẫn đang trong giai đoạn thử nghiệm, cảm ơn bạn đ\xe3 tham gia, hiện tại ch\xfang t\xf4i muốn nghe \xfd kiến của bạn. [Khảo S\xe1t Phản Hồi]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'C\xf3 vẻ bạn đang t\xecm kiếm Nhiệm Vụ Discord! Nếu bạn thấy tin nhắn n\xe0y th\xec ch\xfang ta sẽ cần phải t\xf9y chỉnh c\xe0i đặt một ch\xfat đấy. Để bật t\xednh năng n\xe0y, bạn sẽ phải tới C\xe0i đặt -> Bảo Mật & An To\xe0n v\xe0 bật cả hai c\xe0i đặt "Sử dụng dữ liệu để t\xf9y chỉnh trải nghiệm Discord" v\xe0 "Phần thưởng trong game (c\xf2n gọi l\xe0 Nhiệm Vụ)".\n\n[Đọc th\xeam tại FAQ của ch\xfang t\xf4i]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Đăng K\xfd Ngay",
@@ -9718,7 +9745,7 @@
         PREMIUM_DISCOUNT_CTA: "Mua Nitro rẻ hơn !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Mua Nitro rẻ hơn",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Chỉ trả **{discountedPrice}** cho **{numMonths, plural, one {một th\xe1ng!} other {{numMonths} th\xe1ng!}}** Sau đ\xf3 l\xe0 {regularPrice}.",
+          "Chỉ trả **{discountedPrice}** cho **{numMonths, plural, one {1 th\xe1ng!} other {{numMonths} th\xe1ng!}}** Sau đ\xf3 mức gi\xe1 sẽ l\xe0 {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Ưu đ\xe3i !!{percent, number}!!% của bạn sẽ kết th\xfac {numMonths, plural, one {1 th\xe1ng} other {{numMonths} th\xe1ng}} sau khi mua. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10458,6 +10485,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "G\xf3i Đăng K\xfd Hiện Tại",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Tổng G\xf3i Đăng K\xfd Mới",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Đ\xe3 hủy bỏ {planName}",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Điều chỉnh n\xe0y bao gồm c\xe1c khoản chia tỉ lệ, chiết khấu, thuế \xe1p dụng v\xe0 ho\xe0n tiền.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Sao t\xf4i lại thấy c\xe1i n\xe0y thế?**\n\nBạn đang thay đổi g\xf3i đăng k\xfd. N\xe2ng Cấp M\xe1y Chủ của bạn hiện đang được cập nhật tương ứng.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -11180,7 +11209,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Chỉ trả **{discountedPrice}** mỗi th\xe1ng trong **3 th\xe1ng** đăng k\xfd Nitro đầu ti\xean. Trả {regularPrice} mỗi th\xe1ng sau khi 3 th\xe1ng ưu đ\xe3i kết th\xfac.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Chỉ trả **{discountedPrice}** mỗi th\xe1ng trong **{numMonths, plural, one {th\xe1ng} other {{numMonths} th\xe1ng}}** cho g\xf3i đăng k\xfd Nitro đầu ti\xean. Trả {regularPrice} mỗi th\xe1ng sau khi ưu đ\xe3i kết th\xfac.",
+          "{numMonths, plural, one {Th\xe1ng} other {{numMonths} th\xe1ng}} đầu trong g\xf3i Nitro h\xe0ng th\xe1ng của bạn {numMonths, plural, one {sẽ c\xf3 gi\xe1} other {sẽ c\xf3 gi\xe1}} **{discountedPrice}**. Sau khi ưu đ\xe3i kết th\xfac, mức gi\xe1 phải trả l\xe0 {regularPrice}/th\xe1ng",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/th\xe1ng trong 3 th\xe1ng\n\n{regularPrice}/th\xe1ng sau 3 th\xe1ng",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -11222,6 +11251,8 @@
           "Ch\xfang t\xf4i vừa gửi cho bạn một email. Nhấp v\xe0o li\xean kết x\xe1c thực trong email để ph\xea duyệt thao t\xe1c mua h\xe0ng.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Tiếp tục",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Kh\xf4ng nhận được g\xec sao?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Gửi lại email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13693,8 +13724,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Bạn cũng c\xf3 thể [tạo m\xe1y chủ cho ri\xeang m\xecnh](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Xin lỗi về điều đ\xf3",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Tắt sử dụng dữ liệu để cải thiện Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Nếu bạn tắt t\xednh năng n\xe0y, ch\xfang t\xf4i sẽ dừng xử l\xfd dữ liệu mới trong việc ph\xe2n t\xedch. Bạn sẽ mất quyền truy cập v\xe0o c\xe1c t\xednh năng thử nghiệm mới v\xe0 c\xe1c cải tiến dựa tr\xean mức độ sử dụng c\xe1c t\xednh năng như tr\xf2 chuyện thoại. Nếu bạn muốn phản đối việc ch\xfang t\xf4i xử l\xfd dữ liệu của bạn, h\xe3y gửi email tới privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "V\xe2ng t\xf4i chắc chắn",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Kh\xf4ng, đưa t\xf4i trở lại!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Tắt c\xe1 nh\xe2n h\xf3a?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Khi tắt t\xednh năng n\xe0y, bạn sẽ mất quyền truy cập v\xe0o những thứ như khuyến nghị c\xe1 nh\xe2n v\xe0 đề xuất. Bạn sẽ kh\xf4ng thể kh\xf4i phục ch\xfang trong tương lai!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "V\xe2ng t\xf4i chắc chắn",
@@ -14042,19 +14078,32 @@
           "{count, plural, =0 {0 Bạn Chung} one {1 Bạn Chung} other {{count} Bạn Chung}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 M\xe1y Chủ Chung} one {1 M\xe1y Chủ Chung} other {{count} M\xe1y Chủ Chung}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 bạn b\xe8} one {1 bạn b\xe8} other {{count} bạn b\xe8}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 m\xe1y chủ} one {1 m\xe1y chủ} other {{count} m\xe1y chủ}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "bạn b\xe8 với **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "bạn b\xe8 với **{usernameOne}** v\xe0 **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "bạn b\xe8 với **{usernameOne}**, **{usernameTwo}** v\xe0 **{count} người kh\xe1c**",
+          "bạn b\xe8 với **{usernameOne}**, **{usernameTwo}** v\xe0 {count} người kh\xe1c",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "bạn b\xe8 với **{usernameOne}** v\xe0 {count} người kh\xe1c",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "bạn b\xe8 với {count, plural, =0 {0 người} one {1 người} other {{count} người}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE:
           "th\xe0nh vi\xean của **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "th\xe0nh vi\xean của **{guildNameOne}** v\xe0 **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "th\xe0nh vi\xean của **{guildNameOne}**, **{guildNameTwo}** v\xe0 **{count} m\xe1y chủ kh\xe1c**",
+          "th\xe0nh vi\xean của **{guildNameOne}**, **{guildNameTwo}** v\xe0 {count} m\xe1y chủ kh\xe1c",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "th\xe0nh vi\xean của {count, plural, =0 {0 m\xe1y chủ} one {1 m\xe1y chủ} other {{count} m\xe1y chủ}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Bạn Chung",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "M\xe1y Chủ Chung",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Xem tất cả bạn chung",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Xem tất cả m\xe1y chủ chung",
+        USER_PROFILE_MUTUALS_TITLE: "Điểm chung",
         PROFILE_IN_VOICE_CALL: "Đang trong cuộc gọi thoại",
         PROFILE_OPEN_VOICE_CHANNEL: "Mở K\xeanh Thoại",
         IOS_PROFILE_IN_VOICE_CALL: "Đang trong cuộc gọi thoại",
@@ -14199,6 +14248,10 @@
           "Tặng {count, plural, one {# th\xe1ng} other {# th\xe1ng}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Tặng {count, plural, one {# năm} other {# năm}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Tặng {username} {count, plural, one {# th\xe1ng} other {# th\xe1ng}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Tặng {username} {count, plural, one {# năm} other {# năm}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Khi nhấn v\xe0o “Mua Qu\xe0”, bạn đồng \xfd với [Điều Khoản Dịch Vụ Trả Ph\xed.]({paidURL}) Đ\xe2y sẽ l\xe0 h\xecnh thức thanh to\xe1n một lần t\xf9y theo thời gian t\xf9y chọn.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER:
@@ -15062,7 +15115,17 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "X\xf3a tin nhắn?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "C\xf3 vẻ như bạn đ\xe3 viết một nội dung n\xe0o đ\xf3. Bạn c\xf3 muốn x\xf3a nội dung n\xe0y v\xe0 sử dụng một lệnh kh\xf4ng?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Bạn c\xf3 thể sử dụng ứng dụng n\xe0y ở mọi nơi tr\xean Discord. Phản hồi sẽ chỉ hiển thị với bạn trong những m\xe1y chủ c\xf3 nhiều hơn {betaUserLimit} người.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Ứng dụng sẽ phản hồi ri\xeang với bạn",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Chỉ một m\xecnh bạn mới c\xf3 thể xem tin nhắn n\xe0y trong thời gian beta.\n\n[Tại sao t\xf4i thấy nội dung n\xe0y?]({learnMoreUrl}) • [Bỏ qua](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Chỉ một m\xecnh bạn mới c\xf3 thể xem tin nhắn n\xe0y trong thời gian beta • [Bỏ qua](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "Xem Mục Hỗ Trợ",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[T\xecm hiểu th\xeam]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Nhập “$[command](commandHook)” để sử dụng Midjourney. Mẹo: Tạo một m\xe1y chủ để d\xf9ng thử t\xednh năng với bạn b\xe8.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "Xảy ra lỗi khi tải ứng dụng.",
@@ -17946,6 +18009,8 @@
           "Nếu hủy, **bạn sẽ mất những đặc quyền sau:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Bỏ qua, giữ lại g\xf3i Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Bỏ qua, giữ lại g\xf3i Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Nếu hủy bỏ, bạn sẽ mất tiến tr\xecnh phần thưởng của m\xecnh v\xe0 tất cả những phần thưởng sau:",
         PREMIUM_PAUSE_INSTEAD: "Chọn Tạm Dừng",
         PREMIUM_PAUSE_SELECT_TITLE: "Tạm dừng hoặc hủy bỏ đăng k\xfd",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19689,6 +19754,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "vừa n\xe3y",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {ph\xfat} other {ph\xfat}} trước",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {giờ} other {giờ}} trong tuần n\xe0y",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19784,6 +19851,8 @@
           "Th\xe0nh vi\xean đ\xe3 khởi tạo hoạt động n\xe0y.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE:
           "Quyền hạn điều phối vi\xean",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Tìm ki\xeám quyền hạn theo t\xean, danh mục hoặc m\xf4 tả...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Tất cả ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# vai tr\xf2} other {# vai tr\xf2}}",
@@ -19792,7 +19861,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Kh\xf4ng c\xf3 quyền hạn điều phối vi\xean",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Được cấp bởi",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(N\xe2ng cao) Được cấp bởi",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "N\xe2ng cao",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Điều phối vi\xean",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Quyền hạn n\xe2ng cao sẽ cấp quyền truy cập cao hơn đối với c\xe1c c\xe0i đặt m\xe1y chủ, v\xe0 chỉ n\xean trao quyền hạn n\xe0y cho những điều phối vi\xean đ\xe1ng tin cậy.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Quyền hạn được cấp từ những vai tr\xf2 n\xe0y",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Vai tr\xf2 cao nhất",
@@ -22524,6 +22598,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Xem tất cả",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Tặng một m\xf3n qu\xe0",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Xem trước qu\xe0 của bạn",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Mua h\xe0ng ở bất kỳ đ\xe2u, bất kỳ l\xfac n\xe0o",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Mua Trang Tr\xed Ảnh Đại Diện v\xe0 Hiệu Ứng Hồ Sơ để c\xe1 nh\xe2n h\xf3a hồ sơ của bạn.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Những phong c\xe1ch phổ biến gồm c\xf3 Anime, Giả Tưởng, Cyberpunk v\xe0 nhiều phong c\xe1ch kh\xe1c.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Th\xe0nh vi\xean Nitro được giảm gi\xe1 mọi vật phẩm trong Cửa h\xe0ng.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Nh\xe2n Vi\xean Tuyển Chọn",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Ti\xeau Điểm Game Indie",
@@ -24275,6 +24357,8 @@
           "Ch\xfang t\xf4i rất coi trọng sự an to\xe0n của thanh thiếu ni\xean tại Discord. Khi ph\xe1t hiện rủi ro an to\xe0n c\xf3 thể xảy ra trong cuộc tr\xf2 chuyện, ch\xfang t\xf4i sẽ th\xf4ng b\xe1o cho bạn biết. [T\xecm hiểu th\xeam về cảnh b\xe1o an to\xe0n.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Tới c\xe0i đặt",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Bỏ qua",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Đ\xe2y l\xe0 lỗi ư? $[H\xe3y cho ch\xfang t\xf4i biết](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "Cảm ơn c\xe1c phản hồi của bạn!",
         STRANGER_DANGER_BANNER_BLOCK: "Chặn",
@@ -24491,6 +24575,8 @@
         POLL_COACHMARK_TITLE: "MỚI! Bảng thăm d\xf2 \xfd kiến đ\xe3 ra mắt.",
         POLL_COACHMARK_SUBTITLE:
           "L\xean kế hoạch cho sự kiện, thu thập \xfd kiến hoặc hỏi những c\xe2u hỏi vu vơ trong khi tr\xf2 chuyện.",
+        POLL_COACHMARK_CTA: "Bắt đầu bảng thăm d\xf2 \xfd kiến ngay!",
+        POLL_COACHMARK_DISMISS: "C\xf3 lẽ để sau.",
         POLL_NOT_INTERACTIVE: "Xem tin nhắn gốc để tương t\xe1c",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Ở đ\xe2y chẳng c\xf3 g\xec để xem cả",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
@@ -24600,6 +24686,7 @@
         QUESTS: "Nhiệm Vụ",
         QUEST: "Nhiệm Vụ {questName}",
         QUESTS_SEE_CODE: "Xem M\xe3",
+        QUESTS_CLAIM_REWARD: "Nhận phần thưởng",
         QUESTS_ACCEPT: "Chấp nhận nhiệm vụ",
         QUESTS_COMPLETE_TOOLTIP: "Nhấn nhận để lấy m\xe3 phần thưởng của bạn!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24615,13 +24702,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "\xd4i kh\xf4ng! Ch\xfang t\xf4i kh\xf4ng thể gửi email x\xe1c minh cho bạn.",
         QUEST_REWARD: "Thắng {reward}",
+        QUEST_REWARD_COMPLETED:
+          "Bạn đ\xe3 mở kh\xf3a {reward} v\xe0o ng\xe0y {date}",
+        QUESTS_REWARD_CODE_HEADER: "M\xe3 phần thưởng của bạn",
         QUESTS_REWARD_CODE_CONGRATS: "Ch\xfac mừng!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Nền tảng bạn y\xeau th\xedch l\xe0 g\xec?",
         QUESTS_REWARD_CODE_ERROR:
           "\xd4i kh\xf4ng! C\xf3 g\xec đ\xf3 kh\xf4ng ổn, vui l\xf2ng thử lại sau",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Chọn một nền tảng",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Chọn nền tảng",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Ch\xfang t\xf4i sẽ tạo một m\xe3 nền tảng duy nhất cho {rewardName} của bạn. **Bạn sẽ kh\xf4ng thể thay đổi lựa chọn của m\xecnh sau khi nhấn v\xe0o Nhận M\xe3.**",
         QUESTS_REWARD_CODE_DONE: "Xong",
+        QUESTS_REWARD_CODE_GET_CODE: "Nhận M\xe3",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Thử lại",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Nhận Ngay",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Bạn Đ\xe3 Nhận Rồi",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Đa nền tảng",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24629,11 +24726,14 @@
         QUESTS_SPONSORED: "Được t\xe0i trợ",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "T\xecm hiểu th\xeam",
+        QUESTS_LEARN_MORE_STACKED: "T\xecm Hiểu\n\nTh\xeam",
+        QUESTS_LEARN_MORE_LINK: "[T\xecm hiểu th\xeam]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Chấp nhận nhiệm vụ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} cho một người bạn trong {streamingDurationRequirement, number} ph\xfat v\xe0 nhận thưởng {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Đ\xe3 chấp nhận nhiệm vụ!** Stream {gameTitle} cho một người bạn trong {streamingDurationRequirement, number} ph\xfat v\xe0 nhận thưởng {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Theo D\xf5i Tiến Tr\xecnh Của Bạn",
         QUESTS_TITLE: "Nhiệm Vụ {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ui ch\xe0!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24643,6 +24743,8 @@
           "Bạn c\xf3 thể v\xe0o \nThiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
         QUESTS_GET_THIS_GAME: "Nhận tr\xf2 chơi",
         QUESTS_DISCLOSURE_LABEL: "Tại sao t\xf4i thấy nội dung n\xe0y?",
+        QUESTS_SHARE_LINK: "Sao Ch\xe9p Đường Link Chia Sẻ",
+        QUESTS_HIDE_THIS: "Ẩn Đi",
         QUESTS_FIND_QUEST:
           "Bạn c\xf3 thể mở lại nhiệm vụ trong Thiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng",
         QUESTS_CLAIM_BY: "Nhận trước {expirationDate}.",
@@ -24685,6 +24787,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! v\xe0 {count, plural, one {1 người kh\xe1c} other {{count} người kh\xe1c}}",
         STOREFRONT: "Cửa h\xe0ng",
+        STOREFRONT_TITLE: "Cửa h\xe0ng {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "Đăng K\xfd",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Mua g\xf3i đăng k\xfd từ {appName}",
         STOREFRONT_APP_PRODUCTS: "Sản phẩm",
@@ -24749,10 +24852,22 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu ti\xean",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Đ\xe3 xem **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} đ\xe3 xem **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Hiểu rồi!",
+        RECENT_GAMES: "Tr\xf2 Chơi Gần Đ\xe2y",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {tuần} other {tuần}} trước",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {giờ} other {giờ}} trước",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {ph\xfat} other {ph\xfat}} trước",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {gi\xe2y} other {gi\xe2y}} trước",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tuần trước",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} ng\xe0y trước",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} giờ trước",
@@ -24760,6 +24875,12 @@
           "{count} ph\xfat trước",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
           "{count} gi\xe2y trước",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {giờ} other {giờ}} trong tuần n\xe0y",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {ph\xfat} other {ph\xfat}} trong tuần n\xe0y",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {gi\xe2y} other {gi\xe2y}} trong tuần n\xe0y",
       };
     },
   },

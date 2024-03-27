@@ -161,7 +161,9 @@
         PAGINATION_PAGE_LABEL: "{pageNumber} 페이지",
         PAGINATION_SLIDE_LABEL: "{pageNumber}번 슬라이드",
         MUTE: "음소거",
+        MUTE_ALT: "마이크 끄기",
         UNMUTE: "음소거 해제",
+        UNMUTE_ALT: "마이크 켜기",
         DEAFEN: "헤드셋 음소거 ",
         UNDEAFEN: "헤드셋 음소거 해제하기",
         SEARCH: "검색하기",
@@ -1203,6 +1205,8 @@
           "이 앱은 Discord가 만든 것이 아니에요. 오직 신뢰할 수 있는 개발자들이 만든 테스트 앱만 사용하세요.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "비공개 앱에 대해 더 자세히 알아보세요.",
+        APPLICATION_ICON_A11Y_LABEL: "{applicationName} 앱 아이콘",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "앱 아이콘",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) 님이 활동을 시작했어요",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4634,8 +4638,11 @@
           "참여 또는 전환할 음성 채널 선택하기",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "단축키 활성화 또는 비활성화",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "결과",
+        SHOW_CURRENT_ACTIVITY: "나의 활동을 다른 사람들과 공유하세요.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "공개 스테이지에 참가 중이라면 Discord가 상태를 자동으로 업데이트할 거예요.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "게임을 하거나 음악을 듣는 등 감지 가능한 활동에 참여할 때, Discord는 그 활동에 대한 정보를 표시할 수 있어요. 언제, 어디서 그 활동에 참여했는지 포함해서요.",
         GAME_DETECTION_SERVICE: "게임 감지 서비스",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "설치 위치하기",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "설치 위치 추가하기",
@@ -4926,6 +4933,7 @@
         SUB_ENABLED_SERVERS: "구독이 활성화된 서버",
         AUTHORIZATION: "승인",
         AUTHORIZED_APPS: "승인한 앱",
+        MANAGE_AUTHORIZED_APP: "승인한 앱 관리",
         DEAUTHORIZE: "승인 해제하기",
         DEAUTHORIZE_APP: "애플리케이션 승인 해제하기",
         ABOUT_THIS_APP: "앱 소개",
@@ -6149,7 +6157,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "서버 선택하기",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "**서버 관리** 권한이 있어야만 수행 가능한 작업이에요.",
+        OAUTH2_INTEGRATION_SELECT_USER: "이용해보기",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "이 앱을 어디서든 사용하세요!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "서버에 추가",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "이 앱을 추가하여 서버 사용자 지정",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "이 앱은 Discord의 어디에서든 사용할 수 있어요. 베타 테스트 기간에 {betaUserLimit}명 이상의 서버에서는 나만 반응을 볼 수 있어요. [자세히 알아보세요]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "올바르지 않은 요청. **{param}** 파라미터 없음",
         OAUTH2_REQUEST_INVALID_SCOPE: "올바르지 않은 스코프 **{scope}**",
@@ -6189,6 +6203,7 @@
         SCOPE_VOICE:
           "나를 대신하여 음성 연결하고, 음성 채널이나 통화 중인 사람을 확인합니다",
         SCOPE_DM_CHANNELS_READ: "내가 속한 DM과 GDM 정보를 확인합니다",
+        SCOPE_DM_YOU: "다이렉트 메시지 보내기",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "이 애플리케이션의 연결과 메타데이터를 업데이트하세요",
         SCOPE_WEBHOOK_INCOMING: "채널에 웹후크 추가하기",
@@ -6512,11 +6527,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "유해 이미지를 포함할 수 있는 다이렉트 메시지를 자동으로 차단합니다. [여기서 이 설정에 대해 자세히 알아보세요.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "친구들이 게임에 참여하게 해주세요.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "설정하면 친구들이 요청을 보내지 않고도 게임에 참여할 수 있어요.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "음성 채널 참가자들이 게임에 참여하게 해주세요.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "설정하면 나와 같은 음성 채널에 있는 사람들이 요청을 보내지 않고도 게임에 참여할 수 있어요. 이 기능은 커뮤니티 서버에서는 작동하지 않아요.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6572,6 +6584,12 @@
         DATA_PRIVACY_CONTROLS: "데이터 사용처",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "데이터를 사용해 Discord 향상하기",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "이 설정은 Discord가 나의 정보를 사용하고 처리하여 서비스를 이해하고 향상할 수 있게 해줘요. [여기에서 자세히 알아보세요.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "맞춤 Discord 경험을 위해 데이터 사용",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Discord가 나의 정보(대화 상대, 플레이하는 게임 등)를 사용해 맞춤 서비스를 제공할 수 있게 해줘요. [여기에서 자세히 알아보세요.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "데이터를 사용해 Discord 작동을 수월하게 만들기",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "내 모든 데이터 요청하기",
@@ -6604,9 +6622,16 @@
           "기존에 접속해 있던 서버에도 변경 사항을 적용하시겠어요?",
         NEW_GUILDS_DM_ALLOWED: "서버 멤버가 보내는 다이렉트 메시지 허용하기",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "게임 내 보상(즉, 퀘스트)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "내가 플레이한 게임 등, 나의 Discord 사용 정보를 활용하여 퀘스트나 기타 게임 내 보상을 받을 기회에 대해 알려드려요. [여기서 자세히 알아보세요.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "서버 개인정보 보호 정책",
         USER_DM_SETTINGS_DESCRIPTION:
           "기존에 접속해 있던 서버에도 변경 사항을 적용하시겠어요? 서버의 설정 페이지를 열어서 서버별로 다이렉트 메시지를 비활성화할 수도 있어요.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "퀘스트는 현재 베타예요. 퀘스트를 끈 이유를 알려주세요. [피드백 설문 조사]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "퀘스트는 현재 베타예요. 참여해주셔서 감사하고, 의견을 들려주세요! [피드백 설문 조사]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Discord 퀘스트를 찾고 계시는군요! 이 메시지가 나왔다면 설정을 조정해야 해요. 활성화하려면 설정 -> 개인 정보 보호 및 보안을 열고 "데이터를 사용해 내 Discord 사용 경험 바꾸기"와 "게임 내 보상(퀘스트)" 설정을 모두 활성화해주세요.\n\n[자주 묻는 질문에서 자세히 알아보기]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "지금 등록하기",
@@ -9052,7 +9077,7 @@
         PREMIUM_DISCOUNT_CTA: "Nitro 구독료 !!{percent, number}!!% 절약하기",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro 구독료 절약하기",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "**{numMonths, plural, one {한 달} other {{numMonths}달}}** 동안은 **{discountedPrice}**만 지불하세요. 그 뒤로는 {regularPrice}을 지불하세요.",
+          "**{numMonths, plural, one {1개월} other {{numMonths}개월}} 동안은 **{discountedPrice}**만 지불하세요!** 그 뒤로는 {regularPrice}의 금액을 지불하세요.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!% 할인은 구매 후 {numMonths, plural, one {1개월} other {{numMonths}개월}} 뒤에 종료돼요. 이후에는 {regularPrice}의 금액이 청구돼요.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9760,6 +9785,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "현재 구독",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "새 구독 합계",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} 취소됨",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "이 조정에는 비례 배분, 할인, 관련 세금, 환불이 포함되어 있어요.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**왜 이게 보이는 거죠?**\n\n플랜 변경을 변경하고 있어요. 서버 부스트가 이에 따라 업데이트돼요.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10445,7 +10472,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro 구독 첫 **3개월** 동안은 월 **{discountedPrice}**만 지불하세요! 3개월의 할인 기간이 끝나면 월 {regularPrice}의 금액이 청구돼요.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Nitro 구독 첫 **{numMonths, plural, one {개월} other {{numMonths}개월}}** 동안은 월 **{discountedPrice}**만 지불하세요. 할인 기간이 끝나면 {regularPrice}의 금액이 청구돼요.",
+          "Nitro 월정액의 첫 {numMonths, plural, one {달} other {{numMonths}달}} 동안은 {numMonths, plural, one {} other {}}**{discountedPrice}**예요. 할인이 끝나면 매달 {regularPrice}예요.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3개월 동안 {discountedPrice}/월\n\n3개월 이후 {regularPrice}/월",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10484,6 +10511,8 @@
           "방금 이메일을 전송해 드렸어요. 이메일에서 인증 링크를 클릭해 구매를 인증하세요.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "계속하기",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "못 받으셨나요?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "이메일 재전송",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -12783,8 +12812,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "나도 직접 [서버를 만들 수 있어요](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "죄송해요.",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "데이터를 사용해 Discord 향상하기를 끄시겠어요?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "이 설정을 끄면 분석을 위해 새 데이터를 처리하는 것이 중단되어 새로운 실험 기능과 음성 채팅 등 기능의 사용량 기반 향상 기능을 사용할 수 없게 돼요. 본인 데이터의 처리에 관한 이의신청권을 더 주장하고 싶으시다면, privacy@discord.com에 문의해주세요.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "네, 확실해요",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "아니요, 돌아갈래요!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "개인 맞춤 기능을 끌까요?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "이 설정을 끄면 사용자 맞춤형 추천 및 제안 등을 사용할 수 없게 돼요. 나중에도 복구할 수 없어요!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "네, 확실해요",
@@ -13106,18 +13140,31 @@
           "{count, plural, =0 {같이 아는 친구 0명} one {같이 아는 친구 1명} other {같이 아는 친구 {count}명}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {같이 있는 서버 0개} one {같이 있는 서버 1개} other {같이 있는 서버 {count}개}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "친구 {count, plural, =0 {없음} one {1명} other {{count}명}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "서버 {count, plural, =0 {0개} one {1개} other {{count}개}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** 님과 친구",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "**{usernameOne}**, **{usernameTwo}** 님과 친구",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "**{usernameOne}**, **{usernameTwo}**, 이외 **{count}명**과 친구",
+          "**{usernameOne}**, **{usernameTwo}**, 이외 {count}명과 친구",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "**{usernameOne}**, 이외{count}명과 친구",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0명} one {1명} other {{count}명}}과 친구",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}**의 멤버",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "**{guildNameOne}**, **{guildNameTwo}**의 멤버",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "**{guildNameOne}**, **{guildNameTwo}**, 이외 **{count}개**의 멤버",
+          "**{guildNameOne}**, **{guildNameTwo}**, 이외 {count}개의 멤버",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "서버 {count, plural, =0 {0개} one {1개} other {{count}개}}의 멤버",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "같이 아는 친구",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "같이 있는 서버",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "같이 아는 친구 모두 보기",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "같이 있는 서버 모두 보기",
+        USER_PROFILE_MUTUALS_TITLE: "공통",
         PROFILE_IN_VOICE_CALL: "음성 통화 중",
         PROFILE_OPEN_VOICE_CHANNEL: "음성 채널 열기",
         IOS_PROFILE_IN_VOICE_CALL: "음성 통화 중",
@@ -13256,6 +13303,10 @@
           "{count, plural, one {#개월} other {#개월}}치 {nitroTierName} 선물",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "{count, plural, one {#년} other {#년}}치 {nitroTierName} 선물",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "{username}에게 {nitroTierName} {count, plural, one {#개월} other {#개월}} 선물하기",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "{username}에게 {nitroTierName} {count, plural, one {#년} other {#년}} 선물하기",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "“선물 구매”를 탭하면 [유료 서비스 이용 약관]({paidURL})에 동의하는 것입니다. 선택한 기간만큼 한 번만 청구될 거예요.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "선물이 곧 도착할 거예요!",
@@ -14049,7 +14100,17 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "메시지를 지울까요?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "이미 내용을 입력하신 것 같네요. 지우고 명령어를 사용할까요?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Discord의 어디에서든 이 앱을 사용하실 수 있어요. {betaUserLimit}명 이상의 서버에서는 나만 반응을 볼 수 있어요.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "앱이 비공개로 응답해요",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "베타 기간에는 나만 이 메시지를 볼 수 있어요.\n\n[왜 이런 내용이 보이는 건가요?]({learnMoreUrl}) • [닫기](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "베타 기간에는 나만 이 메시지를 볼 수 있어요 • [닫기](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "도움말 보기",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[자세히 알아보기]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Midjourney를 사용하려면 “$[명령어](commandHook)”를 입력하세요. 팁: 친구하고 시도해볼 서버를 만들어보세요.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -16752,6 +16813,8 @@
           "취소하시면 **다음 특전을 사용할 수 없게 돼요.**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Nitro를 유지할래요",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "됐어요, Nitro를 유지할래요",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "취소하면 보상 진행 상황과 다음 보상을 모두 잃게 돼요.",
         PREMIUM_PAUSE_INSTEAD: "일시 정지로 대신",
         PREMIUM_PAUSE_SELECT_TITLE: "구독 일시 정지 또는 취소",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -18357,6 +18420,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "방금",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count}{count, plural, =1 {분} other {분}} 전",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "이번 주 {count}{count, plural, =1 {시간} other {시간}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count}{count, plural, =1 {일} other {일}} 전",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -18440,13 +18505,19 @@
         GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG: "관리자 활동 기록",
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER: "이 작업을 시작한 멤버.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "관리자 권한",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "권한 이름, 카테고리, 설명을 검색하세요...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "모두({count}개)",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "역할 {roleCount, plural, =1 {#개} other {#개}}",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "모든 부여된 권한",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "관리자 권한 없음",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "부여한 사람:",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY: "(승급) 부여자",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "승급됨",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "관리자",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "권한이 승급되면 서버 설정에 대해 더 높은 접근 권한이 주어지므로, 신뢰할 수 있는 관리자에게만 부여하세요.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "이 역할들에 의해 부여된 권한",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "가장 높은 역할",
@@ -20976,6 +21047,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "모두 보기",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "선물 보내기",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "선물 검토하기",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "언제든, 어디서든 쇼핑하세요",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "아바타 장식과 프로필 효과를 구매하여 프로필을 맞춤 설정하세요.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "인기 있는 스타일에는 애니, 판타지, 사이버펑크 등이 있어요.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro 멤버는 상점의 모든 아이템에 할인을 받을 수 있어요.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "스태프 추천",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "게임",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "인디 스포트라이트",
@@ -22611,6 +22689,8 @@
           "Discord에서는 청소년의 안전을 매우 중요하게 생각합니다. 대화에서 안전 위험이 감지되면 알려 드릴게요. [안전 알림에 대해 자세히 알아보세요.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "설정으로 가기",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "닫기",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "착오라고 생각되시나요? $[저희에게 문의해주세요](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "피드백 감사합니다!",
         STRANGER_DANGER_BANNER_BLOCK: "차단하기",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "닫기",
@@ -22807,6 +22887,8 @@
         POLL_COACHMARK_TITLE: "신규! 투표 기능이 도입됐어요.",
         POLL_COACHMARK_SUBTITLE:
           "이벤트를 계획하거나, 의견을 수집하거나, 채팅에서 재미있는 질문을 던져보세요.",
+        POLL_COACHMARK_CTA: "지금 투표를 시작하세요!",
+        POLL_COACHMARK_DISMISS: "나중에 할게요.",
         POLL_NOT_INTERACTIVE: "상호작용하려면 원본 메시지를 보세요",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "여긴 아무것도 없어요",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "이 응답은 표가 없어요.",
@@ -22902,6 +22984,7 @@
         QUESTS: "퀘스트",
         QUEST: "{questName} 퀘스트",
         QUESTS_SEE_CODE: "코드 보기",
+        QUESTS_CLAIM_REWARD: "보상 받기",
         QUESTS_ACCEPT: "퀘스트 수락하기",
         QUESTS_COMPLETE_TOOLTIP: "받기를 눌러 보상 코드를 획득하세요!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -22915,13 +22998,22 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "이런! 인증 이메일을 보내지 못했어요.",
         QUEST_REWARD: "{reward} 받기",
+        QUEST_REWARD_COMPLETED: "{date}에서 {reward}을(를) 잠금 해제했어요",
+        QUESTS_REWARD_CODE_HEADER: "내 보상 코드",
         QUESTS_REWARD_CODE_CONGRATS: "축하드려요!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "선호하는 플랫폼은 무엇인가요?",
         QUESTS_REWARD_CODE_ERROR:
           "이런! 뭔가 잘못됐어요. 나중에 다시 시도해 주세요.",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "플랫폼 선택하기",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "플랫폼 선택",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "{rewardName}에 대한 플랫폼별 코드를 생성합니다. **코드 받기를 누른 후에는 선택을 변경할 수 없어요.**",
         QUESTS_REWARD_CODE_DONE: "완료",
+        QUESTS_REWARD_CODE_GET_CODE: "코드 받기",
         QUESTS_REWARD_CODE_TRY_AGAIN: "다시 시도하기",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "이걸 받으세요",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "이걸 받았어요",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "크로스 플랫폼",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -22929,11 +23021,14 @@
         QUESTS_SPONSORED: "후원:",
         QUESTS_PROMOTED: "광고",
         QUESTS_LEARN_MORE_V2: "자세히 알아보기",
+        QUESTS_LEARN_MORE_STACKED: "자세히\n\n알아보기",
+        QUESTS_LEARN_MORE_LINK: "[자세히 알아보기]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "퀘스트 수락하기",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "친구에게 {gameTitle} 게임을 {streamingDurationRequirement, number}분 동안 방송하고 {questReward} 보상을 받으세요.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**퀘스트를 수령했어요!** 친구에게 {gameTitle} 게임을 {streamingDurationRequirement, number}분 동안 방송하고 {questReward} 보상을 받으세요.",
+        QUESTS_TRACK_YOUR_PROGRESS: "진행 상황 확인하기",
         QUESTS_TITLE: "{questName} 퀘스트",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "이런!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -22943,6 +23038,8 @@
           "PC의 Discord 앱이나 브라우저에서\n사용자 설정 > 선물 인벤토리로 이동해 퀘스트를 수락하실 수 있어요.",
         QUESTS_GET_THIS_GAME: "게임 받기",
         QUESTS_DISCLOSURE_LABEL: "왜 그런 거죠?",
+        QUESTS_SHARE_LINK: "공유 링크 복사하기",
+        QUESTS_HIDE_THIS: "숨기기",
         QUESTS_FIND_QUEST:
           "사용자 설정 > 선물 인벤토리에서 다시 찾을 수 있어요",
         QUESTS_CLAIM_BY: "{expirationDate}까지 받으세요.",
@@ -22983,6 +23080,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! 외 {count, plural, one {1명} other {{count}명}}",
         STOREFRONT: "스토어",
+        STOREFRONT_TITLE: "{appName} 스토어",
         STOREFRONT_APP_SUBSCRIPTIONS: "구독",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName}에서 구독 구매",
         STOREFRONT_APP_PRODUCTS: "제품",
@@ -23047,15 +23145,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "처음",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "**{mediaTitle}** 시청함",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} 님이 **{mediaTitle}** 시청함",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "활동",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "알겠어요!",
+        RECENT_GAMES: "최근 게임",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count}{count, plural, =1 {주} other {주}} 전",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count}{count, plural, =1 {일} other {일}} 전",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {시간} other {시간}} 전",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {분} other {분}} 전",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {초} other {초}} 전",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}주 전",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}일 전",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}시간 전",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}분 전",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}초 전",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "이번 주 {count}{count, plural, =1 {시간} other {시간}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "이번 주 {count}{count, plural, =1 {분} other {분}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "이번 주 {count}{count, plural, =1 {초} other {초}}",
       };
     },
   },

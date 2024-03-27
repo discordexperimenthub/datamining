@@ -164,7 +164,9 @@
         PAGINATION_PAGE_LABEL: "Страница {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Слайд {pageNumber}",
         MUTE: "Изкл. на звука",
+        MUTE_ALT: "Изключи микрофона",
         UNMUTE: "Вкл. на звука",
+        UNMUTE_ALT: "Включи микрофона",
         DEAFEN: "Заглушаване",
         UNDEAFEN: "Премахване на заглушаване",
         SEARCH: "Търсене",
@@ -1265,6 +1267,8 @@
           "Това приложение не е създадено от Discord. Тествай само приложения от разработчици, на които имаш доверие.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Научи повече за частните приложения.",
+        APPLICATION_ICON_A11Y_LABEL: "Икона на приложение за {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Икона на приложение",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) стартира активност",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4845,8 +4849,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Активиране или деактивиране на клавишна комбинация",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Резултати",
+        SHOW_CURRENT_ACTIVITY: "Сподели активността си с другите.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord автоматично ще актуализира статуса ти, ако присъстваш на публична сцена.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Когато участваш в дейност, която може да бъде отчетена (като игра или слушане на музика), Discord може да покаже информация за тези дейности, включително кога и как си се включил(а).",
         GAME_DETECTION_SERVICE: "Услуга за засичане на игри",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Места на инсталиране",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5157,6 +5164,7 @@
         SUB_ENABLED_SERVERS: "Активирани подсървъри",
         AUTHORIZATION: "Оторизация",
         AUTHORIZED_APPS: "Оторизирани приложения",
+        MANAGE_AUTHORIZED_APP: "Управление на оторизирано приложение",
         DEAUTHORIZE: "Премахване на оторизация",
         DEAUTHORIZE_APP: "Премахване на оторизация на приложение",
         ABOUT_THIS_APP: "Информация за това приложение",
@@ -6425,7 +6433,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Избери сървър",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "За тази цел е необходимо да имаш разрешение за **управление на сървър** в сървъра.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Опитай сега",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "Използвай това приложение навсякъде!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Добави към сървър",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Персонализирай своя сървър като добавиш това приложение",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Това приложение може да се използва навсякъде в Discord. По време на бета, отговорите са видими само за теб в сървъри с над {betaUserLimit} души. [Научи повече]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Невалидна заявка. Липсващи параметри **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Невалиден обхват **{scope}**",
@@ -6472,6 +6487,7 @@
           "Свържи се гласово от свое име и виж други хора, които са в гласови канали или обаждания",
         SCOPE_DM_CHANNELS_READ:
           "Виж информация относно директните съобщения и груповите директни съобщения, в които участваш",
+        SCOPE_DM_YOU: "Изпращане на директни съобщения до теб",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Актуализирай връзката и мета данните си за това приложение",
         SCOPE_WEBHOOK_INCOMING: "Добавя webhook към канал",
@@ -6819,12 +6835,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Автоматично блокиране на директните съобщения, които биха могли да съдържат нецензурни изображения. [Научи повече за тази настройка тук.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Позволи на приятели да се присъединяват към играта ти.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Тази настройка позволява на приятели да се присъединяват към играта ти, без да изпращат заявка.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Позволи на участници в гласовия канал да се присъединяват към играта ти.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Тази настройка позволява на хора, които са в същия гласов канал като теб, да се присъединяват към играта ти, без да изпращат заявка. Тази функция работи само в необщностни сървъри.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Пази ме",
@@ -6881,6 +6893,12 @@
         DATA_PRIVACY_CONTROLS: "Как използваме данните ти",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Използване на данни за подобряване на Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Тази настройка ни позволява да използваме и обработваме твоята информация, за да разберем и подобрим нашите услуги. [Научи повече за това тук.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Използвайте данни, за да персонализирате моето изживяване в Discord",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Тази настройка ни позволява да използваме информация, като това какви игри играеш и с кого си говориш, за да персонализираме Discord за теб. [Научи повече за това тук.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Използване на данни, за да работи Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Заявка за всички мои данни",
@@ -6916,9 +6934,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Позволи директни съобщения от членовете на сървъра",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Награди в играта (известни още като куестове)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Използваме информация за това как използваш Discord, като например какви игри играеш, за да ти казваме за мисии или други възможности за награди в играта. [Научи повече за това тук.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Поверителност на сървъра",
         USER_DM_SETTINGS_DESCRIPTION:
           "Искаш ли да приложиш тази промяна за всичките си съществуващи сървъри? Можеш също така да деактивираш директните съобщения на индивидуални сървъри, като отвориш страницата с настройки на съответния сървър.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Куестовете в момента са в бета-версия – бихме искали да разберем защо ги изключи. [Анкета за обратна връзка]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Куестовете в момента са в бета-версия – благодарим ти за участието. А сега бихме искали да чуем мнението ти! [Анкета за обратна връзка]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Сигурно търсиш куестове в Discord! Ако виждаш това съобщение, ще трябва да коригираме някои настройки. За да ги активираш, ще трябва да отидеш в „Настройки -> Поверителност и безопасност“ и да активираш както „Използване на данни за персонализиране на моето изживяване в Discord“, така и настройките за „Награди в играта“ (AKA „куестове“).\n\n[Прочети повече в нашите ЧЗВ]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Записване сега",
@@ -9478,7 +9504,7 @@
         PREMIUM_DISCOUNT_CTA: "Спести !!{percent, number}!!% за Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Спести с Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Плати само **{discountedPrice}** за **{numMonths, plural, one {месец!} other {{numMonths} месеца!}}** След това плащай по {regularPrice}.",
+          "Плати само **{discountedPrice}** за **{numMonths, plural, one {1 месец!} other {{numMonths} месеца!}}** След това плащай по {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Твоята отстъпка от !!{percent, number}!!% ще приключи {numMonths, plural, one {1 месец} other {{numMonths} месеца}} след покупката. След това ще има такса от {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10206,6 +10232,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Настоящ абонамент",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Сума за нов абонамент",
         PREMIUM_SUBSCRIPTION_CANCELLED: "План {planName} е анулиран",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Тази корекция включва пропорции, отстъпки, приложими данъци и връщане на суми.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Защо виждам това?**\n\nКупуваш промяна на план. Твоите усилвания на сървъри се актуализират в съответствие с това.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10912,7 +10940,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Плащай само **{discountedPrice}** на месец за първите **3 месеца** Nitro. Плащай {regularPrice} на месец след края на 3-месечния период на отстъпката.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Плати само **{discountedPrice}** на месец за първия(ите) си **{numMonths, plural, one {месец} other {{numMonths} месеца}}** с Nitro. Плащай по {regularPrice} на месец след приключване на отстъпката.",
+          "Първият(ите) {numMonths, plural, one {месец} other {{numMonths} месеца}} от Nitro месечно{numMonths, plural, one {е} other {са}} **{discountedPrice}**. След отстъпката плащаш по {regularPrice} на месец",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/месец за 3 месеца\n\n{regularPrice}/месец след 3-тия месец",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10952,6 +10980,8 @@
           "Току-що ти изпратихме имейл. Кликни върху връзката за потвърждаване в имейла, за да оторизираш покупката.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Продължи",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Не получи всичко?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Повторно изпращане на имейла",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13350,8 +13380,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Ти също можеш да [стартираш свой собствен сървър](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Извиняваме се за това",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Изключване на използването на данни за подобряване на Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Ако изключиш това, ще спрем да обработваме нови данни за анализ. Ще загубиш достъп до нови експериментални функции и базирани на употреба подобрения на функции като гласов чат. Ако искаш допълнително да използваш правото си да възразиш срещу нашата обработка на твоите данни, изпрати имейл на privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Да, сигурен/на съм",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Не, върни ме назад!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Изключване на персонализацията?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Изключвайки това, губите достъп до неща като персонализирани препоръки и предложения. Няма да можеш да ги възстановиш в бъдеще!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Да, сигурен/на съм",
@@ -13681,18 +13716,31 @@
           "{count, plural, =0 {0 общи приятели} one {1 общ приятел} other {{count} общи приятели}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 общи сървъри} one {1 общ сървър} other {{count} общи сървъри}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 приятели} one {1 приятел} other {{count} приятели}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 сървъра} one {1 сървър} other {{count} сървъра}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "приятели с **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "приятели с **{usernameOne}** и **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "приятели с **{usernameOne}**, **{usernameTwo}** и още **{count}**",
+          "приятели с **{usernameOne}**, **{usernameTwo}** и още {count} ",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "приятел с **{usernameOne}** и още {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "приятел с {count, plural, =0 {0 души} one {1 човек} other {{count} души}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "член на **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "член на **{guildNameOne}** и **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "член на **{guildNameOne}**, **{guildNameTwo}** и още **{count}**",
+          "член на **{guildNameOne}**, **{guildNameTwo}** и още {count} ",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "член на {count, plural, =0 {0 сървъра} one {1 сървър} other {{count} сървъра}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Общи приятели",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Общи сървъри",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Виж всички общи приятели",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Виж всички общи сървъри",
+        USER_PROFILE_MUTUALS_TITLE: "Общи неща",
         PROFILE_IN_VOICE_CALL: "В гласов разговор",
         PROFILE_OPEN_VOICE_CHANNEL: "Отвори гласов канал",
         IOS_PROFILE_IN_VOICE_CALL: "В гласов разговор",
@@ -13828,11 +13876,15 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Подарък за членство в {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Продължителност на подаръка",
-        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Подарък {username}:",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Подарък за {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подари {count, plural, one {# месец} other {# месеца}} от {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Подари {count, plural, one {# година} other {# години}} от {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Подари на {username} {count, plural, one {# месец} other {# месеца}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Подари на {username} {count, plural, one {# година} other {# години}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Докосвайки „Купи подарък“, ти се съгласяваш с [Условията за платени услуги]({paidURL}). Това ще бъде еднократна такса за избраното време.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Подаръкът ти е на път!",
@@ -14672,8 +14724,18 @@
           "Изчистване на съобщението?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Вече има нещо написано. Искаш ли да го изчистиш и да използваш команда?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Можеш да използваш това приложение навсякъде в Discord. Отговорите се виждат само от теб в сървъри с над {betaUserLimit} души.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Приложението ще ти отговори лично",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Само ти можеш да видиш това съобщение по време на бета-версия.\n\n[Защо виждам това?]({learnMoreUrl}) • [Отхвърляне](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Само ти можеш да видиш това по време на бета-версия • [Отхвърляне](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Виж помощната статия",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Научи повече]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Напиши $[command](commandHook), за да използваш Midjourney. Съвет: създай сървър, за да го изпробваш с приятели.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17511,6 +17573,8 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Няма значение, задръж Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Няма значение, задържане на Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Ако отмениш, ще загубиш напредъка си за наградите и всички награди от изброените:",
         PREMIUM_PAUSE_INSTEAD: "Временно спиране вместо това",
         PREMIUM_PAUSE_SELECT_TITLE:
           "Временно спиране на или анулиране на абонамента",
@@ -19221,6 +19285,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "току-що",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "преди {count} {count, plural, =1 {мин} other {мин}}",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {ч} other {часа}} тази седмица",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "преди {count} {count, plural, =1 {ден} other {дни}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19315,6 +19381,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Член, инициирал действието.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Разрешения за модератор",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Имена на разрешения за търсене, категория или описание...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Всички ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# роля} other {# роли}}",
@@ -19323,7 +19391,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Няма разрешения за модератор",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Предоставено от",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Издигнато) Предоставено от",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Издигнато",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Модератор",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Издигнатите разрешения предоставят по-високи нива на достъп до настройките на сървъра и трябва да се предоставят само на силно надеждни модератори.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Разрешение, предоставено от тези роли",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Най-висока роля",
@@ -22014,6 +22087,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Виж всички",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Изпрати подарък",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Преглед на подаръка",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Пазарувай навсякъде, по всяко време",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Купи декорации за аватар и профилни ефекти, за да персонализираш профила си.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Популярните стилове включват аниме, фентъзи, киберпънк и още други.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Членовете на Nitro получават отстъпки за всичко в магазина.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Изборът на персонала",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Гейминг",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Инди фокус",
@@ -23752,6 +23833,8 @@
           "Ние в Discord се отнасяме сериозно към безопасността на тийнейджърите. Когато открием възможен риск за безопасността в разговор, ще те уведомим. [Научи повече за предупрежденията за безопасност.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Към „Настройки“",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Затваряне",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Може би сме допуснали грешка? $[Кажи ни](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "Благодарим за обратната връзка!",
         STRANGER_DANGER_BANNER_BLOCK: "Блокиране",
@@ -23958,6 +24041,8 @@
         POLL_COACHMARK_TITLE: "НОВО! Анкетите са вече тук.",
         POLL_COACHMARK_SUBTITLE:
           "Планирай събития, събирай мнения или просто задай някой глуповат въпрос в чата.",
+        POLL_COACHMARK_CTA: "Стартирай анкета сега!",
+        POLL_COACHMARK_DISMISS: "Може би по-късно.",
         POLL_NOT_INTERACTIVE:
           "Прегледай оригиналното съобщение за интерактивни опции",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Тук няма нищо интересно",
@@ -24062,6 +24147,7 @@
         QUESTS: "Куестове",
         QUEST: "Куест {questName}",
         QUESTS_SEE_CODE: "Виж кода",
+        QUESTS_CLAIM_REWARD: "Вземи награда",
         QUESTS_ACCEPT: "Приемане на куест",
         QUESTS_COMPLETE_TOOLTIP:
           "Натисни бутона за взимане, за да си получиш кода за наградата!",
@@ -24078,13 +24164,22 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "О, не! Не успяхме да ти изпратим имейл за потвърждение.",
         QUEST_REWARD: "Спечели {reward}",
+        QUEST_REWARD_COMPLETED: "Ти отключи {reward} на {date}",
+        QUESTS_REWARD_CODE_HEADER: "Кодът на твоята награда",
         QUESTS_REWARD_CODE_CONGRATS: "Честито!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Коя е твоята предпочитана платформа?",
         QUESTS_REWARD_CODE_ERROR:
           "О, не! Нещо се обърка! Моля, опитай отново по-късно",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Избери платформа",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Избери платформа",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Ще ти генерираме код специално за тази платформа за {rewardName}. **Няма да можеш да промениш избраното от теб, след като натиснеш „Взимане на код“.**",
         QUESTS_REWARD_CODE_DONE: "Готово",
+        QUESTS_REWARD_CODE_GET_CODE: "Взимане на код",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Опитай отново",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Вземи това",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Ти взе това",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Между платформи",
         QUESTS_REWARD_CODE_PLATFORM_PC: "Компютър",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24092,11 +24187,14 @@
         QUESTS_SPONSORED: "Спонсорирано",
         QUESTS_PROMOTED: "Промотирани",
         QUESTS_LEARN_MORE_V2: "Научи повече",
+        QUESTS_LEARN_MORE_STACKED: "Научи\n\nповече",
+        QUESTS_LEARN_MORE_LINK: "[Научи повече]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Приемане на куест",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Стриймвай {gameTitle} към приятел за {streamingDurationRequirement, number} минути и спечели {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Куестът е приет!** Стриймвай {gameTitle} към приятел за {streamingDurationRequirement, number} минути и спечели {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Следи напредъка си",
         QUESTS_TITLE: "Куест {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ами сега!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24107,6 +24205,8 @@
           "От приложение на Discord на настолен компютър или браузър можеш да отидеш в \n„Потребителски настройки > Инвентар с подаръци“ и да приемеш куеста там.",
         QUESTS_GET_THIS_GAME: "Вземане на игра",
         QUESTS_DISCLOSURE_LABEL: "Защо виждам това?",
+        QUESTS_SHARE_LINK: "Копирай връзка за споделяне",
+        QUESTS_HIDE_THIS: "Скрий това",
         QUESTS_FIND_QUEST:
           "Можеш да намериш това отново в „Потребителски настройки > Инвентар с подаръци“",
         QUESTS_CLAIM_BY: "Вземи до {expirationDate}.",
@@ -24146,6 +24246,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! и още {count, plural, one {1} other {{count}}}",
         STOREFRONT: "Магазин",
+        STOREFRONT_TITLE: "Магазина на {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "Абонаменти",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Купи абонаменти от {appName}",
         STOREFRONT_APP_PRODUCTS: "Продукти",
@@ -24210,15 +24311,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "За първи път",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Гледа **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} гледа **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Дейност",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Разбрах!",
+        RECENT_GAMES: "Скорошни игри",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "преди {count} {count, plural, =1 {седмица} other {седмици}}",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "преди {count} {count, plural, =1 {ден} other {дни}}",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "преди {count} {count, plural, =1 {час} other {часа}}",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "преди {count} {count, plural, =1 {минута} other {минути}}",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "преди {count} {count, plural, =1 {секунда} other {секунди}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "преди {count} седм.",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "преди {count} ден(ни)",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "преди {count} час(а)",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "преди {count} мин",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Преди {count}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {ч} other {часа}} тази седмица",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {мин} other {мин}} тази седмица",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {сек} other {сек}} тази седмица",
       };
     },
   },

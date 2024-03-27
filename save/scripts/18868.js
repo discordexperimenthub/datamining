@@ -168,7 +168,9 @@
         PAGINATION_PAGE_LABEL: "Strona {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Slajd {pageNumber}",
         MUTE: "Wycisz",
+        MUTE_ALT: "Wyłącz mikrofon",
         UNMUTE: "Wyłącz wyciszenie",
+        UNMUTE_ALT: "Włącz mikrofon",
         DEAFEN: "Wyłącz dźwięk",
         UNDEAFEN: "Włącz dźwięk",
         SEARCH: "Szukaj",
@@ -1283,6 +1285,8 @@
           "Ta aplikacja nie została stworzona przez Discorda. Testuj tylko aplikacje od zaufanych deweloper\xf3w.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Dowiedz się więcej na temat prywatnych aplikacji.",
+        APPLICATION_ICON_A11Y_LABEL: "Ikona aplikacji {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Ikona aplikacji",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "Użytkownik $[](userHook) rozpoczął aktywność",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4877,8 +4881,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Włącz lub wyłącz skr\xf3t klawiszowy",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Wyniki",
+        SHOW_CURRENT_ACTIVITY: "Udostępnij swoją aktywność innym.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord automatycznie zaktualizuje Tw\xf3j status, jeśli bierzesz udział w publicznym podium.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Gdy zajmujesz się wykrywalną aktywnością (np. grą w grę lub słuchaniem muzyki), Discord może wyświetlać informacje o tych aktywnościach, w tym godzinach i sposobach zaangażowania.",
         GAME_DETECTION_SERVICE: "Usługa Wykrywanie gry",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Lokalizacje instalacji",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5193,6 +5200,7 @@
         SUB_ENABLED_SERVERS: "Serwery dostępne dla subskrybent\xf3w",
         AUTHORIZATION: "Autoryzacja",
         AUTHORIZED_APPS: "Autoryzowane aplikacje",
+        MANAGE_AUTHORIZED_APP: "Zarządzaj autoryzowaną aplikacją",
         DEAUTHORIZE: "Wycofaj autoryzację",
         DEAUTHORIZE_APP: "Wycofaj autoryzację aplikacji",
         ABOUT_THIS_APP: "O tej aplikacji",
@@ -6458,7 +6466,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Wybierz serwer",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Wymaga od Ciebie uprawnień do **zarządzania serwerem**.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Wypr\xf3buj teraz",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "Korzystaj z tej aplikacji w dowolnym miejscu!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Dodaj do serwera",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Dostosuj serwer poprzez dodanie tej aplikacji",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Z tej aplikacji można korzystać w dowolnym miejscu na Discordzie. W fazie beta na serwerach z ponad {betaUserLimit} osobami tylko Ty widzisz odpowiedzi. [Więcej informacji]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Nieprawidłowe żądanie. Brakuje parametru **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Nieprawidłowy zakres **{scope}**",
@@ -6506,6 +6521,7 @@
           "Połącz się z kanałem głosowym i zobacz innych użytkownik\xf3w, kt\xf3rzy są na jakimkolwiek kanale głosowym lub uczestniczą w rozmowie",
         SCOPE_DM_CHANNELS_READ:
           "Zobacz informacje na temat PW i GPW z Twoim udziałem",
+        SCOPE_DM_YOU: "Wyślij do siebie prywatną wiadomość",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Zaktualizuj połączenie i metadane tej aplikacji",
         SCOPE_WEBHOOK_INCOMING: "Dodaje webhooka do kanału",
@@ -6858,12 +6874,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Automatycznie blokuj prywatne wiadomości, kt\xf3re mogą zawierać nieodpowiednie obrazy. [Dowiedz się więcej na temat tego ustawienia tutaj.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Bogata obecność",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Zezw\xf3l znajomym dołączać do Twojej gry.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "To ustawienie pozwala znajomym dołączyć do Twojej gry bez przesyłania prośby.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Zezw\xf3l uczestnikom kanału głosowego dołączać do Twojej gry.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "To ustawienie pozwala uczestnikom tego samego kanału głosowego co Ty dołączyć do Twojej gry bez przesyłania prośby. Ta funkcja działa jedynie na serwerach, kt\xf3re nie są społecznościowe.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Chroń mnie",
@@ -6919,6 +6931,12 @@
         DATA_PRIVACY_CONTROLS: "Jak wykorzystujemy Twoje dane",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Używaj danych, aby ulepszyć Discorda",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "To ustawienie umożliwia nam wykorzystywanie i przetwarzanie Twoich danych, aby je zrozumieć i ulepszyć nasze usługi. [Więcej informacji znajdziesz tutaj.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Użyj danych, aby spersonalizować użytkowanie Discorda",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "To ustawienie umożliwia nam korzystanie z określonych informacji, np. z kim rozmawiasz i w jakie gry grasz, aby spersonalizować Twojego Discorda. [Więcej informacji znajdziesz tutaj.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Używaj danych, aby Discord m\xf3gł działać",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -6957,9 +6975,16 @@
         NEW_GUILDS_DM_ALLOWED:
           "Zezwalaj na wiadomości prywatne od członk\xf3w serwer\xf3w",
         USER_DROPS_SETTINGS: "Ustawienia promocji",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "Nagrody w grze (tzw. Zadania)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Wykorzystaj informacje o tym, jak korzystasz z Discorda, np. w jakie gry grasz, aby otrzymywać informacje o Zadaniach i innych możliwościach zdobycia nagr\xf3d w grze. [Więcej informacji znajdziesz tutaj.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Prywatność serwera",
         USER_DM_SETTINGS_DESCRIPTION:
           "Czy chcesz r\xf3wnież zastosować tę zmianę do wszystkich serwer\xf3w, kt\xf3rych jesteś członkiem? Możesz r\xf3wnież wyłączyć prywatne wiadomości na poszczeg\xf3lnych serwerach, odwiedzając ich strony ustawień.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Funkcja Zadania jest obecnie w fazie test\xf3w beta – chcielibyśmy lepiej zrozumieć, dlaczego ją wyłączyłeś(-aś). [Ankieta]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Funkcja Zadania jest obecnie w fazie test\xf3w beta – dziękujemy za udział. Teraz chcielibyśmy poznać Twoją opinię! [Ankieta]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Pewnie szukasz zadań Discorda! Jeśli widzisz ten komunikat, należy dostosować niekt\xf3re ustawienia. Aby włączyć funkcję, wybierz kolejno Ustawienia -> Prywatność i bezpieczeństwo, a następnie włącz opcje „Używaj danych, aby spersonalizować moje korzystanie z Discorda” i „Nagrody w grze (tzw. zadania)”.\n\n[Przeczytaj więcej w sekcji najczęściej zadawanych pytań]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Zapisz się teraz",
@@ -9540,7 +9565,7 @@
         PREMIUM_DISCOUNT_CTA: "Oszczędź !!{percent, number}!!% na Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Oszczędź na Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Zapłać tylko **{discountedPrice}** za **{numMonths, plural, one {miesiąc!} few {{numMonths} miesiące} other {{numMonths} miesięcy!}}** Po tym okresie będziesz płacić {regularPrice}.",
+          "Zapłać tylko **{discountedPrice}** za **{numMonths, plural, one {1 miesiąc!} few {{numMonths} miesiące!} other {{numMonths} miesięcy!}}** Po tym okresie będziesz płacić {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Twoja zniżka !!{percent, number}!!% wygaśnie {numMonths, plural, one {miesiąc} few {{numMonths} miesiące} other {{numMonths} miesięcy}} po zakupie. Po tym okresie będziesz płacić {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10266,6 +10291,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Obecna subskrypcja",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nowa kwota subskrypcji",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} – anulowano",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "To dostosowanie obejmuje odliczenia, zniżki, obowiązujące podatki i zwroty.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Czemu to widzę?**\n\nKupujesz zmianę planu. Twoje wzmocnienia serwera zostaną odpowiednio zaktualizowane.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10977,7 +11004,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Płać tylko **{discountedPrice}** miesięcznie przez **3 miesiące**. Po zakończeniu 3-miesięcznego okresu promocji będziesz płacić {regularPrice} miesięcznie.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Płać tylko **{discountedPrice}** miesięcznie za **{numMonths, plural, one {pierwszy miesiąc} few {pierwsze {numMonths} miesiące} other {pierwszych {numMonths} miesięcy}}** Nitro. Po zakończeniu promocji będziesz płacić {regularPrice} miesięcznie.",
+          "{numMonths, plural, one {Tw\xf3j pierwszy miesiąc} few {Twoje pierwsze {numMonths} miesiące} other {Twoich pierwszych {numMonths} miesięcy}} miesięcznej subskrypcji Nitro {numMonths, plural, one {kosztuje} few {kosztują} other {kosztuje}} **{discountedPrice}**. Po zakończeniu zniżki będziesz płacić {regularPrice} miesięcznie.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice} miesięcznie przez 3 miesiące\n\n{regularPrice} miesięcznie po upływie 3 miesięcy",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -11019,6 +11046,8 @@
           "Wysłaliśmy Ci właśnie wiadomość e-mail. Kliknij zawarty w niej link do weryfikacji, aby autoryzować zakup.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Kontynuuj",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Nic nie otrzymałeś(-aś)?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Wyślij wiadomość e-mail ponownie",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13455,8 +13484,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Możesz też [założyć własny serwer](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Przykro nam",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Wyłączyć wykorzystywanie danych do ulepszenia Discorda?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Jeśli wyłączysz tę opcję, zakończymy przetwarzanie nowych danych do cel\xf3w analitycznych. Stracisz dostęp do nowych eksperymentalnych funkcji i udoskonaleń opartych na użytkowaniu, np. udoskonaleń czatu głosowego. Jeśli chcesz r\xf3wnież skorzystać z prawa do sprzeciwu wobec przetwarzania przez nas Twoich danych, napisz do nas na adres privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Tak, na pewno",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nie, zabierz mnie z powrotem!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Wyłączyć personalizację?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Przez wyłączenie tej funkcji utracisz dostęp do rzeczy takich jak spersonalizowane informacje i sugestie. Nie będziesz w stanie odzyskać ich w przyszłości!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Tak, na pewno",
@@ -13786,19 +13820,34 @@
           "{count, plural, =0 {0 wsp\xf3lnych znajomych} one {1 wsp\xf3lny znajomy} other {{count} wsp\xf3lnych znajomych}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 wsp\xf3lnych serwer\xf3w} one {1 wsp\xf3lny serwer} few {{count} wsp\xf3lne serwery} other {{count} wsp\xf3lnych serwer\xf3w}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 znajomych} one {1 znajomy} other {{count} znajomych}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 serwer\xf3w} one {1 serwer} few {{count} serwery} other {{count} serwer\xf3w}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE:
           "znajomy użytkownika **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "znajomy użytkownik\xf3w **{usernameOne}** i **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "znajomy użytkownik\xf3w **{usernameOne}**, **{usernameTwo}** i innych (**{count})**",
+          "znajomy użytkownik\xf3w **{usernameOne}**, **{usernameTwo}** i innych ({count})",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "znajomy użytkownika **{usernameOne}** i {count} innych",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "znajomy {count, plural, =0 {0 os\xf3b} one {1 osoby} other {{count} os\xf3b}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "członek serwera **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "członek serwer\xf3w **{guildNameOne}** i **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "członek serwer\xf3w **{guildNameOne}**, **{guildNameTwo}** i innych (**{count})**",
+          "członek serwer\xf3w **{guildNameOne}**, **{guildNameTwo}** i innych ({count})",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "członek {count, plural, =0 {0 serwer\xf3w} one {1 serwera} other {{count} serwer\xf3w}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Wsp\xf3lni znajomi",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Wsp\xf3lne serwery",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP:
+          "Zobacz wszystkich wsp\xf3lnych znajomych",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP:
+          "Zobacz wszystkie wsp\xf3lne serwery",
+        USER_PROFILE_MUTUALS_TITLE: "Wsp\xf3lne",
         PROFILE_IN_VOICE_CALL: "W połączeniu głosowym",
         PROFILE_OPEN_VOICE_CHANNEL: "Otw\xf3rz kanał głosowy",
         IOS_PROFILE_IN_VOICE_CALL: "W połączeniu głosowym",
@@ -13939,6 +13988,10 @@
           "Podaruj {count, plural, one {# miesiąc} few {# miesiące} other {# miesięcy}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Podaruj {count, plural, one {# rok} few {# lata} other {# lat}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Podaruj użytkownikowi {username} {count, plural, one {# miesiąc} few {# miesiące} other {# miesięcy}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Podaruj użytkownikowi {username} {count, plural, one {# rok} few {# lata} other {# lat}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Klikając „Kup prezent”, wyrażasz zgodę na [Warunki Korzystania z Płatnych Usług.]({paidURL}) To jednorazowa opłata za wybrany okres.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Tw\xf3j prezent jest w drodze!",
@@ -14769,8 +14822,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Wyczyścić wiadomość?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Wygląda na to, że już coś napisano. Czy chcesz wyczyścić tekst i użyć polecenia?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Możesz korzystać z tej aplikacji na całym Discordzie. Odpowiedzi na serwerach z ponad {betaUserLimit} osobami widzisz tylko Ty.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Aplikacja odpowie do Ciebie prywatnie",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "W fazie beta tylko Ty widzisz tę wiadomość.\n\n[Dlaczego wyświetlany jest ten komunikat?]({learnMoreUrl}) • [Odrzuć](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "W fazie beta tylko Ty widzisz tę wiadomość. • [Odrzuć](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Wyświetl artykuł pomocy",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Dowiedz się więcej]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Wprowadź „$[command](commandHook)”, aby użyć Midjourney. Wskaz\xf3wka: utw\xf3rz serwer, aby wypr\xf3bować funkcję ze znajomymi.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17607,6 +17670,8 @@
           "Jeżeli anulujesz, **stracisz następujące korzyści:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Chcę zachować Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Nieważne, chcę zachować Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Jeżeli anulujesz, stracisz postępy w nagrodach i wszystkie następujące nagrody:",
         PREMIUM_PAUSE_INSTEAD: "Wstrzymaj zamiast tego",
         PREMIUM_PAUSE_SELECT_TITLE: "Wstrzymanie lub anulowanie subskrypcji",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19309,6 +19374,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "przed chwilą",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} few {min} other {min}} temu",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {godz.} other {godz.}} w tym tygodniu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dzień} other {dni}} temu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19401,6 +19468,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Członek, kt\xf3ry zainicjował tę akcję.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Uprawnienia moderatora",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Szukaj nazw, kategorii lub opisu uprawnień...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Wszystkie ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# rola} few {# role} other {# r\xf3l}}",
@@ -19409,7 +19478,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Brak uprawnień moderatora",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Przyznano przez:",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Zwiększono) Przyznano przez:",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Zwiększono",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Zwiększone uprawnienia zapewniają wyższy poziom dostępu do ustawień serwera i należy je przyznawać tylko bardzo zaufanym moderatorom.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Uprawnienie przyznane przez te role",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Najwyższa rola",
@@ -22087,6 +22161,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Wyświetl wszystkie",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Wyślij prezent",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Sprawdź sw\xf3j prezent",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Kupuj zawsze i wszędzie",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Kup dekoracje awatara i efekty profilu, aby spersonalizować sw\xf3j profil.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Popularne style to m.in. Anime, Fantasy i Cyberpunk.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Członkowie Nitro otrzymują zniżki na całą ofertę Sklepu.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Wybrane przez personel",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gry",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Centrum gier indie",
@@ -23806,6 +23887,8 @@
           "Discord poważnie podchodzi do kwestii bezpieczeństwa nastolatk\xf3w. Gdy wykryjemy w rozmowie możliwe zagrożenie, damy Ci znać. [Dowiedz się więcej na temat powiadomień o bezpieczeństwie.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Przejdź do ustawień",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Odrzuć",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Popełniliśmy błąd? $[Daj nam znać](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Dziękujemy za opinię!",
         STRANGER_DANGER_BANNER_BLOCK: "Zablokuj",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Zamknij",
@@ -24016,6 +24099,8 @@
         POLL_COACHMARK_TITLE: "NOWOŚĆ! Ankiety są już dostępne.",
         POLL_COACHMARK_SUBTITLE:
           "Planuj wydarzenia, zbieraj opinie lub zadaj śmieszne pytanie na czacie.",
+        POLL_COACHMARK_CTA: "Rozpocznij ankietę teraz!",
+        POLL_COACHMARK_DISMISS: "Może p\xf3źniej.",
         POLL_NOT_INTERACTIVE:
           "Wyświetl oryginalną wiadomość, aby wejść w interakcję",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nic tu nie ma",
@@ -24120,6 +24205,7 @@
         QUESTS: "Zadania",
         QUEST: "Zadanie {questName}",
         QUESTS_SEE_CODE: "Zobacz kod",
+        QUESTS_CLAIM_REWARD: "Odbierz nagrodę",
         QUESTS_ACCEPT: "Zaakceptuj zadanie",
         QUESTS_COMPLETE_TOOLTIP: "Wybierz Odbierz, aby odebrać kod nagrody!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24134,13 +24220,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ups! Przy wysyłaniu Ci e-maila weryfikacyjnego coś nam nie wyszło.",
         QUEST_REWARD: "Wygraj nagrodę: {reward}",
+        QUEST_REWARD_COMPLETED:
+          "{date} udało Ci się odblokować nagrodę: {reward}",
+        QUESTS_REWARD_CODE_HEADER: "Tw\xf3j kod nagrody",
         QUESTS_REWARD_CODE_CONGRATS: "Gratulacje!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Jaka jest Twoja preferowana platforma?",
         QUESTS_REWARD_CODE_ERROR:
           "O nie! Coś poszło nie tak. Spr\xf3buj ponownie p\xf3źniej.",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Wybierz platformę",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Wybierz platformę",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Wygenerujemy kod Twojej nagrody ({rewardName}) dla danej platformy. **Po wybraniu opcji Uzyskaj kod nie będzie można zmienić wyboru.**",
         QUESTS_REWARD_CODE_DONE: "Gotowe",
+        QUESTS_REWARD_CODE_GET_CODE: "Uzyskaj kod",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Spr\xf3buj ponownie",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Odbierz to",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Odebrano to",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Międzyplatformowa",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24148,11 +24244,14 @@
         QUESTS_SPONSORED: "Sponsorowane",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Dowiedz się więcej",
+        QUESTS_LEARN_MORE_STACKED: "Więcej\n\ninformacji",
+        QUESTS_LEARN_MORE_LINK: "[Dowiedz się więcej]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Zaakceptuj zadanie",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamuj {gameTitle} dla znajomego przez {streamingDurationRequirement, number} min i wygraj nagrodę: {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Przyjęto zadanie!** Streamuj {gameTitle} dla znajomego przez {streamingDurationRequirement, number} min i wygraj nagrodę: {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Śledź swoje postępy",
         QUESTS_TITLE: "Zadanie {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ojojoj!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24163,6 +24262,8 @@
           "Aby przyjąć zadanie, z desktopowej lub przeglądarkowej aplikacji Discorda przejdź do sekcji \nUstawienia użytkownika > Ekwipunek prezent\xf3w.",
         QUESTS_GET_THIS_GAME: "Pobierz grę",
         QUESTS_DISCLOSURE_LABEL: "Dlaczego wyświetlany jest ten komunikat?",
+        QUESTS_SHARE_LINK: "Kopiuj link udostępniania",
+        QUESTS_HIDE_THIS: "Ukryj to",
         QUESTS_FIND_QUEST:
           "W razie potrzeby znajdziesz go w sekcji Ustawienia użytkownika > Ekwipunek Prezent\xf3w.",
         QUESTS_CLAIM_BY: "Odbierz do {expirationDate}.",
@@ -24203,6 +24304,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! i {count, plural, one {1 inna osoba} few {{count} inne osoby} other {{count} innych os\xf3b}}",
         STOREFRONT: "Sklep",
+        STOREFRONT_TITLE: "Sklep {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "Subskrypcje",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Kup subskrypcje aplikacji {appName}",
@@ -24269,15 +24371,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pierwszy raz",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Obejrzano **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "Użytkownik {userName} obejrzał: **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktywność",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Zrozumiano!",
+        RECENT_GAMES: "Ostatnie gry",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {tydzień} few {tygodnie} other {tygodni}} temu",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {dzień} other {dni}} temu",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {godzinę} few {godziny} other {godzin}} temu",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minutę} few {minuty} other {minut}} temu",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {sekundę} few {sekundy} other {sekund}} temu",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tyg. temu",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} d. temu",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} godz. temu",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min temu",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s temu",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {godz.} other {godz.}} w tym tygodniu",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} w tym tygodniu",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {s} other {s}} w tym tygodniu",
       };
     },
   },

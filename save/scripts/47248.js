@@ -165,7 +165,9 @@
         PAGINATION_PAGE_LABEL: "Puslapis {pageNumber}",
         PAGINATION_SLIDE_LABEL: "{pageNumber} skaidrė",
         MUTE: "Nutildyti",
+        MUTE_ALT: "Išjungti mikrofoną",
         UNMUTE: "Atšaukti nutildymą",
+        UNMUTE_ALT: "Įjungti mikrofoną",
         DEAFEN: "Išjungti garsą",
         UNDEAFEN: "Įjungti garsą",
         SEARCH: "Ieškoti",
@@ -1252,6 +1254,8 @@
           "Ši programėlė sukurta ne Discord. Išbandyk programėles tik iš tų programuotojų, kuriais pasitiki.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Sužinoti daugiau apie privačias programėles.",
+        APPLICATION_ICON_A11Y_LABEL: "Programėlės {applicationName} piktograma",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Programėlės piktograma",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) pradėjo veiklą",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4816,8 +4820,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Įgalinti arba išjungti greituosius klavišus",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Rezultatai",
+        SHOW_CURRENT_ACTIVITY: "Bendrinti savo veiklą kitiems.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord automatiškai atnaujins tavo būseną, kai dalyvausi viešame scenos kanale.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Kai užsiimi aptinkama veikla (pvz., žaidimo žaidimu ar muzikos klausymusi), Discord gali rodyti informaciją apie tas veiklas, įskaitant kada ir kaip jomis užsiėmei.",
         GAME_DETECTION_SERVICE: "Žaidimų Nustatymo Paslauga",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Diegimo vietos",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Pridėti Diegimo Vietą",
@@ -5127,6 +5134,7 @@
         SUB_ENABLED_SERVERS: "Iš Dalies Įgalinti Serveriai",
         AUTHORIZATION: "Leidimas",
         AUTHORIZED_APPS: "Autorizuotos Programėlės",
+        MANAGE_AUTHORIZED_APP: "Tvarkyti autorizuotą programėlę",
         DEAUTHORIZE: "Neleisti",
         DEAUTHORIZE_APP: "Panaikinti Prieigą Programėlei",
         ABOUT_THIS_APP: "Apie šią Programėlę",
@@ -6369,7 +6377,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Pasirink serverį",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Tam reikia turėti **serverio tvarkymo** leidimą šiame serveryje.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Išbandyti dabar",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "Naudok šią programėlę visur!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Pridėti į serverį",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Tinkink savo serverį pridėdamas (-a) šią programėlę",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Šią programėlę galima naudoti bet kur Discord. Beta versijos metu atsakymai bus tau matomi tik tau serveriuose su daugiau nei {betaUserLimit} žmonių. [Sužinoti daugiau]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Netinkama užklausa. Trūksta parametro **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Netinkama sritis **{scope}**",
@@ -6417,6 +6431,7 @@
           "Junkis prie balso kanalo savo vardu ir matyk kitus, dalyvaujančius bet kuriame balso kanale ar pokalbyje",
         SCOPE_DM_CHANNELS_READ:
           "Matyk informaciją apie asmenines žinutes ir grupei skirtas asmenines žinutes, kurios tave pasiekia",
+        SCOPE_DM_YOU: "Siųsti tau asmenines žinutes",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Atnaujink savo ryšį ir metaduomenis šiai programėlei",
         SCOPE_WEBHOOK_INCOMING: "Prideda webhook prie kanalo",
@@ -6761,11 +6776,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Automatiškai blokuoti asmenines žinutes, kuriose gali būti nepadorių vaizdų. [Sužinok daugiau apie šį nustatymą čia.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Leisti draugams jungtis prie žaidimo.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Naudodamasis šiuo nustatymu draugams gali leistis jungtis prie žaidimo nesiųsdamas užklausos.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Balso kanalo dalyviams leisti jungtis prie žaidimo.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Šis nustatymas leidžia tame pačiame kaip ir jūs balso kanale esantiems žmonėms jungtis prie žaidimo nesiunčiant užklausos.  Ši funkcija veikia tik neviešuose serveriuose.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6823,6 +6835,12 @@
         DATA_PRIVACY_CONTROLS: "Kaip mes naudojame tavo duomenis",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Naudoti duomenis, kad pagerintume Discordą",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Šis nustatymas mums leidžia naudoti ir apdoroti tavo duomenis, kad geriau suprastume ir pagerintume savo paslaugas. [Sužinok daugiau apie tai čia.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Naudoti duomenis, kad būtų suasmeninama mano Discord patirtis",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Šis nustatymas mums leidžia naudoti informaciją, pvz., su kuo kalbi ir kokius žaidimus žaidi, kad galėtume tau suasmeninti Discord. [Sužinok daugiau apie tai čia.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Naudokis duomenimis, kad pradėtų Discord dirbti",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Prašyti visų mano duomenų",
@@ -6858,9 +6876,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Leisti gauti asmenines žinutes iš serverio narių",
         USER_DROPS_SETTINGS: "Reklamos nustatymai",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Apdovanojimai žaidimuose (dar žinomi kaip misijos)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Naudoti informaciją apie tai, kaip naudoji Discord – pavyzdžiui, kokius žaidimus žaidi, kad tau praneštume apie misijas ar kitas apdovanojimų žaidimuose galimybes. [Sužinok daugiau apie tai čia.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Serverio privatumas",
         USER_DM_SETTINGS_DESCRIPTION:
           "Ar nori ši pakeitimą taikyti visiems savo esamiems serveriams? Taip pat gali išjungti asmenines žinutes atskiruose serveriuose, apsilankydamas (-a) to serverio nustatymų puslapyje.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Misijos šiuo metu yra Beta versijos – norėtume sužinoti daugiau apie tai, kodėl juos išjungei. [Atsiliepimų apklausa]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Misijos šiuo metu yra Beta versijos – dėkojame, kad dalyvauji, o dabar norėtume sužinoti tavo nuomonę! [Atsiliepimų apklausa]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Tikriausiai ieškai Discord misijos! Jei matai šią žinutę, reikėtų pakoreguoti keletą nustatymų. Kad juos įjungtum, nueik į Nustatymai -> Privatumas ir sauga, tada įjunk tiek „Naudoti duomenis Discord patirčiai tinkinti“, tiek „Apdovanojimai žaidime (aka misijos)“ nustatymus.\n\n[Skaityti daugiau mūsų DUK]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Pradėti dalyvauti dabar",
@@ -9412,7 +9438,7 @@
         PREMIUM_DISCOUNT_CTA: "Sutaupyti !!{percent, number}!! % su Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Sutaupyti su Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Mokėk vos **{discountedPrice}** **{numMonths, plural, one {vieną mėnesį!} few {{numMonths} mėnesius} other {{numMonths} mėnesius!}}** Paskui mokėk {regularPrice}.",
+          "Mokėk vos **{discountedPrice}** **{numMonths, plural, one {{numMonths} mėnesį!} few {{numMonths} mėnesius} other {{numMonths} mėnesius!}}** Paskui mokėk {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Tavo !!{percent, number}!! % nuolaida baigs galioti po {numMonths, plural, one {1 mėnesio} other {{numMonths} mėnesių}} nuo įsigijimo. Paskui mokėsi {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10142,6 +10168,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Dabartinė prenumerata",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Bendra naujos prenumeratos suma",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} atšaukta",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Šis koregavimas apima mokesčio perskaičiavimą, nuolaidas, taikomus mokesčius ir lėšų grąžinimą.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Kodėl tai matau?**\n\nTu perki plano keitimą. Atitinkamai atnaujinami serverio stiprinimai.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10850,7 +10878,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Mokėk vos **{discountedPrice}** kas mėnesį už pirmus **3 mėn.** Nitro. Pasibaigus 3 mėn. nuolaidai mokėk {regularPrice} kas mėnesį.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Mokėk vos **{discountedPrice}**/mėn. už **{numMonths, plural, one {pirmą mėnesį} few {pirmus {numMonths} mėnesius} other {pirmų {numMonths} mėnesių}}** Nitro. Pasibaigus nuolaidai mokėk {regularPrice}/mėn.",
+          "Tavo {numMonths, plural, one {pirmas mėnuo} few {pirmi {numMonths} mėnesiai} other {pirmų {numMonths} mėnesių}} Nitro mėnesinės prenumeratos {numMonths, plural, one {kainuos} other {kainuos}} **{discountedPrice}**. Kai nuolaida baigsis, mokėk po {regularPrice} kas mėnesį",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/mėn. pirmus 3 mėnesius\n\n{regularPrice}/mėn. po 3 mėnesių",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10890,6 +10918,8 @@
           "Ką tik išsiuntėme tau el. laišką. Norėdamas (-a) patvirtinti pirkimą, spustelėk el. laiške esančią patvirtinimo nuorodą.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Tęsti",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Nieko negavai?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Dar kartą siųsti el. laišką",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13294,8 +13324,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Taip pat gali [susikurti savo serverį](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Apgailestaujame",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Išjungti duomenų naudojimą siekiant pagerinti Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Jei išjungsi šią parinktį, nebeapdorosime naujų duomenų analizės tikslais. Neteksi prieigos prie naujų eksperimentinių funkcijų ir naudojimo duomenimis grindžiamų funkcijų patobulinimų – pavyzdžiui, pokalbių balsu. Jei pageidauji dar tikslesnio savo teisės prieštarauti tavo duomenų tvarkymui taikymo, parašyk el. laišką adresu privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Taip, esu tikras",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ne, grąžinkite mane atgal!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Išjungti suasmeninimą?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Jei išjungsi šią parinktį, prarasi prieigą prie tam tikrų dalykų, pavyzdžiui, asmeniškai pritaikytų rekomendacijų ir pasiūlymų. Ateityje negalėsi jų susigrąžinti!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Taip, esu tikras",
@@ -13624,18 +13659,31 @@
           "{count, plural, =0 {Nėra bendrų draugų} one {1 bendras draugas} few {{count} bendri draugai} other {{count} bendrų draugų}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {Nėra bendrų serverių} one {1 bendras serveris} few {{count} bendri serveriai} other {{count} bendrų serverių}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 draugų} one {{count} draugas} few {{count} draugai} other {{count} draugų}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 serverių} one {{count} serveris} few {{count} serveriai} other {{count} serverių}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "draugai su **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "draugai su **{usernameOne}** ir **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "draugai su **{usernameOne}**, **{usernameTwo}** ir **dar {count}**",
+          "draugai su **{usernameOne}**, **{usernameTwo}** ir dar {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "draugai su **{usernameOne}** ir dar {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "draugai su {count, plural, =0 {0 žmonių} one {{count} žmogumi} few {{count} žmonėmis} other {{count} žmonių}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** narys (-ė)",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "**{guildNameOne}** ir **{guildNameTwo}** narys (-ė)",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "**{guildNameOne}**, **{guildNameTwo}** ir **dar {count}** narys (-ė)",
+          "**{guildNameOne}**, **{guildNameTwo}** ir dar {count} narys (-ė)",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "{count, plural, =0 {0 serverių} one {{count} serverio} other {{count} serverių}} narys (-ė)",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Bendri draugai",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Bendri Serveriai",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Rodyti visus bendrus draugus",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Rodyti visus bendrus serverius",
+        USER_PROFILE_MUTUALS_TITLE: "Bendri",
         PROFILE_IN_VOICE_CALL: "Balso skambutyje",
         PROFILE_OPEN_VOICE_CHANNEL: "Atidaryti balso kanalą",
         IOS_PROFILE_IN_VOICE_CALL: "Balso skambutyje",
@@ -13775,6 +13823,10 @@
           "Padovanok {count, plural, one {# mėnesį} few {# mėnesius} other {# mėnesių}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Padovanok {count, plural, one {# metus} few {# metus} other {# metų}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Padovanoti {username} {count, plural, one {# mėnesį} few {# mėnesius} other {# mėnesių}} {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Padovanoti {username} {count, plural, one {# metus} few {# metus} other {# metų}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Paliesdamas (-a) „Pirkti dovaną“ sutinki su [Mokamų paslaugų teikimo sąlygomis.]({paidURL}) Bus taikomas vienkartinis mokestis už pasirinktą laiką.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Tavo dovana jau pakeliui!",
@@ -14613,8 +14665,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Pašalinti pranešimą?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Panašu, kad jau kažką parašei. Ar nori tekstą pašalinti ir naudoti komandą?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Šią programėlę gali naudoti visur Discord. atsakymai bus matomi tik tau serveriuose su daugiau nei {betaUserLimit} žmonių.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Programėlė tau atsakys privačiai",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Beta versijos metu šią žinutę matai tik tu.\n\n[Kodėl tai matau?]({learnMoreUrl}) • [Atmesti](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Beta versijos metu šią žinutę matai tik tu • [Atmesti](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Žiūrėti pagalbos straipsnį",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Sužinoti daugiau]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Kad galėtum naudoti Midjourney, įvesk „$[komandą](commandHook)“. Patarimas: sukurk serverį, kad išbandytum šią funkciją tik su draugais.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17448,6 +17510,8 @@
           "Jei atšauksi dabar, **neteksi prieigos prie šių pranašumų:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Tiek to, pasilieku Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Tiek to, pasilieku Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Jei atšauksi, prarasi savo apdovanojimų pažangą ir visus šiuos apdovanojimus:",
         PREMIUM_PAUSE_INSTEAD: "Vietoje to laikinai sustabdyti",
         PREMIUM_PAUSE_SELECT_TITLE:
           "Laikinai sustabdyk arba atšauk prenumeratą",
@@ -19133,6 +19197,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ką tik",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "Prieš {count} {count, plural, =1 {min.} other {min.}}",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {val.} other {val.}} šią savaitę",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "Prieš {count} {count, plural, =1 {d.} other {d.}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19225,6 +19291,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Narys, inicijavęs šį veiksmą.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Leidimai moderatoriams",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Ieškok leidimų pavadinimų, kategorijų ar aprašų...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Visi ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# vaidmuo} few {# vaidmenys} other {# vaidmenų}}",
@@ -19233,7 +19301,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Jokių leidimų moderatoriams nėra",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Suteikė",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Paaukštino) Suteikė",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Paaukštino",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderatorius",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Paaukštinti leidimai suteikia didesnę prieigą prie serverio nustatymų, todėl jie turi būti suteikiami tik tiems moderatoriams, kuriais labai pasitiki.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Leidimą suteikė šie vaidmenys",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Aukščiausias vaidmuo",
@@ -21891,6 +21964,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Peržiūrėti viską",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Siųsti dovaną",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Peržiūrėk savo dovaną",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Apsipirk bet kur, bet kada",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Pirk pseudoportreto papuošimus ir profilio efektus – suasmenink savo profilį.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Populiarūs stiliai: Anime, Fantasy, Cyberpunk ir kt.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro nariai parduotuvėje viskam gauna nuolaidas.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Darbuotojų pasirinkimas",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Žaidimai",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie žaidimai",
@@ -23613,6 +23693,8 @@
           "Paauglių saugą Discord vertina rimtai. Kai aptinkame galimą riziką tavo saugai, apie tai pranešime. [Sužinoti daugiau apie įspėjimus dėl saugos.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Eiti į nustatymus",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Atmesti",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Padarėme klaidą? $[Pranešk apie tai](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Ačiū už atsiliepimą!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokuoti",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Uždaryti",
@@ -23820,6 +23902,8 @@
         POLL_COACHMARK_TITLE: "NAUJA! Apklausos jau čia.",
         POLL_COACHMARK_SUBTITLE:
           "Planuok renginius, sužinok nuomones arba užduok smagiai kvailą klausimą pokalbyje.",
+        POLL_COACHMARK_CTA: "Pradėti apklausą dabar!",
+        POLL_COACHMARK_DISMISS: "Galbūt vėliau.",
         POLL_NOT_INTERACTIVE:
           "Norėdamas (-a) sąveikauti, peržiūrėk pradinę žinutę",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Čia nieko nėra",
@@ -23921,6 +24005,7 @@
         QUESTS: "Misijos",
         QUEST: "{questName} misija",
         QUESTS_SEE_CODE: "Žiūrėti kodą",
+        QUESTS_CLAIM_REWARD: "Atsiimti apdovanojimą",
         QUESTS_ACCEPT: "Priimti misiją",
         QUESTS_COMPLETE_TOOLTIP:
           "Paspausk atsiėmimo mygtuką kad gautum apdovanojimo kodą!",
@@ -23935,13 +24020,22 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "O ne! Mums nepavyko tau išsiųsti patvirtinimo el. laiško.",
         QUEST_REWARD: "Laimėjimas: {reward}",
+        QUEST_REWARD_COMPLETED: "{date} gavai {reward}",
+        QUESTS_REWARD_CODE_HEADER: "Tavo apdovanojimo kodas",
         QUESTS_REWARD_CODE_CONGRATS: "Sveikiname!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Kokia tavo pageidaujama platforma?",
         QUESTS_REWARD_CODE_ERROR:
           "O ne! Kažkas nepavyko, pabandyk dar kartą vėliau",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Pasirink platformą",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Rinkis platformą",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Sukursime specialiai tavo platformai skirtą {rewardName} kodą. **Kai paspausi Gauti kodą, platformos pasirinkimo nebegalėsi pakeisti.**",
         QUESTS_REWARD_CODE_DONE: "Atlikta",
+        QUESTS_REWARD_CODE_GET_CODE: "Gauti kodą",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Bandyk Dar Kartą",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Panaudok šį",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Panaudojai šį",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Veikia įvairiose platformose",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -23950,11 +24044,14 @@
         QUESTS_SPONSORED: "Remiama",
         QUESTS_PROMOTED: "Paaukštintas",
         QUESTS_LEARN_MORE_V2: "Sužinoti daugiau",
+        QUESTS_LEARN_MORE_STACKED: "Sužinoti\n\ndaugiau",
+        QUESTS_LEARN_MORE_LINK: "[Sužinoti daugiau]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Priimti misiją",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Transliuok {gameTitle} draugui {streamingDurationRequirement, number} min. ir laimėk {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Misija patvirtinta!** Transliuok {gameTitle} draugui {streamingDurationRequirement, number} min. ir laimėk {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Sekti savo pažangą",
         QUESTS_TITLE: "{questName} misija",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23965,6 +24062,8 @@
           "Norėdamas (-a) priimti misiją, gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: \nNaudotojo nustatymai > Dovanų atsargos.",
         QUESTS_GET_THIS_GAME: "Gauti Žaidimą",
         QUESTS_DISCLOSURE_LABEL: "Kodėl man tai rodoma?",
+        QUESTS_SHARE_LINK: "Kopijuoti bendrinimo nuorodą",
+        QUESTS_HIDE_THIS: "Slėpti",
         QUESTS_FIND_QUEST:
           "Visa tai rasi čia: Naudotojo nustatymai > Dovanų atsargos",
         QUESTS_CLAIM_BY: "Panaudok iki {expirationDate}.",
@@ -24005,6 +24104,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ir {count, plural, one {{count} kitas} few {{count} kiti} other {{count} kitų}}",
         STOREFRONT: "Parduotuvė",
+        STOREFRONT_TITLE: "{appName} parduotuvė",
         STOREFRONT_APP_SUBSCRIPTIONS: "Prenumeratos",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Įsigyk prenumeratas iš {appName}",
         STOREFRONT_APP_PRODUCTS: "Produktai",
@@ -24069,15 +24169,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pirmą kartą",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Žiūrėjo **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} žiūrėjo **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Veikla",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Supratau!",
+        RECENT_GAMES: "Pastarieji žaidimai",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "Prieš {count} {count, plural, =1 {sav.} other {sav.}}",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "Prieš {count} {count, plural, =1 {d.} other {d.}}",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "Prieš {count} {count, plural, =1 {val.} other {val.}}",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "Prieš {count} {count, plural, =1 {min.} other {min.}}",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "Prieš {count} {count, plural, =1 {sek.} other {sek.}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "prieš {count} sav.",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "prieš {count} d.",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "prieš {count} val.",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "prieš {count} min.",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Prieš {count} sek.",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {val.} other {val.}} šią savaitę",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min.} other {min.}} šią savaitę",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sek.} other {sek.}} šią savaitę",
       };
     },
   },

@@ -4961,11 +4961,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Activar o desactivar los atajos de teclado",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultados",
-        SHOW_CURRENT_ACTIVITY: "Comparte tu actividad con otras personas.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord actualizar\xe1 autom\xe1ticamente tu estado si est\xe1s en un escenario p\xfablico.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Cuando participas en una actividad detectable (como jugar un juego o escuchar m\xfasica), Discord puede mostrar informaci\xf3n sobre esas actividades, lo que incluye cu\xe1ndo y c\xf3mo has participado.",
         GAME_DETECTION_SERVICE: "Servicio de detecci\xf3n de juegos",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Ubicaciones de instalaci\xf3n",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -6986,12 +6983,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Bloquea autom\xe1ticamente los mensajes directos que puedan contener im\xe1genes expl\xedcitas. [M\xe1s informaci\xf3n sobre esta configuraci\xf3n aqu\xed.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Permite que tus amigos se unan a tu partida.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Esta configuraci\xf3n permite que tus amigos se unan a tu partida sin tener que enviar una solicitud.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Permite que los participantes del canal de voz se unan a tu partida.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Esta configuraci\xf3n permite que las personas que est\xe1n en tu mismo canal de voz se unan a tu partida sin tener que enviar una solicitud. Esta caracter\xedstica solo funciona en los servidores que no son servidores de comunidad.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:

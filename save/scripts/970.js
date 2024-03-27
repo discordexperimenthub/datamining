@@ -4917,11 +4917,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Hotkey aktivieren oder deaktivieren",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Ergebnisse",
-        SHOW_CURRENT_ACTIVITY: "Teile deine Aktivit\xe4t mit anderen.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord aktualisiert automatisch deinen Status, wenn du an einer Stage teilnimmst.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Wenn du an einer erkennbaren Aktivit\xe4t teilnimmst (wie zum Beispiel ein Spiel spielst oder Musik h\xf6rst), kann Discord Informationen \xfcber diese Aktivit\xe4ten anzeigen, einschlie\xdflich wann und auf welche Weise du dich daran beteiligt hast.",
         GAME_DETECTION_SERVICE: "Spielerkennungsdienst",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Installationsverzeichnisse",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -6928,12 +6925,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Blockiert automatisch Direktnachrichten, die anst\xf6\xdfige Bilder enthalten k\xf6nnten. [Mehr zu dieser Einstellung erf\xe4hrst du hier.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Erlaube Freunden, deinem Spiel beizutreten.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Diese Einstellung erlaubt es Freunden, deinem Spiel beizutreten, ohne dir vorher eine Anfrage zu schicken.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Erlaube Teilnehmern des Sprachkanals, deinem Spiel beizutreten.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Diese Einstellung erlaubt es Teilnehmern in deinem Sprachkanal, deinem Spiel beizutreten, ohne dir vorher eine Anfrage zu schicken. Nicht auf Community-Servern m\xf6glich.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -19509,6 +19502,9 @@
         MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP: "Weitere Optionen",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY: "Verd\xe4chtige DM-Aktivit\xe4t",
         MEMBER_SAFETY_COMMUNICATION_DISABLED: "Im Timeout",
+        MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY:
+          "Ungew\xf6hnliche Kontoaktivit\xe4t",
+        MEMBER_SAFETY_USERNAME_QUARANTINED: "In Quarant\xe4ne gestellt",
         MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP: "Im Timeout f\xfcr",
         MEMBER_SAFETY_MORE_ROLES_TOOLTIP: "Mehr Rollen",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP:

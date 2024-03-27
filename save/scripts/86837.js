@@ -5033,12 +5033,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Activer ou d\xe9sactiver le raccourci clavier",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "R\xe9sultats",
-        SHOW_CURRENT_ACTIVITY:
-          "Partage ton activit\xe9 avec d'autres personnes.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord mettra automatiquement ton statut \xe0 jour si tu participes \xe0 une conf\xe9rence publique.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Lorsque tu commences une activit\xe9 d\xe9tectable (comme jouer \xe0 un jeu ou \xe9couter de la musique), Discord peut afficher des informations sur ces activit\xe9s, y compris quand et comment tu l'utilises.",
         GAME_DETECTION_SERVICE: "Service de d\xe9tection de jeu",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Emplacements d'installation",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -7085,12 +7081,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Bloque automatiquement les messages priv\xe9s qui pourraient contenir des images explicites. [En savoir plus sur ce param\xe8tre.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Autoriser des amis \xe0 rejoindre ton jeu.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Ce param\xe8tre autorise tes amis \xe0 rejoindre ton jeu sans avoir \xe0 t'envoyer une demande.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Autoriser les participants du salon vocal \xe0 rejoindre ton jeu.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Ce param\xe8tre autorise les participants pr\xe9sents dans ton salon vocal \xe0 rejoindre ton jeu sans avoir \xe0 t'envoyer une demande. Cette fonctionnalit\xe9 fonctionne uniquement hors serveurs de communaut\xe9.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Prot\xe8ge-moi",

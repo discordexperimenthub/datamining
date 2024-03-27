@@ -169,7 +169,9 @@
         PAGINATION_PAGE_LABEL: "Pagina {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Dia {pageNumber}",
         MUTE: "Dempen",
+        MUTE_ALT: "Microfoon uitzetten",
         UNMUTE: "Dempen opheffen",
+        UNMUTE_ALT: "Microfoon aanzetten",
         DEAFEN: "Onhoorbaar maken",
         UNDEAFEN: "Hoorbaar maken",
         SEARCH: "Zoeken",
@@ -1277,6 +1279,9 @@
           "Deze app is niet gemaakt door Discord. Test alleen apps van ontwikkelaars die je vertrouwt.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Kom meer te weten over apps van derden.",
+        APPLICATION_ICON_A11Y_LABEL:
+          "Applicatiepictogram voor {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Applicatiepictogram",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) heeft een activiteit gestart",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4831,8 +4836,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Toetsencombinatie in- of uitschakelen",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultaten",
+        SHOW_CURRENT_ACTIVITY: "Deel je activiteit met anderen.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord werkt automatisch je status bij wanneer je een openbaar podium bijwoont.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Als je een detecteerbare activiteit onderneemt (zoals gamen of naar muziek luisteren), kan Discord informatie over die activiteit tonen, inclusief wanneer en hoe je ermee bezig bent geweest.",
         GAME_DETECTION_SERVICE: "Gamedetectieservice",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locaties installeren",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5146,6 +5154,7 @@
         SUB_ENABLED_SERVERS: "Sub ingeschakelde servers",
         AUTHORIZATION: "Autorisatie",
         AUTHORIZED_APPS: "Goedgekeurde apps",
+        MANAGE_AUTHORIZED_APP: "Geautoriseerde app beheren",
         DEAUTHORIZE: "Autorisatie ongedaan maken",
         DEAUTHORIZE_APP: "Autorisatie applicatie ongedaan maken",
         ABOUT_THIS_APP: "Over deze applicatie",
@@ -6403,7 +6412,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Selecteer een server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Dit vereist dat je de machtiging **Server beheren** hebt op de server.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Nu uitproberen",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "Gebruik deze app overal!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Toevoegen aan server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Pas je server aan door deze app toe te voegen",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Je kunt deze app overal op Discord gebruiken. In de b\xe8tafase zijn reacties alleen zichtbaar voor jou in servers met meer dan {betaUserLimit} mensen. [Meer informatie]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Ongeldig verzoek. Ontbrekende parameter **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ongeldig bereik **{scope}**",
@@ -6450,6 +6465,7 @@
           "Maak een spraakverbinding namens jezelf en zie wie er nog meer in een spraakkanaal of gesprek zijn",
         SCOPE_DM_CHANNELS_READ:
           "Bekijk informatie over de pb's en groeps-pb's waarvan je deel uitmaakt",
+        SCOPE_DM_YOU: "Priv\xe9berichten naar je sturen",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Update je verbinding en metadata voor deze applicatie",
         SCOPE_WEBHOOK_INCOMING: "Voegt een webhook toe aan een kanaal",
@@ -6794,12 +6810,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Blokkeer automatisch priv\xe9berichten die expliciete afbeeldingen kunnen bevatten. [Lees hier meer over deze instelling.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Vrienden toestaan om deel te nemen aan je game.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Met deze instelling kunnen vrienden aan je game deelnemen zonder een verzoek te sturen.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Spraakkanaal-deelnemers toestaan om deel te nemen aan je game.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Met deze instelling kunnen mensen die zich in hetzelfde spraakkanaal bevinden als jij, aan je game deelnemen zonder een verzoek te sturen. Deze functie werkt alleen in servers zonder community.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Houd me veilig",
@@ -6854,6 +6866,12 @@
         DATA_PRIVACY_CONTROLS: "Hoe wij jouw gegevens gebruiken",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Gegevens gebruiken om Discord te verbeteren",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Met deze instelling kunnen wij je gegevens gebruiken en verwerken om onze diensten beter te begrijpen en te verbeteren. [Meer informatie daarover vind je hier.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Gegevens gebruiken om mijn Discord-ervaring persoonlijker te maken",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Met deze instelling kunnen we informatie, zoals met wie je praat en welke games je speelt, gebruiken om Discord voor jou aan te passen. [Meer informatie daarover vind je hier.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Gegevens gebruiken om Discord te doen werken",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Al mijn gegevens aanvragen",
@@ -6889,9 +6907,16 @@
           "Wil je deze wijziging ook toepassen op al je bestaande servers?",
         NEW_GUILDS_DM_ALLOWED: "Priv\xe9berichten van serverleden toestaan",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "Beloningen in de game (missies)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Informatie gebruiken over hoe je Discord gebruikt, zoals welke games je speelt, om je op de hoogte te stellen van missies of andere mogelijkheden om beloningen te krijgen. [Meer informatie daarover vind je hier.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Serverprivacy",
         USER_DM_SETTINGS_DESCRIPTION:
           "Wil je deze wijziging ook toepassen op al je bestaande servers? Je kunt priv\xe9berichten ook op individuele servers uitschakelen via de instellingenpagina van de betreffende server.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Missies zitten momenteel in de b\xe8tafase. We willen graag weten waarom je ze hebt uitgeschakeld. [Feedbackenqu\xeate]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Missies zitten momenteel in de b\xe8tafase. Bedankt voor het deelnemen, nu willen we graag wat meer horen over je ervaringen! [Feedbackenqu\xeate]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Jij bent vast op zoek naar Discord-missies! Als je dit bericht ziet, moeten er wat instellingen bijgewerkt worden. Om dit te doen ga je naar Instellingen > Privacy en veiligheid, en daar schakel je zowel 'Gegevens gebruiken om mijn Discord-ervaring aan te passen' en 'Beloningen in de game (oftewel missies)' in.\n\n[Lees meer in onze FAQ's]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Nu inschrijven",
@@ -9444,7 +9469,7 @@
         PREMIUM_DISCOUNT_CTA: "Bespaar !!{percent, number}!!% op Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Bespaar op Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Betaal **{numMonths, plural, one {een maand} other {{numMonths} maanden}}** lang slechts **{discountedPrice}**! Daarna betaal je {regularPrice}.",
+          "Betaal **{numMonths, plural, one {1 maand} other {{numMonths} maanden}}** lang slechts **{discountedPrice}**! Daarna betaal je {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Je korting van !!{percent, number}!!% eindigt {numMonths, plural, one {1 maand} other {{numMonths} maanden}} na aankoop. Daarna wordt er {regularPrice} in rekening gebracht.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10162,6 +10187,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Huidig abonnement",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nieuw abonnementstotaal",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} geannuleerd",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Deze wijziging is van toepassing op verrekening, korting, toepasbare belastingen en terugbetaling.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Waarom zie ik dit?**\n\nJe koopt een abonnementwijziging. Je serverboosts worden hieraan aangepast.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10867,7 +10894,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Betaal slechts **{discountedPrice}** per maand voor je eerste **3 maanden** Nitro. Na de korting voor 3 maanden betaal je maandelijks {regularPrice}.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Betaal slechts **{discountedPrice}** per maand voor je eerste **{numMonths, plural, one {maand} other {{numMonths} maanden}}** Nitro. Na de korting betaal je maandelijks {regularPrice}.",
+          "De eerste {numMonths, plural, one {maand} other {{numMonths} maanden}} van 'Nitro maandelijks' {numMonths, plural, one {kost} other {kosten}} **{discountedPrice}**. Als de korting voorbij is, betaal je {regularPrice} per maand",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 maanden lang {discountedPrice}/maand\n\nNa 3 maanden {regularPrice}/maand",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10909,6 +10936,8 @@
           "We hebben je net gemaild. Klik op de verificatielink in de e-mail om deze aankoop goed te keuren.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Doorgaan",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Heb je niets ontvangen?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "E-mail opnieuw sturen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13298,8 +13327,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Je kunt ook [je eigen server beginnen](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Sorry daarvoor",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Gegevens gebruiken om Discord te verbeteren uitschakelen?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Als je deze optie uitschakelt, stoppen we met het verwerken van gegevens voor analyse. Je verliest toegang tot nieuwe experimentele functies en op gebruik gebaseerde verbeteringen aan functies zoals voicechat. Als je je recht om bezwaar te maken tegen de verwerking van je gegevens op nog meer manieren wilt laten gelden, stuur dan een e-mail naar privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ja, ik weet het zeker",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nee, ik wil terug!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Personaliseren uitschakelen?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Door dit uit te schakelen, verlies je de toegang tot zaken zoals gepersonaliseerde aanbevelingen en suggesties. Je kunt ze in de toekomst niet meer terughalen!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ja, ik weet het zeker",
@@ -13627,18 +13661,33 @@
           "{count, plural, =0 {0 gemeenschappelijke vrienden} one {1 gemeenschappelijke vriend} other {{count} gemeenschappelijke vrienden}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 gemeenschappelijke servers} one {1 gemeenschappelijke server} other {{count} gemeenschappelijke servers}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 vrienden} one {1 vriend(in)} other {{count} vrienden}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 servers} one {1 server} other {{count} servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "vrienden met **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "vrienden met **{usernameOne}** en **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "vrienden met **{usernameOne}** en **{usernameTwo}** en **{count} anderen**",
+          "vrienden met **{usernameOne}** en **{usernameTwo}** en {count} anderen",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "vrienden met **{usernameOne}** en nog {count}",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "vrienden met {count, plural, =0 {0 mensen} one {1 persoon} other {{count} personen}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "lid van **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "lid van **{guildNameOne}** en **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "lid van **{guildNameOne}** en **{guildNameTwo}** en nog **{count}**",
+          "lid van **{guildNameOne}** en **{guildNameTwo}** en nog {count}",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "lid van {count, plural, =0 {0 servers} one {1 server} other {{count} servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Gemeenschappelijke vrienden",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Gemeenschappelijke servers",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP:
+          "Alle gemeenschappelijke vrienden tonen",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP:
+          "Alle gemeenschappelijke servers tonen",
+        USER_PROFILE_MUTUALS_TITLE: "Gemeenschappelijk",
         PROFILE_IN_VOICE_CALL: "In een spraakoproep",
         PROFILE_OPEN_VOICE_CHANNEL: "Spraakkanaal openen",
         IOS_PROFILE_IN_VOICE_CALL: "In een spraakoproep",
@@ -13781,6 +13830,10 @@
           "Geef {count, plural, one {# maand} other {# maanden}} {nitroTierName} cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Geef {count, plural, one {# jaar} other {# jaar}} {nitroTierName} cadeau",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Geef {username} {count, plural, one {# maand} other {# maanden}} {nitroTierName} cadeau",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Geef {username} {count, plural, one {# jaar} other {# jaar}} {nitroTierName} cadeau",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Door op 'Cadeau kopen' te klikken ga je akkoord met de [Voorwaarden betaaldiensten.]({paidURL}) Dit is een eenmalige betaling voor de gekozen periode.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Je cadeau is onderweg!",
@@ -14617,8 +14670,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Bericht verwijderen?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Het lijkt erop dat je al iets getypt hebt. Wil je dat verwijderen en in plaats daarvan een opdracht gebruiken?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Je kunt deze app overal op Discord gebruiken. Reacties zijn alleen voor jou zichtbaar in servers met meer dan {betaUserLimit} mensen.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "De reactie van de app is alleen voor jou zichtbaar",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Alleen jij kunt dit bericht zien tijdens de b\xe8tafase.\n\n[Waarom zie ik dit?]({learnMoreUrl}) • [Afwijzen](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Alleen jij kunt dit bericht zien tijdens de b\xe8tafase • [Afwijzen](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Help-artikel bekijken",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Meer informatie]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Typ '$[command](commandHook)' om Midjourney te gebruiken. Tip: Cre\xeber een server om hem alleen met vrienden uit te proberen.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17439,6 +17502,8 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Laat maar, ik ga door met Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Laat maar, ik ga door met Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Als je annuleert, gaan je beloningsvoortgang en al deze beloningen verloren:",
         PREMIUM_PAUSE_INSTEAD: "Liever tijdelijk stopzetten",
         PREMIUM_PAUSE_SELECT_TITLE:
           "Abonnement tijdelijk stopzetten of annuleren",
@@ -19127,6 +19192,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "zojuist",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min.} other {min.}} geleden",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {u} other {u}} deze week",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dag} other {dagen}} geleden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19215,6 +19282,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Lid dat deze actie in gang heeft gezet.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Modmachtigingen",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Zoeken op machtigingsnaam, -categorie of -beschrijving...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Alle ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# rol} other {# rollen}}",
@@ -19222,7 +19291,12 @@
           "Alle verleende machtigingen",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Geen modmachtigingen",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Verleend door",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Verhoogd) verleend door",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Verhoogd",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Verhoogde machtigingen geven een hoger toegangsniveau voor serverinstellingen. Geef ze alleen aan mods die je echt vertrouwt.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Machtiging verleend door deze rollen",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Hoogste rol",
@@ -21865,6 +21939,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Alles bekijken",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Verstuur een cadeau",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Bekijk je cadeau",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Shop waar je wilt en wanneer je wilt",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Koop avatarversieringen en profieleffecten om je profiel een persoonlijk tintje te geven.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Er zijn populaire stijlen zoals Anime, Fantasy en Cyberpunk.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro-leden krijgen korting op alles in de winkel.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Favo's van onze medewerkers",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie-spotlight",
@@ -23580,6 +23662,8 @@
           "We nemen de veiligheid van tieners heel serieus bij Discord. Als we een mogelijk veiligheidsrisico ontdekken in een chat, laten we het je weten. [Meer informatie over veiligheidswaarschuwingen.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Naar instellingen",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Afwijzen",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Hebben we een fout gemaakt? $[Laat het ons weten](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Bedankt voor je feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokkeren",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Sluiten",
@@ -23789,6 +23873,8 @@
         POLL_COACHMARK_TITLE: "NIEUW! Je kunt nu peilingen opstellen.",
         POLL_COACHMARK_SUBTITLE:
           "Plan evenementen, verzamel meningen of verblijd de chat met een maffe vraag.",
+        POLL_COACHMARK_CTA: "Maak nu een peiling!",
+        POLL_COACHMARK_DISMISS: "Misschien later.",
         POLL_NOT_INTERACTIVE:
           "Bekijk het oorspronkelijke bericht voor interactie",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Hier is niets te zien",
@@ -23890,6 +23976,7 @@
         QUESTS: "Missies",
         QUEST: "Missie: {questName}",
         QUESTS_SEE_CODE: "Code bekijken",
+        QUESTS_CLAIM_REWARD: "Beloning claimen",
         QUESTS_ACCEPT: "Missie accepteren",
         QUESTS_COMPLETE_TOOLTIP: "Accepteer om je beloningscode te ontvangen!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23905,13 +23992,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Och, mensen! We hebben je geen verificatiemail gestuurd.",
         QUEST_REWARD: "Win {reward}",
+        QUEST_REWARD_COMPLETED: "Je hebt {reward} ontgrendeld op {date}",
+        QUESTS_REWARD_CODE_HEADER: "Je beloningscode",
         QUESTS_REWARD_CODE_CONGRATS: "Gefeliciteerd!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Aan welk platform geef je de voorkeur?",
         QUESTS_REWARD_CODE_ERROR:
           "O-oh, er is iets fout gegaan, probeer het later nog eens",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Kies een platform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Platform selecteren",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "We genereren een platformspecifieke code voor je {rewardName}. **Als je 'Code ontvangen' gebruikt, kun je je keuze niet meer wijzigen.**",
         QUESTS_REWARD_CODE_DONE: "Klaar",
+        QUESTS_REWARD_CODE_GET_CODE: "Code ontvangen",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Probeer het opnieuw",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim dit",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
+          "Je hebt dit al geclaimd",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Cross-platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "Pc",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23919,11 +24016,14 @@
         QUESTS_SPONSORED: "Gesponsord",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Meer informatie",
+        QUESTS_LEARN_MORE_STACKED: "Meer\n\ninformatie",
+        QUESTS_LEARN_MORE_LINK: "[Meer informatie]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Missie accepteren",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} {streamingDurationRequirement, number} minuten voor een vriend(in) en win {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Missie aanvaard!** Stream {gameTitle} {streamingDurationRequirement, number} minuten voor een vriend(in) en win {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Hou je voortgang bij",
         QUESTS_TITLE: "Missie: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oeps!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23934,6 +24034,8 @@
           "Ga in de Discord-app of browser op je pc naar \nGebruikersinstellingen > Cadeau-inventaris en accepteer de missie daar.",
         QUESTS_GET_THIS_GAME: "Game halen",
         QUESTS_DISCLOSURE_LABEL: "Waarom zie ik dit?",
+        QUESTS_SHARE_LINK: "Deellink kopi\xebren",
+        QUESTS_HIDE_THIS: "Dit verbergen",
         QUESTS_FIND_QUEST:
           "Je kunt dit terugvinden onder Gebruikersinstellingen > Cadeau-inventaris",
         QUESTS_CLAIM_BY: "Claim dit voor {expirationDate}.",
@@ -23974,6 +24076,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! en {count, plural, one {1 andere persoon} other {{count} anderen}}",
         STOREFRONT: "Store",
+        STOREFRONT_TITLE: "{appName} Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonnementen",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koop abonnementen via {appName}",
         STOREFRONT_APP_PRODUCTS: "Producten",
@@ -24038,15 +24141,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Eerste keer",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "**{mediaTitle}** bekeken",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} heeft **{mediaTitle}** bekeken",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activiteiten",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Begrepen!",
+        RECENT_GAMES: "Recente games",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {week} other {weken}} geleden",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {dag} other {dagen}} geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {uur} other {uur}} geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minuut} other {minuten}} geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {seconde} other {seconden}} geleden",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w geleden",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d geleden",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}u geleden",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m geleden",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s geleden",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {u} other {u}} deze week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} deze week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sec} other {sec}} deze week",
       };
     },
   },

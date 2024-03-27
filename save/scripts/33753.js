@@ -163,7 +163,9 @@
         PAGINATION_PAGE_LABEL: "หน้า {pageNumber}",
         PAGINATION_SLIDE_LABEL: "สไลด์ {pageNumber}",
         MUTE: "ปิดเสียง",
+        MUTE_ALT: "ปิดไมโครโฟน",
         UNMUTE: "เปิดเสียง",
+        UNMUTE_ALT: "เปิดไมโครโฟน",
         DEAFEN: "ปิดการได้ยิน",
         UNDEAFEN: "เปิดการได้ยิน",
         SEARCH: "ค้นหา",
@@ -1226,6 +1228,8 @@
           "Discord ไม่ได้จัดทำแอปนี้ โปรดทดสอบเฉพาะแอปจากนักพัฒนาที่คุณเชื่อถือเท่านั้น",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "เรียนรู้เพิ่มเติมเกี่ยวกับแอปส่วนตัว",
+        APPLICATION_ICON_A11Y_LABEL: "ไอคอนแอปของ {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "ไอคอนแอป",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) เริ่มกิจกรรม",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4699,8 +4703,11 @@
           "เลือกช่องสำหรับแชทด้วยเสียงที่จะเข้าร่วมหรือที่จะสลับไปใช้",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "เปิดหรือปิดใช้งานปุ่มลัด",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "ผลลัพธ์",
+        SHOW_CURRENT_ACTIVITY: "แชร์กิจกรรมของคุณกับคนอื่น",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord จะอัปเดตสถานะของคุณโดยอัตโนมัติหากคุณเข้าร่วมเวทีสาธารณะ",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "เมื่อคุณมีส่วนร่วมกับกิจกรรมที่ตรวจพบได้ (เช่น เล่นเกม หรือฟังเพลง) Discord จะสามารถแสดงข้อมูลเกี่ยวกับกิจกรรมเหล่านั้น รวมถึงเวลาและวิธีการที่คุณมีส่วนร่วม",
         GAME_DETECTION_SERVICE: "บริการตรวจพบเกม",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "ตำแหน่งติดตั้ง",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "เพิ่มตำแหน่งติดตั้ง",
@@ -5001,6 +5008,7 @@
         SUB_ENABLED_SERVERS: "เซิร์ฟเวอร์ที่เปิดให้ Subscribe",
         AUTHORIZATION: "การอนุญาต",
         AUTHORIZED_APPS: "แอปที่ได้รับอนุญาต",
+        MANAGE_AUTHORIZED_APP: "จัดการแอปที่ได้รับอนุญาต",
         DEAUTHORIZE: "ยกเลิกการอนุญาต",
         DEAUTHORIZE_APP: "ยกเลิกการให้สิทธิแอป",
         ABOUT_THIS_APP: "เกี่ยวกับแอปนี้",
@@ -6226,7 +6234,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "เลือกเซิร์ฟเวอร์",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "คุณต้องมีสิทธิ์การอนุญาตให้**จัดการเซิร์ฟเวอร์**ในเซิร์ฟเวอร์",
+        OAUTH2_INTEGRATION_SELECT_USER: "ลองตอนนี้เลย",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "ใช้แอปนี้ทุกที่!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "เพิ่มไปยังเซิร์ฟเวอร์",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "ปรับแต่งเซิร์ฟเวอร์ของคุณโดยเพิ่มแอปนี้",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "คุณสามารถใช้แอปนี้ได้ทุกที่ใน Discord ระหว่างช่วงทดสอบเบต้า จะมีเฉพาะคุณเท่านั้นที่มองเห็นการตอบกลับในเซิร์ฟเวอร์ที่มีมากกว่า {betaUserLimit} คน [เรียนรู้เพิ่มเติม]({learnMoreUrl})",
         OAUTH2_REQUEST_MISSING_PARAM:
           "การร้องขอไม่ถูกต้อง ค่าที่หายไป **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "สโคปไม่ถูกต้อง **{scope}**",
@@ -6268,6 +6282,7 @@
         SCOPE_VOICE:
           "เชื่อมต่อกับแชทด้วยเสียงสำหรับพูดแทนคุณ และดูคนอื่น ๆ ที่อยู่ในช่องสำหรับแชทด้วยเสียงหรือการโทร",
         SCOPE_DM_CHANNELS_READ: "ดูข้อมูลเกี่ยวกับ DM และ GDM ที่คุณอยู่",
+        SCOPE_DM_YOU: "ส่งข้อความส่วนตัว",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "อัปเดตการเชื่อมต่อและเมตาดาต้าสำหรับแอปพลิเคชันนี้",
         SCOPE_WEBHOOK_INCOMING: "เพิ่ม Webhook ในช่อง",
@@ -6597,11 +6612,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "บล็อกข้อความส่วนตัวที่อาจมีภาพล่อแหลมโดยอัตโนมัติ [เรียนรู้เพิ่มเติมเกี่ยวกับการตั้งค่านี้ที่นี่]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "ให้เพื่อน ๆ เข้าร่วมเกมกับคุณ",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "การตั้งค่านี้ทำให้เพื่อน ๆ เข้าร่วมเกมกับคุณได้โดยไม่ต้องส่งคำขอ",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "ให้สมาชิกในช่องสำหรับพูดเข้าร่วมเกมกับคุณ",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "การตั้งค่านี้ทำให้ผู้ที่อยู่ในช่องสำหรับพูดช่องเดียวกับคุณเข้าร่วมเกมกับคุณได้โดยไม่ต้องส่งคำขอ ฟีเจอร์นี้ใช้ได้ในเซิร์ฟเวอร์ที่ไม่ใช่ชุมชนเท่านั้น",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "ให้ฉันปลอดภัย",
@@ -6655,6 +6667,12 @@
         DATA_PRIVACY_CONTROLS: "วิธีการที่เราใช้ข้อมูลของคุณ",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "การใช้ข้อมูลเพื่อพัฒนา Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "การตั้งค่านี้จะช่วยให้เราใช้และประมวลผลข้อมูลของคุณเพื่อทำความเข้าใจและปรับปรุงบริการของเรา [เรียนรู้เพิ่มเติมได้ที่นี่]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "ใช้ข้อมูลเพื่อปรับแต่งประสบการณ์ใช้งาน Discord ในแบบส่วนตัว",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "การตั้งค่านี้จะช่วยให้เราใช้ข้อมูล เช่น คนที่คุณคุยด้วย และเกมที่คุณเล่น เพื่อปรับแต่ง Discord ให้เหมาะกับคุณ [เรียนรู้เพิ่มเติมได้ที่นี่]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "ใช้ข้อมูลเพื่อให้ Discord ทำงาน",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -6689,9 +6707,16 @@
           "คุณต้องการให้การตั้งค่านี้มีผลกับ server ที่คุณเป็นสมาชิกอยู่ในขณะนี้ด้วยหรือไม่",
         NEW_GUILDS_DM_ALLOWED: "อนุญาตข้อความส่วนตัวจากสมาชิกเซิร์ฟเวอร์",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "รางวัลในเกม (หรือเควสต์)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "ใช้ข้อมูลเกี่ยวกับการใช้ Discord ของคุณ เช่น เกมที่คุณเล่น เพื่อบอกให้คุณทราบเกี่ยวกับเควสต์หรือโอกาสรับรางวัลในเกมอื่นๆ [เรียนรู้เพิ่มเติมได้ที่นี่]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "ความเป็นส่วนตัวของเซิร์ฟเวอร์",
         USER_DM_SETTINGS_DESCRIPTION:
           "คุณต้องการให้การเปลี่ยนแปลงนี้มีผลกับเซิร์ฟเวอร์ที่คุณเป็นสมาชิกอยู่ในขณะนี้ด้วยหรือไม่ คุณยังสามารถปิดการใช้งานข้อความส่วนตัวในแต่ละเซิร์ฟเวอร์ได้เช่นกันโดยไปที่หน้าการตั้งค่าของเซิร์ฟเวอร์",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "ขณะนี้เควสต์อยู่ในช่วงทดสอบเบต้า เราจึงอยากทราบหตุผลที่คุณปิดฟีเจอร์นี้ [แบบสอบถามความคิดเห็น]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "ขณะนี้เควสต์อยู่ในช่วงทดสอบเบต้า ขอบคุณที่เข้าร่วม ตอนนี้เราอยากรับฟังความคิดเห็นจากคุณ! [แบบสอบถามความคิดเห็น]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'คุณกำลังมองหาภารกิจ Discord อยู่แน่เลย! หากคุณเห็นข้อความนี้ เราต้องเปลี่ยนการตั้งค่าบางอย่าง เพื่อเปิดใช้ คุณจะต้องไปที่ การตั้งค่า -> ความเป็นส่วนตัวและความปลอดภัย และเปิดใช้งานการตั้งค่าทั้ง "ใช้ข้อมูลนี้เพื่อกหนดการใช้งานของ Discord ของฉันเอง" และ "รางวัลในเกม (aka ภารกิจ)"\n\n[อ่านเพิ่มเติมในคำถามที่พบบ่อย]({blogURL})ของเรา',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "เข้าร่วมเดี๋ยวนี้",
@@ -7697,9 +7722,9 @@
         SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED:
           "[!!{username}!!](usernameOnClick) ได้บูสต์เซิร์ฟเวอร์นี้แล้ว!",
         SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK:
-          "$[!!{username}!!](usernameHook) แค่บูสต์เซิร์ฟเวอร์! !!{guildName}!! สำเร็จแล้ว **{newTierName}!**",
+          "$[!!{username}!!](usernameHook) เพิ่งบูสต์เซิร์ฟเวอร์! !!{guildName}!! ได้มาถึง ระดับ **{newTierName}!**",
         SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER:
-          "[!!{username}!!](usernameOnClick) แค่บูสต์เซิร์ฟเวอร์! !!{guildName}!! สำเร็จแล้ว **{newTierName}!**",
+          "$[!!{username}!!](usernameHook) เพิ่งบูสต์เซิร์ฟเวอร์! !!{guildName}!! ได้มาถึง ระดับ **{newTierName}!**",
         SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK:
           "$[!!{username}!!](usernameHook) แค่บูสต์เซิร์ฟเวอร์ **{numSubscriptions}** ครั้ง!",
         SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY:
@@ -9167,7 +9192,7 @@
         PREMIUM_DISCOUNT_CTA: "Nitro ประหยัดเพิ่ม !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro ประหยัดคุ้ม",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "จ่ายเพียง **{discountedPrice}** สำหรับ **{numMonths, plural, one {เดือน!} other {{numMonths} เดือน!}}** จากนั้นจ่าย {regularPrice}",
+          "จ่ายเพียง **{discountedPrice}** เป็นเวลา **{numMonths, plural, one {1 เดือน!} other {{numMonths} เดือน!}}** จากนั้นจ่ายในราคา {regularPrice}",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "ส่วนลด !!{percent, number}!!% ของคุณจะสิ้นสุดลงหลังซื้อครบ {numMonths, plural, one {1 เดือน} other {{numMonths} เดือน}} หลังจากนั้นเราจะเรียกเก็บค่าบริการที่ {regularPrice}",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9883,6 +9908,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "การสมัครสมาชิกปัจจุบัน",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "การสมัครสมาชิกใหม่ทั้งหมด",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} ยกเลิกแล้ว",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "การปรับค่าใช้จ่ายนี้จะรวมถึงอัตราส่วน ส่วนลด ภาษีที่เกี่ยวข้อง และการคืนเงิน",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**ทำไมฉันจึงเห็นสิ่งนี้**\n\nคุณกำลังซื้อการเปลี่ยนแปลงแผน การบูสต์เซิร์ฟเวอร์ของคุณจะได้รับการอัปเดตให้สอดคล้องกัน",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10571,7 +10598,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "จ่ายเพียง **{discountedPrice}** ต่อเดือนสำหรับ **3 เดือน**แรกที่สมัคร Nitro แล้วจ่าย {regularPrice} ต่อเดือนหลังจากสิ้นสุดส่วนลดนาน 3 เดือน",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "จ่ายเพียง **{discountedPrice}** ต่อเดือนสำหรับ **{numMonths, plural, one { เดือน} other {{numMonths} เดือนแรกที่สมัคร}}** Nitro จากนั้นจ่าย {regularPrice} ต่อเดือนหลังจากส่วนลดหมดอายุลง",
+          "ค่า Nito รายเดือนสำหรับ {numMonths, plural, one {เดือน} other {{numMonths} เดือน}}แรก{numMonths, plural, one {จะอยู่ที่} other {จะอยู่ที่}} **{discountedPrice}** จ่ายเพียง {regularPrice} ต่อเดือนหลังจากส่วนลดหมดลง",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/เดือนนาน 3 เดือน\n\n{regularPrice}/เดือนหลังจาก 3 เดือน",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10611,6 +10638,8 @@
           "เราเพิ่งส่งอีเมลให้คุณ คลิกลิงก์การยืนยันในอีเมลเพื่ออนุมัติการสั่งซื้อนี้",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "ดำเนินการต่อ",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "หากคุณไม่ได้รับอะไรเลย",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "ส่งอีเมลอีกครั้ง",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -12942,8 +12971,14 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "คุณสามารถ [สร้างเซิร์ฟเวอร์ของตัวเอง](onClick)ได้เช่นกัน",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "ขอโทษทีนะ",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "ปิดการใช้ข้อมูลเพื่อปรับปรุง Discord ให้ดีขึ้นใช่ไหม",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "หากคุณปิด เราจะหยุดประมวลผลข้อมูลใหม่เพื่อการวิเคราะห์ คุณจะเสียสิทธิ์เข้าถึงฟีเจอร์ทดลองใหม่ๆ และการปรับปรุงฟีเจอร์ตามการใช้งาน เช่น การแชทด้วยเสียง หากคุณต้องการยืนยันสิทธิ์เพิ่มเติมเพื่อคัดค้านการประมวลผลข้อมูลของคุณ โปรดส่งอีเมลไปยัง privacy@discord.com",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "ใช่ ฉันแน่ใจ",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "ไม่ ฉันอยากถอยกลับ",
+        PERSONALIZATION_DISABLE_MODAL_TITLE:
+          "ต้องการปิดการปรับเป็นส่วนตัวใช่ไหม",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "การปิดโหมดนี้จะทำให้คุณเสียคำแนะนำหรือข้อเสนอแนะที่ออกแบบมาปรับให้เหมาะกับคุณ คุณจะเสียคำแนะนำหรือข้อเสนอแนะนั้น ๆ ไปตลอดนะ",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "ใช่ ฉันแน่ใจ",
@@ -13264,18 +13299,32 @@
           "{count, plural, =0 {0 เพื่อนร่วมกัน} one {1 เพื่อนร่วมกัน} other {{count} เพื่อนร่วมกัน}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 เซิร์ฟเวอร์ร่วมกัน} one {1 เซิร์ฟเวอร์ร่วมกัน} other {{count} เซิร์ฟเวอร์ร่วมกัน}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {เพื่อน 0 คน} one {เพื่อน 1 คน} other {{count}คน}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 เซิร์ฟเวอร์} one {1 เซิร์ฟเวอร์} other {{count}เซิร์ฟเวอร์}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "เป็นเพื่อนกับ **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "เป็นเพื่อนกับ **{usernameOne}** และ **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "เป็นเพื่อนกับ **{usernameOne}**, **{usernameTwo}** และ **{count} และอีกมากมาย**",
+          "เป็นเพื่อนกับ **{usernameOne}**, **{usernameTwo}** และอีก {count} คน",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "เป็นเพื่อนกับ **{usernameOne}** และอีก {count} คน",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "เป็นเพื่อนกับ{count, plural, =0 { 0 คน} one { 1 คน} other {{count}คน}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "สมาชิกของ **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "สมาชิกของ **{guildNameOne}** และ **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "สมาชิกของ **{guildNameOne}**, **{guildNameTwo}** และ **{count} และอีกมากมาย**",
+          "สมาชิกของ **{guildNameOne}**, **{guildNameTwo}** และ {count} และอีกมากมาย",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "เป็นสมาชิกใน {count, plural, =0 {0 เซิร์ฟเวอร์} one {1 เซิร์ฟเวอร์} other {{count}เซิร์ฟเวอร์}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "เพื่อนร่วมกัน",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "เซิร์ฟเวอร์ร่วมกัน",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "ดูเพื่อนที่มีร่วมกันทั้งหมด",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP:
+          "ดูเซิร์ฟเวอร์ที่เป็นสมาชิกร่วมกันทั้งหมด",
+        USER_PROFILE_MUTUALS_TITLE: "มีร่วมกัน",
         PROFILE_IN_VOICE_CALL: "ในการโทรด้วยเสียง",
         PROFILE_OPEN_VOICE_CHANNEL: "เปิดช่องสำหรับพูด",
         IOS_PROFILE_IN_VOICE_CALL: "ในการโทรด้วยเสียง",
@@ -13416,6 +13465,10 @@
           "ให้ของขวัญเป็น {nitroTierName} นาน {count, plural, one {# เดือน} other {# เดือน}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "ให้ของขวัญเป็น {nitroTierName} นาน {count, plural, one {# ปี} other {# ปี}}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "มอบของขวัญให้ {username} {count, plural, one {# เดือน} other {# เดือน}} จาก {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "มอบของขวัญให้ {username} {count, plural, one {# ปี} other {# ปี}} จาก {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           'การแตะ "ซื้อของขวัญ" แสดงว่าคุณยอมรับ[เงื่อนไขการบริการชำระเงิน]({paidURL}) นี่จะเป็นการเรียกเก็บเงินครั้งเดียวตามระยะเวลาที่เลือก',
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "ของขวัญของคุณกำลังไปหาผู้รับ!",
@@ -14230,8 +14283,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "ล้างข้อความหรือไม่",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "ดูเหมือนว่าคุณได้เขียนอะไรบางอย่างแล้ว คุณต้องการล้างข้อมูลและใช้คำสั่งหรือไม่",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "คุณสามารถใช้แอปนี้ได้ทุกที่บน Discord เฉพาะคุณเท่านั้นที่จะเห็นการตอบกลับในเซิร์ฟเวอร์ที่มีมากกว่า {betaUserLimit} คน",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "แอปจะตอบกลับคุณเป็นการส่วนตัว",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "เฉพาะคุณเท่านั้นที่จะเห็นข้อความนี้ระหว่างการทดสอบเบต้า\n\n[ทำไมฉันจึงเห็นข้อความนี้]({learnMoreUrl}) • [ปิด](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "เฉพาะคุณเท่านั้นที่จะเห็นข้อความนี้ระหว่างการทดสอบเบต้า • [ปิด](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "อ่านบทความช่วยเหลือ",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[เรียนรู้เพิ่มเติม]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "พิมพ์ “$[command](commandHook)” เพื่อใช้ Midjourney เคล็ดลับ: สร้างเซิร์ฟเวอร์เพื่อลองใช้แค่ในหมู่เพื่อน",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -16955,6 +17018,8 @@
           "หากยกเลิก **คุณจะเสียสิทธิพิเศษเหล่านี้ไป:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "ไม่เป็นไร ฉันจะใช้ Nitro ต่อ",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "ไม่เป็นไร ฉันจะใช้ Nitro ต่อ",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "หากคุณยกเลิก ความคืบหน้าในการรับรางวัลของคุณจะหายไป รวมถึงรางวัลทั้งหมดต่อไปนี้:",
         PREMIUM_PAUSE_INSTEAD: "หยุดชั่วคราวแทน",
         PREMIUM_PAUSE_SELECT_TITLE: "หยุดชั่วคราวหรือยกเลิกการสมัครสมาชิก",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -18579,6 +18644,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ตอนนี้เลย",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {นาที} other {นาที}} ที่ผ่านมา",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {ชั่วโมง} other {ชั่วโมง}}ในสัปดาห์นี้",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {วัน} other {วัน}} ที่ผ่านมา",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -18668,6 +18735,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "สมาชิกที่เริ่มการดำเนินการนี้",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "การอนุญาตโดยผู้ดูแล",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "ค้นหาชื่อ หมวดหมู่ หรือคำอธิบายของสิทธิ์อนุญาต...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "ทั้งหมด ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# บทบาท} other {# บทบาท}}",
@@ -18676,7 +18745,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "ไม่มีการอนุญาตโดยผู้ดูแล",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "อนุมัติโดย",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(ยกระดับแล้ว) อนุมัติโดย",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "ยกระดับแล้ว",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "ผู้ดูแล",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "สิทธิ์อนุญาตที่ยกระดับจะให้สิทธิ์เข้าถึงการตั้งค่าเซิร์ฟเวอร์ในระดับที่สูงขึ้น และควรมอบให้กับผู้ดูแลที่เชื่อถือได้สูงเท่านั้น",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "การอนุญาตที่อนุมัติโดยบทบาทเหล่านี้",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "บทบาทสูงสุด",
@@ -21276,6 +21350,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "ดูทั้งหมด",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "ส่งของขวัญ",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "ตรวจสอบของขวัญของคุณ",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "ช้อปได้ทุกที่ ทุกเวลา",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "ซื้อของตกแต่งสัญลักษณ์ประจำตัวและเอฟเฟต์โปรไฟล์เพื่อปรับแต่งโปรไฟล์ของคุณ",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "สไตล์ยอดนิยม อาทิ อนิเมะ แฟนตาซี ไซเบอร์พังค์ และอื่นๆ",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "สมาชิก Nitro จะได้รับส่วนลดสินค้าทุกรายการในร้านค้า",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "คัดสรรโดยสตาฟ",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "การเล่นเกม",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "มาแรงในสายอินดี้",
@@ -22941,6 +23022,8 @@
           "Discord ให้ความสำคัญกับความปลอดภัยของบุตรหลานอย่างจริงจัง เมื่อเราตรวจพบความเสี่ยงด้านความปลอดภัยที่อาจเกิดขึ้นในการสนทนา เราจะแจ้งให้คุณทราบ [เรียนรู้เพิ่มเติมเกี่ยวกับการแจ้งเตือนความปลอดภัย]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "ไปที่การตั้งค่า",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "ยกเลิก",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "หากเราตัดสินผิดพลาด โปรด$[แจ้งให้เราทราบ](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "ขอบคุณสำหรับข้อเสนอแนะ",
         STRANGER_DANGER_BANNER_BLOCK: "บล็อก",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "ปิด",
@@ -23142,6 +23225,8 @@
         POLL_COACHMARK_TITLE: "ใหม่! โพลล์พร้อมให้ใช้งานแล้ว",
         POLL_COACHMARK_SUBTITLE:
           "วางแผนกิจกรรม รวบรวมความคิดเห็น หรือถามคำถามขำขันในแชท",
+        POLL_COACHMARK_CTA: "เริ่มโพลล์ตอนนี้เลย!",
+        POLL_COACHMARK_DISMISS: "ไว้ที่หลัง",
         POLL_NOT_INTERACTIVE: "ดูข้อความต้นฉบับเพื่อดำเนินการต่อ",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "ไม่มีอะไรให้อ่านที่นี่",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "ไม่มีการโหวตให้คำตอบนี้",
@@ -23236,6 +23321,7 @@
         QUESTS: "ภารกิจ",
         QUEST: "ภารกิจ {questName}",
         QUESTS_SEE_CODE: "ดูโค้ด",
+        QUESTS_CLAIM_REWARD: "รับรางวัล",
         QUESTS_ACCEPT: "ยอมรับภารกิจ",
         QUESTS_COMPLETE_TOOLTIP: "กดรับเพื่อรับรหัสรางวัลของคุณ!",
         QUESTS_ACCEPT_TOOLTIP: "ยอมรับภารกิจและทำให้สำเร็จเพื่อปลดล็อกรางวัล",
@@ -23247,12 +23333,21 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "โอ๊ะโอ! เราไม่สามารถส่งอีเมลยืนยันให้กับคุณได้",
         QUEST_REWARD: "รับ {reward}",
+        QUEST_REWARD_COMPLETED: "คุณปลดล็อก {reward} เมื่อ {date}",
+        QUESTS_REWARD_CODE_HEADER: "รหัสรางวัลของคุณ",
         QUESTS_REWARD_CODE_CONGRATS: "ยินดีด้วย!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER: "คุณชอบแพลตฟอร์มอะไร",
         QUESTS_REWARD_CODE_ERROR:
           "โอ๊ะโอ! มีบางอย่างผิดปกติ โปรดลองอีกครั้งในภายหลัง",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "เลือกแพลตฟอร์ม",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "เลือกแพลตฟอร์ม",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "เราจะสร้างรหัสเฉพาะสำหรับแพลตฟอร์มให้ {rewardName} ของคุณ **คุณจะไม่สามารถเปลี่ยนตัวเลือกได้หลังจากที่กดรับรหัสแล้ว**",
         QUESTS_REWARD_CODE_DONE: "เสร็จสิ้น",
+        QUESTS_REWARD_CODE_GET_CODE: "รับรหัส",
         QUESTS_REWARD_CODE_TRY_AGAIN: "ลองอีกครั้ง",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "ขอรับ",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "คุณขอรับแล้ว",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "ข้ามแพลตฟอร์ม",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
@@ -23260,11 +23355,14 @@
         QUESTS_SPONSORED: "ได้รับการสนับสนุน",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "เรียนรู้เพิ่มเติม",
+        QUESTS_LEARN_MORE_STACKED: "เรียนรู้\n\nเพิ่มเติม",
+        QUESTS_LEARN_MORE_LINK: "[เรียนรู้เพิ่มเติม]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "ยอมรับภารกิจ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "สตรีม {gameTitle} ให้เพื่อนดูเป็นเวลา {streamingDurationRequirement, number} นาทีแล้วรับ {questReward} ไปเลย",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**ตอบรับภารกิจแล้ว!** สตรีม {gameTitle} ให้เพื่อนดูเป็นเวลา {streamingDurationRequirement, number} นาทีแล้วรับ {questReward} ไปเลย",
+        QUESTS_TRACK_YOUR_PROGRESS: "ติดตามความคืบหน้า",
         QUESTS_TITLE: "ภารกิจ {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "อ๊ะ!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23274,6 +23372,8 @@
           "จากแอป Discord บนเดสก์ท็อปหรือเบราว์เซอร์ของคุณ ให้ไปที่\nการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ และรับภารกิจได้จากที่นั่น",
         QUESTS_GET_THIS_GAME: "รับเกม",
         QUESTS_DISCLOSURE_LABEL: "ทำไมฉันถึงเห็นสิ่งนี้",
+        QUESTS_SHARE_LINK: "คัดลอกลิงก์แชร์",
+        QUESTS_HIDE_THIS: "ซ่อน",
         QUESTS_FIND_QUEST:
           "คุณสามารถดูสิ่งนี้ได้อีกครั้งในการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ",
         QUESTS_CLAIM_BY: "รับภายใน {expirationDate}",
@@ -23313,6 +23413,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! และอีก {count, plural, one {1 คน} other {{count} คน}}",
         STOREFRONT: "ร้านค้า",
+        STOREFRONT_TITLE: "ร้าน {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "การสมัครสมาชิก",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "ซื้อการสมัครสมาชิกจาก {appName}",
         STOREFRONT_APP_PRODUCTS: "ผลิตภัณฑ์",
@@ -23378,16 +23479,34 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "ครั้งแรก",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "รับชม **{mediaTitle}** แล้ว",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} รับชม **{mediaTitle}** แล้ว",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "กิจกรรม",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "เข้าใจแล้ว",
+        RECENT_GAMES: "เกมล่าสุด",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {สัปดาห์} other {สัปดาห์}}ที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {วัน} other {วัน}} ที่ผ่านมา",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {ชั่วโมง} other {ชั่วโมง}}ที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {นาที} other {นาที}}ที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {วินาที} other {วินาที}}ที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} สัปดาห์ที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} วันที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} ชั่วโมงที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} นาทีที่แล้ว",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
           "{count} วินาทีที่แล้ว",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {ชั่วโมง} other {ชั่วโมง}}ในสัปดาห์นี้",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {นาที} other {นาที}}ในสัปดาห์นี้",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {วินาที} other {วินาที}}ในสัปดาห์นี้",
       };
     },
   },

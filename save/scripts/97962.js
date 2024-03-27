@@ -166,7 +166,9 @@
         PAGINATION_PAGE_LABEL: "पेज {pageNumber}",
         PAGINATION_SLIDE_LABEL: "स्लाइड {pageNumber}",
         MUTE: "म्यूट करें",
+        MUTE_ALT: "माइक्रोफ़ोन बंद करें",
         UNMUTE: "अनम्यूट करें",
+        UNMUTE_ALT: "माइक्रोफ़ोन चालू करें",
         DEAFEN: "आवाज़ बंद करना",
         UNDEAFEN: "आवाज़ ऑन करना",
         SEARCH: "सर्च करें",
@@ -1248,6 +1250,8 @@
           "इस ऐप को Discord ने नहीं बनाया है. सिर्फ़ अपने भरोसेमंद डिवेलपर्स के ऐप्स को टेस्ट करें.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "प्राइवेट ऐप्स के बारे में ज़्यादा जानें.",
+        APPLICATION_ICON_A11Y_LABEL: "{applicationName} का ऐप आइकन",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "ऐप आइकन",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) ने एक्टिविटी शुरू की",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4802,8 +4806,11 @@
           "जॉइन या स्विच करने के लिए वॉयस चैनल सलेक्ट करें",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "कीबाइंड इनेबल या डिसेबल करें",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "रिज़ल्ट्स",
+        SHOW_CURRENT_ACTIVITY: "अपनी ऐक्टिवेटी दूसरों के साथ शेयर करें.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "अगर आप पब्लिक स्टेज पर हैं, तो Discord अपने आप आपका स्टेटस अपडेट कर देगा.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "जब आप किसी डिटेक्ट की जा सकने वाली ऐक्टिविटी में शामिल होते हैं (जैसे कि गेम खेलना या म्यूज़िक सुनना), तो Discord उन ऐक्टिविटीज़ से जुड़ी जानकारी डिस्प्ले कर सकता है, जिसमें ये भी बताया जाएगा कि आप उन ऐक्टिविटीज़ में कब और कैसे शामिल हुए.",
         GAME_DETECTION_SERVICE: "गेम डिटेक्शन सर्विस",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "इंस्टॉल होने की लोकेशन",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "इन्स्टॉल लोकेशन ऐड करें",
@@ -5117,6 +5124,7 @@
         SUB_ENABLED_SERVERS: "सब-ऑन सर्वर",
         AUTHORIZATION: "ऑथराइजेशन",
         AUTHORIZED_APPS: "ऑथराइज़्ड ऐप",
+        MANAGE_AUTHORIZED_APP: "ऑथराइज़्ड ऐप मैनेज करें",
         DEAUTHORIZE: "ऑथराइज़ नहीं किए गए",
         DEAUTHORIZE_APP: "ऑथराइज़ नहीं किए गए एप्लिकेशन",
         ABOUT_THIS_APP: "इस ऐप के बारे में",
@@ -6369,7 +6377,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "सर्वर को सलेक्ट करें",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "इसके लिए आपके पास सर्वर में **सर्वर मैनेज करने की** परमिशन होनी चाहिए.",
+        OAUTH2_INTEGRATION_SELECT_USER: "इसे अभी आज़माएं",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "इस ऐप का हर जगह इस्तेमाल करें!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "सर्वर में ऐड करें",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "ये ऐप जोड़कर अपना सर्वर कस्टमाइज़ करें",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "इस ऐप का Discord पर कहीं भी इस्तेमाल किया जा सकता है. बीटा के दौरान, जवाब सिर्फ़ आपको उन्हीं सर्वर्स पर दिखाई देते हैं, जहां {betaUserLimit} से ज़्यादा लोग होते हैं. [ज़्यादा जानें]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "रिक्वेस्ट इनवैलिड है. परम **{param}** मिसिंग है",
         OAUTH2_REQUEST_INVALID_SCOPE: "इनवैलिड स्कोप **{scope}**",
@@ -6415,6 +6430,7 @@
         SCOPE_VOICE:
           "आपकी ओर से वॉइस से कनेक्ट करें और किसी वॉइस चैनल में जो दूसरे लोग हैं उन्हें देखें",
         SCOPE_DM_CHANNELS_READ: "आप जिन DM और GDM में हैं उनकी जानकारी देखें",
+        SCOPE_DM_YOU: "आपको डायरेक्ट मैसेज भेजें",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "इस एप्लिकेशन के लिए अपने कनेक्शन और मेटाडेटा को अपडेट करें",
         SCOPE_WEBHOOK_INCOMING: "किसी भी चैनल में वेबहुक को ऐड करता है",
@@ -6754,12 +6770,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "ये उन डायरेक्ट मैसेज को अपने आप ब्लॉक करता है जिनमें एक्सप्लिसिट इमेज हो सकती है. [यहां से इस सेटिंग के बारे में और ज़्यादा जानें.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "फ्रेंड्स को अपने गेम में जुड़ने की अनुमति दें.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "इस सेटिंग से आपके फ्रेंड्स रिक्वेस्ट भेजे बिना भी गेम में जॉइन हो पाएंगे.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "वॉइस चैनल के प्रतिभागियों को अपने गेम में जुड़ने की अनुमति दें.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "इस सेटिंग से आपके वाले वॉइस चैनल में आपके फ्रेंड्स को रिक्वेस्ट भेजे बिना भी गेम में जॉइन हो पाएंगे. ये फीचर सिर्फ़ नॉन-कम्युनिटी सर्वर के लिए है.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6817,6 +6829,12 @@
         DATA_PRIVACY_CONTROLS: "हम आपके डेटा को कैसे इस्तेमाल करते है",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discord को बेहतर बनाने के लिए डेटा का इस्तेमाल करें",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "इस सेटिंग की मदद से हम अपनी सेवाओं को समझने और बेहतर बनाने के लिए आपकी जानकारी का इस्तेमाल करते हैं और उसे प्रोसेस करते हैं. [इसके बारे में और जानकारी यहां मौजूद है.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "डेटा का इस्तेमाल करके मेरे Discord अनुभव को पर्सनलाइज़ करें",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "इस सेटिंग की बदौलत हम जानकारी का इस्तेमाल करके Discord को आपके लिए पर्सनलाइज़ कर सकते हैं, जैसे कि आप किससे बातचीत करते हैं और कौन-से गेम्स खेलते हैं. [इसके बारे में और जानकारी यहां मौजूद है.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discord वर्क करने के लिए डेटा का इस्तेमाल करें",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -6856,9 +6874,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "सर्वर मेम्बर से डायरेक्ट मैसेज के लिए अनुमति दें",
         USER_DROPS_SETTINGS: "प्रोमो सेटिंग्स",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "इन-गेम रिवॉर्ड्स (यानी क्वेस्ट्स)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "हम आपको क्वेस्ट्स या अन्य इन-गेम रिवॉर्ड के अवसरों की जानकारी देने के लिए जानकारी का इस्तेमाल कर सकते हैं, जैसे कि आप Discord का इस्तेमाल कैसे करते हैं और कौन-से गेम्स खेलते हैं. [इसके बारे में और जानकारी यहां मौजूद है.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "सर्वर प्राइवेसी",
         USER_DM_SETTINGS_DESCRIPTION:
           "क्या आप इस बदलाव को अपने सभी मौजूदा सर्वर पर भी लागू करना चाहते हैं? आप हर सर्वर के सेटिंग पेज पर जाकर उस सर्वर के लिए DM को बंद भी कर सकते हैं.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "क्वेस्ट्स फ़िलहाल बीटा में है - हम इसके बारे में और जानना चाहेंगे कि आपने उन्हें बंद क्यों किया. [फ़ीडबैक सर्वे]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "क्वेस्ट्स फ़िलहाल बीटा में है - भाग लेने के लिए धन्यवाद, अब हम आपकी राय जानना चाहेंगे! [फ़ीडबैक सर्वे]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'आप ज़रूर Discord क्वेस्ट की तलाश में होंगे! अगर आपको ये मैसेज मिला है, तो इसका मतलब है कि हमें सेटिंग्स में कुछ बदलाव करने होंगे. इसे चालू करने के लिए आपको सेटिंग्स -> गोपनीयता एवं सुरक्षा में जाकर "मेरे Discord अनुभव को कस्टमाइज़ करने के लिए डेटा का इस्तेमाल करें" और "गेम के रिवॉर्ड (यानी, क्वेस्ट)" सेटिंग को इनेबल करना होगा.\n\n[हमारे FAQ पर और ज़्यादा जानकारी पाएं]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "अभी एनरोल करें",
@@ -9400,7 +9426,7 @@
         PREMIUM_DISCOUNT_CTA: "Nitro पर !!{percent, number}!!% सेव करें",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro पर सेव करें",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "**{numMonths, plural, one {महीने के लिए सिर्फ़ **{discountedPrice}** का पेमेंट करें!} other {{numMonths} महीने!}} के लिए** इसके बाद{regularPrice} का पेमेंट करें.",
+          "**{numMonths, plural, one {1 महीने के लिए!} other {{numMonths} महीनों के लिए सिर्फ़**{discountedPrice}** का पेमेंट करें!}}** फिर {regularPrice} का पेमेंट करें.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "आपका !!{percent, number}!!% डिस्काउंट खरीदारी के {numMonths, plural, one {1 महीने} other {{numMonths} महीनों}} बाद खत्म हो जाएगा. उसके बाद आपसे {regularPrice} का शुल्क लिया जाएगा.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10115,6 +10141,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "मौजूदा सब्सक्रिप्शन",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "नए सब्सक्रिप्शन का जोड़",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} कैंसल किया गया",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "इस एडजस्टमेंट में प्रोरेशन, डिस्काउंट, लागू टैक्स और रिफ़ंड शामिल होते हैं.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**मुझे यह क्यों दिखाई दे रहा है?**\n\nआप एक प्लान बदलाव खरीद रहे हैं. आपके सर्वर बूस्ट्स उसी के मुताबिक अपडेट किए जा रहे हैं.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10813,7 +10841,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro के अपने पहले **3 महीनों** के लिए सिर्फ़ **{discountedPrice}** प्रति महीने का भुगतान करें! 3 महीने का डिस्काउंट खत्म होने के बाद,{regularPrice} प्रति महीने का भुगतान करें.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Nitro के लिए अपने शुरूआती **{numMonths, plural, one {महीने} other {{numMonths} महीनों}}** के लिए सिर्फ़ **{discountedPrice}** का पेमेंट करें. छूट खत्म होने के बाद हर महीने {regularPrice} का पेमेंट करें.",
+          "आपको पहले {numMonths, plural, one {महीने} other {{numMonths} महीनों}} के लिए Nitro महीने का {numMonths, plural, one {का पेमेंट करना होगा} other {के पेमेंट}} **{discountedPrice}** करने होंगे. डिस्काउंट खत्म होने के बाद हर महीने {regularPrice} का पेमेंट करें",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 महीने के लिए {discountedPrice}/महीने\n\n3 महीने के बाद {regularPrice}/महीने",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10853,6 +10881,8 @@
           "हमने आपको अभी एक ईमेल भेजा है. इस खरीदारी को ऑथराइज़ करने के लिए ईमेल में दिए गए वेरिफिकेशन लिंक पर क्लिक करें.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "जारी रखें",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "क्या आपको कुछ नहीं मिला?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "ईमेल फिर से भेजें",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13230,8 +13260,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "आप भी [अपना खुद का सर्वर स्टार्ट](onClick) कर सकते हैं",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "उसके लिए माफी चाहते हैं",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Discord को बेहतर बनाने के लिए डेटा का इस्तेमाल बंद करें?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "अगर आप इसे बंद कर देते हैं, तो हम एनालिटिक्स के लिए नए डेटा की प्रोसेसिंग बंद कर देंगे. आपके पास नए प्रायोगिक फ़ीचर्स या उपयोग-आधारित सुधारों का ऐक्सेस नहीं रहेगा. अगर आप अपने डेटा की प्रोसेसिंग पर आपत्ति जताने के अपने अधिकार का और भी आगे जाकर इस्तेमाल करना चाहते हैं, तो privacy@discord.com पर ईमेल भेजें.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "हां, मुझे यकीन है",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "नहीं, मुझे वापस ले जाएं!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "पर्सनलाइज़ेशन बंद करें?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "इसे बंद करके आप पर्सनलाइज़ की गई सलाहों और सुझावों जैसी चीज़ों का एक्सेस खो देंगे. भविष्य में आप इन्हें वापस नहीं पा सकेंगे!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "हां, मुझे यकीन है",
@@ -13556,18 +13591,31 @@
           "{count, plural, =0 {0 म्युचुअल फ्रेंड्स} one {1 म्युचुअल फ्रेंड्} other {{count} म्युचुअल फ्रेंड्स}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 म्युचुअल सर्वर} one {1 म्युचुअल सर्वर} other {{count} म्युचुअल सर्वर}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 फ़्रेंड्स} one {1 फ़्रेंड} other {{count} फ़्रेंड्स}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 सर्वर्स} one {1 सर्वर} other {{count} सर्वर्स}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** के फ़्रेंड्स हैं",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "**{usernameOne}** और **{usernameTwo}** के फ़्रेंड्स हैं",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "**{usernameOne}**, **{usernameTwo}**, और **{count} दूसरे कई** के फ़्रेंड्स हैं",
+          "**{usernameOne}** वाले, **{usernameTwo}**, और {count} अन्य फ़्रेंड्स",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "**{usernameOne}** वाले, और {count} अन्य फ़्रेंड्स",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0 लोगों} one {1 व्यक्ति} other {{count} लोगों वाले फ़्रेंड्स}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** के मेंबर",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "**{guildNameOne}** और **{guildNameTwo}** के मेंबर",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "**{guildNameOne}**, **{guildNameTwo}**, और **{count} दूसरे कई** के मेंबर",
+          "**{guildNameOne}** के, **{guildNameTwo}**, और {count} अन्य के मेंबर",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "{count, plural, =0 {0 सर्वर्स} one {1 सर्वर} other {{count} सर्वर्स का मेंबर}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "म्युचुअल फ्रेंड्स",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "म्युचुअल सर्वर",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "सभी म्युचुअल फ़्रेंड्स देखें",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "सभी म्युचुअल सर्वर्स देखें",
+        USER_PROFILE_MUTUALS_TITLE: "म्युचुअल्स",
         PROFILE_IN_VOICE_CALL: "एक वॉयस कॉल में",
         PROFILE_OPEN_VOICE_CHANNEL: "वॉयस चैनल ओपन करें",
         IOS_PROFILE_IN_VOICE_CALL: "एक वॉयस कॉल में",
@@ -13706,6 +13754,10 @@
           "{count, plural, one {# महीना} other {# महीनों}} का {nitroTierName} गिफ़्ट करें",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "{count, plural, one {# साल} other {# सालों}} का {nitroTierName} गिफ़्ट करें",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "{username} को {count, plural, one {# महीना} other {# महीने}} का {nitroTierName} गिफ़्ट करें",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "{username} को {count, plural, one {# साल} other {# सालों}} का {nitroTierName} गिफ़्ट करें",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           '"गिफ़्ट खरीदें" पर टैप करके, आप [पेड सेवा की शर्तें]({paidURL}) स्वीकार करते हैं. चुने गए समय के लिए सिर्फ़ एक बार पेमेंट लिया जाएगा.',
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "आपका गिफ़्ट आ रहा है!",
@@ -14537,8 +14589,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "मैसेज क्लियर करें?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "लगता है आपने पहले ही कुछ लिख रखा है. क्या आप उसे मिटाकर कोई कमांड देना चाहते हैं?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "आप जब चाहें Discord पर इस ऐप का इस्तेमाल कर सकते हैं. जवाब सिर्फ़ उन्हीं सर्वर्स पर दिखाई देंगे, जहां लोगों की संख्या {betaUserLimit} से ज़्यादा है.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "ऐप आपको निजी रूप से जवाब देगा",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "बीटा के दौरान सिर्फ़ आप ही ये मैसेज देख सकते हैं.\n\n[मुझे ये क्यों दिखाई दे रहा है?]({learnMoreUrl}) • [खारिज करें](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "बीटा के दौरान सिर्फ़ आप ही ये मैसेज देख सकते हैं • [खारिज करें](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "हेल्प आर्टिकल को देखें",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[ज़्यादा जानें]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "मिडजर्नी का इस्तेमाल करने के लिए “$[कमांड](commandHook)” टाइप करें. टिप: इसे सिर्फ़ फ़्रेंड्स के साथ आज़माने के लिए एक सर्वर क्रिएट करें.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17345,6 +17407,8 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "कोई बात नहीं, Nitro को बनाए रखें",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "कोई बात नहीं, Nitro के साथ बने रहें",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "अगर आप कैंसल करते हैं, तो रिवॉर्ड की तरफ़ आपकी प्रोग्रेस रुक जाएगी और आपको इनमें से कोई भी रिवॉर्ड नहीं मिलेगा:",
         PREMIUM_PAUSE_INSTEAD: "इसके बजाय पॉज़ करें",
         PREMIUM_PAUSE_SELECT_TITLE: "सब्सक्रिप्शन पॉज़ या कैंसल करें",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19009,6 +19073,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "अभी-अभी",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {मिनट} other {मिनट}} पहले",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "इस हफ़्ते {count} {count, plural, =1 {घंटा} other {घंटे}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {दिन} other {दिन}} पहले",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19094,13 +19160,20 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "मेंबर जिसने ये एक्शन शुरू किया.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "मॉड परमिशन",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "परमिशन के नाम, कैटेगरी या विवरण सर्च करें...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "सभी ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# रोल} other {# रोल}}",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "दी हुई सभी परमिशन",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "कोई मॉड परमिशन नहीं",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "किसने दी",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(एलिवेट किया गया) इनके द्वारा दिया गया",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "एलिवेट किया गया",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "मॉडरेटर",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "एलिवेट की गई परमिशन सर्वर सेटिंग्स के ज़्यादा ऊंचे लेवल्स का ऐक्सेस देते हैं और उन्हें सिर्फ़ बेहद विश्वसनीय मॉड्स को ही दिया जाना चाहिए.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "इन रोल के द्वारा दी गई परमिशन",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "सबसे ऊंचा रोल",
@@ -21729,6 +21802,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "सब देखें",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "गिफ्ट भेजें",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "गिफ़्ट रिव्यू करें",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "कहीं भी, कभी भी शॉप करें",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "अपनी प्रोफ़ाइल पर्सनलाइज़ करने के लिए अवतार डेकोरेशन और प्रोफ़ाइल इफ़ेक्ट्स खरीदें.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "लोकप्रिय स्टाइल्स में एनीमे, फ़ैंटेसी, साइबरपंक और बहुत कुछ शामिल हैं.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro मेंबर्स को शॉप में हर चीज़ पर छूट मिलती है.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "स्टाफ़ की पसंद",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "गेमिंग",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "इंडी स्पॉटलाइट",
@@ -23439,6 +23519,8 @@
           "हम Discord में टीनेजर की सुरक्षा को गंभीरता से लेते हैं. अगर हमें किसी बातचीत में सुरक्षा से जुड़ा कोई संभावित खतरा नज़र आता है, तो हम आपको बता देंगे. [सुरक्षा अलर्ट के बारे में और जानें.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "सेटिंग पर जाएं",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "खारिज कर दें",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "क्या हमसे कोई गलती हो गई है? $[हमें बताएं](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "आपके फ़ीडबैक के लिए धन्यवाद!",
         STRANGER_DANGER_BANNER_BLOCK: "ब्लॉक करें",
@@ -23643,6 +23725,8 @@
         POLL_COACHMARK_TITLE: "नए! पोल शुरू हो गए हैं.",
         POLL_COACHMARK_SUBTITLE:
           "इवेंट प्लान करें, राय बटोरें, या चैट में बेतुके सवाल पूछें.",
+        POLL_COACHMARK_CTA: "अभी पोल शुरू करें!",
+        POLL_COACHMARK_DISMISS: "शायद बाद में.",
         POLL_NOT_INTERACTIVE: "बातचीत करने के लिए ओरिजिनल मैसेज देखें",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "यहां देखने के लिए कुछ नहीं है",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "इस जवाब के लिए कोई वोट नहीं है.",
@@ -23742,6 +23826,7 @@
         QUESTS: "क्वेस्ट",
         QUEST: "{questName} क्वेस्ट",
         QUESTS_SEE_CODE: "कोड देखें",
+        QUESTS_CLAIM_REWARD: "रिवॉर्ड क्लेम करें",
         QUESTS_ACCEPT: "क्वेस्ट एक्सेप्ट करें",
         QUESTS_COMPLETE_TOOLTIP:
           "अपना रिवॉर्ड कोड पाने के लिए क्लेम पर क्लिक करें!",
@@ -23757,13 +23842,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "ओफ्फ़ोह! हम आपको एक वेरीफ़िकेशन ईमेल नहीं भेज सके.",
         QUEST_REWARD: "{reward} जीतें",
+        QUEST_REWARD_COMPLETED: "आपने {date} को {reward} अनलॉक किया",
+        QUESTS_REWARD_CODE_HEADER: "आपका रिवॉर्ड कोड",
         QUESTS_REWARD_CODE_CONGRATS: "बधाई हो!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "आपका पसंदीदा प्लैटफ़ॉर्म कौन-सा है?",
         QUESTS_REWARD_CODE_ERROR:
           "ओह हो, कुछ गड़बड़ हुई है. कृपया कुछ देर बाद फिर से कोशिश करें",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "प्लैटफ़ॉर्म चुनें",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
+          "प्लैटफ़ॉर्म सलेक्ट करें",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "हम आपके {rewardName} के लिए एक खास-प्लैटफ़ॉर्म कोड जनरेट करेंगे. **आप 'कोड पाएं' क्लिक करने के बाद अपना सलेक्शन नहीं बदल सकेंगे.**",
         QUESTS_REWARD_CODE_DONE: "हो गया",
+        QUESTS_REWARD_CODE_GET_CODE: "कोड पाएं",
         QUESTS_REWARD_CODE_TRY_AGAIN: "फिर से कोशिश करें",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "इसे क्लेम करें",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "आपने इसे क्लेम किया",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "क्रॉस-प्लैटफ़ॉर्म",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23771,11 +23866,14 @@
         QUESTS_SPONSORED: "स्पॉन्सर किया गया",
         QUESTS_PROMOTED: "प्रमोट किया गया",
         QUESTS_LEARN_MORE_V2: "ज़्यादा जानें",
+        QUESTS_LEARN_MORE_STACKED: "ज़्यादा\n\nजानें",
+        QUESTS_LEARN_MORE_LINK: "[ज़्यादा जानें]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "क्वेस्ट एक्सेप्ट करें",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "फ़्रेंड को {streamingDurationRequirement, number} मिनट के लिए {gameTitle} स्ट्रीम करें और {questReward} जीतें.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**क्वेस्ट स्वीकार किया गया!** फ़्रेंड को {streamingDurationRequirement, number} मिनट के लिए {gameTitle} स्ट्रीम करें और {questReward} जीतें.",
+        QUESTS_TRACK_YOUR_PROGRESS: "अपनी प्रोग्रेस ट्रैक करें",
         QUESTS_TITLE: "{questName} क्वेस्ट",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "ओह!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23785,6 +23883,8 @@
           "अपने डेस्कटॉप Discord ऐप या ब्राउज़र से \nयूज़र सेटिंग > गिफ़्ट इन्वेंटरी पर जाकर आप क्वेस्ट स्वीकार कर सकते हैं.",
         QUESTS_GET_THIS_GAME: "गेम पाएं",
         QUESTS_DISCLOSURE_LABEL: "मुझे ये क्यों दिख रहा है?",
+        QUESTS_SHARE_LINK: "शेयर लिंक कॉपी करें",
+        QUESTS_HIDE_THIS: "इसे छिपाएं",
         QUESTS_FIND_QUEST:
           "आप इसे यूज़र सेटिंग > गिफ़्ट इन्वेंटरी में फिर से पा सकते हैं",
         QUESTS_CLAIM_BY: "{expirationDate} तक क्लेम करें.",
@@ -23825,6 +23925,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!!, और {count, plural, one {1 और} other {{count} और}}",
         STOREFRONT: "स्टोर",
+        STOREFRONT_TITLE: "{appName} स्टोर",
         STOREFRONT_APP_SUBSCRIPTIONS: "सब्सक्रिप्शन",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName} से सब्सक्रिप्शन खरीदें",
         STOREFRONT_APP_PRODUCTS: "प्रोडक्ट",
@@ -23889,15 +23990,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "पहली बार",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "**{mediaTitle}** देखा",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} ने **{mediaTitle}** देखा",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "एक्टिविटी",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "समझ गया!",
+        RECENT_GAMES: "हाल ही के गेम्स",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {हफ़्ता} other {हफ़्ते}} पहले",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {दिन} other {दिन}} पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {घंटा} other {घंटे}} पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {मिनट} other {मिनट}} पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {सेकंड} other {सेकंड}} पहले",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}हफ़्ते पहले",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}दिन पहले",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}घंटे पहले",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}मिनट पहले",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}पहले",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "इस हफ़्ते {count} {count, plural, =1 {घंटा} other {घंटे}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "इस हफ़्ते {count} {count, plural, =1 {मिनट} other {मिनट}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "इस हफ़्ते {count} {count, plural, =1 {सेकंड} other {सेकंड}}",
       };
     },
   },

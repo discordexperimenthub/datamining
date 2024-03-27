@@ -166,7 +166,9 @@
         PAGINATION_PAGE_LABEL: "{pageNumber}ページ",
         PAGINATION_SLIDE_LABEL: "スライド {pageNumber}",
         MUTE: "ミュート",
+        MUTE_ALT: "マイクをオフ",
         UNMUTE: "ミュート解除",
+        UNMUTE_ALT: "マイクをオン",
         DEAFEN: "スピーカーミュート",
         UNDEAFEN: "スピーカーミュート解除",
         SEARCH: "検索",
@@ -1255,6 +1257,8 @@
           "このアプリはDiscordによって作られていません。信頼できる開発者からのアプリのみをテストしてください。",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "プライベートアプリについて詳しくご覧ください。",
+        APPLICATION_ICON_A11Y_LABEL: "{applicationName}のアプリアイコン",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "アプリのアイコン",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook)がアクティビティを開始しました",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4772,8 +4776,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "キー割り当てを有効または無効にする",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "結果",
+        SHOW_CURRENT_ACTIVITY: "アクティビティを他のユーザーと共有しましょう。",
         SHOW_CURRENT_ACTIVITY_DESC:
           "公開ステージに参加している場合、Discord が自動的にステータスをアップデートします。",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "検出可能なアクティビティ（ゲームのプレイや音楽の再生等）を行う際、Discordではそれらのアクティビティについて、履歴および参加状況の情報を表示できます。",
         GAME_DETECTION_SERVICE: "ゲーム検出サービス",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "インストールする場所",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "インストール場所を追加する",
@@ -5076,6 +5083,7 @@
         SUB_ENABLED_SERVERS: "サブスクリプションが有効になっているサーバー",
         AUTHORIZATION: "認証",
         AUTHORIZED_APPS: "連携済アプリケーション",
+        MANAGE_AUTHORIZED_APP: "認証済みアプリを管理",
         DEAUTHORIZE: "認証解除",
         DEAUTHORIZE_APP: "アプリの認証を解除",
         ABOUT_THIS_APP: "このアプリについて",
@@ -6325,7 +6333,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "サーバーを選択",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "サーバーの**サーバー管理**権限が必要です。",
+        OAUTH2_INTEGRATION_SELECT_USER: "今すぐ試す",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "このアプリをあらゆる場所で使おう！",
         OAUTH2_INTEGRATION_SELECT_GUILD: "サーバーに追加",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "このアプリを追加してサーバーをカスタマイズしよう",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "このアプリはDiscordのどこでも使用できます。ベータ版の間、{betaUserLimit}人を超えるサーバーでは、応答はあなたにのみ表示されます。[詳細はこちら]({learnMoreUrl})。",
         OAUTH2_REQUEST_MISSING_PARAM:
           "無効なリクエストです。不足したパラメータ **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "無効な範囲**{scope}**",
@@ -6366,6 +6381,7 @@
           "ボイスチャンネルに接続し、ボイスチャンネルまたは通話にいる人を見る",
         SCOPE_DM_CHANNELS_READ:
           "あなたが入っている DM とグループ DM の情報を見る",
+        SCOPE_DM_YOU: "ダイレクトメッセージを受け取ろう",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "このアプリケーションを使うには接続とメタデータをアップデートしてください",
         SCOPE_WEBHOOK_INCOMING: "チャンネルにwebhookを追加します",
@@ -6708,11 +6724,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "不適切な画像を含む可能性のあるダイレクトメッセージを自動的にブロックします。[この設定について詳しくはこちら。]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "友達にゲーム参加を許可する。",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "この設定をオンにすると、友達がリクエストを送られなくてもゲームに参加できるようになります。",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "ボイスチャンネル参加者にゲーム参加を許可する。",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "この設定をオンにすると、同じボイスチャンネルの参加者がゲームに参加できるようになります。この機能はコミュニティサーバー以外でのみ有効です。",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "安全第一",
@@ -6770,6 +6783,12 @@
         DATA_PRIVACY_CONTROLS: "当方でのあなたのデータの使い方",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discordを改善するためにデータを使用",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "この設定により、Discordはあなたの情報を利用および処理してサービスの理解と改善に役立てることができます。[こちらで詳しくご覧ください。]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "データを利用してDiscord体験をパーソナライズしよう",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "この設定では、あなたが話す相手やプレイするゲームなどの情報を使い、Discordをお好みにパーソナライズできます。[こちらで詳しくご覧ください。]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discordを機能させるためにデータを使用",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "データすべてをリクエスト",
@@ -6806,9 +6825,16 @@
         NEW_GUILDS_DM_ALLOWED:
           "サーバーにいるメンバーからのダイレクトメッセージを許可する",
         USER_DROPS_SETTINGS: "プロモ設定",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "ゲーム内報酬（別名：クエスト）",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "どのゲームをプレイするか等のDiscordの使用方法に関する情報を活用して、クエストやその他のゲーム内報酬のチャンスについてお知らせします。[こちらで詳しくご覧ください。]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "サーバープライバシー",
         USER_DM_SETTINGS_DESCRIPTION:
           "この変更を参加中の全てのサーバーにも適用しますか？各サーバーの設定ページから、サーバー別にダイレクトメッセージを無効にすることもできます。",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "クエストは現在ベータ版です。オフにした理由をお聞かせいただけますと幸いです。[フィードバックアンケート]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "クエストは現在ベータ版です。参加していただきありがとうございます。ぜひご意見をお聞かせください！[フィードバックアンケート]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Discordクエストをご希望ですね！　このメッセージが表示されたということは、少し設定をいじる必用があります。有効にするには、「設定」→「プライバシー・安全」を開き、「Discord体験をカスタマイズするためにデータを使用」と「ゲーム内リワード（AKAクエスト）」の設定を有効にしてください。\n\n[詳細はFAQでご確認ください]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "今すぐ参加",
@@ -9315,7 +9341,7 @@
         PREMIUM_DISCOUNT_CTA: "Nitroで!!{percent, number}!!%割引",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitroで割引",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "**{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}**間でたったの**{discountedPrice}**のお支払い！その後は{regularPrice}のお支払いです。",
+          "料金は**{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}**でたったの**{discountedPrice}**！その後は{regularPrice}が請求されます。",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!%割引は購入後{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}で終了します。その後は{regularPrice}が請求されます。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10031,6 +10057,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "現在の購読",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "新しい購読合計",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName}をキャンセルしました",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "この調整には配分、割引、適用される税金、返金が含まれます。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**これが表示される理由**\n\nプラン変更を購入しています。 これに応じてサーバーブーストが更新されます。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10728,7 +10756,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitroサブスクリプションの最初の**3ヵ月**間は月額**{discountedPrice}**の支払いだけ。3ヵ月の割引終了後は、月額{regularPrice}の支払いです。",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Nitroの最初の**{numMonths, plural, one {ヵ月} other {{numMonths}ヵ月}}**間は月額**{discountedPrice}**のお支払いだけです。割引終了後は、月額{regularPrice}のお支払いとなります。",
+          "最初の{numMonths, plural, one {ヵ月} other {{numMonths}ヵ月}}{numMonths, plural, one {は} other {は}}、Nitroの月額が**{discountedPrice}**です。割引終了後は、毎月{regularPrice}が請求されます。",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3ヵ月間は月額{discountedPrice}\n\n3ヵ月以降は月額{regularPrice}",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10768,6 +10796,8 @@
           "先ほどメールをお送りいたしました。メールに記載されているリンクをクリックし、購入を承認してください。",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "続行",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "受け取れませんでしたか？",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "メールを再送信する",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13137,8 +13167,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "自分のサーバーを[立ち上げることもできます](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "残念です",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "「Discordを改善するためにデータを使用」をオフにしますか？",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "この機能をオフにすると、Discordは今後、分析を目的としたデータの処理を停止します。テスト中の新機能や、ボイスチャットなどの機能の使用状況に基づく改善がご利用いただけなくなります。Discordによる個人データ処理に反対する権利をさらに行使されたい場合は、privacy@discord.comまでメールでご連絡ください。",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "はい、わかっています",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "いいえ、やっぱりやめます！",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "パーソナライズをオフにしますか？",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "これをオフにすると、パーソナライズされたアドバイスや推奨事項などへのアクセスを失います。一旦オフにすると、元に戻すことはできなくなります！",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "はい、わかっています",
@@ -13462,18 +13497,31 @@
           "{count, plural, =0 {0 人の共通の友だち} one {1 人の共通の友だち} other {{count} 人の共通の友だち}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 個の共通サーバー} one {1 個の共通サーバー} other {{count} 個の共通サーバー}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0人のフレンド} one {1人のフレンド} other {{count}人のフレンド}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0件のサーバー} one {1件のサーバー} other {{count}件のサーバー}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}**とフレンド",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "**{usernameOne}**、**{usernameTwo}**とフレンド",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "**{usernameOne}**、**{usernameTwo}**、**さらに{count}人**とフレンド",
+          "**{usernameOne}**、**{usernameTwo}**、その他{count}人とフレンド",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "**{usernameOne}**、その他{count}人とフレンド",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0人} one {1人} other {{count}人}}とフレンド",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}**のメンバー",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "**{guildNameOne}**、**{guildNameTwo}**のメンバー",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "**{guildNameOne}**、**{guildNameTwo}**、**さらに{count}個**のメンバー",
+          "**{guildNameOne}**、**{guildNameTwo}**、その他{count}人のメンバー",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "{count, plural, =0 {0件のサーバー} one {1件のサーバー} other {{count}件のサーバー}}のメンバー",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "共通のフレンド",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "共通のサーバー",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "すべての共通のフレンドを見る",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "すべての共通のサーバーを見る",
+        USER_PROFILE_MUTUALS_TITLE: "共通",
         PROFILE_IN_VOICE_CALL: "音声通話にて",
         PROFILE_OPEN_VOICE_CHANNEL: "ボイスチャンネルを開く",
         IOS_PROFILE_IN_VOICE_CALL: "音声通話にて",
@@ -13614,6 +13662,10 @@
           "{nitroTierName}の{count, plural, one {#ヵ月} other {#ヵ月}}分をプレゼント",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "{nitroTierName}の{count, plural, one {#年} other {#年}}分をプレゼント",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "{username}に{count, plural, one {#ヵ月} other {#ヵ月}}分の{nitroTierName}を贈る",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "{username}に{count, plural, one {#年} other {#年}}分の{nitroTierName}を贈る",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "「ギフトを購入」をタップすることで、あなたは[有料サービス利用規約]({paidURL})に同意したとみなされます。これは選択した期間に対する一回限りの料金となります。",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "ギフトをお届け中！",
@@ -14433,7 +14485,17 @@
           "メッセージを削除しますか？",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "既に何かが書いてあるようです。すべて削除してコマンドを使用しますか？",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "このアプリはDiscordのどこでも使用できます。{betaUserLimit}人を超えるサーバーでは、応答はあなたにのみ表示されます。",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "アプリがあなたに対し、個人的に応答します",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "ベータ版の間、このメッセージを閲覧できるのはあなただけです。\n\n[これが表示される理由]({learnMoreUrl}) • [閉じる](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "ベータ版の間、このメッセージを閲覧できるのはあなただけです•[閉じる](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "ヘルプ記事を見る",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[詳細はこちら]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "「$[command](commandHook)」と入力するとMidjourneyを利用できます。アドバイス：サーバーを作成すれば友達と内々で遊べます。",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17195,6 +17257,8 @@
           "キャンセルすると、**以下の特典が失われます:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "やっぱり Nitro を続ける",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Nitroを続ける",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "解約すると、報酬の進捗およびこれらの報酬のすべてが失われます：",
         PREMIUM_PAUSE_INSTEAD: "代わりに一時停止",
         PREMIUM_PAUSE_SELECT_TITLE:
           "サブスクリプションを一時停止またはキャンセル",
@@ -18858,6 +18922,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ちょうど今",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count}{count, plural, =1 {分} other {分}}前",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "今週は{count} {count, plural, =1 {時間} other {時間}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count}{count, plural, =1 {日} other {日}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -18946,6 +19012,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "このアクションを開始したメンバー。",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Botの権限",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "権限名、カテゴリー、説明を検索...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "全て（{count}）",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {ロール#件} other {ロール#件}}",
@@ -18953,7 +19021,12 @@
           "すべての付与された権限",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "モデレーター権限なし",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "付与者：",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "（高位）付与者：",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "高位",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "モデレーター",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "高位権限はサーバー設定へのさらに高レベルなアクセスを許可するものであり、非常に信頼できるモデレーターにのみ付与されるべきものです。",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "これらのロールによって許可された権限",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "最高位のロール",
@@ -21562,6 +21635,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "全て表示",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "ギフトを贈る",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "ギフトを確認",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "いつでもどこでもお買い物",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "アバターデコレーションとプロフィールエフェクトを購入して、プロフィールをパーソナライズしましょう。",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "アニメ、ファンタジー、サイバーパンクなどのスタイルが人気です。",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitroメンバーはショップのすべての商品で割引を受けられます。",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "スタッフのおすすめ",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "ゲーム",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "インディーズ・スポットライト",
@@ -23244,6 +23324,8 @@
           "Discordは、10代の若者の安全を真剣に考慮しています。Discordが会話の中に安全性に関するリスクを検出した場合はお知らせが届きます。[セーフティアラートについて詳しくはこちら。]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "設定を開く",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "閉じる",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Discord側のミスだと思われる場合は、$[ご連絡ください](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "フィードバックをいただき、ありがとうございます！",
         STRANGER_DANGER_BANNER_BLOCK: "ブロック",
@@ -23451,6 +23533,8 @@
         POLL_COACHMARK_TITLE: "新着！投票はこちら。",
         POLL_COACHMARK_SUBTITLE:
           "チャットでイベントを計画したり、意見を集めたり、馬鹿げた質問を投げかけたりしましょう。",
+        POLL_COACHMARK_CTA: "今すぐ投票を開始しよう！",
+        POLL_COACHMARK_DISMISS: "また後で。",
         POLL_NOT_INTERACTIVE:
           "インタラクトするにはもとのメッセージを表示してください",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "ここには何もありません",
@@ -23547,6 +23631,7 @@
         QUESTS: "クエスト",
         QUEST: "{questName}クエスト",
         QUESTS_SEE_CODE: "コードを表示",
+        QUESTS_CLAIM_REWARD: "報酬を受け取る",
         QUESTS_ACCEPT: "クエストを承認",
         QUESTS_COMPLETE_TOOLTIP: "「獲得」を押して報酬コードをゲット！",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23560,13 +23645,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "あれっ！認証メールを送信できませんでした。",
         QUEST_REWARD: "{reward}をゲット",
+        QUEST_REWARD_COMPLETED: "{reward}を{date}にアンロックしました",
+        QUESTS_REWARD_CODE_HEADER: "あなたの報酬コード",
         QUESTS_REWARD_CODE_CONGRATS: "おめでとう！",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "お好みのプラットフォームは何ですか？",
         QUESTS_REWARD_CODE_ERROR:
           "おっと、エラーが発生したようです。しばらく待ってから再度お試しください",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "プラットフォームを選択",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
+          "プラットフォームを選択",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "あなたの{rewardName}にプラットフォーム固有のコードを生成します。**「コードを取得」を押した後は、選択の変更はできません。**",
         QUESTS_REWARD_CODE_DONE: "完了",
+        QUESTS_REWARD_CODE_GET_CODE: "コードを取得",
         QUESTS_REWARD_CODE_TRY_AGAIN: "やり直す",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "これを受け取る",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "入手済みです",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "クロスプラットフォーム",
         QUESTS_REWARD_CODE_PLATFORM_PC: "パソコン",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23574,11 +23669,14 @@
         QUESTS_SPONSORED: "スポンサード",
         QUESTS_PROMOTED: "昇格済み",
         QUESTS_LEARN_MORE_V2: "詳細",
+        QUESTS_LEARN_MORE_STACKED: "詳しくは\n\nこちら",
+        QUESTS_LEARN_MORE_LINK: "[詳細はこちら]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "クエストを承認",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "{gameTitle}をフレンド1人に{streamingDurationRequirement, number}分間配信して、{questReward}を獲得しましょう。",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**クエストが承認されました！**{gameTitle}をフレンド1人に{streamingDurationRequirement, number}分間配信して、{questReward}を獲得しましょう。",
+        QUESTS_TRACK_YOUR_PROGRESS: "進捗状況を追跡",
         QUESTS_TITLE: "{questName}クエスト",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "おっと！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23588,6 +23686,8 @@
           "デスクトップ版のDiscordアプリまたはブラウザから\n「ユーザー設定」>「ギフトインベントリ」に移動して、クエストに参加できます。",
         QUESTS_GET_THIS_GAME: "ゲームを入手",
         QUESTS_DISCLOSURE_LABEL: "これが表示される理由",
+        QUESTS_SHARE_LINK: "共有リンクをコピー",
+        QUESTS_HIDE_THIS: "これを非表示",
         QUESTS_FIND_QUEST:
           "これは「ユーザー設定」→「ギフトインベントリ」から再度表示できます。",
         QUESTS_CLAIM_BY: "{expirationDate}までに受け取ろう。",
@@ -23627,6 +23727,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!!、!!{third}!!と他{count, plural, one {1人} other {{count}人}}",
         STOREFRONT: "ストア",
+        STOREFRONT_TITLE: "{appName}のストア",
         STOREFRONT_APP_SUBSCRIPTIONS: "購読",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName}からサブスクリプションを購入",
@@ -23692,15 +23793,34 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "初めて",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA:
+          "**{mediaTitle}**を視聴しました",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName}が**{mediaTitle}**を視聴しました",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "アクティビティ",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "分かった！",
+        RECENT_GAMES: "最近のゲーム",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count}{count, plural, =1 {週間} other {週間}}前",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count}{count, plural, =1 {日} other {日}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {時間} other {時間}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {分} other {分}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {秒} other {秒}}前",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}週間前",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} 日前",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} 時間前",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} 分前",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}秒前",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "今週は{count} {count, plural, =1 {時間} other {時間}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "今週は{count}{count, plural, =1 {分} other {分}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "今週は{count}{count, plural, =1 {秒} other {秒}}",
       };
     },
   },

@@ -4873,11 +4873,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Attiva o disattiva l'associazione tasti",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Risultati",
-        SHOW_CURRENT_ACTIVITY: "Condividi la tua attivit\xe0 con gli altri.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord aggiorner\xe0 automaticamente il tuo stato quando parteciperai a un palco pubblico.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Quando ti dedichi a un'attivit\xe0 rilevabile (come giocare o ascoltare musica), Discord pu\xf2 mostrare informazioni su queste attivit\xe0, incluso quando e come le stai intraprendendo.",
         GAME_DETECTION_SERVICE: "Servizio Rilevazione dei giochi",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Posizioni di installazione",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -6874,12 +6871,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Blocca automaticamente i messaggi diretti che potrebbero contenere immagini esplicite. [Scopri di pi\xf9 su questa impostazione qui.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Consenti agli amici di unirsi alla tua partita.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Questa impostazione consente agli amici di unirsi alla tua partita senza inviare una richiesta.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Consenti ai partecipanti del canale vocale di unirsi alla tua partita.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Questa impostazione consente alle persone che si trovano nel tuo stesso canale vocale di unirsi alla tua partita senza inviare una richiesta. Questa funzione \xe8 possibile solo nei server non-community.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:

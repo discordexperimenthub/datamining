@@ -165,7 +165,9 @@
         PAGINATION_PAGE_LABEL: "Strana {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Sn\xedmek {pageNumber}",
         MUTE: "Ztlumit",
+        MUTE_ALT: "Vypnout mikrofon",
         UNMUTE: "Zrušit ztlumen\xed",
+        UNMUTE_ALT: "Zapnout mikrofon",
         DEAFEN: "Ztlumit zvuk",
         UNDEAFEN: "Zrušit ztlumen\xed zvuk",
         SEARCH: "Hledat",
@@ -1286,6 +1288,8 @@
           "Tato aplikace nepoch\xe1z\xed z\xa0d\xedlny Discordu. Testuj jenom aplikace od v\xfdvoj\xe1řů, kter\xfdm věř\xedš.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Dalš\xed informace o\xa0soukrom\xfdch aplikac\xedch.",
+        APPLICATION_ICON_A11Y_LABEL: "Ikona aplikace {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Ikona aplikace",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) zah\xe1jil/a aktivitu",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4920,8 +4924,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Povolit nebo zak\xe1zat kl\xe1vesov\xe9 zkratky",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "V\xfdsledky",
+        SHOW_CURRENT_ACTIVITY: "Sd\xedlej svoji aktivitu s\xa0ostatn\xedmi.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Když se budeš pohybovat na veřejn\xe9m p\xf3diu, Discord automaticky aktualizuje tvůj stav.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Když se zapojuješ do detekovateln\xfdch aktivit (např\xedklad hran\xed her nebo poslechu hudby), Discord může zobrazit informace o\xa0těchto aktivit\xe1ch včetně toho, jak a\xa0kdy se do těchto aktivit zapojuješ.",
         GAME_DETECTION_SERVICE: "Služba zjištěn\xed her",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Um\xedstěn\xed instalace",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5242,6 +5249,7 @@
         SUB_ENABLED_SERVERS: "Servery pro odběratele",
         AUTHORIZATION: "Autorizace",
         AUTHORIZED_APPS: "Autorizovan\xe9 aplikace",
+        MANAGE_AUTHORIZED_APP: "Spravovat autorizovan\xe9 aplikace",
         DEAUTHORIZE: "Odebrat autorizaci",
         DEAUTHORIZE_APP: "Odebrat autorizaci aplikaci",
         ABOUT_THIS_APP: "O t\xe9to aplikaci",
@@ -6516,7 +6524,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Vybrat server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Aby bylo možn\xe9 server přev\xe9st, mus\xedš na něm m\xedt opr\xe1vněn\xed **spravovat server**.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Chci to vyzkoušet",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "Použ\xedvej tuto aplikaci všude!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Přidat na server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Přizpůsob svůj server přid\xe1n\xedm t\xe9to aplikace",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Tuto aplikaci je možn\xe9 použ\xedvat kdekoli na Discordu. Během f\xe1ze beta testov\xe1n\xed na serverech s\xa0v\xedce než {betaUserLimit} lidmi uvid\xedš odpovědi jenom ty. [Zjistit v\xedce]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Neplatn\xfd požadavek. Chyb\xed parametr **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Neplatn\xfd rozsah **{scope}**",
@@ -6563,6 +6578,7 @@
           "Připojovat se k hlasov\xfdm kan\xe1lům tv\xfdm jm\xe9nem a vidět ostatn\xed \xfačastn\xedky hlasov\xe9ho kan\xe1lu nebo hovoru",
         SCOPE_DM_CHANNELS_READ:
           "Zobrazovat informace o PZ a skupinov\xfdch PZ, kter\xfdch se \xfačastn\xedš",
+        SCOPE_DM_YOU: "Př\xedm\xe9 zpr\xe1vy poslan\xe9 tobě",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Aktualizuj si připojen\xed a metadata pro tuto aplikaci",
         SCOPE_WEBHOOK_INCOMING: "Přidat do kan\xe1lu h\xe1ček webhook",
@@ -6926,12 +6942,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Automaticky blokovat př\xedm\xe9 zpr\xe1vy, kter\xe9 mohou obsahovat explicitn\xed obr\xe1zky. [Dalš\xed informace o\xa0tomto nastaven\xed najdeš zde.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Umožni př\xe1telům, aby se přidali k tv\xe9 hře.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Toto nastaven\xed umožn\xed př\xe1telům připojit se k tv\xe9 hře, aniž by museli pos\xedlat ž\xe1dosti.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Umožni \xfačastn\xedkům hlasov\xe9ho kan\xe1lu, aby se přidali k tv\xe9 hře.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Toto nastaven\xed umožn\xed lidem, kteř\xed jsou ve stejn\xe9m hlasov\xe9m kan\xe1lu jako ty, aby se připojili k tv\xe9 hře, aniž by museli pos\xedlat ž\xe1dost. Tuto funkci lze použ\xedt jenom mimo komunitn\xed servery.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6990,6 +7002,12 @@
         DATA_PRIVACY_CONTROLS: "Jak nakl\xe1d\xe1me s tv\xfdmi \xfadaji",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Použ\xedvat \xfadaje k vylepšov\xe1n\xed Discordu",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Toto nastaven\xed n\xe1m umožňuje použ\xedvat a\xa0zpracov\xe1vat informace o\xa0tobě, abychom l\xe9pe porozuměli tv\xfdm potřeb\xe1m a\xa0mohli vylepšovat naše služby. [Podrobnosti najdeš zde.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Použ\xedvat data k\xa0personalizaci m\xe9ho z\xe1žitku z\xa0Discordu",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Toto nastaven\xed n\xe1m umožňuje využ\xedvat informace (např\xedklad o\xa0tom, s\xa0k\xfdm se bav\xedš a\xa0jak\xe9 hry hraješ) k\xa0tomu, abychom Discord personalizovali tobě na m\xedru. [V\xedc informac\xed zjist\xedš zde.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Použ\xedvat \xfadaje k provozu Discordu",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7027,9 +7045,16 @@
           "Chceš tyto změny použ\xedt taky na všechny sv\xe9 st\xe1vaj\xedc\xed servery?",
         NEW_GUILDS_DM_ALLOWED: "Povolit př\xedm\xe9 zpr\xe1vy od členů serveru",
         USER_DROPS_SETTINGS: "Nastaven\xed propagace",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "Odměny ve hře (aka \xdakoly)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Využ\xedvat informace o\xa0tom, jak použ\xedv\xe1š Discord (např\xedklad jak\xe9 hry hraješ), abychom tě mohli informovat o\xa0\xfakolech a\xa0dalš\xedch př\xedležitostech k\xa0z\xedsk\xe1n\xed odměn ve hr\xe1ch. [Podrobnosti najdeš zde.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Ochrana osobn\xedch \xfadajů na serveru",
         USER_DM_SETTINGS_DESCRIPTION:
           "Chceš tyto změny použ\xedt taky na všechny sv\xe9 st\xe1vaj\xedc\xed servery? Na str\xe1nce nastaven\xed př\xedslušn\xfdch serverů můžeš zak\xe1zat př\xedm\xe9 zpr\xe1vy na jednotliv\xfdch serverech.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "\xdakoly jsou aktu\xe1lně ve f\xe1zi beta testov\xe1n\xed. Řekneš n\xe1m pros\xedm, proč je vyp\xedn\xe1š? [Průzkum n\xe1zorů]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "\xdakoly jsou aktu\xe1lně ve f\xe1zi beta testov\xe1n\xed. Děkujeme za tvou \xfačast! Teď bychom r\xe1di znali tvůj n\xe1zor! [Průzkum n\xe1zorů]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Určitě hled\xe1š \xfakoly od Discordu! Pokud vid\xedš tuto zpr\xe1vu, pak ještě mus\xedme zapracovat na někter\xfdch nastaven\xedch. Jestliže chceš \xfakoly povolit, přejdi do č\xe1sti Nastaven\xed -> Soukrom\xed a\xa0zabezpečen\xed a\xa0povol možnosti „Použ\xedvat \xfadaje k\xa0přizpůsoben\xed Discordu“ a\xa0„Odměny ve hře (aka \xfakoly)“.\n\n[V\xedce se dozv\xedš v\xa0čast\xfdch dotazech]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Zapsat se nyn\xed",
@@ -9624,7 +9649,7 @@
         PREMIUM_DISCOUNT_CTA: "Ušetři !!{percent, number}!!\xa0% na Nitru",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Ušetři na Nitru",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Zaplať jen **{discountedPrice}** na **{numMonths, plural, one {měs\xedc!} few {{numMonths} měs\xedce!} other {{numMonths} měs\xedců!}}** Pot\xe9 budeš platit {regularPrice}.",
+          "Plať pouh\xfdch **{discountedPrice}** po dobu **{numMonths, plural, one {1\xa0měs\xedce!} few {{numMonths}\xa0měs\xedců!} other {{numMonths}\xa0měs\xedců!}}** Pot\xe9 budeš platit {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Tvoje !!{percent, number}!!% sleva vyprš\xed {numMonths, plural, one {1\xa0měs\xedc} few {{numMonths}\xa0měs\xedce} other {{numMonths}\xa0měs\xedců}} po zakoupen\xed. Pot\xe9 ti budeme \xfačtovat {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10362,6 +10387,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "St\xe1vaj\xedc\xed předplatn\xe9",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nov\xe9 předplatn\xe9 celkem",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} – zrušeno",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Tato \xfaprava zahrnuje poměrn\xe9 rozdělen\xed, slevy, platn\xe9 daně a\xa0vr\xe1cen\xed peněz.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Proč se mi tohle zobrazuje?**\n\nKupuješ si změnu pl\xe1nu. Tv\xe1 vylepšen\xed serveru se patřičně aktualizuj\xed.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -11074,7 +11101,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Plať pouze **{discountedPrice}** měs\xedčně za prvn\xed **3\xa0měs\xedce** Nitra. Po skončen\xed 3měs\xedčn\xed slevy budeš platit {regularPrice} měs\xedčně.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Plať pouze **{discountedPrice}** měs\xedčně za **{numMonths, plural, one {prvn\xed měs\xedc} few {prvn\xed {numMonths}\xa0měs\xedce} other {prvn\xedch {numMonths}\xa0měs\xedců}}** Nitra. Po skončen\xed slevy budeš platit {regularPrice} měs\xedčně.",
+          "{numMonths, plural, one {Tvůj prvn\xed měs\xedc} few {Tv\xe9 prvn\xed {numMonths}\xa0měs\xedce} other {Tv\xfdch prvn\xedch {numMonths}\xa0měs\xedců}} měs\xedčn\xedho předplatn\xe9ho Nitra {numMonths, plural, one {m\xe1š za} other {m\xe1š za}} **{discountedPrice}**. Po vypršen\xed t\xe9to slevy budeš platit {regularPrice} za měs\xedc.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/měs\xedčně po dobu 3\xa0měs\xedců\n\n{regularPrice}/měs\xedčně po uplynut\xed 3\xa0měs\xedců",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -11115,6 +11142,8 @@
           "Pr\xe1vě jsme ti poslali e-mail. Autorizuj svůj n\xe1kup kliknut\xedm na ověřovac\xed odkaz v zaslan\xe9 zpr\xe1vě.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Pokračovat",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Nic ti nepřišlo?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Odeslat e-mail znovu",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13567,8 +13596,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Tak\xe9 můžeš [vytvořit svůj vlastn\xed server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Omlouv\xe1me se",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Chceš vypnout použ\xedv\xe1n\xed dat k\xa0vylepšov\xe1n\xed Discordu?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Pokud tuto možnost vypneš, přestaneme zpracov\xe1vat nov\xe1 data pro analytick\xe9 \xfačely. Přijdeš o\xa0př\xedstup k\xa0experiment\xe1ln\xedm funkc\xedm a\xa0vylepšen\xedm založen\xfdm na použ\xedv\xe1n\xed, jako je např\xedklad hlasov\xfd chat. Pokud budeš cht\xedt d\xe1le uplatnit sv\xe9 pr\xe1vo na n\xe1mitku vůči zpracov\xe1n\xed sv\xfdch \xfadajů, pošli n\xe1m e-mail na adresu privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ano, nem\xe1m pochyb!",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ne, chci zp\xe1tky!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Vypnout personalizaci?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Pokud tuto možnost vypneš, přijdeš o př\xedstup k takov\xfdm věcem, jako jsou doporučen\xed a n\xe1vrhy tobě na m\xedru. Nebudeš je moct později obnovit!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ano, nem\xe1m pochyb!",
@@ -13903,18 +13937,33 @@
           "{count, plural, =0 {0 společn\xfdch př\xe1tel} one {1 společn\xfd př\xedtel} few {{count} společn\xed př\xe1tel\xe9} other {{count} společn\xfdch př\xe1tel}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 společn\xfdch serverů} one {1 společn\xfd server} few {{count} společn\xe9 servery} other {{count} společn\xfdch serverů}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0\xa0př\xe1tel} one {1\xa0př\xedtel} few {{count}\xa0př\xe1tel\xe9} other {{count}\xa0př\xe1tel}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0\xa0serverů} one {1\xa0server} few {{count}\xa0servery} other {{count}\xa0serverů}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "př\xe1tel\xe9 s\xa0**{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "př\xe1tel\xe9 s\xa0**{usernameOne}** a\xa0**{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "př\xe1tel\xe9 s\xa0**{usernameOne}**, **{usernameTwo}** a\xa0**{count} k\xa0tomu**",
+          "př\xe1tel\xe9 s\xa0**{usernameOne}**, **{usernameTwo}** a\xa0{count} k\xa0tomu",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "př\xe1tel\xe9 s\xa0**{usernameOne}** a\xa0{count} k\xa0tomu",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "př\xe1tel\xe9 s\xa0{count, plural, =0 {0\xa0lidmi} one {1\xa0člověkem} other {{count}\xa0lidmi}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "člen **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "člen **{guildNameOne}** a\xa0**{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "člen **{guildNameOne}**, **{guildNameTwo}** a\xa0**{count} k\xa0tomu**",
+          "člen **{guildNameOne}**, **{guildNameTwo}** a\xa0{count} k\xa0tomu",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "člen {count, plural, =0 {0\xa0serverů} one {1\xa0serveru} other {{count}\xa0serverů}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Společn\xed př\xe1tel\xe9",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Společn\xe9 servery",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP:
+          "Zobrazit všechny společn\xe9 př\xe1tele",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP:
+          "Zobrazit všechny společn\xe9 servery",
+        USER_PROFILE_MUTUALS_TITLE: "Společn\xe9",
         PROFILE_IN_VOICE_CALL: "V hlasov\xe9m hovoru",
         PROFILE_OPEN_VOICE_CHANNEL: "Otevř\xedt hlasov\xfd kan\xe1l",
         IOS_PROFILE_IN_VOICE_CALL: "V hlasov\xe9m hovoru",
@@ -14060,6 +14109,10 @@
           "Darovat {nitroTierName} na {count, plural, one {#\xa0měs\xedc} few {#\xa0měs\xedce} other {#\xa0měs\xedců}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Darovat {nitroTierName} na {count, plural, one {#\xa0rok} few {#\xa0roky} other {#\xa0let}}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Darovat uživateli {username} předplatn\xe9 {nitroTierName} na {count, plural, one {#\xa0měs\xedc} few {#\xa0měs\xedce} other {#\xa0měs\xedců}}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Darovat uživateli {username} předplatn\xe9 {nitroTierName} na {count, plural, one {#\xa0rok} few {#\xa0roky} other {#\xa0let}}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Klepnut\xedm na tlač\xedtko „Koupit d\xe1rek“ vyjadřuješ souhlas s\xa0[podm\xednkami placen\xfdch služeb]({paidURL}). Strhneme ti jednor\xe1zov\xfd poplatek za zvolen\xe9 obdob\xed.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Tvůj d\xe1rek už je na cestě!",
@@ -14919,8 +14972,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Vymazat zpr\xe1vu?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Vypad\xe1 to, že už m\xe1š něco naps\xe1no. Chceš napsan\xfd text smazat a\xa0použ\xedt př\xedkaz?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Tuto aplikaci můžeš použ\xedvat kdekoli na Discordu. Na serverech s\xa0v\xedce než {betaUserLimit} lidmi uvid\xedš odpovědi jenom ty.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Aplikace bude odpov\xeddat tobě soukromě",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "V\xa0beta verzi tuto zpr\xe1vu uvid\xedš jen ty.\n\n[Proč tohle vid\xedm?]({learnMoreUrl}) • [Zavř\xedt](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "V\xa0beta verzi tuto zpr\xe1vu uvid\xedš jen ty. • [Zavř\xedt](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Zobrazit čl\xe1nek n\xe1povědy",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Zjistit v\xedce]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Jestli chceš zač\xedt použ\xedvat Midjourney, napiš „$[command](commandHook)“. Tip: Vytvoř server a\xa0vyzkoušej tuto funkci jenom s\xa0př\xe1teli.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17788,6 +17851,8 @@
           "Pokud ho teď zruš\xedš, **přijdeš o všechny tyto v\xfdhody:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Tak nic, nech\xe1m si Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Tak nic, nech\xe1m si Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Pokud zruš\xedš sv\xe9 pr\xe9miov\xe9 předplatn\xe9, přijdeš o\xa0postup v\xa0odměn\xe1ch a\xa0tak\xe9 o\xa0všechny n\xe1sleduj\xedc\xed odměny:",
         PREMIUM_PAUSE_INSTEAD: "Raději pozastavit",
         PREMIUM_PAUSE_SELECT_TITLE: "Pozastavit nebo zrušit předplatn\xe9",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19520,6 +19585,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "pr\xe1vě teď",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "před {count} {count, plural, =1 {minutou} other {minutami}}",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {h} other {h}} tento t\xfdden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {den} few {dny} other {dnů}} nazpět",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19614,6 +19681,8 @@
           "Člen, kter\xfd zah\xe1jil tuto akci.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE:
           "Opr\xe1vněn\xed moder\xe1tora",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Hledat n\xe1zvy, kategorie nebo popis opr\xe1vněn\xed…",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Vše ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {#\xa0role} few {#\xa0role} other {#\xa0rol\xed}}",
@@ -19622,7 +19691,12 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Ž\xe1dn\xe1 opr\xe1vněn\xed moder\xe1tora",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Udělil/a",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Zv\xfdšen\xe9) Uděleno uživatelem",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Zv\xfdšen\xe9",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moder\xe1tor",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Zv\xfdšen\xe1 opr\xe1vněn\xed poskytuj\xed vyšš\xed \xfaroveň př\xedstupu k\xa0nastaven\xedm serveru, proto by se měla udělovat pouze těm nejvěrohodnějš\xedm moder\xe1torům.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Opr\xe1vněn\xed udělen\xe1 těmito rolemi",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Nejvyšš\xed role",
@@ -22341,6 +22415,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Zobrazit vše",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Odeslat d\xe1rek",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Zkontroluj svůj d\xe1rek",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Nakupuj kdekoli a\xa0kdykoli",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Kup si vzhledy avataru a\xa0efekty profilu a\xa0uprav si profil dle sv\xe9ho gusta.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Mezi obl\xedben\xe9 styly patř\xed anime, fantasy, Cyberpunk a\xa0dalš\xed.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Členov\xe9 Nitra z\xedskaj\xed slevu na všechno zbož\xed v\xa0Obchodu.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Volba t\xfdmu",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Hran\xed",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Zaměřeno na Indie hry",
@@ -24098,6 +24179,8 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "Přej\xedt do nastaven\xed",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Zrušit",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Zm\xfdlili jsme se? $[Ozvi se n\xe1m](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "Děkujeme ti za zpětnou vazbu!",
         STRANGER_DANGER_BANNER_BLOCK: "Zablokovat",
@@ -24305,6 +24388,8 @@
         POLL_COACHMARK_TITLE: "NOV\xc9! Jsou tady průzkumy.",
         POLL_COACHMARK_SUBTITLE:
           "Pl\xe1nuj ud\xe1losti, zjišťuj n\xe1zory nebo pokl\xe1dej bl\xe1zniv\xe9 ot\xe1zky př\xedmo v\xa0chatu.",
+        POLL_COACHMARK_CTA: "Odstartuj svůj průzkum!",
+        POLL_COACHMARK_DISMISS: "Možn\xe1 později.",
         POLL_NOT_INTERACTIVE:
           "Jestli chceš interagovat, zobraz původn\xed zpr\xe1vu",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nen\xed tu nic zaj\xedmav\xe9ho",
@@ -24411,6 +24496,7 @@
         QUESTS: "\xdakoly",
         QUEST: "\xdakol {questName}",
         QUESTS_SEE_CODE: "Zobrazit k\xf3d",
+        QUESTS_CLAIM_REWARD: "Vyzvednout odměnu",
         QUESTS_ACCEPT: "Přijmout \xfakol",
         QUESTS_COMPLETE_TOOLTIP:
           "Klepnut\xedm na Vyzvednout z\xedskej k\xf3d sv\xe9 odměny!",
@@ -24426,13 +24512,23 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ale ne! Ověřovac\xed e-mail se n\xe1m nepodařilo odeslat.",
         QUEST_REWARD: "Vyhraj {reward}",
+        QUEST_REWARD_COMPLETED: "Odměna {reward} byla odemčena {date}",
+        QUESTS_REWARD_CODE_HEADER: "Tvůj k\xf3d odměny",
         QUESTS_REWARD_CODE_CONGRATS: "Blahopřejeme!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Jak\xe9 platformě d\xe1v\xe1š přednost?",
         QUESTS_REWARD_CODE_ERROR:
           "Ajaj! Něco se pokazilo. Zkus to pros\xedm znovu později.",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Vyber si platformu",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Vybrat platformu",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Vygenerujeme ti k\xf3d odměny speci\xe1lně pro platformu {rewardName}. **Po použit\xed tlač\xedtka „Z\xedskat k\xf3d“ už nebudeš moct v\xfdběr platformy změnit.**",
         QUESTS_REWARD_CODE_DONE: "Hotovo",
+        QUESTS_REWARD_CODE_GET_CODE: "Z\xedskat k\xf3d",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Zkusit znovu",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Vyzvednout tohle",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
+          "\xdaspěšně vyzvednuto",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "V\xedce platforem",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24440,11 +24536,14 @@
         QUESTS_SPONSORED: "Sponzorov\xe1no",
         QUESTS_PROMOTED: "Doporučujeme",
         QUESTS_LEARN_MORE_V2: "Zjistit v\xedce",
+        QUESTS_LEARN_MORE_STACKED: "Dalš\xed\n\ninformace",
+        QUESTS_LEARN_MORE_LINK: "[Zjistit v\xedce]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Přijmout \xfakol",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamuj hru {gameTitle} př\xedteli po dobu {streamingDurationRequirement, number} minut a\xa0z\xedskej {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**\xdakol přijat!** Streamuj hru {gameTitle} př\xedteli po dobu {streamingDurationRequirement, number} minut a\xa0z\xedskej {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Sleduj svůj postup",
         QUESTS_TITLE: "\xdakol {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Jejda!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24454,6 +24553,8 @@
           "Moc n\xe1s to mrz\xed! Ve sv\xe9m prohl\xedžeči nebo poč\xedtačov\xe9 aplikaci Discord však můžeš přej\xedt do sekce \nUživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků a\xa0přijmout \xfakol tam.",
         QUESTS_GET_THIS_GAME: "Z\xedskat hru",
         QUESTS_DISCLOSURE_LABEL: "Proč tohle vid\xedm?",
+        QUESTS_SHARE_LINK: "Kop\xedrovat odkaz pro sd\xedlen\xed",
+        QUESTS_HIDE_THIS: "Chci to skr\xfdt",
         QUESTS_FIND_QUEST:
           "Později to najdeš v\xa0č\xe1sti Uživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků",
         QUESTS_CLAIM_BY: "Vyzvedni do {expirationDate}.",
@@ -24495,6 +24596,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! a\xa0{count, plural, one {1\xa0dalš\xed} few {{count}\xa0dalš\xed} other {{count}\xa0dalš\xedch}}",
         STOREFRONT: "Obchod",
+        STOREFRONT_TITLE: "Obchod {appName}",
         STOREFRONT_APP_SUBSCRIPTIONS: "Předplatn\xe9",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koupit předplatn\xe9 od {appName}",
         STOREFRONT_APP_PRODUCTS: "Produkty",
@@ -24562,16 +24664,34 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Poprv\xe9",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Sledoval/a **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} sledoval/a **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivita",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Rozum\xedm!",
+        RECENT_GAMES: "Ned\xe1vn\xe9 hry",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {t\xfdden} few {t\xfddny} other {t\xfddnů}} nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {den} few {dny} other {dnů}} nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {hodinu} few {hodiny} other {hodin}} nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minutu} few {minuty} other {minut}} nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "před {count} {count, plural, =1 {sekundou} other {sekundami}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0t nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} d nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} h nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
           "{count}\xa0s\xa0nazpět",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {h} other {h}} tento t\xfdden",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} tento t\xfdden",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {s} other {s}} tento t\xfdden",
       };
     },
   },

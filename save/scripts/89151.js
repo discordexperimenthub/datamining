@@ -173,7 +173,9 @@
         PAGINATION_PAGE_LABEL: "Sayfa {pageNumber}",
         PAGINATION_SLIDE_LABEL: "{pageNumber}. Sayfa",
         MUTE: "Sustur",
+        MUTE_ALT: "Mikrofonu Kapat",
         UNMUTE: "Susturmayı Kaldır",
+        UNMUTE_ALT: "Mikrofonu A\xe7",
         DEAFEN: "Sağırlaştır",
         UNDEAFEN: "Sağırlığı Kaldır",
         SEARCH: "Ara",
@@ -1262,6 +1264,9 @@
           "Bu uygulama Discord tarafından \xfcretilmedi. Sadece g\xfcvendiğin geliştiricilerin uygulamalarını test et.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "\xd6zel uygulamalar hakkında daha fazla bilgi al.",
+        APPLICATION_ICON_A11Y_LABEL:
+          "{applicationName} i\xe7in uygulama simgesi",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Uygulama simgesi",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) bir etkinlik başlattı",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4842,8 +4847,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Tuş atamasını etkinleştir ya da devre dışı bırak",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Sonu\xe7lar",
+        SHOW_CURRENT_ACTIVITY: "Etkinliklerini diğerleriyle paylaş.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Herkese a\xe7ık bir Sahne'ye katıldığında Discord durumunu otomatik olarak g\xfcnceller.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "Discord, algılanabilir bir etkinliğe katıldığında (bir oyun oynamak veya m\xfczik dinlemek gibi) ne zaman ve nasıl katıldığın da d\xe2hil olmak \xfczere s\xf6z konusu etkinlikle ilgili bilgileri g\xf6sterebilir.",
         GAME_DETECTION_SERVICE: "Oyun Tespit Hizmeti",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Kurulum konumları",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Kurulum Yeri ekle",
@@ -5161,6 +5169,7 @@
         SUB_ENABLED_SERVERS: "Abonelik Etkin Sunucular",
         AUTHORIZATION: "Yetkilendirme",
         AUTHORIZED_APPS: "Yetkili Uygulamalar",
+        MANAGE_AUTHORIZED_APP: "Yetkili Uygulamayı Y\xf6net",
         DEAUTHORIZE: "Yetkiyi Kaldır",
         DEAUTHORIZE_APP: "Uygulamanın Yetkisini Kaldır",
         ABOUT_THIS_APP: "Bu Uygulama Hakkında",
@@ -6424,7 +6433,14 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Bir sunucu se\xe7",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Bunun i\xe7in sunucuda **Sunucu Y\xf6netme** iznine sahip olmalısın.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Hemen Dene",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE:
+          "Bu uygulamayı her yerde kullan!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Sunucuya ekle",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Bu uygulamayı ekleyerek sunucunu \xf6zelleştir.",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Bu uygulama Discord'un herhangi bir yerinde kullanılabilir. Beta sırasında, {betaUserLimit} kişiden fazla kullanıcısı olan sunucularda yanıtları sadece sen g\xf6rebilirsin. [Daha fazla bilgi edin]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Talep ge\xe7ersiz. **{param}** parametresi eksik",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ge\xe7ersiz kapsam **{scope}**",
@@ -6470,6 +6486,7 @@
           "Senin adına sesli konuşmaya bağlanabilecek ve ses kanallarında veya aramalarda başka kimlerin olduğunu g\xf6rebilecek",
         SCOPE_DM_CHANNELS_READ:
           "Katıldığın DM'ler ve GDM'ler hakkındaki bilgilere g\xf6z at",
+        SCOPE_DM_YOU: "Kendine direkt mesaj g\xf6nder.",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Bu uygulama i\xe7in bağlantını ve meta verini g\xfcncelle",
         SCOPE_WEBHOOK_INCOMING: "Bir kanala webhook ekler",
@@ -6812,12 +6829,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Sakıncalı g\xf6rseller i\xe7erebilecek direkt mesajları otomatik olarak engeller. [Bu ayarla ilgili daha fazla bilgi edin.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS:
-          "Arkadaşlarının oyununa katılmasına izin ver.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Bu ayar arkadaşlarının talep g\xf6ndermeden oyununa katılmalarını sağlar.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Ses kanalı katılımcılarının oyununa katılmasına izin ver.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Bu ayar seninle aynı ses kanalında bulunan kişilerin talep g\xf6ndermeden oyununa katılmalarını sağlar. Bu \xf6zellik sadece topluluk sunucusu olmayan sunucularda \xe7alışır.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -6874,6 +6887,12 @@
         DATA_PRIVACY_CONTROLS: "Verilerini kullanma pratiklerimiz",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discord'u iyileştirmek i\xe7in verileri kullan",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Bu ayar sayesinde hizmetlerimizi anlayıp geliştirmek i\xe7in bilgilerini kullanabilir ve işleyebiliriz. [Daha fazla bilgi edin.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Discord deneyimimi kişiselleştirmek i\xe7in verilerimi kullan.",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Bu ayar sayesinde Discord'u sana \xf6zel olarak kişiselleştirmek i\xe7in konuştuğun kullanıcılar veya oynadığın oyunlar gibi bilgileri kullanıyoruz. [Daha fazla bilgi edin.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discord'un \xe7alışması i\xe7in verileri kullan",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "T\xfcm Verilerimi iste",
@@ -6908,9 +6927,17 @@
         NEW_GUILDS_DM_ALLOWED:
           "Sunucu \xfcyelerinden gelen direkt mesajlara izin ver.",
         USER_DROPS_SETTINGS: "Reklam Ayarları",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Oyun i\xe7i \xf6d\xfcller (diğer adıyla G\xf6revler)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "G\xf6revler veya diğer oyun i\xe7i \xf6d\xfcl fırsatları hakkında bilgi edinmek i\xe7in hangi oyunları oynadığın gibi Discord'u nasıl kullandığında dair bilgileri kullan. [Daha fazla bilgi edin.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Sunucu Gizliliği",
         USER_DM_SETTINGS_DESCRIPTION:
           "Bu değişikliği ayrıca b\xfct\xfcn mevcut sunucularına uygulamak istiyor musun? Buna ek olarak, birbirinden bağımsız olarak her sunucunun kendi Gizlilik Ayarları sekmesinden o sunucu i\xe7in direkt mesajları devre dışı bırakabilirsin.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "G\xf6revler şu an betada. Neden devre dışı bıraktığın hakkında g\xf6r\xfcşlerini \xf6ğrenmek isteriz. [Geri Bildirim Anketi]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "G\xf6revler şu an betada. Katıldığın i\xe7in teşekk\xfcr ederiz ve g\xf6r\xfcşlerini bizimle paylaşmanı isteriz! [Geri Bildirim Anketi]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Discord G\xf6revlerini arıyor olmalısın! Bu mesajı g\xf6r\xfcyorsan bazı ayarlarda değişiklikler yapmalıyız. Etkinleştirmek i\xe7in Ayarlar -> Gizlilik ve G\xfcvenlik sekmesine gidip "Discord deneyimimi kişiselleştirmek i\xe7in verileri kullan" ve "Oyun i\xe7i \xf6d\xfcller (yani G\xf6revler)" ayarlarını etkinleştir.\n\n[Daha fazla bilgiye SSS kısmından ulaşabilirsin.]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Şimdi Katıl",
@@ -9465,7 +9492,7 @@
         PREMIUM_DISCOUNT_CTA: "Nitro'dan %!!{percent, number}!! tasarruf et",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro'dan tasarruf et",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "**{numMonths, plural, one {Bir ay} other {{numMonths} ay}}** boyunca sadece **{discountedPrice}**! Sonrasında ise {regularPrice}.",
+          "**{numMonths, plural, one {1 ay} other {{numMonths} ay}}** boyunca sadece **{discountedPrice}**! Sonrasında ise {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "%!!{percent, number}!! indirimin satın alımdan {numMonths, plural, one {1 ay} other {{numMonths} ay}} sonra sona erecek. Sonrasında hesabından {regularPrice} kesilecek.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10196,6 +10223,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Mevcut Abonelik",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Yeni Abonelik Toplamı",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} İptal Edildi",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Bu ayarlamaya eşit paylaştırmalar, indirimler, ilgili vergiler ve iadeler d\xe2hildir.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Bunu neden g\xf6r\xfcyorum?**\n\nBir plan değişikliği satın alıyorsun. Sunucu Takviyelerin de buna uygun olarak g\xfcncelleniyor.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10898,7 +10927,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro'nun ilk **3 ayında** sadece **{discountedPrice}** \xf6de. 3 aylık indirim sona erdikten sonra ayda {regularPrice} \xf6de.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Nitro'nun ilk **{numMonths, plural, one {ayında} other {{numMonths} ayında}}** yalnızca **{discountedPrice}** \xf6de. İndirim bittikten sonra aylık {regularPrice} \xf6de.",
+          "Aylık Nitro aboneliğinin ilk {numMonths, plural, one {ayında} other {{numMonths} ayında}} {numMonths, plural, one {yalnızca} other {yalnızca}} **{discountedPrice}** \xf6de. İndirim sona erdikten sonra aylık {regularPrice} \xf6de.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 ay boyunca ayda {discountedPrice}\n\n3 aydan sonra ayda {regularPrice}",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10940,6 +10969,8 @@
           "Az \xf6nce sana bir e-posta g\xf6nderdik. Bu satın alma işlemini onaylamak i\xe7in e-postadaki doğrulama bağlantısına tıkla.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Devam Et",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Sana bir şey ulaşmadı mı?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "E-postayı yeniden g\xf6nder",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13350,8 +13381,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Ayrıca [kendi sunucunu da oluşturabilirsin](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Kusura bakma",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Discord'u iyileştirmek i\xe7in verileri kullan ayarı kapatılsın mı?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Bunu kapatırsan analiz i\xe7in yeni verileri işlemeyi durduracağız. Yeni deneysel \xf6zelliklere ve sesli sohbet gibi kullanım temelli iyileştirmelere erişim imk\xe2nını kaybedeceksin. Verilerini işlememiz konusundaki itiraz hakkını daha ileri aşamalarda uygulamak istiyorsan privacy@discord.com adresine e-posta g\xf6nderebilirsin.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Evet, eminim",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Hayır, beni geri alın!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Kişiselleştirme kapatılsın mı?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Bunu kapatırsan kişiselleştirilmiş \xf6neriler ve tavsiyeler gibi şeylere erişim imkanını kaybedeceksin. Bunları gelecekte geri alamayacaksın!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Evet, eminim",
@@ -13681,18 +13717,31 @@
           "{count, plural, =0 {0 Ortak Arkadaş} one {1 Ortak Arkadaş} other {{count} Ortak Arkadaş}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 Ortak Sunucu} one {1 Ortak Sunucu} other {{count} Ortak Sunucu}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 Arkadaş} one {1 Arkadaş} other {{count} Arkadaş}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 Sunucu} one {1 Sunucu} other {{count} Sunucu}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** ile arkadaş",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "**{usernameOne}** ve **{usernameTwo}** ile arkadaş",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "**{usernameOne}**, **{usernameTwo}** ve **{count} kullanıcı** ile arkadaş",
+          "**{usernameOne}**, **{usernameTwo}** ve {count} kullanıcı ile arkadaş",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "**{usernameOne}** ve {count} kullanıcı ile arkadaş",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0 kişi} one {1 kişi} other {{count} kişi}} ile arkadaş",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** \xfcyesi",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "**{guildNameOne}** ve **{guildNameTwo}** \xfcyesi",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "**{guildNameOne}**, **{guildNameTwo}** ve **{count} sunucuya daha** \xfcye",
+          "**{guildNameOne}**, **{guildNameTwo}** ve {count} sunucuya daha \xfcye",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "{count, plural, =0 {0 sunucuya} one {1 sunucuya} other {{count} sunucuya}} \xfcye",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Ortak Arkadaşlar",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Ortak Sunucular",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "T\xfcm ortak arkadaşları g\xf6r",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "T\xfcm ortak sunucuları g\xf6r",
+        USER_PROFILE_MUTUALS_TITLE: "Ortak arkadaşlar ve sunucular",
         PROFILE_IN_VOICE_CALL: "Bir sesli aramada",
         PROFILE_OPEN_VOICE_CHANNEL: "Ses Kanalı A\xe7",
         IOS_PROFILE_IN_VOICE_CALL: "Bir sesli aramada",
@@ -13837,6 +13886,10 @@
           "{count, plural, one {# aylık} other {# aylık}} {nitroTierName} hediye et",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "{count, plural, one {# yıllık} other {# yıllık}} {nitroTierName} hediye et",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "{username} kişisine {count, plural, one {# aylık} other {# aylık}} {nitroTierName} hediye et",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "{username} kişisine {count, plural, one {# yıllık} other {# yıllık}} {nitroTierName} hediye et",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           '"Hediye satın al"a dokunarak [\xdccretli Hizmet Koşullarımızı]({paidURL}) kabul edersin. Bu, se\xe7ilen s\xfcre i\xe7in sadece tek seferlik bir \xfccretlendirme olacak.',
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Hediyen yolda!",
@@ -14678,8 +14731,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Mesaj temizlensin mi?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "G\xf6r\xfcn\xfcşe g\xf6re \xe7oktan bir şeyler yazmışsın. Mesajı temizlemek ve bir komut kullanmak ister misin?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Bu uygulamayı Discord'un her yerinde kullanabilirsin. {betaUserLimit} kişiden fazla kullanıcısı olan sunucularda yanıtları sadece sen g\xf6rebilirsin.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Uygulama sana \xf6zelden yanıt verir.",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Beta sırasında bu mesajı sadece sen g\xf6rebilirsin.\n\n[Bunu neden g\xf6r\xfcyorum?]({learnMoreUrl}) • [Kapat](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Beta sırasında bu mesajı sadece sen g\xf6rebilirsin. • [Kapat](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Yardım Yazısını G\xf6r\xfcnt\xfcle",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Daha Fazla Bilgi Edin]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           'Midjourney kullanmak i\xe7in "$[command](commandHook)" yaz. İpucu: Yalnızca arkadaşlarınla denemek i\xe7in bir sunucu oluştur.',
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17491,6 +17554,8 @@
           "İptal edersen **şu avantajları kaybedeceksin:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Boş ver, Nitro'yu bırakma",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Boş ver, Nitro'yu bırakma",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "İptal edersen \xf6d\xfcl ilerlemeni ve t\xfcm bu \xf6d\xfclleri kaybedersin:",
         PREMIUM_PAUSE_INSTEAD: "Bunun Yerine Duraklat",
         PREMIUM_PAUSE_SELECT_TITLE: "Aboneliği duraklat veya iptal et",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19180,6 +19245,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "az \xf6nce",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {dakika} other {dakika}} \xf6nce",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "Bu hafta {count} {count, plural, =1 {saat} other {saat}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {g\xfcn} other {g\xfcn}} \xf6nce",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19271,6 +19338,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Bu eylemi başlatan \xfcye.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Mod İzinleri",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "İzin adlarını, kategorileri veya a\xe7ıklamaları ara...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "T\xfcm\xfc ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# Rol} other {# Rol}}",
@@ -19278,7 +19347,12 @@
           "Verilen B\xfct\xfcn İzinler",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Mod İzni Yok",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "İzni sağlayan:",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Y\xfckseltilmiş) İzni sağlayan:",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Y\xfckseltilmiş",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderat\xf6r",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Y\xfckseltilmiş izinler, sunucu ayarlarına daha y\xfcksek seviyelerde erişim hakkı sağlar ve yalnızca \xe7ok g\xfcvenilir moderat\xf6rlere verilmelidir.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Bu Roller Tarafından Sağlanan İzinler",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "En Y\xfcksek Rol",
@@ -21947,6 +22021,14 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "T\xfcm\xfcn\xfc g\xf6ster",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Bir hediye g\xf6nder",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Hediyeni \xf6n izle",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE:
+          "Her yerde istediğin zaman alışveriş yap.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Profilini kişiselleştirmek i\xe7in Avatar Dekorasyonları ve Profil Efektleri satın al.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Pop\xfcler tarzlar arasında Anime, Fantezi, Cyberpunk ve \xe7ok daha fazlası bulunuyor.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro \xfcyeleri i\xe7in Mağaza'daki t\xfcm \xfcr\xfcnler indirimli.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Ekibin Se\xe7tikleri",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Oyun",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Bağımsızlar Sahnesi",
@@ -23667,6 +23749,8 @@
           "Discord'da \xe7ocuk g\xfcvenliğine \xf6nem veriyoruz. Konuşmada olası bir g\xfcvenlik ihlali tespit ettiğimizde sana bildireceğiz. [G\xfcvenlik uyarıları hakkında daha fazla bilgi edin.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Ayarlara git",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Kapat",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Hata yaptığımızı mı d\xfcş\xfcn\xfcyorsun? $[Bizimle iletişime ge\xe7](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "Geri bildirimin i\xe7in teşekk\xfcrler!",
         STRANGER_DANGER_BANNER_BLOCK: "Engelle",
@@ -23876,6 +23960,8 @@
         POLL_COACHMARK_TITLE: "YENİ! Anketler geldi.",
         POLL_COACHMARK_SUBTITLE:
           "Etkinlikler d\xfczenle, g\xf6r\xfcş alışverişi yap veya sohbete sa\xe7ma bir soru bırak.",
+        POLL_COACHMARK_CTA: "Hemen bir anket başlat!",
+        POLL_COACHMARK_DISMISS: "Belki daha sonra.",
         POLL_NOT_INTERACTIVE:
           "Etkileşime girmek i\xe7in asıl mesajı g\xf6r\xfcnt\xfcle",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Burada bir şey yok",
@@ -23978,6 +24064,7 @@
         QUESTS: "G\xf6revler",
         QUEST: "{questName} G\xf6revi",
         QUESTS_SEE_CODE: "Kodu G\xf6r",
+        QUESTS_CLAIM_REWARD: "\xd6d\xfcl\xfc Al",
         QUESTS_ACCEPT: "G\xf6revi Kabul Et",
         QUESTS_COMPLETE_TOOLTIP:
           "\xd6d\xfcl kodunu almak i\xe7in butona tıkla!",
@@ -23994,13 +24081,22 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Hayda! Sana bir doğrulama e-postası g\xf6ndermeyi başaramadık.",
         QUEST_REWARD: "{reward} kazan.",
+        QUEST_REWARD_COMPLETED: "{date} tarihinde a\xe7tın: {reward}",
+        QUESTS_REWARD_CODE_HEADER: "\xd6d\xfcl Kodun",
         QUESTS_REWARD_CODE_CONGRATS: "Tebrikler!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Hangi platformu tercih ediyorsun?",
         QUESTS_REWARD_CODE_ERROR:
           "T\xfch! Bir şeyler ters gitti, l\xfctfen daha sonra tekrar dene",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Bir Platform Se\xe7",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Platform Se\xe7",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "{rewardName} i\xe7in platforma \xf6zel ve sana ait bir kod oluşturacağız. **Kodu Al butonuna bastıktan sonra yaptığın se\xe7imi değiştiremeyeceksin.**",
         QUESTS_REWARD_CODE_DONE: "Bitti",
+        QUESTS_REWARD_CODE_GET_CODE: "Kodu Al",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Tekrar Dene",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Bunu Al",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Bunu Aldın",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "\xc7apraz platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24008,11 +24104,15 @@
         QUESTS_SPONSORED: "Sponsorlu",
         QUESTS_PROMOTED: "Tanıtımda",
         QUESTS_LEARN_MORE_V2: "Daha Fazla Bilgi Edin",
+        QUESTS_LEARN_MORE_STACKED: "Daha Fazla\n\nBilgi Edin",
+        QUESTS_LEARN_MORE_LINK:
+          "[Daha Fazla Bilgi Edin]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "G\xf6revi Kabul Et",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Bir arkadaşına {streamingDurationRequirement, number} dakika boyunca {gameTitle} yayını yap ve {questReward} kazan.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**G\xf6rev kabul edildi!** Bir arkadaşına {streamingDurationRequirement, number} dakika boyunca {gameTitle} yayını yap ve {questReward} kazan.",
+        QUESTS_TRACK_YOUR_PROGRESS: "İlerlemeni Takip Et",
         QUESTS_TITLE: "{questName} G\xf6revi",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "T\xfch!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24022,6 +24122,8 @@
           "G\xf6revini kabul etmek i\xe7in masa\xfcst\xfc Discord uygulamasından veya tarayıcı \xfczerinden \nKullanıcı Ayarları > Hediye Envanteri b\xf6l\xfcm\xfcne gidebilirsin.",
         QUESTS_GET_THIS_GAME: "Oyunu al",
         QUESTS_DISCLOSURE_LABEL: "Bunu neden g\xf6r\xfcyorum?",
+        QUESTS_SHARE_LINK: "Paylaşım Bağlantısını Kopyala",
+        QUESTS_HIDE_THIS: "Bunu Gizle",
         QUESTS_FIND_QUEST:
           "Bunu yeniden Kullanıcı Ayarları > Hediye Envanteri \xfczerinden bulabilirsin",
         QUESTS_CLAIM_BY: "{expirationDate} tarihinden \xf6nce al.",
@@ -24062,6 +24164,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ve {count, plural, one {1 kişi daha} other {{count} kişi daha}}",
         STOREFRONT: "Mağaza",
+        STOREFRONT_TITLE: "{appName} Mağazası",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonelikler",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName} \xfczerinden abonelik satın al",
@@ -24130,16 +24233,34 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "İlk defa",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "**{mediaTitle}** izledi",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} **{mediaTitle}** izledi",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Etkinlik",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Anladım!",
+        RECENT_GAMES: "Son Oyunlar",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {hafta} other {hafta}} \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {g\xfcn} other {g\xfcn}} \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {saat} other {saat}} \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {dakika} other {dakika}} \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {saniye} other {saniye}} \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} hafta \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} g\xfcn \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} saat \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
           "{count} dakika \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} sn \xf6nce",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "Bu hafta {count} {count, plural, =1 {saat} other {saat}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "Bu hafta {count} {count, plural, =1 {dakika} other {dakika}}",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "Bu hafta {count} {count, plural, =1 {saniye} other {saniye}}",
       };
     },
   },

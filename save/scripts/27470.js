@@ -4910,11 +4910,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Ativar/desativar atalho do teclado",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultados",
-        SHOW_CURRENT_ACTIVITY: "Compartilhe sua atividade com os outros.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "O Discord atualizar\xe1 seu status automaticamente se voc\xea estiver participando de um palco.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Quando voc\xea participa de uma atividade detect\xe1vel (como jogar um jogo ou ouvir m\xfasica), o Discord pode exibir informa\xe7\xf5es sobre essas atividades, incluindo quando e de que maneira voc\xea se envolveu.",
         GAME_DETECTION_SERVICE: "Servi\xe7o de Detec\xe7\xe3o de Jogos",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locais de instala\xe7\xe3o",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -6930,11 +6927,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Bloqueia automaticamente mensagens diretas que possam conter imagens expl\xedcitas. [Saiba mais sobre esta configura\xe7\xe3o aqui.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Permitir que amigos entrem no jogo.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Esta configura\xe7\xe3o permite que seus amigos entrem no jogo sem precisar pedir.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Permitir que os participantes do canal de voz entrem no jogo.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Esta configura\xe7\xe3o permite que as pessoas no seu atual canal de voz entrem no jogo sem precisar pedir. Esse recurso s\xf3 funciona em servidores que n\xe3o sejam de comunidade.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS:
@@ -18503,7 +18497,7 @@
         FORUM_TAG_A11Y_TAG_BY: "tag, {tagName}",
         NEW_FORUM_POST: "Criar postagem",
         NEW_FORUM_POST_NEW: "Nova postagem",
-        SUBMIT_POST: "Postagem",
+        SUBMIT_POST: "Publicar",
         FORUM_POST_TITLE_PLACEHOLDER: "Come\xe7ar a conversar...",
         FORUM_POST_TITLE_PLACEHOLDER_SEARCH: "Buscar ou criar postagem...",
         FORUM_CHANNEL_NO_POST_HISTORY:
@@ -24236,7 +24230,7 @@
         CREATE_POLL_DURATION_BUTTON_A11Y_HINT:
           "Toque para alterar a dura\xe7\xe3o da enquete",
         CREATE_POLL_MULTIPLE_ANSWERS: "Permitir v\xe1rias respostas",
-        CREATE_POLL_POST: "Postagem",
+        CREATE_POLL_POST: "Publicar",
         CREATE_POLL_REMOVE_ANSWER_A11Y: "Remova a resposta {answerNumber}",
         CREATE_POLL_MODAL_WARNING_MODAL_TITLE: "Voc\xea tem certeza?",
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:

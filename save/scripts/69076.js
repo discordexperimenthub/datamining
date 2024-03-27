@@ -166,7 +166,9 @@
         PAGINATION_PAGE_LABEL: "Page {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Slide {pageNumber}",
         MUTE: "Mute",
+        MUTE_ALT: "Turn Off Microphone",
         UNMUTE: "Unmute",
+        UNMUTE_ALT: "Turn On Microphone",
         DEAFEN: "Deafen",
         UNDEAFEN: "Undeafen",
         SEARCH: "Search",
@@ -1231,6 +1233,8 @@
           "This app is not made by Discord. Only test apps from developers you trust.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Learn more about private apps.",
+        APPLICATION_ICON_A11Y_LABEL: "App icon for {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "App icon",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) started an activity",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4709,8 +4713,11 @@
           "Select the voice channel to join or switch to",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Enable or disable keybind",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Results",
+        SHOW_CURRENT_ACTIVITY: "Share your activity with others.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord will automatically update your status if you're attending a public Stage.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "When you engage in a detectable activity (such as playing a game or listening to music), Discord can display information about those activities, including when and how you’ve engaged.",
         GAME_DETECTION_SERVICE: "Game Detection Service",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Install locations",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Add Install Location",
@@ -5017,6 +5024,7 @@
         SUB_ENABLED_SERVERS: "Sub Enabled Servers",
         AUTHORIZATION: "Authorisation",
         AUTHORIZED_APPS: "Authorised Apps",
+        MANAGE_AUTHORIZED_APP: "Manage Authorised App",
         DEAUTHORIZE: "Deauthorise",
         DEAUTHORIZE_APP: "Deauthorise Application",
         ABOUT_THIS_APP: "About this App",
@@ -6247,7 +6255,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Select a server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "This requires you to have **Manage Server** permission in the server.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Try It Now",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "Use this app everywhere!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Add to Server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Customise your server by adding this app",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "This app can be used anywhere on Discord. During beta, responses are visible only to you in servers with over {betaUserLimit} people. [Learn more]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Invalid request. Missing param **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Invalid scope **{scope}**",
@@ -6291,6 +6305,7 @@
           "Connect to voice on your behalf and see others who are in any voice channel or call",
         SCOPE_DM_CHANNELS_READ:
           "See information about the DMs and GDMs you are in",
+        SCOPE_DM_YOU: "Send you direct messages",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Update your connection and metadata for this application",
         SCOPE_WEBHOOK_INCOMING: "Adds a webhook to a channel",
@@ -6624,11 +6639,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Automatically block direct messages that may contain explicit images. [Learn more about this setting here.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Allow friends to join your game.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "This setting allows friends to join your game without sending a request.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Allow voice channel participants to join your game.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "This setting allows people that are in the same voice channel as you to join your game without sending a request. This feature only works in non-Community servers.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Keep me safe",
@@ -6683,6 +6695,12 @@
         DATA_PRIVACY_CONTROLS: "How we use your data",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Use data to improve Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "This setting allows us to use and process your information to understand and improve our services. [Learn more about it here.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Use data to personalise my Discord experience",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "This setting allows us to use information, such as who you talk to and what games you play, to personalise Discord for you. [Learn more about it here.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Use data to make Discord work",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Request all of my data",
@@ -6715,9 +6733,16 @@
           "Do you want to also apply this change to all your existing servers?",
         NEW_GUILDS_DM_ALLOWED: "Allow direct messages from server members",
         USER_DROPS_SETTINGS: "Promo Settings",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "In-game rewards (aka Quests)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Use information about how you use Discord such as what games you play to tell you about Quests or other in-game reward opportunities. [Learn more about it here.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Server Privacy",
         USER_DM_SETTINGS_DESCRIPTION:
           "Do you want to also apply this change to all your existing servers? You can also disable direct messages on individual servers by visiting that server’s settings page.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Quests is currently in beta – we’d like to learn more about why you turned it off. [Feedback Survey]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Quests is currently in beta – thanks for participating. Now we’d like to hear from you! [Feedback Survey]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "You must be looking for Discord Quests! If you’re seeing this message, we need to tweak some settings. To enable it, you’ll need to go to Settings -> Privacy & Safety and enable both ‘Use data to customise my Discord experience’ and ‘In-game rewards (aka Quests)’ settings.\n\n[Read more in our FAQs]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Enrol Now",
@@ -9201,7 +9226,7 @@
         PREMIUM_DISCOUNT_CTA: "Save !!{percent, number}!!% on Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Save on Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Pay just **{discountedPrice}** for **{numMonths, plural, one {a month!} other {{numMonths} months!}}** Then pay {regularPrice}.",
+          "Pay just **{discountedPrice}** for **{numMonths, plural, one {1 month!} other {{numMonths} months!}}** Then pay {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Your !!{percent, number}!!% discount will end {numMonths, plural, one {1 month} other {{numMonths} months}} after purchase. After that, you’ll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9908,6 +9933,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Current Subscription",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "New Subscription Total",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} Cancelled",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "This adjustment includes prorations, discounts, applicable taxes and refunds.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Why am I seeing this?**\n\nYou are purchasing a plan change. Your Server Boosts are being updated accordingly.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10599,7 +10626,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Pay just **{discountedPrice}** a month for your first **3 months** of Nitro. Pay {regularPrice} a month after the 3-month discount ends.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Pay just **{discountedPrice}** a month for your first **{numMonths, plural, one {month} other {{numMonths} months}}** of Nitro. Pay {regularPrice} a month after the discount ends.",
+          "Your first {numMonths, plural, one {month} other {{numMonths} months}} of Nitro Monthly {numMonths, plural, one {is} other {are}} **{discountedPrice}**. Pay {regularPrice} a month after the discount ends",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/month for 3 months\n\n{regularPrice}/month after 3 months",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10640,6 +10667,8 @@
           "We just sent you an email. Click the verification link in the email to authorise this purchase.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continue",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Haven’t received anything?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Resend email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -12972,8 +13001,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "You can also [start your own server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Sorry about that",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Turn off use data to improve Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "If you turn this off, we’ll stop processing new data for analytics. You will lose access to new experimental features and usage-based improvements to features like voice chat. If you’d like to further assert your right to object to our processing of your data, email privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Yes, I'm sure",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "No, take me back!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Turn off personalisation?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "By turning this off you lose access to things like personalised recommendations and suggestions. You won't be able to recover them in the future!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Yes, I'm sure",
@@ -13294,18 +13328,31 @@
           "{count, plural, =0 {0 Mutual Friends} one {1 Mutual Friend} other {{count} Mutual Friends}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 Mutual Servers} one {1 Mutual Server} other {{count} Mutual Servers}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 Friends} one {1 Friend} other {{count} Friends}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 Servers} one {1 Server} other {{count} Servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "friends with **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "friends with **{usernameOne}** and **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "friends with **{usernameOne}**, **{usernameTwo}** and **{count} more**",
+          "friends with **{usernameOne}**, **{usernameTwo}** and {count} more",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "friends with **{usernameOne}** and {count} more",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "friends with {count, plural, =0 {0 people} one {1 person} other {{count} people}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "member of **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "member of **{guildNameOne}** and **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "member of **{guildNameOne}**, **{guildNameTwo}** and **{count} more**",
+          "member of **{guildNameOne}**, **{guildNameTwo}** and {count} more",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "member of {count, plural, =0 {0 servers} one {1 server} other {{count} servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Mutual Friends",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Mutual Servers",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "See all mutual friends",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "See all mutual servers",
+        USER_PROFILE_MUTUALS_TITLE: "Mutuals",
         PROFILE_IN_VOICE_CALL: "In a voice call",
         PROFILE_OPEN_VOICE_CHANNEL: "Open Voice Channel",
         IOS_PROFILE_IN_VOICE_CALL: "In a voice call",
@@ -13445,6 +13492,10 @@
           "Gift {count, plural, one {# month} other {# months}} of {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Gift {count, plural, one {# year} other {# years}} of {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Gift {username} {count, plural, one {# month} other {# months}} of {nitroTierName}",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Gift {username} {count, plural, one {# year} other {# years}} of {nitroTierName}",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "By tapping ‘Buy gift’, you agree to the [Paid Services Terms.]({paidURL}) This will be a one-off charge for the amount of time chosen.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Your gift is on its way!",
@@ -14253,7 +14304,17 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Clear message?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Looks like you’ve already written something. Do you want to clear it and use a command?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "You can use this app anywhere on Discord. Responses are visible only to you in servers with over {betaUserLimit} people.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "App will respond to you privately",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Only you can see this message during beta.\n\n[Why am I seeing this?]({learnMoreUrl}) • [Dismiss](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Only you can see this message during beta • [Dismiss](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "View Help Article",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Learn More]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Type ‘$[command](commandHook)’ to use Midjourney. Tip: Create a server to try it with just friends.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -16995,6 +17056,8 @@
           "If you cancel, **you will lose these perks:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Never mind, keep Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Never mind, keep Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "If you cancel, you will lose your reward progress and all of these rewards:",
         PREMIUM_PAUSE_INSTEAD: "Pause Instead",
         PREMIUM_PAUSE_SELECT_TITLE: "Pause or cancel subscription",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -18619,6 +18682,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "just now",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {mins}} ago",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {hr} other {hrs}} this week",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {day} other {days}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -18703,6 +18768,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Member who initiated this action.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Mod Permissions",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Search permission names, category or description...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "All ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# Role} other {# Roles}}",
@@ -18710,7 +18777,12 @@
           "All Granted Permissions",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "No Mod Permissions",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Granted By",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Elevated) Granted By",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Elevated",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Elevated permissions grant higher levels of access to server settings and should only be granted to highly trusted mods.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permission Granted by These Roles",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Highest Role",
@@ -21289,6 +21361,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "View all",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Send a gift",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Review your gift",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Shop anywhere, at any time",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Buy Avatar Decorations and Profile Effects to personalise your profile.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Popular styles include Anime, Fantasy, Cyberpunk and more.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro members get discounts on everything in the Shop.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Staff Picks",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie Spotlight",
@@ -22964,6 +23043,8 @@
           "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we’ll let you know. [Learn more about safety alerts.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Go to settings",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Dismiss",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Did we make a mistake? $[Let us know](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Thanks for your feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Block",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Close",
@@ -23160,6 +23241,8 @@
         POLL_COACHMARK_TITLE: "NEW! Polls are here.",
         POLL_COACHMARK_SUBTITLE:
           "Plan events, gather opinions or drop a silly question in the chat.",
+        POLL_COACHMARK_CTA: "Start a poll now!",
+        POLL_COACHMARK_DISMISS: "Maybe later.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -23254,6 +23337,7 @@
         QUESTS: "Quests",
         QUEST: "{questName} Quest",
         QUESTS_SEE_CODE: "See Code",
+        QUESTS_CLAIM_REWARD: "Claim Reward",
         QUESTS_ACCEPT: "Accept Quest",
         QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23268,13 +23352,22 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Uh-oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
+        QUEST_REWARD_COMPLETED: "You unlocked {reward} on {date}",
+        QUESTS_REWARD_CODE_HEADER: "Your Reward Code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "What is your preferred platform?",
         QUESTS_REWARD_CODE_ERROR:
           "Uh-oh! Something went wrong. Please try again later",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Choose a Platform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Select Platform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "We will generate a platform-specific code for your {rewardName}. **You will not be able to change your selection after hitting Get Code.**",
         QUESTS_REWARD_CODE_DONE: "Done",
+        QUESTS_REWARD_CODE_GET_CODE: "Get Code",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Try Again",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim This",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "You Claimed This",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Cross-platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23282,11 +23375,14 @@
         QUESTS_SPONSORED: "Sponsored",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Learn More",
+        QUESTS_LEARN_MORE_STACKED: "Learn\n\nMore",
+        QUESTS_LEARN_MORE_LINK: "[Learn More]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accept Quest",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Quest accepted!** Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "Track Your Progress",
         QUESTS_TITLE: "{questName} Quest",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23296,6 +23392,8 @@
           "From your desktop Discord app or browser, you can go to \nUser Settings > Gift Inventory and accept the Quest there.",
         QUESTS_GET_THIS_GAME: "Get Game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
+        QUESTS_SHARE_LINK: "Copy Share Link",
+        QUESTS_HIDE_THIS: "Hide This",
         QUESTS_FIND_QUEST:
           "You can find this again in User Settings > Gift Inventory",
         QUESTS_CLAIM_BY: "Claim by {expirationDate}.",
@@ -23335,6 +23433,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! and {count, plural, one {1 other} other {{count} others}}",
         STOREFRONT: "Store",
+        STOREFRONT_TITLE: "{appName} Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "Subscriptions",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Purchase subscriptions from {appName}",
@@ -23400,15 +23499,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Watched **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} watched **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Got it!",
+        RECENT_GAMES: "Recent Games",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {week} other {weeks}} ago",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {day} other {days}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {hour} other {hours}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minute} other {minutes}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {second} other {seconds}} ago",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w ago",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d ago",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}h ago",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m ago",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}s ago",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {hr} other {hrs}} this week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {mins}} this week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sec} other {secs}} this week",
       };
     },
   },

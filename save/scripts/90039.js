@@ -166,7 +166,9 @@
         PAGINATION_PAGE_LABEL: "Side {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Lysbilde {pageNumber}",
         MUTE: "Demp",
+        MUTE_ALT: "Sl\xe5 av mikrofonen",
         UNMUTE: "Opphev demping",
+        UNMUTE_ALT: "Sl\xe5 p\xe5 mikrofonen",
         DEAFEN: "Sl\xe5 av lyd",
         UNDEAFEN: "Sl\xe5 p\xe5 lyd",
         SEARCH: "S\xf8k",
@@ -1262,6 +1264,8 @@
           "Denne appen er ikke laget av Discord. Du b\xf8r bare bruke apper fra utviklere du stoler p\xe5.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Mer informasjon om private apper.",
+        APPLICATION_ICON_A11Y_LABEL: "Appikon for {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "Appikon",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) startet en aktivitet",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4815,8 +4819,11 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Sl\xe5 p\xe5 eller av hurtigtaster",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultater",
+        SHOW_CURRENT_ACTIVITY: "Vis andre hva du driver med.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord vil automatisk oppdatere statusen din hvis du deltar i en offentlig scene.",
+        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
+          "N\xe5r du driver med noe vi er i stand til \xe5 registrere (som \xe5 spille spill eller h\xf8re p\xe5 musikk), kan Discord vise informasjon om aktivitetene, for eksempel n\xe5r og hvordan du bedrev dem.",
         GAME_DETECTION_SERVICE: "Tjeneste for spillgjenkjenning",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Installasjonsposisjon",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5136,6 +5143,7 @@
         SUB_ENABLED_SERVERS: "Underaktiverte Servere",
         AUTHORIZATION: "Autorisering",
         AUTHORIZED_APPS: "Autoriserte apper",
+        MANAGE_AUTHORIZED_APP: "Administrer autorisert app",
         DEAUTHORIZE: "Opphev autorisering",
         DEAUTHORIZE_APP: "Opphev autorisering for appen",
         ABOUT_THIS_APP: "Om denne appen",
@@ -6388,7 +6396,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Velg en server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Dette krever at du har **Administrer server**-tillatelse i serveren.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Pr\xf8v n\xe5",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "Bruk denne appen overalt!",
         OAUTH2_INTEGRATION_SELECT_GUILD: "Legg til p\xe5 server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Legg til appen for \xe5 tilpasse serveren din",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "Appen kan brukes overalt p\xe5 Discord. I betaperioden er svar synlig for deg bare p\xe5 servere med over {betaUserLimit} brukere. [Mer info]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Ugyldig foresp\xf8rsel. Mangler parameter **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ugyldig omr\xe5de **{scope}**",
@@ -6432,6 +6446,7 @@
           "Koble til tale p\xe5 dine vegne, og se andre som er i enhver talekanal eller samtale",
         SCOPE_DM_CHANNELS_READ:
           "Se informasjon om DM-ene og GDM-ene du er med i",
+        SCOPE_DM_YOU: "Sende deg direktemeldinger",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Oppdatert forbindelsen og metadata for denne appen",
         SCOPE_WEBHOOK_INCOMING: "Legg til en webhook p\xe5 en kanal",
@@ -6780,11 +6795,8 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Blokker automatisk direktemeldinger som inneholder bilder med grovt innhold. [Her f\xe5r du vite mer om denne innstillingen.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Tillat venner \xe5 bli med i spillet.",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "Denne innstillingen gj\xf8r at venner kan bli med i spillet uten \xe5 sende en foresp\xf8rsel.",
-        ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Tillat deltakere i talekanaler \xe5 bli med i spillet.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "Denne innstillingen gj\xf8r at personer i samme talekanal som deg kan bli med i spillet uten \xe5 sende en foresp\xf8rsel. Dette fungerer bare i servere som ikke er fellesskapsservere.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Beskytt meg",
@@ -6839,6 +6851,12 @@
         DATA_PRIVACY_CONTROLS: "Slik bruker vi dataene dine",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Bruk data for \xe5 forbedre Discord",
+        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
+          "Dette gir oss tillatelse til \xe5 bruke og behandle informasjon om deg for \xe5 forst\xe5 og forbedre tjenestene v\xe5re. [Her f\xe5r du mer informasjon.]({helpdeskArticle})",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
+          "Bruk data til \xe5 tilpasse Discord-opplevelsen min",
+        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
+          "Denne innstillingen lar oss bruke informasjon, som hvem du snakker med og hvilke spill du spiller, for \xe5 personliggj\xf8re Discord for deg. [Her f\xe5r du mer informasjon.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Bruk data for \xe5 f\xe5 Discord til \xe5 fungere",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Be om alle dataene mine",
@@ -6874,9 +6892,17 @@
           "Vil du ogs\xe5 bruke denne endringen p\xe5 alle de eksisterende serverne dine?",
         NEW_GUILDS_DM_ALLOWED: "Tillat direktemeldinger fra servermedlemmer",
         USER_DROPS_SETTINGS: "Kampanjeinnstillinger",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
+          "Premier i spill (kjent som oppdrag)",
+        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED:
+          "Vi kan bruke informasjon om hvordan du bruker Discord, for eksempel hvilke spill du spiller, til \xe5 informere deg om oppdrag eller andre muligheter til \xe5 vinne premier i spill. [Her f\xe5r du mer informasjon.]({helpdeskArticle})",
         USER_DM_SETTINGS_TITLE: "Serverens personvern",
         USER_DM_SETTINGS_DESCRIPTION:
           "Vil du ogs\xe5 bruke denne endringen i alle de eksisterende serverne dine? Du kan ogs\xe5 sl\xe5 av direktemeldinger i enkeltservere ved \xe5 g\xe5 til innstillingssiden for serveren.",
+        DROPS_REQUEST_FEEDBACK_OPT_OUT:
+          "Oppdrag er forel\xf8pig i beta\xa0– vi vil gjerne vite mer om hvorfor du slo det av. [Unders\xf8kelse]({feedbackURL})",
+        DROPS_REQUEST_FEEDBACK_SUCCESS:
+          "Oppdrag er forel\xf8pig i beta\xa0– takk for at du deltok, n\xe5 vil vi gjerne h\xf8re hva du synes! [Unders\xf8kelse]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Du er sikkert p\xe5 utkikk etter Discord-oppdrag! Hvis du ser denne meldingen, m\xe5 vi justere noen innstillinger. For \xe5 aktivere m\xe5 du g\xe5 til Innstillinger -> Personvern og sikkerhet og aktivere b\xe5de \xabBruk data for \xe5 tilpasse Discord-opplevelsen min\xbb og \xabSpillpremier (alias \xaboppdrag\xbb)\xbb.\n\n[Du kan lese mer p\xe5 vanlige sp\xf8rsm\xe5l]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Registrer deg n\xe5",
@@ -9420,7 +9446,7 @@
           "Spar !!{percent, number}!! % p\xe5 kj\xf8p av Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Spar p\xe5 kj\xf8p av Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
-          "Du betaler bare **{discountedPrice}** for **{numMonths, plural, one {en m\xe5ned!} other {{numMonths} m\xe5neder!}}** Deretter er prisen {regularPrice}.",
+          "Du betaler bare **{discountedPrice}** for **{numMonths, plural, one {1 m\xe5ned!} other {{numMonths} m\xe5neder!}}** Deretter er prisen {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Rabatten p\xe5 !!{percent, number}!! % varer i {numMonths, plural, one {1 m\xe5ned} other {{numMonths} m\xe5neder}} etter fullf\xf8rt kj\xf8p. Videre blir du belastet {regularPrice} i m\xe5neden.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -10144,6 +10170,8 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Gjeldende abonnement",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Ny totalsum for abonnement",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} kansellert",
+        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
+          "Denne justeringen inkluderer proporsjonal fordeling, gjeldende skatter og avgifter, rabatter og refusjoner.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Hvorfor ser jeg dette?**\n\nDu kj\xf8per en abonnementsendring. Server Boostene dine oppdateres i henhold til dette.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -10854,7 +10882,7 @@
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Betal kun **{discountedPrice}** i m\xe5neden **i de f\xf8rste tre m\xe5nedene** med Nitro. M\xe5nedsprisen etter de f\xf8rste tre m\xe5nedene er {regularPrice}.",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
-          "Betal bare **{discountedPrice}** i m\xe5neden **{numMonths, plural, one {den f\xf8rste m\xe5neden} other {de f\xf8rste {numMonths} m\xe5nedene}}** med Nitro. Du betaler {regularPrice} i m\xe5neden n\xe5r tilbudsperioden er over.",
+          "{numMonths, plural, one {Den f\xf8rste m\xe5neden} other {De f\xf8rste {numMonths} m\xe5nedene}} med Nitro m\xe5nedlig {numMonths, plural, one {koster} other {koster}} **{discountedPrice}**. Etter tilbudsperioden betaler du {regularPrice}",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice} i m\xe5neden i tre m\xe5neder\n\n{regularPrice} i m\xe5neden i tre m\xe5neder",
         BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
@@ -10896,6 +10924,8 @@
           "Vi sendte deg nettopp en e-post. Klikk p\xe5 bekreftelseslenken i e-posten for \xe5 godkjenne kj\xf8pet.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Fortsett",
+        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
+          "Mottok du ikke noe?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Send e-post p\xe5 nytt",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -13265,8 +13295,13 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Du kan ogs\xe5 [starte en server selv](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Beklager for det",
+        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
+          "Vil du sl\xe5 av data som kan forbedre Discord?",
+        USAGE_STATISTICS_DISABLE_MODAL_BODY:
+          "Hvis du sl\xe5r av dette, slutter vi \xe5 behandle nye data i analyse\xf8yemed. Du mister tilgangen til nye eksperimentelle funksjoner og bruksbaserte forbedringer av funksjoner som talechat. Hvis du \xf8nsker \xe5 ytterligere hevde retten til \xe5 innvende mot at vi behandler dataene dine, ber vi deg sende en e-post til privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ja, jeg er sikker",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nei, ta meg tilbake!",
+        PERSONALIZATION_DISABLE_MODAL_TITLE: "Sl\xe5 av tilpassing?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Ved \xe5 sl\xe5 av dette mister du tilgang til ting som personlige anbefalinger og forslag. Du kan ikke gjenopprette dem i fremtiden!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ja, jeg er sikker",
@@ -13599,18 +13634,31 @@
           "{count, plural, =0 {0 felles venner} one {1 felles venn} other {{count} felles venner}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 felles servere} one {1 felles server} other {{count} felles servere}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 venner} one {1 venn} other {{count} venner}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 servere} one {1 server} other {{count} servere}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "venner med **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "venner med **{usernameOne}** og **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "venner med **{usernameOne}**, **{usernameTwo}** og **{count} andre**",
+          "venner med **{usernameOne}**, **{usernameTwo}** og {count} andre",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "venner med **{usernameOne}** og {count} andre",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "{count, plural, =0 {0 venner} one {1 venn} other {{count} venner}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "medlem av **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "medlem av **{guildNameOne}** og **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "medlem av **{guildNameOne}**, **{guildNameTwo}** og **{count} andre**",
+          "medlem av **{guildNameOne}**, **{guildNameTwo}** og {count} andre",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "medlem av {count, plural, =0 {0 servere} one {1 server} other {{count} servere}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Felles venner",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Felles servere",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Se alle felles venner",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Se alle felles servere",
+        USER_PROFILE_MUTUALS_TITLE: "Felles",
         PROFILE_IN_VOICE_CALL: "I et taleanrop",
         PROFILE_OPEN_VOICE_CHANNEL: "\xc5pen talekanal",
         IOS_PROFILE_IN_VOICE_CALL: "I et taleanrop",
@@ -13751,6 +13799,10 @@
           "Gi {count, plural, one {# m\xe5ned} other {# m\xe5neder}} med {nitroTierName} i gave",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
           "Gi {count, plural, one {# \xe5r} other {# \xe5r}} med {nitroTierName} i gave",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH_WITH_USERNAME:
+          "Gi {username} {count, plural, one {# m\xe5ned} other {# m\xe5neder}} med {nitroTierName} i gave",
+        MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR_WITH_USERNAME:
+          "Gi {username} {count, plural, one {# \xe5r} other {# \xe5r}} med {nitroTierName} i gave",
         MOBILE_CUSTOM_GIFT_PAID_SERVICE_TERMS_AGREEMENT:
           "Ved \xe5 trykke p\xe5 \xabKj\xf8p gave\xbb godtar du [vilk\xe5rene for betalte tjenester]({paidURL}). Dette blir en engangsbetaling for den valgte perioden.",
         MOBILE_CUSTOM_GIFT_SUCCESS_HEADER: "Gaven din er p\xe5 vei!",
@@ -14576,8 +14628,18 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Vil du fjerne meldingen?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Det ser ut til at du allerede har skrevet noe. Vil du fjerne dette og bruke en kommando?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "Du kan bruke denne appen overalt p\xe5 Discord. P\xe5 servere med over {betaUserLimit} brukere er svar synlig bare for deg.",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION_MOBILE:
+          "Appen svarer deg privat",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Bare du kan se denne meldingen i betaperioden.\n\n[Hvorfor ser jeg dette?]({learnMoreUrl}) • [Avvis](handleDelete)",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL_MOBILE:
+          "Bare du kan se denne meldingen i betaperioden • [Avvis](handleDelete)",
         APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
           "Se hjelpeartikkelen",
+        APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE:
+          "[Finn ut mer]({learnMoreUrl})",
         MJ_CHATBAR_BODY:
           "Skriv \xab$[command](commandHook)\xbb for \xe5 bruke Midjourney. Tips: Opprett en server hvis du vil pr\xf8ve sammen med venner.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -17362,6 +17424,8 @@
           "Hvis du sier opp abonnementet, **mister du disse fordelene:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Jeg vil beholde Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Glem det, behold Nitro",
+        PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD:
+          "Hvis du sier opp, mister du premiefremdriften og alle disse premiene:",
         PREMIUM_PAUSE_INSTEAD: "Sett p\xe5 pause i stedet",
         PREMIUM_PAUSE_SELECT_TITLE: "Abonnement: Sett p\xe5 pause eller si opp",
         PREMIUM_PAUSE_SELECT_SUBTITLE:
@@ -19030,6 +19094,8 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "n\xe5 nettopp",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "For {count} {count, plural, =1 {min} other {min}} siden",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {t} other {t}} denne uken",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "For {count} {count, plural, =1 {dag} other {dager}} siden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -19118,6 +19184,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Medlemmet som startet denne handlingen.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Modtillatelser",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "S\xf8k etter tillatelsens navn, kategori eller beskrivelse …",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "Alle ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# rolle} other {# roller}}",
@@ -19125,7 +19193,12 @@
           "Alle gitte tillatelser",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Ingen modtillatelser",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Gitt av",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Opph\xf8yd) Skjenket av",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Opph\xf8yd",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Opph\xf8yde tillatelser gir en st\xf8rre grad av tilgang til serverinnstillinger og b\xf8r bare skjenkes moderatorer du har stor tillit til.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Tillatelse gitt av disse rollene",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "H\xf8yeste rolle",
@@ -21765,6 +21838,13 @@
         COLLECTIBLES_SHOP_VIEW_ALL: "Vis alle",
         COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER: "Send en gave",
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Forh\xe5ndsvis gaven",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Handle n\xe5r og hvor som helst",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Kj\xf8p avatardekorasjoner og profileffekter for \xe5 tilpasse profilen din.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Noen popul\xe6re valg er anime, fantasy og cyberpunk.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro-medlemmer f\xe5r rabatt p\xe5 alt i butikken.",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Discords utvalgte",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indiefokus",
@@ -23467,6 +23547,8 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "G\xe5 til innstillingene",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Avvis",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE:
+          "Har vi gjort en feil? $[Gi oss beskjed](reportFalsePositiveHook)",
         SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
           "Takk for tilbakemeldingen!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokker",
@@ -23676,6 +23758,8 @@
         POLL_COACHMARK_TITLE: "NYHET! Det har kommet meningsm\xe5linger.",
         POLL_COACHMARK_SUBTITLE:
           "Planlegg en sammenkomst, lodd stemningen, eller still et morsomt sp\xf8rsm\xe5l i chatten.",
+        POLL_COACHMARK_CTA: "Start en unders\xf8kelse n\xe5!",
+        POLL_COACHMARK_DISMISS: "Kanskje senere.",
         POLL_NOT_INTERACTIVE:
           "Vis opprinnelig melding for \xe5 kunne samhandle",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Ikke noe \xe5 se her",
@@ -23782,6 +23866,7 @@
         QUESTS: "Oppdrag",
         QUEST: "Oppdraget {questName}",
         QUESTS_SEE_CODE: "Se kode",
+        QUESTS_CLAIM_REWARD: "Hent premie",
         QUESTS_ACCEPT: "Godta oppgave",
         QUESTS_COMPLETE_TOOLTIP:
           "Trykk p\xe5 \xabHent\xbb for \xe5 f\xe5 bel\xf8nningskoden din!",
@@ -23798,12 +23883,21 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Oi da! Vi sendte deg ikke en e-postbekreftelse.",
         QUEST_REWARD: "Vinn {reward}",
+        QUEST_REWARD_COMPLETED: "Du l\xe5ste opp {reward} {date}",
+        QUESTS_REWARD_CODE_HEADER: "Premiekoden din",
         QUESTS_REWARD_CODE_CONGRATS: "Gratulerer!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Hvilken plattform foretrekker du?",
         QUESTS_REWARD_CODE_ERROR: "Oi da. Noe gikk galt. Pr\xf8v igjen senere",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Velg en plattform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Velg plattform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
+          "Vi genererer en plattformspesifikk kode for {rewardName}. **N\xe5r du har trykket p\xe5 Hent kode, kan du ikke lenger forandre valget.**",
         QUESTS_REWARD_CODE_DONE: "Ferdig",
+        QUESTS_REWARD_CODE_GET_CODE: "Hent kode",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Pr\xf8v p\xe5 nytt",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Hent dette",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Du hentet dette",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Kryss-plattform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23811,11 +23905,14 @@
         QUESTS_SPONSORED: "Sponset",
         QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Finn ut mer",
+        QUESTS_LEARN_MORE_STACKED: "Mer\n\ninfo",
+        QUESTS_LEARN_MORE_LINK: "[Finn ut mer]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Godta oppgave",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Str\xf8m {gameTitle} til en venn i {streamingDurationRequirement, number} minutter, og vinn {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Oppdrag akseptert!** Str\xf8m {gameTitle} til en venn i {streamingDurationRequirement, number} minutter, og vinn {questReward}.",
+        QUESTS_TRACK_YOUR_PROGRESS: "F\xf8lg med p\xe5 fremdriften din",
         QUESTS_TITLE: "Oppdraget {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23825,6 +23922,8 @@
           "Bruk Discord-appen p\xe5 skrivebordet eller i nettleseren, og g\xe5 til \nBrukerinnstillinger\xa0> Gavebeholdning og godta oppdraget der.",
         QUESTS_GET_THIS_GAME: "F\xe5 spill",
         QUESTS_DISCLOSURE_LABEL: "Hvorfor ser jeg dette?",
+        QUESTS_SHARE_LINK: "Kopier delingslenke",
+        QUESTS_HIDE_THIS: "Skjul dette",
         QUESTS_FIND_QUEST:
           "Du finner tilbake til dette i Brukerinnstillinger\xa0> Gavebeholdning",
         QUESTS_CLAIM_BY: "M\xe5 hentes innen {expirationDate}.",
@@ -23865,6 +23964,7 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! og {count, plural, one {1 annen} other {{count} andre}}",
         STOREFRONT: "Butikk",
+        STOREFRONT_TITLE: "{appName}-butikk",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonnementer",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Kj\xf8p abonnementer fra {appName}",
         STOREFRONT_APP_PRODUCTS: "Produkter",
@@ -23929,15 +24029,33 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf8rste gang",
+        MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "S\xe5 p\xe5 **{mediaTitle}**",
+        MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
+          "{userName} s\xe5 p\xe5 **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
         CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Forst\xe5tt!",
+        RECENT_GAMES: "Nylige spill",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "For {count} {count, plural, =1 {uke} other {uker}} siden",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "For {count} {count, plural, =1 {dag} other {dager}} siden",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "For {count} {count, plural, =1 {time} other {timer}} siden",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "For {count} {count, plural, =1 {minutt} other {minutter}} siden",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "For {count} {count, plural, =1 {sekund} other {sekunder}} siden",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}u siden",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d siden",
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}t siden",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m siden",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s siden",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {t} other {t}} denne uken",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {min}} denne uken",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sek} other {sek}} denne uken",
       };
     },
   },

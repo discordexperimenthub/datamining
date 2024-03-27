@@ -15,10 +15,10 @@
             return u;
           },
           updateAddressInfo: function () {
-            return l;
+            return i;
           },
           clearError: function () {
-            return i;
+            return l;
           },
         });
       var a = n("913144");
@@ -42,14 +42,14 @@
           isValid: !1,
         });
       }
-      function l(e, t) {
+      function i(e, t) {
         a.default.dispatch({
           type: "NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE",
           info: e,
           isValid: t,
         });
       }
-      function i() {
+      function l() {
         a.default.wait(() =>
           a.default.dispatch({ type: "NEW_PAYMENT_SOURCE_CLEAR_ERROR" })
         );
@@ -225,8 +225,8 @@
         r = n("65597"),
         s = n("875212"),
         u = n("21526"),
-        l = n("853987"),
-        i = n("12480"),
+        i = n("853987"),
+        l = n("12480"),
         o = n("775416");
       function c(e) {
         var t;
@@ -253,24 +253,24 @@
                 location: t + " auto off",
                 autoTrackExposure: !1,
               });
-            let [n, i, o, c] = (0, r.useStateFromStoresArray)(
-              [l.default],
+            let [n, l, o, c] = (0, r.useStateFromStoresArray)(
+              [i.default],
               () => {
                 var e;
                 return [
-                  l.default.isFetching,
-                  l.default.error,
-                  null !== (e = l.default.lastFetched) && void 0 !== e ? e : 0,
-                  l.default.categories,
+                  i.default.isFetching,
+                  i.default.error,
+                  null !== (e = i.default.lastFetched) && void 0 !== e ? e : 0,
+                  i.default.categories,
                 ];
               }
             );
             return (
               (0, a.useEffect)(() => {
-                !(n || i || Date.now() - o < 6e5) &&
+                !(n || l || Date.now() - o < 6e5) &&
                   (0, u.fetchCollectiblesCategories)(e);
-              }, [n, o, i, e]),
-              { isFetching: n, categories: c, error: i }
+              }, [n, o, l, e]),
+              { isFetching: n, categories: c, error: l }
             );
           })(e),
           {
@@ -289,7 +289,7 @@
                 location: e + " auto off",
                 autoTrackExposure: !1,
               });
-            let [t, n, l, c, d] = (0, r.useStateFromStoresArray)(
+            let [t, n, i, c, d] = (0, r.useStateFromStoresArray)(
                 [o.default],
                 () => [
                   o.default.isFetching,
@@ -299,7 +299,7 @@
                   o.default.purchases,
                 ]
               ),
-              { shouldFakePurchaseSuccessFlowLocally: f } = (0, i.default)({
+              { shouldFakePurchaseSuccessFlowLocally: f } = (0, l.default)({
                 location: "useFetchPurchases",
               });
             return (
@@ -308,7 +308,7 @@
               }, [f]),
               {
                 isClaiming: n,
-                fetchError: l,
+                fetchError: i,
                 claimError: c,
                 isFetching: t,
                 purchases: d,
@@ -340,8 +340,8 @@
       var r = n("748820"),
         s = n("77078"),
         u = n("112679"),
-        l = n("55689"),
-        i = n("676379"),
+        i = n("55689"),
+        l = n("676379"),
         o = n("697218"),
         c = n("599110"),
         d = n("659500"),
@@ -370,11 +370,12 @@
             giftRecipient: N,
             returnRef: M,
             subscription: D,
+            skipConfirm: L,
           } = null != e ? e : {},
-          L = !1,
-          F = (0, r.v4)(),
-          O = o.default.getCurrentUser(),
-          U = (0, f.isPremiumExactly)(O, p.PremiumTypes.TIER_2);
+          F = !1,
+          O = (0, r.v4)(),
+          U = o.default.getCurrentUser(),
+          k = (0, f.isPremiumExactly)(U, p.PremiumTypes.TIER_2);
         (0, s.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -382,7 +383,7 @@
               let { onClose: r, ...s } = n;
               return (0, a.jsx)(e, {
                 ...s,
-                loadId: F,
+                loadId: O,
                 subscriptionTier: y,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(y),
                 isGift: I,
@@ -398,15 +399,15 @@
                       !I &&
                         null != t &&
                         t === p.PremiumSubscriptionSKUs.TIER_2 &&
-                        !U &&
+                        !k &&
                         d.ComponentDispatch.dispatch(
                           h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (L = !0),
+                  (F = !0),
                     null == g || g(),
-                    !I && (0, i.setCanPlayWowMoment)(!0);
+                    !I && (0, l.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: m,
                 analyticsLocations: v,
@@ -421,15 +422,16 @@
                 referralTrialOfferId: x,
                 returnRef: M,
                 subscription: D,
+                skipConfirm: !!L,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !L &&
+              !F &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: F,
+                  load_id: O,
                   payment_type:
                     h.PurchaseTypeToAnalyticsPaymentType[
                       h.PurchaseTypes.SUBSCRIPTION
@@ -443,9 +445,9 @@
                   location_stack: v,
                 }),
                 (0, u.clearError)(),
-                (0, l.clearPurchaseTokenAuthState)(),
-                null == E || E(L),
-                L && (null == m || m());
+                (0, i.clearPurchaseTokenAuthState)(),
+                null == E || E(F),
+                F && (null == m || m());
             },
           }
         );
@@ -485,8 +487,8 @@
         r,
         s = n("37983"),
         u = n("884691"),
-        l = n("414456"),
-        i = n.n(l),
+        i = n("414456"),
+        l = n.n(i),
         o = n("458960"),
         c = n("77078"),
         d = n("252744"),
@@ -500,7 +502,7 @@
           let { className: e, shineSize: t, shinePaused: n, ...a } = this.props;
           return (0, s.jsx)(o.default.div, {
             ...a,
-            className: i(h.shineContainer, e, { [h.shinePaused]: n }),
+            className: l(h.shineContainer, e, { [h.shinePaused]: n }),
             children: (0, s.jsx)(f.default, {
               align: f.default.Align.CENTER,
               justify: f.default.Justify.CENTER,
@@ -517,7 +519,7 @@
             className: n,
             disabled: a,
             submitting: r,
-            pauseAnimation: l,
+            pauseAnimation: i,
             shineSize: o = "default",
             shinePaused: f,
             buttonShineClassName: p,
@@ -526,11 +528,11 @@
           } = e,
           m = u.createRef(),
           v = (0, d.default)(m),
-          S = !a && !r && !0 !== l && (!C || v);
+          S = !a && !r && !0 !== i && (!C || v);
         return (0, s.jsxs)(c.Button, {
           buttonRef: m,
           ...g,
-          className: i(h.shinyButton, n),
+          className: l(h.shinyButton, n),
           disabled: a,
           submitting: r,
           children: [
@@ -538,7 +540,7 @@
             S
               ? (0, s.jsx)(E, {
                   shinePaused: f,
-                  className: i(
+                  className: l(
                     h.buttonShine,
                     C ? h.onlyShineOnHover : void 0,
                     p
@@ -560,10 +562,10 @@
             return u;
           },
           useUID: function () {
-            return l;
+            return i;
           },
           UID: function () {
-            return i;
+            return l;
           },
         });
       var a = n("995008"),
@@ -576,10 +578,10 @@
               : "uid_";
           return r(e);
         },
-        l = () => (0, s.useLazyValue)(() => u()),
-        i = e => {
+        i = () => (0, s.useLazyValue)(() => u()),
+        l = e => {
           let { children: t } = e;
-          return t(l());
+          return t(i());
         };
     },
     743826: function (e, t, n) {
@@ -587,7 +589,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return i;
           },
         });
       var a = n("37983");
@@ -595,7 +597,7 @@
       var r = n("469563"),
         s = n("422244"),
         u = n("75196"),
-        l = (0, r.replaceIcon)(
+        i = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 23,
@@ -627,7 +629,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return i;
           },
         });
       var a = n("37983");
@@ -635,18 +637,18 @@
       var r = n("469563"),
         s = n("833222"),
         u = n("75196"),
-        l = (0, r.replaceIcon)(
+        i = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
               color: r = "currentColor",
               className: s,
-              foreground: l,
-              ...i
+              foreground: i,
+              ...l
             } = e;
             return (0, a.jsxs)("svg", {
-              ...(0, u.default)(i),
+              ...(0, u.default)(l),
               className: s,
               width: t,
               height: n,
@@ -654,7 +656,7 @@
               children: [
                 (0, a.jsx)("path", { d: "M0 0h24v24H0z", fill: "none" }),
                 (0, a.jsx)("path", {
-                  className: l,
+                  className: i,
                   fill: r,
                   d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z",
                 }),
@@ -683,11 +685,11 @@
           width: t = 24,
           height: n = 24,
           color: u = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...i
+          colorClass: i = "",
+          ...l
         } = e;
         return (0, a.jsx)("svg", {
-          ...(0, s.default)(i),
+          ...(0, s.default)(l),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -698,7 +700,7 @@
             fillRule: "evenodd",
             d: "M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-2 0a9 9 0 0 1-14.62 7.03L19.03 6.38A8.96 8.96 0 0 1 21 12ZM4.97 17.62 17.62 4.97A9 9 0 0 0 4.97 17.62Z",
             clipRule: "evenodd",
-            className: l,
+            className: i,
           }),
         });
       };
@@ -720,11 +722,11 @@
           width: t = 24,
           height: n = 24,
           color: u = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...i
+          colorClass: i = "",
+          ...l
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, s.default)(i),
+          ...(0, s.default)(l),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -736,12 +738,12 @@
               fillRule: "evenodd",
               d: "M2 5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5Zm16 3a1 1 0 0 0-.3-.7l-3-3a1 1 0 1 0-1.4 1.4L14.58 7H13a6 6 0 0 0-6 6 1 1 0 1 0 2 0 4 4 0 0 1 4-4h1.59l-1.3 1.3a1 1 0 0 0 1.42 1.4l3-3A1 1 0 0 0 18 8Z",
               clipRule: "evenodd",
-              className: l,
+              className: i,
             }),
             (0, a.jsx)("path", {
               fill: "string" == typeof u ? u : u.css,
               d: "M13 19.5c0 .28.22.5.5.5H15a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h1.5a.5.5 0 0 0 .5-.5v-2c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v2Z",
-              className: l,
+              className: i,
             }),
           ],
         });
@@ -764,11 +766,11 @@
           width: t = 24,
           height: n = 24,
           color: u = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...i
+          colorClass: i = "",
+          ...l
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, s.default)(i),
+          ...(0, s.default)(l),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -778,12 +780,12 @@
             (0, a.jsx)("path", {
               fill: "string" == typeof u ? u : u.css,
               d: "M2.63 4.19A3 3 0 0 1 5.53 2H7a1 1 0 0 1 1 1v3.98a3.07 3.07 0 0 1-.3 1.35A2.97 2.97 0 0 1 4.98 10c-2 0-3.44-1.9-2.9-3.83l.55-1.98ZM10 2a1 1 0 0 0-1 1v4a3 3 0 0 0 3 3 3 3 0 0 0 3-2.97V3a1 1 0 0 0-1-1h-4ZM17 2a1 1 0 0 0-1 1v3.98a3.65 3.65 0 0 0 0 .05A2.95 2.95 0 0 0 19.02 10c2 0 3.44-1.9 2.9-3.83l-.55-1.98A3 3 0 0 0 18.47 2H17Z",
-              className: l,
+              className: i,
             }),
             (0, a.jsx)("path", {
               fill: "string" == typeof u ? u : u.css,
               d: "M21 11.42V19a3 3 0 0 1-3 3h-2.75a.25.25 0 0 1-.25-.25V16a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v5.75c0 .14-.11.25-.25.25H6a3 3 0 0 1-3-3v-7.58c0-.18.2-.3.37-.24a4.46 4.46 0 0 0 4.94-1.1c.1-.12.3-.12.4 0a4.49 4.49 0 0 0 6.58 0c.1-.12.3-.12.4 0a4.45 4.45 0 0 0 4.94 1.1c.17-.07.37.06.37.24Z",
-              className: l,
+              className: i,
             }),
           ],
         });
@@ -791,4 +793,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ca5b5f3c4d635e731e87.js.map
+//# sourceMappingURL=9a8240843d8b8eb6b1c4.js.map

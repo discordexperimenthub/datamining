@@ -2023,11 +2023,12 @@
             giftRecipient: j,
             returnRef: b,
             subscription: P,
+            skipConfirm: w,
           } = null != e ? e : {},
-          w = !1,
-          V = (0, l.v4)(),
-          D = o.default.getCurrentUser(),
-          O = (0, f.isPremiumExactly)(D, h.PremiumTypes.TIER_2);
+          V = !1,
+          D = (0, l.v4)(),
+          O = o.default.getCurrentUser(),
+          U = (0, f.isPremiumExactly)(O, h.PremiumTypes.TIER_2);
         (0, r.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -2035,7 +2036,7 @@
               let { onClose: l, ...r } = n;
               return (0, i.jsx)(e, {
                 ...r,
-                loadId: V,
+                loadId: D,
                 subscriptionTier: x,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(x),
                 isGift: N,
@@ -2051,13 +2052,13 @@
                       !N &&
                         null != t &&
                         t === h.PremiumSubscriptionSKUs.TIER_2 &&
-                        !O &&
+                        !U &&
                         c.ComponentDispatch.dispatch(
                           v.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (w = !0),
+                  (V = !0),
                     null == C || C(),
                     !N && (0, u.setCanPlayWowMoment)(!0);
                 },
@@ -2074,15 +2075,16 @@
                 referralTrialOfferId: L,
                 returnRef: b,
                 subscription: P,
+                skipConfirm: !!w,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !w &&
+              !V &&
                 d.default.track(v.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: V,
+                  load_id: D,
                   payment_type:
                     v.PurchaseTypeToAnalyticsPaymentType[
                       v.PurchaseTypes.SUBSCRIPTION
@@ -2097,8 +2099,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, a.clearPurchaseTokenAuthState)(),
-                null == m || m(w),
-                w && (null == _ || _());
+                null == m || m(V),
+                V && (null == _ || _());
             },
           }
         );
@@ -4018,4 +4020,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8641cd00c0539879738f.js.map
+//# sourceMappingURL=11a4dcb343b27340358e.js.map

@@ -27,7 +27,7 @@
     },
     446707: function (e, t, a) {
       "use strict";
-      e.exports = a.p + "6254171088ded6cc8aec.png";
+      e.exports = a.p + "f3d5b902c4336e19591d.png";
     },
     566247: function (e, t, a) {
       "use strict";
@@ -125,49 +125,50 @@
             return n;
           },
           CollectiblesDCToDisplayOptions: function () {
-            return p;
-          },
-          SkuIdToCountdownDisplayOptions: function () {
             return b;
           },
+          SkuIdToCountdownDisplayOptions: function () {
+            return E;
+          },
           SkuIdToCustomConfettiDisplayOptions: function () {
-            return T;
+            return I;
           },
         });
       var r,
         n,
-        o = a("151426"),
-        s = a("782340"),
-        i = a("919806"),
-        l = a("424744"),
-        c = a("753867"),
-        d = a("577151"),
-        u = a("177493"),
-        f = a("66453"),
-        C = a("446707"),
-        g = a("566247");
+        o = a("635058"),
+        s = a("151426"),
+        i = a("782340"),
+        l = a("919806"),
+        c = a("424744"),
+        d = a("753867"),
+        u = a("577151"),
+        f = a("177493"),
+        C = a("66453"),
+        g = a("446707"),
+        p = a("566247");
       ((r = n || (n = {}))[(r.NONE = 0)] = "NONE"),
         (r[(r.TOOLTIP = 1)] = "TOOLTIP"),
         (r[(r.COACHTIP = 2)] = "COACHTIP");
-      let p = {
-          [o.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
+      let b = {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
             type: 1,
             title: () =>
-              s.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
+              i.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
             emojiName: "dragon",
           },
-          [o.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
             type: 1,
-            title: () => s.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
+            title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
             emojiName: "fire",
           },
-          [o.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
             type: 2,
             title: () =>
-              s.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
+              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
             body: () =>
-              s.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
-            imageSrc: d,
+              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
+            imageSrc: u,
             assetIds: [
               "a_a065206df7b011a5510e4e5bca7d49be",
               "a_554b7c34f7b6c709f19535aacb128e7b",
@@ -175,59 +176,59 @@
               "a_fa014594d4b2b4249e1098c0adc85b47",
             ],
           },
-          [o.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
             type: 2,
             title: () =>
-              s.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
+              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
             body: () =>
-              s.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
-            imageSrc: f,
+              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
+            imageSrc: C,
             assetIds: [
               "a_c3cffc19e9784f7d0b005eecdf1b566e",
               "a_f3af281c65cf0cf590e9e1f59e9c6cf6",
               "a_51d3bb502109eec26c76386ec980bc8b",
             ],
           },
-          [o.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
             type: 2,
             title: () =>
-              s.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
+              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
             body: () =>
-              s.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
-            imageSrc: u,
+              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
+            imageSrc: f,
             assetIds: [
               "a_ab95c78401ce4ec85c25a6d308db9d85",
               "a_4cd9ae5a8d103c219eacd3674d7730cd",
               "a_27bbf0b53b1054cf61e9a4c0e8d4027f",
             ],
           },
-          [o.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
+          [s.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
             type: 2,
-            title: () => s.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
+            title: () => i.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
             body: () =>
-              s.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
-            imageSrc: g,
+              i.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
+            imageSrc: p,
             assetIds: [
               "a_98555e40cc6802bd3a4fed906af1d992",
               "a_d22ba4f29568b6ebd2cfc5e95428f5b6",
               "a_904b1989077c91fca1168d39bfcaa0a4",
             ],
-            entrypointDecorationAssets: { srcDark: i, srcLight: l },
+            entrypointDecorationAssets: { srcDark: l, srcLight: c },
             entryPointClassName: "shyButton",
           },
         },
-        b = {
-          "1220513972189663413": {
-            label: () => s.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
+        E = {
+          [o.CollectiblesCategorySkuId.SHY]: {
+            label: () => i.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
             backgroundColor: "rgba(255, 70, 85, 1)",
             boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
             labelColor: "rgba(15, 25, 35, 1)",
-            iconSrc: C,
+            iconSrc: g,
           },
         },
-        E = {
+        T = {
           SHY: {
-            confettiAssetSrc: c,
+            confettiAssetSrc: d,
             style: {
               position: "absolute",
               top: "-120px",
@@ -236,10 +237,10 @@
             },
           },
         },
-        T = {
-          "1220513977683935373": E.SHY,
-          "1220432647453409384": E.SHY,
-          "1220432697718083614": E.SHY,
+        I = {
+          "1220513977683935373": T.SHY,
+          "1220432647453409384": T.SHY,
+          "1220432697718083614": T.SHY,
         };
     },
     546483: function (e, t, a) {
@@ -823,7 +824,7 @@
         },
         [r.CollectiblesCategorySkuId.SHY]: {
           assetUrlOverride: a("776204"),
-          addGradient: !0,
+          addGradient: !1,
         },
       };
     },
@@ -968,4 +969,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f410dc74a7d270d4c805.js.map
+//# sourceMappingURL=465ab365d1ca48056b10.js.map

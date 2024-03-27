@@ -792,7 +792,12 @@
           },
           children: [
             null != c.iconSrc &&
-              (0, s.jsx)("img", { src: c.iconSrc, alt: "shy" }),
+              (0, s.jsx)("img", {
+                src: c.iconSrc,
+                className: u.countdownIcon,
+                alt: "",
+                "aria-hidden": !0,
+              }),
             (0, s.jsx)(n.Heading, {
               variant: "heading-md/medium",
               className: u.countdownLabel,
@@ -1703,7 +1708,7 @@
             animateOnHover: !q,
           }),
           { buttonColors: ea, backgroundColors: es } = (0, O.default)(t.styles),
-          el = (0, k.getFormattedPriceForCollectiblesProduct)(t, T),
+          el = (0, k.getFormattedPriceForCollectiblesProduct)(t, T, !1),
           er = (0, k.isPremiumCollectiblesProduct)(t),
           en = (0, k.isFreeCollectiblesProduct)(t),
           [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [
@@ -2020,7 +2025,7 @@
         },
         [s.CollectiblesCategorySkuId.SHY]: {
           assetUrlOverride: a("776204"),
-          addGradient: !0,
+          addGradient: !1,
         },
       };
     },
@@ -2570,7 +2575,7 @@
             animateOnHover: !et,
           }),
           { backgroundColors: eo } = (0, B.default)(t.styles),
-          ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N),
+          ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1),
           eu = (0, j.isPremiumCollectiblesProduct)(t),
           ec = (0, j.isFreeCollectiblesProduct)(t),
           [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [
@@ -3198,4 +3203,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3dfec6ec1448b330e84a.js.map
+//# sourceMappingURL=f0a8e6058cc3567e593d.js.map

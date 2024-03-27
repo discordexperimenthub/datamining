@@ -786,11 +786,12 @@
             giftRecipient: x,
             returnRef: b,
             subscription: y,
+            skipConfirm: U,
           } = null != e ? e : {},
-          U = !1,
-          D = (0, r.v4)(),
-          j = o.default.getCurrentUser(),
-          B = (0, f.isPremiumExactly)(j, S.PremiumTypes.TIER_2);
+          D = !1,
+          j = (0, r.v4)(),
+          B = o.default.getCurrentUser(),
+          w = (0, f.isPremiumExactly)(B, S.PremiumTypes.TIER_2);
         (0, a.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -798,7 +799,7 @@
               let { onClose: r, ...a } = n;
               return (0, i.jsx)(e, {
                 ...a,
-                loadId: D,
+                loadId: j,
                 subscriptionTier: v,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(v),
                 isGift: p,
@@ -814,13 +815,13 @@
                       !p &&
                         null != t &&
                         t === S.PremiumSubscriptionSKUs.TIER_2 &&
-                        !B &&
+                        !w &&
                         d.ComponentDispatch.dispatch(
                           E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (U = !0),
+                  (D = !0),
                     null == h || h(),
                     !p && (0, u.setCanPlayWowMoment)(!0);
                 },
@@ -837,15 +838,16 @@
                 referralTrialOfferId: M,
                 returnRef: b,
                 subscription: y,
+                skipConfirm: !!U,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !U &&
+              !D &&
                 c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: D,
+                  load_id: j,
                   payment_type:
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
@@ -860,8 +862,8 @@
                 }),
                 (0, l.clearError)(),
                 (0, s.clearPurchaseTokenAuthState)(),
-                null == _ || _(U),
-                U && (null == m || m());
+                null == _ || _(D),
+                D && (null == m || m());
             },
           }
         );
@@ -1367,8 +1369,8 @@
             paymentSources: B,
             priceOptions: w,
             purchaseError: V,
-            purchaseTokenAuthState: H,
-            selectedPlan: k,
+            purchaseTokenAuthState: k,
+            selectedPlan: H,
             selectedSku: F,
             setCurrency: G,
             setPaymentSourceId: W,
@@ -1379,7 +1381,7 @@
             setSubscriptionMetadataRequest: X,
             setHasAcceptedTerms: J,
           } = (0, d.usePaymentContext)();
-        l(null != k, "Expected plan to be selected"),
+        l(null != H, "Expected plan to be selected"),
           l(null != y, "Expected application");
         let q = r.useRef(null),
           [Q, $] = (0, u.default)(!1, 500),
@@ -1460,7 +1462,7 @@
                         ],
                       }),
                     (0, i.jsx)(o.default, {
-                      selectedPlanId: k.id,
+                      selectedPlanId: H.id,
                       paymentSources: B,
                       onPaymentSourceChange: e => W(null != e ? e.id : null),
                       priceOptions: w,
@@ -1492,7 +1494,7 @@
                     baseAnalyticsData: R,
                     flowStartTime: D.startTime,
                     planGroup: O,
-                    purchaseTokenAuthState: H,
+                    purchaseTokenAuthState: k,
                     openInvoiceId: g,
                     metadata: en ? void 0 : z,
                     backButtonEligible: n,
@@ -3751,4 +3753,4 @@
     },
   },
 ]);
-//# sourceMappingURL=75e253005ac5a84828e4.js.map
+//# sourceMappingURL=50c86a310dbdf9c4417c.js.map

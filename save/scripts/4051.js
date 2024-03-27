@@ -344,8 +344,8 @@
         T = s("145131"),
         P = s("251752"),
         C = s("719923"),
-        R = s("942456"),
-        A = s("646718"),
+        A = s("942456"),
+        R = s("646718"),
         M = s("843455"),
         h = s("782340"),
         L = s("99119"),
@@ -386,7 +386,7 @@
                   ref: u,
                   children: I.map((e, t) =>
                     (0, a.jsx)(
-                      R.default,
+                      A.default,
                       {
                         className: l(L.paymentRow, L.bottomDivider),
                         payment: e,
@@ -518,7 +518,7 @@
         return !(
           null == s ||
           null == a ||
-          Object.values(A.PremiumSubscriptionSKUs).includes(s) ||
+          Object.values(R.PremiumSubscriptionSKUs).includes(s) ||
           (0, C.isPremiumSubscriptionPlan)(a)
         );
       }
@@ -604,8 +604,8 @@
         T = s("609190"),
         P = s("442379"),
         C = s("565559"),
-        R = s("928576"),
-        A = s("407417"),
+        A = s("928576"),
+        R = s("407417"),
         M = s("246421"),
         h = s("264742"),
         L = s("537325"),
@@ -727,7 +727,7 @@
           a = (0, P.useFetchGuildProductListing)(t, s, {
             requireCurrentGuild: !1,
           }),
-          n = (0, R.useProductType)(a),
+          n = (0, A.useProductType)(a),
           r = (0, p.useStateFromStores)([U.default], () =>
             U.default.getGuild(t)
           ),
@@ -811,7 +811,7 @@
                             ea.default.Messages
                               .GUILD_PRODUCT_BILLING_ACCESS_DOWNLOADABLES,
                         }),
-                        (0, i.jsx)(A.default, { guildId: a, productId: l.id }),
+                        (0, i.jsx)(R.default, { guildId: a, productId: l.id }),
                       ],
                     }),
                   c &&
@@ -1922,8 +1922,8 @@
         T = s("10514"),
         P = s("145131"),
         C = s("599110"),
-        R = s("745279"),
-        A = s("701909"),
+        A = s("745279"),
+        R = s("701909"),
         M = s("719923"),
         h = s("153160"),
         L = s("809071"),
@@ -2003,20 +2003,20 @@
           [p, I] = l.useState(!1),
           T = (0, m.default)(),
           { analyticsLocations: C } = (0, N.default)(),
-          R = null;
+          A = null;
         switch (s.status) {
           case w.SubscriptionStatusTypes.PAST_DUE:
           case w.SubscriptionStatusTypes.PAUSED:
-            R = H.default.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY;
+            A = H.default.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY;
             break;
           default:
             switch (a) {
               case k.PremiumTypes.TIER_0:
-                R = d
+                A = d
                   ? H.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format(
                       {
                         date: s.currentPeriodEnd,
-                        helpdeskArticle: A.default.getArticleURL(
+                        helpdeskArticle: R.default.getArticleURL(
                           w.HelpdeskArticles.BLOCKED_PAYMENTS
                         ),
                       }
@@ -2026,11 +2026,11 @@
                     );
                 break;
               case k.PremiumTypes.TIER_1:
-                R = d
+                A = d
                   ? H.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format(
                       {
                         date: s.currentPeriodEnd,
-                        helpdeskArticle: A.default.getArticleURL(
+                        helpdeskArticle: R.default.getArticleURL(
                           w.HelpdeskArticles.BLOCKED_PAYMENTS
                         ),
                       }
@@ -2040,11 +2040,11 @@
                     );
                 break;
               default:
-                R = d
+                A = d
                   ? H.default.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2_PAYMENT_BLOCKED_RUSSIA.format(
                       {
                         date: s.currentPeriodEnd,
-                        helpdeskArticle: A.default.getArticleURL(
+                        helpdeskArticle: R.default.getArticleURL(
                           w.HelpdeskArticles.BLOCKED_PAYMENTS
                         ),
                       }
@@ -2135,7 +2135,7 @@
                     })
                   : null,
                 (0, i.jsx)("div", { className: Y.cancelImage }),
-                (0, i.jsx)("div", { children: R }),
+                (0, i.jsx)("div", { children: A }),
               ],
             }),
             (0, i.jsxs)(_.ModalFooter, {
@@ -2307,7 +2307,7 @@
           p = l.useRef(new o.Environment()),
           [S, T] = l.useState(null),
           P = (0, y.useFreeBoostUserTenureReward)(),
-          A = (null == P ? void 0 : P.showNotification) === !0,
+          R = (null == P ? void 0 : P.showNotification) === !0,
           h =
             null === (t = (0, M.getPremiumPlanItem)(a)) || void 0 === t
               ? void 0
@@ -2401,7 +2401,7 @@
             if (null == J) {
               let e = Error("No pause duration to set");
               throw (
-                ((0, R.captureBillingException)(e, {
+                ((0, A.captureBillingException)(e, {
                   extra: { subscriptionId: a.id, status: a.status },
                 }),
                 e)
@@ -2420,13 +2420,13 @@
             s = (0, i.jsx)(b.default, {
               premiumType: L,
               titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
-              subtitleText: A
+              subtitleText: R
                 ? H.default.Messages
                     .PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD
                 : H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
-              subtitleClassName: A ? Y.subtitleSection : void 0,
+              subtitleClassName: R ? Y.subtitleSection : void 0,
               subtitleIcon:
-                A &&
+                R &&
                 (0, i.jsx)("div", {
                   className: Y.subtitleIcon,
                   children: (0, i.jsx)(F.default, {
@@ -2551,9 +2551,9 @@
               premiumType: s,
               onClose: i,
               onConfirm: C,
-              userDiscountOffer: R,
+              userDiscountOffer: A,
             } = e,
-            [A, M] = n.useState(!1),
+            [R, M] = n.useState(!1),
             [h, L] = n.useState(!1),
             g = async e => {
               try {
@@ -2574,11 +2574,11 @@
             D = (0, _.useChurnDiscountedPrice)(
               t,
               m.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-              R
+              A
             ),
             U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
             O = (0, f.formatPrice)(U.amount, U.currency);
-          return null == R
+          return null == A
             ? null
             : (0, a.jsxs)(a.Fragment, {
                 children: [
@@ -2592,7 +2592,7 @@
                           variant: "heading-xl/bold",
                           children:
                             N.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format(
-                              { percent: R.discount.amount }
+                              { percent: A.discount.amount }
                             ),
                         }),
                         (0, a.jsxs)("div", {
@@ -2608,8 +2608,8 @@
                               children:
                                 N.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format(
                                   {
-                                    percent: R.discount.amount,
-                                    numMonths: R.discount.user_usage_limit,
+                                    percent: A.discount.amount,
+                                    numMonths: A.discount.user_usage_limit,
                                     price: O,
                                   }
                                 ),
@@ -2627,9 +2627,9 @@
                                   discountedPrice: D,
                                   billingPeriod: (0,
                                   E.getDiscountIntervalString)(
-                                    R.discount.user_usage_limit_interval
+                                    A.discount.user_usage_limit_interval
                                   ),
-                                  numMonths: R.discount.user_usage_limit,
+                                  numMonths: A.discount.user_usage_limit,
                                   fullPrice: O,
                                   helpdeskArticle: c.default.getArticleURL(
                                     I.HelpdeskArticles.PAID_TERMS
@@ -2638,7 +2638,7 @@
                               ),
                           }),
                         }),
-                        A &&
+                        R &&
                           (0, a.jsx)("div", {
                             className: S.redemptionFailedMessage,
                             children: (0, a.jsx)(o.Text, {
@@ -2651,8 +2651,8 @@
                           }),
                         (0, a.jsxs)("div", {
                           className: l(S.confirmDiscountButtons, {
-                            [S.confrimDiscountsButtonsError]: A,
-                            [S.confrimDiscountsButtonsNoError]: !A,
+                            [S.confrimDiscountsButtonsError]: R,
+                            [S.confrimDiscountsButtonsNoError]: !R,
                           }),
                           children: [
                             (0, a.jsx)(o.Button, {
@@ -2664,7 +2664,7 @@
                             (0, a.jsx)(o.Button, {
                               size: o.ButtonSizes.SMALL,
                               submitting: h,
-                              onClick: () => g(R.id),
+                              onClick: () => g(A.id),
                               children:
                                 N.default.Messages
                                   .CHURN_DISCOUNT_CONFIRM_DISCOUNT,
@@ -2711,16 +2711,16 @@
             onClose: T,
             confettiCanvas: P,
             userWasChurned: C = !1,
-            userDiscountOffer: R,
+            userDiscountOffer: A,
           } = e,
-          A = (0, u.default)(),
-          M = (0, l.isThemeDark)(A) ? N : S,
+          R = (0, u.default)(),
+          M = (0, l.isThemeDark)(R) ? N : S,
           h = n.useRef(null),
           [L, g] = n.useState(!1),
           y = (0, f.useChurnDiscountedPrice)(
             t,
             p.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-            R
+            A
           ),
           x = (0, c.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
           D = (0, E.formatPrice)(x.amount, x.currency),
@@ -2732,13 +2732,13 @@
           (n.useEffect(() => {
             null != h.current && null != y && g(!0);
           }, [h, L, y]),
-          null == R || null == y)
+          null == A || null == y)
         )
           return null;
         let O =
             m.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format(
               {
-                numMonths: R.discount.user_usage_limit,
+                numMonths: A.discount.user_usage_limit,
                 discountedPrice: y,
                 regularPrice: D,
               }
@@ -2947,8 +2947,8 @@
           } = e,
           [_, T] = n.useState(!1),
           { analyticsLocations: P } = (0, E.default)(),
-          [C, R] = n.useState(!1),
-          A = (0, c.default)(),
+          [C, A] = n.useState(!1),
+          R = (0, c.default)(),
           M = null,
           h = null,
           L = [
@@ -3018,7 +3018,7 @@
                         await S({
                           premiumSubscription: t,
                           pauseDuration: r,
-                          setIsCancelling: R,
+                          setIsCancelling: A,
                           setHasError: T,
                           onClose: i,
                           analyticsLocations: P,
@@ -3029,7 +3029,7 @@
                     }),
                     (0, a.jsx)(o.Button, {
                       look: o.Button.Looks.LINK,
-                      color: (0, u.isThemeDark)(A)
+                      color: (0, u.isThemeDark)(R)
                         ? o.Button.Colors.WHITE
                         : o.Button.Colors.PRIMARY,
                       onClick: i,
@@ -3082,8 +3082,8 @@
         T = s("697218"),
         P = s("145131"),
         C = s("953109"),
-        R = s("423487"),
-        A = s("599110"),
+        A = s("423487"),
+        R = s("599110"),
         M = s("701909"),
         h = s("719923"),
         L = s("713518"),
@@ -3177,14 +3177,14 @@
       function G() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            R.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_missing_payment_method",
             });
           }, []),
           (0, a.jsxs)("div", {
             className: B.paymentBanner,
             children: [
-              (0, a.jsx)(R.default, {
+              (0, a.jsx)(A.default, {
                 className: B.paymentBannerIcon,
                 color: E.default.unsafe_rawColors.YELLOW_260.css,
               }),
@@ -3200,14 +3200,14 @@
       function F() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            R.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
           (0, a.jsxs)("div", {
             className: B.paymentBanner,
             children: [
-              (0, a.jsx)(R.default, {
+              (0, a.jsx)(A.default, {
                 className: B.paymentBannerIcon,
                 color: E.default.unsafe_rawColors.RED_360.css,
               }),
@@ -3227,14 +3227,14 @@
           );
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            R.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
           (0, a.jsxs)("div", {
             className: B.paymentBanner,
             children: [
-              (0, a.jsx)(R.default, {
+              (0, a.jsx)(A.default, {
                 className: B.paymentBannerIcon,
                 color: E.default.unsafe_rawColors.YELLOW_260.css,
               }),
@@ -3436,14 +3436,14 @@
       function V() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            R.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_duplicate_subscriptions",
             });
           }, []),
           (0, a.jsxs)("div", {
             className: B.duplicateSubscriptionsBanner,
             children: [
-              (0, a.jsx)(R.default, {
+              (0, a.jsx)(A.default, {
                 color: E.default.unsafe_rawColors.RED_360.css,
               }),
               (0, a.jsx)(f.Text, {
@@ -3496,15 +3496,15 @@
               ? void 0
               : e.hasFreePremium();
           }),
-          R = d(n.currentPeriodEnd),
-          A = null != n.paymentSourceId,
+          A = d(n.currentPeriodEnd),
+          R = null != n.paymentSourceId,
           M =
             null !== (t = null == P ? void 0 : P.total) && void 0 !== t ? t : 0,
           h = null == l ? void 0 : l.invalid,
           L =
-            !A &&
+            !R &&
             M > 0 &&
-            (7 >= R.diff(d(), "days") ||
+            (7 >= A.diff(d(), "days") ||
               n.status === b.SubscriptionStatusTypes.PAST_DUE) &&
             !C &&
             !n.isPurchasedExternally,
@@ -3649,8 +3649,8 @@
         T = s("713518"),
         P = s("380186"),
         C = s("182650"),
-        R = s("70578"),
-        A = s("154889"),
+        A = s("70578"),
+        R = s("154889"),
         M = s("892843"),
         h = s("21367"),
         L = s("400307"),
@@ -3810,8 +3810,8 @@
           { analyticsLocations: k } = (0, c.default)(
             d.default.SUBSCRIPTION_HEADER
           ),
-          { enabled: w } = (0, R.default)({ location: "subscription_header" }),
-          H = (0, A.usePremiumDiscountOffer)(),
+          { enabled: w } = (0, A.default)({ location: "subscription_header" }),
+          H = (0, R.usePremiumDiscountOffer)(),
           Y =
             null == H
               ? void 0
@@ -3886,7 +3886,16 @@
               );
               return;
             }
-            o.resume(l, k);
+            l.status === y.SubscriptionStatusTypes.PAUSED
+              ? (0, f.default)({
+                  initialPlanId: l.planIdFromItems,
+                  analyticsLocations: k,
+                  analyticsLocation: F,
+                  analyticsObject: O,
+                  subscription: l,
+                  skipConfirm: !0,
+                })
+              : o.resume(l, k);
           },
           J = () => {
             l.status === y.SubscriptionStatusTypes.PAUSED &&
@@ -4143,8 +4152,8 @@
         T = s("719923"),
         P = s("713518"),
         C = s("380186"),
-        R = s("809071"),
-        A = s("49111"),
+        A = s("809071"),
+        R = s("49111"),
         M = s("782340"),
         h = s("229647"),
         L = s("125047");
@@ -4182,7 +4191,7 @@
           },
           W = async (e, s, a) => {
             k(!0);
-            let n = await (0, R.updateSubscriptionInvoicePreview)({
+            let n = await (0, A.updateSubscriptionInvoicePreview)({
               subscriptionId: t.id,
               paymentSourceId: null == e ? void 0 : e.id,
               renewal: !0,
@@ -4208,7 +4217,7 @@
             u(null != e, "paymentSource not specified for change"),
               u(null != s, "Unable to fetch plan");
             let a = (0, P.getCurrencies)(s.id, e.id, !1),
-              n = a.length > 0 ? a[0] : A.CurrencyCodes.USD;
+              n = a.length > 0 ? a[0] : R.CurrencyCodes.USD;
             return n;
           },
           K = e => {
@@ -4240,7 +4249,7 @@
                 onCloseCallback: () => {
                   (0, c.clearError)();
                 },
-                onCloseRequest: A.NOOP,
+                onCloseRequest: R.NOOP,
               }
             );
           };
@@ -4378,8 +4387,8 @@
         T = s("719923"),
         P = s("153160"),
         C = s("782340"),
-        R = s("264188");
-      function A(e) {
+        A = s("264188");
+      function R(e) {
         let {
             subscription: t,
             renewalMutations: s,
@@ -4391,7 +4400,7 @@
           { analyticsLocations: S } = (0, _.default)(
             f.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL
           );
-        async function A() {
+        async function R() {
           await (0, E.upgradeSubscription)(t, t.planId, S, l), i();
         }
         let M = I.default.get(t.planId);
@@ -4424,7 +4433,7 @@
               ],
             }),
             (0, a.jsx)(c.ModalContent, {
-              className: R.modalBody,
+              className: A.modalBody,
               children: (0, m.isNoneSubscription)(t.planId)
                 ? C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format(
                     {
@@ -4443,7 +4452,7 @@
             (0, a.jsxs)(c.ModalFooter, {
               children: [
                 (0, a.jsx)(c.Button, {
-                  onClick: A,
+                  onClick: R,
                   children:
                     C.default.Messages
                       .PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON,
@@ -4470,11 +4479,11 @@
           } = e,
           [u, o] = n.useState(!1);
         return (0, a.jsxs)("div", {
-          className: l(R.root, i),
+          className: l(A.root, i),
           children: [
-            (0, a.jsx)(S.default, { className: R.infoIcon }),
+            (0, a.jsx)(S.default, { className: A.infoIcon }),
             (0, a.jsx)("div", {
-              className: R.text,
+              className: A.text,
               children:
                 C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
                   planName: t.hasExternalPlanChange
@@ -4489,14 +4498,14 @@
                   onClick: e => {
                     o(!0), e.preventDefault();
                   },
-                  className: R.cancelLink,
+                  className: A.cancelLink,
                   children: C.default.Messages.CANCEL,
                 }),
             u
               ? (0, a.jsx)(c.Modal, {
                   renderModal: e => {
                     let { transitionState: n } = e;
-                    return (0, a.jsx)(A, {
+                    return (0, a.jsx)(R, {
                       subscription: t,
                       renewalMutations: s,
                       transitionState: n,
@@ -5061,4 +5070,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4051.39e888aace6495c6a709.js.map
+//# sourceMappingURL=4051.c59ab702340633c76acf.js.map

@@ -461,44 +461,38 @@
                 giftInfoOptions: w,
               }
             );
+          } else if (M && null != R && null != O && null != L)
+            e = _.PREPAID_PAYMENT_SOURCES.has(O.type)
+              ? await (0, i.payInvoiceManually)(L, R, O, y.currency)
+              : await (0, i.updateSubscription)(
+                  L,
+                  { paymentSource: O, currency: y.currency },
+                  C,
+                  A,
+                  B
+                );
+          else if (null != L) {
+            let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(
+                L,
+                v.id,
+                1,
+                new Set(g)
+              ),
+              n = { paymentSource: O, currency: y.currency };
+            L.status === _.SubscriptionStatusTypes.PAUSED
+              ? (n.status = _.SubscriptionStatusTypes.ACTIVE)
+              : (n.items = t),
+              (e = await (0, i.updateSubscription)(L, n, C, A, B));
           } else
-            e =
-              M && null != R && null != O && null != L
-                ? _.PREPAID_PAYMENT_SOURCES.has(O.type)
-                  ? await (0, i.payInvoiceManually)(L, R, O, y.currency)
-                  : await (0, i.updateSubscription)(
-                      L,
-                      { paymentSource: O, currency: y.currency },
-                      C,
-                      A,
-                      B
-                    )
-                : null != L
-                  ? await (0, i.updateSubscription)(
-                      L,
-                      {
-                        items: (0, f.getItemsWithUpsertedPlanIdForGroup)(
-                          L,
-                          v.id,
-                          1,
-                          new Set(g)
-                        ),
-                        paymentSource: O,
-                        currency: y.currency,
-                      },
-                      C,
-                      A,
-                      B
-                    )
-                  : await (0, u.subscribe)({
-                      planId: v.id,
-                      currency: y.currency,
-                      paymentSource: O,
-                      trialId: x,
-                      metadata: j,
-                      referralCode: F,
-                      loadId: B,
-                    });
+            e = await (0, u.subscribe)({
+              planId: v.id,
+              currency: y.currency,
+              paymentSource: O,
+              trialId: x,
+              metadata: j,
+              referralCode: F,
+              loadId: B,
+            });
           if (e.redirectConfirmation) {
             P(null != e.redirectURL);
             return;
@@ -3852,7 +3846,10 @@
             selectedSkuId: z,
             startedPaymentFlowWithPaymentSources: q.current,
           }),
-          ea = r.useMemo(
+          ea =
+            (null == a ? void 0 : a.status) ===
+            R.SubscriptionStatusTypes.PAUSED,
+          ei = r.useMemo(
             () =>
               (0, C.getPremiumPlanOptions)({
                 skuId: z,
@@ -3869,7 +3866,8 @@
         return (0, s.jsxs)("div", {
           className: j.stepBody,
           children: [
-            er &&
+            !ea &&
+              er &&
               (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsx)(g.PremiumInvoiceTableDivider, {
@@ -3877,7 +3875,7 @@
                     negativeMarginTop: !0,
                   }),
                   (0, s.jsx)(O.PremiumSwitchPlanSelectBody, {
-                    planOptions: ea,
+                    planOptions: ei,
                     eligibleForMultiMonthPlans: !1,
                     selectedPlanId: M,
                     showTotal: !1,
@@ -4755,4 +4753,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31835.414599c9147be139f492.js.map
+//# sourceMappingURL=31835.e4eac55524a226beee40.js.map

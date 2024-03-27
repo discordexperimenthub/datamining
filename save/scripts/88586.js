@@ -8633,7 +8633,7 @@
             return r;
           },
           default: function () {
-            return et;
+            return es;
           },
         });
       var a,
@@ -8689,6 +8689,7 @@
         q = s("832085"),
         $ = s("443646"),
         ee = s("759308");
+      let et = new Date("2024-05-07T12:00:00Z");
       ((a = r || (r = {})).AVATAR_DECORATIONS = "avatarDecorations"),
         (a.CLIENT_THEMES = "clientThemes"),
         (a.CLIPS = "clips"),
@@ -8716,7 +8717,7 @@
         (a.EARLY_ACCESS_SEE_ALL_VARIATION = "earlyAccessSeeAllVariant"),
         (a.FREE_BOOST = "freeBoost"),
         (a.SHY_PROJECT = "shyProject");
-      var et = () => {
+      var es = () => {
         let { analyticsLocations: e } = (0, c.default)(
             d.default.PREMIUM_MARKETING_PERK_CARD
           ),
@@ -8726,31 +8727,31 @@
             R.default.getPremiumTypeSubscription()
           ),
           r = null != a ? m.default.getPremiumPlanItem(a) : null,
-          et = null != r ? m.default.getSkuIdForPlan(r.planId) : null,
-          es = et === O.PremiumSubscriptionSKUs.TIER_2,
-          { flipped: ea } = (0, N.useWhatsNewAvatarDecoRollout)(),
-          { flipped: er } = (0, N.useWhatsNewProfileFXRollout)(),
-          ei = (0, _.default)(f.default),
-          en = (0, A.default)(),
-          el = (0, I.default)({
+          es = null != r ? m.default.getSkuIdForPlan(r.planId) : null,
+          ea = es === O.PremiumSubscriptionSKUs.TIER_2,
+          { flipped: er } = (0, N.useWhatsNewAvatarDecoRollout)(),
+          { flipped: ei } = (0, N.useWhatsNewProfileFXRollout)(),
+          en = (0, _.default)(f.default),
+          el = (0, A.default)(),
+          eo = (0, I.default)({
             scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
             analyticsLocations: e,
           }),
-          eo = () => {
+          eu = () => {
             o.default.open(
               P.UserSettingsSections.VOICE,
               M.SOUNDBOARD_SUBSECTION,
               { openWithoutBackstack: !0, analyticsLocations: e }
             );
           },
-          eu = () => {
+          ed = () => {
             (0, E.openCollectiblesShop)({
               analyticsLocations: e,
               analyticsSource: d.default.PREMIUM_MARKETING_PERK_CARD,
             });
           },
-          ed = {
-            avatarDecorations: es
+          ec = {
+            avatarDecorations: ea
               ? {
                   name: "avatarDecorations",
                   title:
@@ -8763,10 +8764,10 @@
                     h.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   pillText: h.default.Messages.EARLY_ACCESS,
                   perkImage: B,
-                  canReveal: ea,
+                  canReveal: er,
                   dismissibleContentType:
                     l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP,
                 }
@@ -8783,7 +8784,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                   pillText: h.default.Messages.EARLY_ACCESS,
                   perkImage: B,
-                  canReveal: ea,
+                  canReveal: er,
                   dismissibleContentType:
                     l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP,
                 },
@@ -8807,7 +8808,7 @@
               },
               perkImage: U,
             },
-            clips: es
+            clips: ea
               ? {
                   name: "clips",
                   title: h.default.Messages.CLIPS,
@@ -8817,11 +8818,11 @@
                   description:
                     h.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-                  descriptionCta: ei
+                  descriptionCta: en
                     ? h.default.Messages.TAKE_ME_THERE
                     : h.default.Messages.LEARN_MORE,
                   pillText: h.default.Messages.EARLY_ACCESS,
-                  onCtaClick: ei
+                  onCtaClick: en
                     ? () => {
                         o.default.open(P.UserSettingsSections.CLIPS, null, {
                           openWithoutBackstack: !0,
@@ -8848,7 +8849,7 @@
                   pillText: h.default.Messages.EARLY_ACCESS,
                   perkImage: G,
                 },
-            earlyAccess: es
+            earlyAccess: ea
               ? {
                   name: "earlyAccess",
                   title:
@@ -8876,7 +8877,7 @@
                   isPremiumGetCta: !0,
                   perkImage: k,
                 },
-            earlyAccessSeeAllVariant: es
+            earlyAccessSeeAllVariant: ea
               ? {
                   name: "earlyAccessSeeAllVariant",
                   title:
@@ -8904,7 +8905,7 @@
                   isPremiumGetCta: !0,
                   perkImage: H,
                 },
-            entranceSounds: es
+            entranceSounds: ea
               ? {
                   name: "entranceSounds",
                   title:
@@ -8917,7 +8918,7 @@
                     h.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.TAKE_ME_THERE,
-                  onCtaClick: eo,
+                  onCtaClick: eu,
                   perkImage: w,
                 }
               : {
@@ -8933,7 +8934,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
                   perkImage: w,
                 },
-            entranceSoundsSeeAllVariation: es
+            entranceSoundsSeeAllVariation: ea
               ? {
                   name: "entranceSoundsSeeAllVariation",
                   title:
@@ -8946,7 +8947,7 @@
                     h.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.TAKE_ME_THERE,
-                  onCtaClick: eo,
+                  onCtaClick: eu,
                   perkImage: W,
                 }
               : {
@@ -8962,7 +8963,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
                   perkImage: W,
                 },
-            profileEffects: es
+            profileEffects: ea
               ? {
                   name: "profileEffects",
                   title:
@@ -8975,10 +8976,10 @@
                     h.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   pillText: h.default.Messages.EARLY_ACCESS,
                   perkImage: V,
-                  canReveal: er,
+                  canReveal: ei,
                   dismissibleContentType:
                     l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP,
                 }
@@ -8995,7 +8996,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                   pillText: h.default.Messages.EARLY_ACCESS,
                   perkImage: V,
-                  canReveal: er,
+                  canReveal: ei,
                   dismissibleContentType:
                     l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP,
                 },
@@ -9011,10 +9012,10 @@
                 h.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
               descriptionCta: h.default.Messages.TAKE_ME_THERE,
-              onCtaClick: el,
+              onCtaClick: eo,
               perkImage: b,
             },
-            remixing: es
+            remixing: ea
               ? {
                   name: "remixing",
                   title:
@@ -9064,7 +9065,7 @@
               perkImage: j,
               hideOnNarrowScreen: !0,
             },
-            specialMemberPricing: es
+            specialMemberPricing: ea
               ? {
                   name: "specialMemberPricing",
                   title:
@@ -9077,7 +9078,7 @@
                     h.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   perkImage: X,
                 }
               : {
@@ -9094,7 +9095,7 @@
                   isPremiumGetCta: !0,
                   perkImage: X,
                 },
-            specialMemberPricingSeeAllVariant: es
+            specialMemberPricingSeeAllVariant: ea
               ? {
                   name: "specialMemberPricingSeeAllVariant",
                   title:
@@ -9107,7 +9108,7 @@
                     h.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   perkImage: Q,
                 }
               : {
@@ -9124,7 +9125,7 @@
                   isPremiumGetCta: !0,
                   perkImage: Q,
                 },
-            specialShopPerks: es
+            specialShopPerks: ea
               ? {
                   name: "specialShopPerks",
                   title:
@@ -9137,7 +9138,7 @@
                     h.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   perkImage: X,
                 }
               : {
@@ -9152,10 +9153,10 @@
                     h.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                   descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-                  onCtaClick: eu,
+                  onCtaClick: ed,
                   perkImage: X,
                 },
-            unlimitedSuperReactions: es
+            unlimitedSuperReactions: ea
               ? {
                   name: "unlimitedSuperReactions",
                   title:
@@ -9279,15 +9280,15 @@
               description: h.default.Messages.NITRO_HOME_STREAM_UP_TO_4K,
             },
           };
-        if (null != en) {
+        if (null != el) {
           let {
             title: t,
             subtitle: s,
             description: a,
             pillText: r,
             ctaDescription: n,
-          } = en;
-          ed.freeBoost = {
+          } = el;
+          ec.freeBoost = {
             name: "freeBoost",
             title: t,
             subtitle: s,
@@ -9305,25 +9306,27 @@
               l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI,
           };
         }
-        let ec = (0, T.default)("usePerksDiscoverabilityCard"),
-          e_ = ec === T.CollectiblesShopMarketingVariants.SHY;
+        let e_ = (0, T.default)("usePerksDiscoverabilityCard"),
+          eE =
+            e_ === T.CollectiblesShopMarketingVariants.SHY &&
+            Date.now() < et.getTime();
         return (
-          e_ &&
-            (ed.shyProject = {
+          eE &&
+            (ec.shyProject = {
               name: "shyProject",
               title: h.default.Messages.NITRO_HOME_SHY_PROJECT_TITLE,
               subtitle: h.default.Messages.NITRO_HOME_SHY_PROJECT_SUBTITLE,
-              description: es
+              description: ea
                 ? h.default.Messages
                     .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB
                 : h.default.Messages
                     .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
               descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-              onCtaClick: es ? eu : void 0,
+              onCtaClick: ea ? ed : void 0,
               perkImage: z,
-              isPremiumGetCta: !es,
+              isPremiumGetCta: !ea,
             }),
-          ed
+          ec
         );
       };
     },
@@ -10242,4 +10245,4 @@
     },
   },
 ]);
-//# sourceMappingURL=118317b0582c5492238a.js.map
+//# sourceMappingURL=4202acf58a1f8580312d.js.map

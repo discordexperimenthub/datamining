@@ -168,7 +168,7 @@
             R = (e[5] >> 4) / 15,
             p = E ? 6 : 5,
             A = 0,
-            S = (t, n, r) => {
+            C = (t, n, r) => {
               let l = [];
               for (let s = 0; s < n; s++)
                 for (let a = s ? 0 : 1; a * n < t * (n - s); a++)
@@ -177,10 +177,10 @@
                   );
               return l;
             },
-            C = S(f, T, ((i >> 18) & 31) / 31),
-            M = S(3, 3, 1.25 * (((o >> 3) & 63) / 63)),
-            N = S(3, 3, 1.25 * (((o >> 9) & 63) / 63)),
-            m = E && S(5, 5, R),
+            S = C(f, T, ((i >> 18) & 31) / 31),
+            M = C(3, 3, 1.25 * (((o >> 3) & 63) / 63)),
+            N = C(3, 3, 1.25 * (((o >> 9) & 63) / 63)),
+            m = E && C(5, 5, R),
             P = r(e),
             h = a(P > 1 ? 32 : 32 * P),
             L = a(P > 1 ? 32 / P : 32),
@@ -203,7 +203,7 @@
                   n * T < f * (T - e);
                   n++, t++
                 )
-                  i += C[t] * U[n] * r;
+                  i += S[t] * U[n] * r;
               for (let e = 0, t = 0; e < 3; e++)
                 for (let n = e ? 0 : 1, r = 2 * D[e]; n < 3 - e; n++, t++) {
                   let e = U[n] * r;
@@ -215,9 +215,9 @@
                     R += m[t] * U[n] * r;
               let p = i - (2 / 3) * o,
                 A = (3 * i - p + _) / 2,
-                S = A - _;
+                C = A - _;
               (O[r] = l(0, 255 * n(1, A))),
-                (O[r + 1] = l(0, 255 * n(1, S))),
+                (O[r + 1] = l(0, 255 * n(1, C))),
                 (O[r + 2] = l(0, 255 * n(1, p))),
                 (O[r + 3] = l(0, 255 * n(1, R)));
             }
@@ -456,10 +456,10 @@
             return A;
           },
           HOME_HEADER_ASPECT_RATIO: function () {
-            return S;
+            return C;
           },
           MAX_BANNER_OVERLAY_HEIGHT: function () {
-            return C;
+            return S;
           },
           MAX_GUILD_BANNER_OVERLAY_HEIGHT: function () {
             return M;
@@ -504,11 +504,11 @@
         R = 17 / 6,
         p = 16 / 9,
         A = 2.5,
-        S = 4,
-        C = o / R,
+        C = 4,
+        S = o / R,
         M = o / p,
         N = o / A,
-        m = o / S,
+        m = o / C,
         P =
           i.BACKGROUND_REPLACEMENT_SIZE.width /
           i.BACKGROUND_REPLACEMENT_SIZE.height,
@@ -588,8 +588,8 @@
             onComplete: R,
             onSubscriptionConfirmation: p,
             analyticsLocations: A,
-            analyticsObject: S,
-            analyticsLocation: C,
+            analyticsObject: C,
+            analyticsLocation: S,
             analyticsSourceLocation: M,
             isGift: N = !1,
             giftMessage: m,
@@ -602,11 +602,12 @@
             giftRecipient: v,
             returnRef: x,
             subscription: g,
+            skipConfirm: H,
           } = null != e ? e : {},
-          H = !1,
-          y = (0, l.v4)(),
-          j = u.default.getCurrentUser(),
-          b = (0, E.isPremiumExactly)(j, f.PremiumTypes.TIER_2);
+          y = !1,
+          j = (0, l.v4)(),
+          b = u.default.getCurrentUser(),
+          B = (0, E.isPremiumExactly)(b, f.PremiumTypes.TIER_2);
         (0, s.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -614,7 +615,7 @@
               let { onClose: l, ...s } = n;
               return (0, r.jsx)(e, {
                 ...s,
-                loadId: y,
+                loadId: j,
                 subscriptionTier: P,
                 skuId: (0, E.castPremiumSubscriptionAsSkuId)(P),
                 isGift: N,
@@ -630,20 +631,20 @@
                       !N &&
                         null != t &&
                         t === f.PremiumSubscriptionSKUs.TIER_2 &&
-                        !b &&
+                        !B &&
                         d.ComponentDispatch.dispatch(
                           _.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (H = !0),
+                  (y = !0),
                     null == R || R(),
                     !N && (0, o.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: p,
                 analyticsLocations: A,
-                analyticsObject: S,
-                analyticsLocation: C,
+                analyticsObject: C,
+                analyticsLocation: S,
                 analyticsSourceLocation: M,
                 trialId: h,
                 postSuccessGuild: L,
@@ -653,20 +654,21 @@
                 referralTrialOfferId: D,
                 returnRef: x,
                 subscription: g,
+                skipConfirm: !!H,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !H &&
+              !y &&
                 c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: y,
+                  load_id: j,
                   payment_type:
                     _.PurchaseTypeToAnalyticsPaymentType[
                       _.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != C ? C : S,
+                  location: null != S ? S : C,
                   source: M,
                   subscription_type: _.SubscriptionTypes.PREMIUM,
                   is_gift: N,
@@ -676,8 +678,8 @@
                 }),
                 (0, a.clearError)(),
                 (0, i.clearPurchaseTokenAuthState)(),
-                null == I || I(H),
-                H && (null == p || p());
+                null == I || I(y),
+                y && (null == p || p());
             },
           }
         );
@@ -727,8 +729,8 @@
         R = n("745279"),
         p = n("718517"),
         A = n("49111"),
-        S = n("782340"),
-        C = n("540700");
+        C = n("782340"),
+        S = n("540700");
       let M = new Set([
         f.Step.SKU_SELECT,
         f.Step.AWAITING_AUTHENTICATION,
@@ -744,7 +746,7 @@
             header: m,
             footer: P,
             isGift: h = !1,
-            giftMessage: L = S.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
+            giftMessage: L = C.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
             hideBreadcrumbs: O = !1,
             isLoading: U = !1,
             purchaseError: D,
@@ -765,11 +767,11 @@
           j instanceof d.BillingError &&
           (j.code === E.ErrorCodes.CARD_DECLINED &&
             y &&
-            (b += " ".concat(S.default.Messages.BILLING_ERROR_TRY_ANOTHER)),
+            (b += " ".concat(C.default.Messages.BILLING_ERROR_TRY_ANOTHER)),
           j.code === E.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED &&
-            (b = S.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT),
+            (b = C.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT),
           j.code === A.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE &&
-            (b = S.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+            (b = C.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
         let { stripe: B } = (0, _.usePaymentContext)();
         U = U || null == B;
         let G = l.useRef(new o.Timeout());
@@ -796,11 +798,11 @@
           children: [
             m,
             (0, r.jsxs)("div", {
-              className: i("paymentModalContent", C.content),
+              className: i("paymentModalContent", S.content),
               children: [
                 h && n !== f.Step.CONFIRM
                   ? (0, r.jsx)(c.default, {
-                      className: C.paymentNote,
+                      className: S.paymentNote,
                       iconSize: c.default.Sizes.SMALL,
                       icon: I.default,
                       color:
@@ -813,7 +815,7 @@
                 O
                   ? null
                   : (0, r.jsx)("div", {
-                      className: C.breadcrumbsWrapper,
+                      className: S.breadcrumbsWrapper,
                       children: (0, r.jsx)(T.default, {
                         activeId: f.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(n)
                           ? V
@@ -831,30 +833,30 @@
                       }),
                     }),
                 (0, r.jsxs)("div", {
-                  className: C.bodyWrapper,
+                  className: S.bodyWrapper,
                   children: [
                     null == j
                       ? null
                       : (0, r.jsx)("div", {
-                          className: C.errorBlockWrapper,
+                          className: S.errorBlockWrapper,
                           children: (0, r.jsx)(u.FormErrorBlock, {
                             ref: v,
                             children: b,
                           }),
                         }),
                     U
-                      ? (0, r.jsx)(u.Spinner, { className: C.loadingBlock })
+                      ? (0, r.jsx)(u.Spinner, { className: S.loadingBlock })
                       : (0, r.jsx)(u.Sequencer, {
-                          className: C.sequencer,
-                          staticClassName: C.sequencerStatic,
-                          animatedNodeClassName: C.sequencerAnimatedNode,
+                          className: S.sequencer,
+                          staticClassName: S.sequencerStatic,
+                          animatedNodeClassName: S.sequencerAnimatedNode,
                           fillParent: !0,
                           step: n,
                           steps: t,
                           sideMargin: 20,
                           children: (0, r.jsx)(u.AdvancedScrollerThin, {
                             onScroll: g,
-                            className: i(C.scroller, H),
+                            className: i(S.scroller, H),
                             children: a,
                           }),
                         }),
@@ -922,8 +924,8 @@
         R = n("154889"),
         p = n("917247"),
         A = n("956597"),
-        S = n("635956"),
-        C = n("273619"),
+        C = n("635956"),
+        S = n("273619"),
         M = n("674158"),
         N = n("915639"),
         m = n("357957"),
@@ -1081,7 +1083,7 @@
                 look: o.Button.Looks.LINK,
                 children: g.default.Messages.CLOSE,
               }),
-              (0, r.jsx)(S.default, {
+              (0, r.jsx)(C.default, {
                 buttonText:
                   null != t || null != n
                     ? l
@@ -1110,7 +1112,7 @@
             () => m.default.hasFetchedPaymentSources
           ),
           A = s && a,
-          S = (0, p.usePremiumTrialOffer)(),
+          C = (0, p.usePremiumTrialOffer)(),
           M = (0, R.usePremiumDiscountOffer)(),
           { isLoading: N, suggestedPremiumType: P } = (0, I.default)({
             autoTrackExposure: A,
@@ -1142,10 +1144,10 @@
           children: (0, r.jsx)(o.ModalRoot, {
             ...n,
             "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-            children: (0, r.jsx)(C.default, {
+            children: (0, r.jsx)(S.default, {
               hideBreadcrumbs: !0,
               body: (0, r.jsx)(b, {
-                trialOffer: S,
+                trialOffer: C,
                 discountOffer: M,
                 isTier0Upsell: h,
                 isLoading: !A || N,
@@ -1153,7 +1155,7 @@
                 onClose: t,
               }),
               footer: (0, r.jsx)(B, {
-                trialOffer: S,
+                trialOffer: C,
                 discountOffer: M,
                 isTier0Upsell: h,
                 onClose: t,
@@ -1533,4 +1535,4 @@
     },
   },
 ]);
-//# sourceMappingURL=858fca596b38b60aac1b.js.map
+//# sourceMappingURL=25a26806a16ef8b2372f.js.map

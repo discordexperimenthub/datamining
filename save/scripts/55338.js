@@ -868,10 +868,10 @@
             modalTitle: H = A.default.Messages.SELECT_IMAGE_MODAL_TITLE,
             uploadOptionTitle: w = A.default.Messages.UPLOAD_IMAGE,
           } = e,
-          D = (0, l.useStateFromStores)([h.default], () =>
+          k = (0, l.useStateFromStores)([h.default], () =>
             h.default.isFocused()
           ),
-          k = (0, l.useStateFromStores)([p.default], () =>
+          D = (0, l.useStateFromStores)([p.default], () =>
             p.default.getCurrentUser()
           ),
           G = (0, l.useStateFromStores)([f.default], () =>
@@ -884,7 +884,7 @@
             i.AccessibilityPreferencesContext
           ),
           z = (0, i.useModalContext)(),
-          K = !_.default.canUseAnimatedAvatar(k) && y === g.UploadTypes.AVATAR,
+          K = !_.default.canUseAnimatedAvatar(D) && y === g.UploadTypes.AVATAR,
           { analyticsLocations: Z } = (0, u.default)(
             U,
             s.default.SELECT_IMAGE_MODAL
@@ -1015,7 +1015,7 @@
                           (0, a.jsxs)("div", {
                             className: N.contentCircle,
                             children: [
-                              (0, a.jsx)(P, { shouldAnimate: D && !V.enabled }),
+                              (0, a.jsx)(P, { shouldAnimate: k && !V.enabled }),
                               (0, a.jsx)("div", {
                                 className: N.gifIconContainer,
                                 children: (0, a.jsx)(m.default, {
@@ -1207,11 +1207,12 @@
             giftRecipient: M,
             returnRef: F,
             subscription: O,
+            skipConfirm: U,
           } = null != e ? e : {},
-          U = !1,
-          b = (0, r.v4)(),
-          j = o.default.getCurrentUser(),
-          H = (0, f.isPremiumExactly)(j, h.PremiumTypes.TIER_2);
+          b = !1,
+          j = (0, r.v4)(),
+          H = o.default.getCurrentUser(),
+          w = (0, f.isPremiumExactly)(H, h.PremiumTypes.TIER_2);
         (0, l.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -1219,7 +1220,7 @@
               let { onClose: r, ...l } = n;
               return (0, a.jsx)(e, {
                 ...l,
-                loadId: b,
+                loadId: j,
                 subscriptionTier: A,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(A),
                 isGift: g,
@@ -1235,13 +1236,13 @@
                       !g &&
                         null != t &&
                         t === h.PremiumSubscriptionSKUs.TIER_2 &&
-                        !H &&
+                        !w &&
                         d.ComponentDispatch.dispatch(
                           p.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (U = !0),
+                  (b = !0),
                     null == S || S(),
                     !g && (0, u.setCanPlayWowMoment)(!0);
                 },
@@ -1258,15 +1259,16 @@
                 referralTrialOfferId: R,
                 returnRef: F,
                 subscription: O,
+                skipConfirm: !!U,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !U &&
+              !b &&
                 c.default.track(p.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: b,
+                  load_id: j,
                   payment_type:
                     p.PurchaseTypeToAnalyticsPaymentType[
                       p.PurchaseTypes.SUBSCRIPTION
@@ -1281,8 +1283,8 @@
                 }),
                 (0, i.clearError)(),
                 (0, s.clearPurchaseTokenAuthState)(),
-                null == E || E(U),
-                U && (null == T || T());
+                null == E || E(b),
+                b && (null == T || T());
             },
           }
         );
@@ -1762,4 +1764,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f8ddbcbbcef0751cd50f.js.map
+//# sourceMappingURL=d643e48585a746f86279.js.map

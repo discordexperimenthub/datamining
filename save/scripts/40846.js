@@ -187,11 +187,11 @@
     },
     387649: function (e, t, s) {
       "use strict";
-      e.exports = s.p + "e14364e352643fd53142.png";
+      e.exports = s.p + "ded1db94f6b9fc77bc47.png";
     },
     404028: function (e, t, s) {
       "use strict";
-      e.exports = s.p + "f66560f30b9c556945b6.png";
+      e.exports = s.p + "ce3f349449ba082cf07c.png";
     },
     43980: function (e, t, s) {
       "use strict";
@@ -2811,14 +2811,17 @@
                     variant: "heading-lg/extrabold",
                     color: "always-white",
                     className: m.title,
-                    children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024,
+                    children:
+                      _.default.Messages
+                        .COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE,
                   }),
                   (0, a.jsx)(o.Text, {
                     className: m.textBody,
                     variant: "text-sm/normal",
                     color: "always-white",
                     children:
-                      _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024,
+                      _.default.Messages
+                        .COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE,
                   }),
                 ],
               }),
@@ -12024,9 +12027,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278907",
+          E = "278938",
           T =
-            ((e = "dc7fdafebec06586d515b5972e603169a0410c55"),
+            ((e = "e293d0bbeca211e6534d8d529f0fd564bffa99d4"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32201,4 +32204,4 @@
     },
   },
 ]);
-//# sourceMappingURL=02cf7becfa9f9ca1d5a1.js.map
+//# sourceMappingURL=0df4846943619e1a8bfa.js.map

@@ -151,7 +151,7 @@
     },
     446707: function (e, t, n) {
       "use strict";
-      e.exports = n.p + "6254171088ded6cc8aec.png";
+      e.exports = n.p + "f3d5b902c4336e19591d.png";
     },
     566247: function (e, t, n) {
       "use strict";
@@ -1717,7 +1717,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278907",
+                  buildNumber: "278938",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -13288,49 +13288,50 @@
             return s;
           },
           CollectiblesDCToDisplayOptions: function () {
-            return _;
-          },
-          SkuIdToCountdownDisplayOptions: function () {
             return C;
           },
+          SkuIdToCountdownDisplayOptions: function () {
+            return S;
+          },
           SkuIdToCustomConfettiDisplayOptions: function () {
-            return I;
+            return m;
           },
         });
       var a,
         s,
-        l = n("151426"),
-        i = n("782340"),
-        r = n("919806"),
-        o = n("424744"),
-        u = n("753867"),
-        d = n("577151"),
-        c = n("177493"),
-        f = n("66453"),
-        E = n("446707"),
-        h = n("566247");
+        l = n("635058"),
+        i = n("151426"),
+        r = n("782340"),
+        o = n("919806"),
+        u = n("424744"),
+        d = n("753867"),
+        c = n("577151"),
+        f = n("177493"),
+        E = n("66453"),
+        h = n("446707"),
+        _ = n("566247");
       ((a = s || (s = {}))[(a.NONE = 0)] = "NONE"),
         (a[(a.TOOLTIP = 1)] = "TOOLTIP"),
         (a[(a.COACHTIP = 2)] = "COACHTIP");
-      let _ = {
-          [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
+      let C = {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
             type: 1,
             title: () =>
-              i.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
+              r.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
             emojiName: "dragon",
           },
-          [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
             type: 1,
-            title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
+            title: () => r.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
             emojiName: "fire",
           },
-          [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
             type: 2,
             title: () =>
-              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
+              r.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
             body: () =>
-              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
-            imageSrc: d,
+              r.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
+            imageSrc: c,
             assetIds: [
               "a_a065206df7b011a5510e4e5bca7d49be",
               "a_554b7c34f7b6c709f19535aacb128e7b",
@@ -13338,59 +13339,59 @@
               "a_fa014594d4b2b4249e1098c0adc85b47",
             ],
           },
-          [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
             type: 2,
             title: () =>
-              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
+              r.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
             body: () =>
-              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
-            imageSrc: f,
+              r.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
+            imageSrc: E,
             assetIds: [
               "a_c3cffc19e9784f7d0b005eecdf1b566e",
               "a_f3af281c65cf0cf590e9e1f59e9c6cf6",
               "a_51d3bb502109eec26c76386ec980bc8b",
             ],
           },
-          [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
             type: 2,
             title: () =>
-              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
+              r.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
             body: () =>
-              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
-            imageSrc: c,
+              r.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
+            imageSrc: f,
             assetIds: [
               "a_ab95c78401ce4ec85c25a6d308db9d85",
               "a_4cd9ae5a8d103c219eacd3674d7730cd",
               "a_27bbf0b53b1054cf61e9a4c0e8d4027f",
             ],
           },
-          [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
+          [i.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
             type: 2,
-            title: () => i.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
+            title: () => r.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
             body: () =>
-              i.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
-            imageSrc: h,
+              r.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
+            imageSrc: _,
             assetIds: [
               "a_98555e40cc6802bd3a4fed906af1d992",
               "a_d22ba4f29568b6ebd2cfc5e95428f5b6",
               "a_904b1989077c91fca1168d39bfcaa0a4",
             ],
-            entrypointDecorationAssets: { srcDark: r, srcLight: o },
+            entrypointDecorationAssets: { srcDark: o, srcLight: u },
             entryPointClassName: "shyButton",
           },
         },
-        C = {
-          "1220513972189663413": {
-            label: () => i.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
+        S = {
+          [l.CollectiblesCategorySkuId.SHY]: {
+            label: () => r.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
             backgroundColor: "rgba(255, 70, 85, 1)",
             boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
             labelColor: "rgba(15, 25, 35, 1)",
-            iconSrc: E,
+            iconSrc: h,
           },
         },
-        S = {
+        I = {
           SHY: {
-            confettiAssetSrc: u,
+            confettiAssetSrc: d,
             style: {
               position: "absolute",
               top: "-120px",
@@ -13399,10 +13400,10 @@
             },
           },
         },
-        I = {
-          "1220513977683935373": S.SHY,
-          "1220432647453409384": S.SHY,
-          "1220432697718083614": S.SHY,
+        m = {
+          "1220513977683935373": I.SHY,
+          "1220432647453409384": I.SHY,
+          "1220432697718083614": I.SHY,
         };
     },
     476863: function (e, t, n) {
@@ -36311,7 +36312,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return C;
+            return p;
           },
         }),
         n("222007");
@@ -36320,15 +36321,19 @@
       var s = n("77078"),
         l = n("913144"),
         i = n("316272"),
-        r = n("340412"),
-        o = n("197881"),
-        u = n("982457"),
-        d = n("443504"),
-        c = n("247820"),
-        f = n("641078"),
-        E = n("518151");
-      let h = "PremiumServerDriveAnnouncementModal";
-      class _ extends i.default {
+        r = n("697218"),
+        o = n("340412"),
+        u = n("719923"),
+        d = n("197881"),
+        c = n("443504"),
+        f = n("154889"),
+        E = n("247820"),
+        h = n("833516"),
+        _ = n("641078"),
+        C = n("518151"),
+        S = n("646718");
+      let I = "PremiumServerDriveAnnouncementModal";
+      class m extends i.default {
         _initialize() {
           l.default.subscribe(
             "POST_CONNECTION_OPEN",
@@ -36352,13 +36357,13 @@
         constructor(...e) {
           super(...e),
             (this.maybeOpenServerDriveAnnouncementModal = (e, t) => {
-              let l = (0, E.extractAnnouncementModalContent)({
+              let l = (0, C.extractAnnouncementModalContent)({
                 content: e,
                 isPreview: t,
               });
               return (
                 null != l &&
-                ((0, s.closeModal)(h),
+                ((0, s.closeModal)(I),
                 (0, s.openModalLazy)(
                   async () => {
                     let { default: e } = await n
@@ -36367,7 +36372,7 @@
                     return t =>
                       (0, a.jsx)(e, { renderModalProps: t, properties: l });
                   },
-                  { modalKey: h }
+                  { modalKey: I }
                 ),
                 !0)
               );
@@ -36376,24 +36381,59 @@
               let { properties: t } = e;
               this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
+            (this.getOfferFromStore = () => {
+              let e = r.default.getCurrentUser();
+              if ((0, u.isPremium)(e)) return {};
+              let t = [
+                (0, S.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID),
+                (0, S.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID),
+                (0, S.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID),
+                (0, S.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID),
+              ]
+                .map(e => o.default.getUserDiscountOffer(e))
+                .filter(e => null != e && !(0, f.hasUserDiscountExpired)(e))
+                .shift();
+              if (null != t) return { userDiscountOffer: t };
+              let n = [
+                (0, S.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
+                (0, S.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
+                (0, S.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID),
+                (0, S.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID),
+                (0, S.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID),
+                (0, S.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID),
+                (0, S.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
+              ]
+                .map(e => o.default.getUserTrialOffer(e))
+                .filter(e => null != e && !(0, h.hasUserTrialOfferExpired)(e))
+                .shift();
+              return null != n ? { userTrialOffer: n } : {};
+            }),
             (this.mayShowAnnouncementModal = async () => {
               if (
-                (await (0, f.maybeFetchActiveBogoPromotion)(),
-                !o.ProcessArgs.isDisallowPopupsSet())
+                (await (0, _.maybeFetchActiveBogoPromotion)(),
+                !d.ProcessArgs.isDisallowPopupsSet())
               ) {
                 if (
                   !(0, s.hasAnyModalOpen)() &&
-                  d.default.getCurrentConfig({
+                  c.default.getCurrentConfig({
                     location: "OfferAnnouncementManager",
                   }).enabled
                 ) {
-                  let e = await (0, c.fetchPremiumMarketingContent)();
-                  for (let t of e)
-                    if (this.maybeOpenServerDriveAnnouncementModal(t, !1))
+                  let e =
+                      !(0, u.isPremium)(r.default.getCurrentUser()) &&
+                      (!o.default.hasFetchedOffer() ||
+                        o.default.shouldFetchOffer()),
+                    t = e
+                      ? await (0, E.fetchPremiumMarketingContent)()
+                      : await (0, E.fetchPremiumMarketingContentWithUserOffer)(
+                          this.getOfferFromStore()
+                        );
+                  for (let e of t)
+                    if (this.maybeOpenServerDriveAnnouncementModal(e, !1))
                       break;
                 }
                 !(0, s.hasAnyModalOpen)() &&
-                  (await (0, f.isEligibleForBOGOAnnouncementModal)()) &&
+                  (await (0, _.isEligibleForBOGOAnnouncementModal)()) &&
                   (0, s.openModalLazy)(async () => {
                     let { default: e } = await n
                       .el("981125")
@@ -36401,24 +36441,10 @@
                     return t => (0, a.jsx)(e, { renderModalProps: t });
                   });
               }
-            }),
-            (this._hasTrialOffer = async () => {
-              try {
-                if (
-                  (r.default.shouldFetchOffer() &&
-                    (await u.default.fetchUserTrialOffer()),
-                  r.default.hasFetchedOffer() &&
-                    r.default.hasAnyUnexpiredOffer())
-                )
-                  return !0;
-                return !1;
-              } catch (e) {
-                return !1;
-              }
             });
         }
       }
-      var C = new _();
+      var p = new m();
     },
     215429: function (e, t, n) {
       "use strict";
@@ -36483,10 +36509,13 @@
           );
         return "announcementModalVariant1" !== a.properties.oneofKind
           ? null
-          : !n &&
-              (0, c.isDismissibleContentDismissed)(
-                Number(a.properties.announcementModalVariant1.dismissKey)
-              )
+          : 0 ===
+                a.properties.announcementModalVariant1.dismissKey.trim()
+                  .length ||
+              (!n &&
+                (0, c.isDismissibleContentDismissed)(
+                  Number(a.properties.announcementModalVariant1.dismissKey)
+                ))
             ? null
             : (n && (a.properties.announcementModalVariant1.dismissKey = ""),
               a);
@@ -36575,12 +36604,32 @@
           fetchPremiumMarketingContent: function () {
             return l;
           },
+          fetchPremiumMarketingContentWithUserOffer: function () {
+            return i;
+          },
         });
       var a = n("872717"),
         s = n("49111");
       async function l() {
         try {
           let e = await a.HTTP.get({ url: s.Endpoints.PREMIUM_MARKETING });
+          if (e.ok) return e.body;
+          return [];
+        } catch (e) {
+          return [];
+        }
+      }
+      async function i(e) {
+        let { userTrialOffer: t, userDiscount: n, userDiscountOffer: l } = e;
+        try {
+          let e = await a.HTTP.post({
+            url: s.Endpoints.PREMIUM_MARKETING,
+            body: {
+              user_trial_offer: t,
+              user_discount: n,
+              user_discount_offer: l,
+            },
+          });
           if (e.ok) return e.body;
           return [];
         } catch (e) {
@@ -53247,4 +53296,4 @@
     },
   },
 ]);
-//# sourceMappingURL=679abc6dd3720f92e3e0.js.map
+//# sourceMappingURL=19d9e3b6236168e926da.js.map

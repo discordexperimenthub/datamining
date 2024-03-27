@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["26956"],
+  ["84283"],
   {
     68422: function (e, t, n) {
       "use strict";
@@ -179,6 +179,12 @@
           ],
         });
       }
+    },
+    7037: function (e, t, n) {
+      "use strict";
+      n.r(t);
+      var s = n("833067");
+      n.es(s, t);
     },
     772279: function (e, t, n) {
       "use strict";
@@ -418,13 +424,13 @@
         p = n("160299"),
         h = n("153160"),
         I = n("271560"),
-        E = n("991254"),
-        _ = n("777053"),
-        v = n("139737"),
-        C = n("375010"),
-        T = n("49111"),
-        A = n("782340"),
-        m = n("597550");
+        v = n("991254"),
+        E = n("777053"),
+        _ = n("139737"),
+        T = n("375010"),
+        C = n("49111"),
+        m = n("782340"),
+        A = n("597550");
       let g = (0, a.cssValueToNumber)(
           r.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE
         ),
@@ -438,7 +444,7 @@
             children: (0, s.jsx)("img", {
               src: i,
               alt: "",
-              className: m.listingImage,
+              className: A.listingImage,
             }),
           });
         },
@@ -463,12 +469,12 @@
           } = e,
           L = (0, l.useStateFromStores)([p.default], () => p.default.isSyncing),
           { activeSubscription: x, activeSubscriptionListing: P } = (0,
-          E.useActiveSubscriptionListingForApplication)(t.application_id, a),
+          v.useActiveSubscriptionListingForApplication)(t.application_id, a),
           {
             openModal: O,
             canOpenModal: M,
             cannotOpenReason: y,
-          } = (0, C.default)({
+          } = (0, T.default)({
             listing: t,
             guildId: a,
             groupListingId: n,
@@ -479,26 +485,26 @@
           }),
           j = t.subscription_plans[0],
           b = 0 === j.price,
-          D = (null == P ? void 0 : P.id) === t.id,
-          w = (0, o.default)(),
-          U = (w && !M) || L,
+          w = (null == P ? void 0 : P.id) === t.id,
+          D = (0, o.default)(),
+          U = (D && !M) || L,
           V = () => {
-            w ? O() : (0, c.redirectToLogin)({ [N]: "true" });
+            D ? O() : (0, c.redirectToLogin)({ [N]: "true" });
           };
         return (
           i.useEffect(() => {
             let e = new URL(location.href);
-            if (w && !U && "true" === e.searchParams.get(N)) {
+            if (D && !U && "true" === e.searchParams.get(N)) {
               e.searchParams.delete(N);
               let t = e.pathname + e.search;
               (0, f.replaceWith)(t), O();
             }
-          }, [w, O, U]),
+          }, [D, O, U]),
           (0, s.jsxs)("div", {
-            className: m.container,
+            className: A.container,
             children: [
               (0, s.jsxs)("div", {
-                className: m.cardHeader,
+                className: A.cardHeader,
                 children: [
                   (0, s.jsx)(S, { listing: t }),
                   (0, s.jsx)(u.Text, {
@@ -507,14 +513,14 @@
                     children: t.name,
                   }),
                   (0, s.jsxs)("div", {
-                    className: m.priceAndButtonContainer,
+                    className: A.priceAndButtonContainer,
                     children: [
                       (0, s.jsx)(u.Text, {
                         variant: "text-md/normal",
                         color: "interactive-normal",
                         children: b
-                          ? A.default.Messages.APPLICATION_SUBSCRIPTION_FREE
-                          : A.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format(
+                          ? m.default.Messages.APPLICATION_SUBSCRIPTION_FREE
+                          : m.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format(
                               {
                                 amount: (0, h.formatPrice)(j.price, j.currency),
                                 period: (0, d.formatPlanInterval)(j),
@@ -523,37 +529,37 @@
                       }),
                       (() => {
                         var e;
-                        if (D)
+                        if (w)
                           return (0, s.jsx)(R, {
                             children:
                               (null == x ? void 0 : x.status) ===
-                              T.SubscriptionStatusTypes.CANCELED
-                                ? A.default.Messages
+                              C.SubscriptionStatusTypes.CANCELED
+                                ? m.default.Messages
                                     .APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL
-                                : A.default.Messages
+                                : m.default.Messages
                                     .APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL,
                           });
                         if (b)
                           return null == P
                             ? (0, s.jsx)(R, {
                                 children:
-                                  A.default.Messages
+                                  m.default.Messages
                                     .APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL,
                               })
                             : null;
                         return (0, s.jsx)(u.Tooltip, {
-                          tooltipClassName: m.subscribeButtonTooltip,
-                          text: M || !w ? null : y,
+                          tooltipClassName: A.subscribeButtonTooltip,
+                          text: M || !D ? null : y,
                           "aria-label":
                             null !== (e = !M && y) && void 0 !== e && e,
                           children: e =>
-                            (0, s.jsx)(_.default, {
+                            (0, s.jsx)(E.default, {
                               ...e,
                               disabled: U,
                               submitting: !1,
                               onClick: V,
                               children:
-                                A.default.Messages
+                                m.default.Messages
                                   .APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL,
                             }),
                         });
@@ -563,12 +569,12 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: m.benefitsContainer,
-                children: (0, s.jsx)(v.SubscriptionListingBenefits, {
+                className: A.benefitsContainer,
+                children: (0, s.jsx)(_.SubscriptionListingBenefits, {
                   applicationId: t.application_id,
                   storeListingBenefits: t.store_listing_benefits,
                   skuBenefits: t.sku_benefits.benefits,
-                  className: m.benefit,
+                  className: A.benefit,
                 }),
               }),
             ],
@@ -632,31 +638,31 @@
             applicationPrimarySkuId: d,
             analyticsLocation: h,
             onComplete: I,
-            forcesTransitionToGuild: E,
+            forcesTransitionToGuild: v,
           } = e,
-          { listingsLoaded: _ } = (0, u.useFetchListingsForApplication)(o, d),
-          { entitlementsLoaded: v } = (0, u.useFetchEntitlementsForGuild)({
+          { listingsLoaded: E } = (0, u.useFetchListingsForApplication)(o, d),
+          { entitlementsLoaded: _ } = (0, u.useFetchEntitlementsForGuild)({
             guildId: n,
           }),
-          { subscriptionGroupListing: C } = (0,
+          { subscriptionGroupListing: T } = (0,
           u.useActiveSubscriptionListingForApplication)(o, n),
-          T = (0, r.default)();
+          C = (0, r.default)();
         i.useEffect(() => {
-          T && l.fetchSubscriptions();
-        }, [T]);
-        let A = null == C ? void 0 : C.id,
-          m =
-            null == C
+          C && l.fetchSubscriptions();
+        }, [C]);
+        let m = null == T ? void 0 : T.id,
+          A =
+            null == T
               ? void 0
-              : null === (t = C.subscription_listings) || void 0 === t
+              : null === (t = T.subscription_listings) || void 0 === t
                 ? void 0
                 : t.filter(e => e.published);
-        return _ && (null == n || v)
-          ? null == A || null == m || 0 === m.length
+        return E && (null == n || _)
+          ? null == m || null == A || 0 === A.length
             ? null
             : (0, s.jsx)("div", {
                 className: f.container,
-                children: m.map(e =>
+                children: A.map(e =>
                   (0, s.jsxs)(
                     i.Fragment,
                     {
@@ -665,10 +671,10 @@
                         (0, s.jsx)(c.default, {
                           listing: e,
                           guildId: n,
-                          groupListingId: A,
+                          groupListingId: m,
                           analyticsLocation: h,
                           onComplete: I,
-                          forcesTransitionToGuild: E,
+                          forcesTransitionToGuild: v,
                         }),
                       ],
                     },
@@ -958,13 +964,13 @@
         p = n("21121"),
         h = n("934306"),
         I = n("288518"),
-        E = n("486503"),
-        _ = n("233069"),
-        v = n("42203"),
-        C = n("305961"),
-        T = n("660478"),
-        A = n("282109"),
-        m = n("697218"),
+        v = n("486503"),
+        E = n("233069"),
+        _ = n("42203"),
+        T = n("305961"),
+        C = n("660478"),
+        m = n("282109"),
+        A = n("697218"),
         g = n("299039"),
         N = n("724210");
       ((r = l || (l = {})).DEFAULT = "DEFAULT"), (r.FAVORITE = "FAVORITE");
@@ -987,7 +993,7 @@
                 let s =
                     null !==
                       (n =
-                        null !== (t = T.default.lastMessageId(e.id)) &&
+                        null !== (t = C.default.lastMessageId(e.id)) &&
                         void 0 !== t
                           ? t
                           : e.lastMessageId) && void 0 !== n
@@ -1005,27 +1011,27 @@
           channelId: e.id,
           lastMessageId: t,
           isFavorite:
-            A.default.isMessagesFavorite(e.id) &&
+            m.default.isMessagesFavorite(e.id) &&
             (0, p.isInMainTabsExperiment)(),
-          isRequest: I.default.isMessageRequest(e.id) || E.default.isSpam(e.id),
+          isRequest: I.default.isMessageRequest(e.id) || v.default.isSpam(e.id),
         };
       }
       function L() {
         S.clear(),
-          Object.values(v.default.getMutablePrivateChannels()).forEach(e => {
+          Object.values(_.default.getMutablePrivateChannels()).forEach(e => {
             S.set(e.id, R(e));
           }),
           (0, p.isInMainTabsExperiment)() &&
             (0, h.isSplitMessagesTab)() &&
-            A.default.getAddedToMessages().forEach(e => {
-              let t = v.default.getChannel(e);
+            m.default.getAddedToMessages().forEach(e => {
+              let t = _.default.getChannel(e);
               null != t &&
-                (0, _.isGuildTextChannelType)(t.type) &&
+                (0, E.isGuildTextChannelType)(t.type) &&
                 S.set(t.id, R(t));
             });
       }
       function x() {
-        let e = v.default.getMutablePrivateChannels();
+        let e = _.default.getMutablePrivateChannels();
         for (let t in e) S.set(t, R(e[t]));
       }
       let P =
@@ -1053,8 +1059,8 @@
         });
       class O extends c.default.Store {
         initialize() {
-          this.waitFor(v.default, C.default, m.default, I.default, A.default),
-            this.syncWith([A.default, I.default], L);
+          this.waitFor(_.default, T.default, A.default, I.default, m.default),
+            this.syncWith([m.default, I.default], L);
         }
         getPrivateChannelIds() {
           return P();
@@ -1083,13 +1089,13 @@
         CHANNEL_UPDATES: function (e) {
           let { channels: t } = e;
           t.forEach(e => {
-            ((0, _.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, R(e));
+            ((0, E.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, R(e));
           });
         },
         CHANNEL_CREATE: function (e) {
           let { channel: t } = e;
           if (
-            !(0, _.isPrivate)(t.type) ||
+            !(0, E.isPrivate)(t.type) ||
             t.id === N.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
           )
             return !1;
@@ -1102,7 +1108,7 @@
         MESSAGE_CREATE: function (e) {
           let { channelId: t, message: n } = e;
           if (!S.has(t)) return !1;
-          let s = v.default.getChannel(t);
+          let s = _.default.getChannel(t);
           return null != s && S.set(t, R(s, n.id));
         },
         GUILD_CREATE: function (e) {
@@ -1113,6 +1119,38 @@
           S.clear();
         },
       });
+    },
+    137215: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return f;
+          },
+        });
+      var s = n("37983"),
+        i = n("884691"),
+        a = n("414456"),
+        l = n.n(a),
+        r = n("546671"),
+        u = n("711603");
+      let o = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
+        c = {
+          [o.UP]: u.up,
+          [o.RIGHT]: u.right,
+          [o.DOWN]: u.down,
+          [o.LEFT]: u.left,
+        };
+      class d extends i.PureComponent {
+        render() {
+          let { direction: e, className: t } = this.props;
+          return (0, s.jsx)(r.default, {
+            className: l(u.arrow, t, { [c[e]]: !0 }),
+          });
+        }
+      }
+      d.Directions = o;
+      var f = d;
     },
     265836: function (e, t, n) {
       "use strict";
@@ -1218,15 +1256,15 @@
               onChange: p,
               onFocus: h,
               onBlur: I,
-              onKeyPress: E,
-              autoComplete: _,
-              forwardedRef: v,
-              closeIconClassName: C,
-              searchIconClassName: T,
-              cta: A,
+              onKeyPress: v,
+              autoComplete: E,
+              forwardedRef: _,
+              closeIconClassName: T,
+              searchIconClassName: C,
+              cta: m,
             } = this.props,
-            m = null != i && i.length > 0,
-            g = null != v ? v : this._textInputRef;
+            A = null != i && i.length > 0,
+            g = null != _ ? _ : this._textInputRef;
           return (0, s.jsx)(r.FocusRing, {
             focusTarget: g,
             ringTarget: this._containerRef,
@@ -1244,32 +1282,32 @@
                   onChange: p,
                   onFocus: h,
                   onBlur: I,
-                  onKeyPress: E,
-                  value: m ? i : "",
+                  onKeyPress: v,
+                  value: A ? i : "",
                   placeholder: n,
                   autoFocus: e,
                   "aria-label": t,
-                  autoComplete: _ ? "on" : "off",
+                  autoComplete: E ? "on" : "off",
                 }),
-                null != A
+                null != m
                   ? (0, s.jsx)(r.Text, {
                       color: "text-muted",
                       variant: "text-xs/normal",
                       className: d.cta,
-                      children: A,
+                      children: m,
                     })
                   : null,
-                m
+                A
                   ? (0, s.jsx)(r.Clickable, {
                       onClick: this.handleClear,
                       className: d.clear,
                       "aria-label": c.default.Messages.SEARCH_CLEAR,
                       children: (0, s.jsx)(u.default, {
-                        className: l(d.clearIcon, C),
+                        className: l(d.clearIcon, T),
                       }),
                     })
                   : (0, s.jsx)(o.default, {
-                      className: l(d.searchIcon, T),
+                      className: l(d.searchIcon, C),
                       "aria-label": c.default.Messages.SEARCH,
                     }),
               ],
@@ -1289,6 +1327,26 @@
       }
       f.defaultProps = { autoComplete: !1 };
       var p = i.forwardRef((e, t) => (0, s.jsx)(f, { forwardedRef: t, ...e }));
+    },
+    546671: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return r;
+          },
+        });
+      var s = n("37983");
+      n("884691");
+      var i = n("469563"),
+        a = n("7037"),
+        l = n("246053"),
+        r = (0, i.replaceIcon)(function (e) {
+          return (0, s.jsx)(l.default, {
+            ...e,
+            direction: l.default.Directions.UP,
+          });
+        }, a.ArrowSmallUpIcon);
     },
     662255: function (e, t, n) {
       "use strict";
@@ -1463,6 +1521,41 @@
           { size: 24 }
         );
     },
+    833067: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ArrowSmallUpIcon: function () {
+            return l;
+          },
+        });
+      var s = n("37983");
+      n("884691");
+      var i = n("669491"),
+        a = n("82169");
+      let l = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: l = i.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
+        } = e;
+        return (0, s.jsx)("svg", {
+          ...(0, a.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, s.jsx)("path", {
+            fill: "string" == typeof l ? l : l.css,
+            d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
+            className: r,
+          }),
+        });
+      };
+    },
     890439: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -1632,4 +1725,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60579532ddf82f379723.js.map
+//# sourceMappingURL=15899a55e0683e9d6b37.js.map

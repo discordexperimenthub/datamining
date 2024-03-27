@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["81832"],
+  ["85206"],
   {
     397613: function (e, t, r) {
       "use strict";
@@ -108,21 +108,21 @@
         return (e = String(e).toLowerCase()).length < 3
           ? e
           : (121 === e.charCodeAt(0) && ((t = !0), (e = "Y" + e.substr(1))),
-            b.test(e)
+            T.test(e)
               ? (e = e.substr(0, e.length - 2))
               : y.test(e) && (e = e.substr(0, e.length - 1)),
             (r = g.exec(e))
               ? u.test(r[1]) && (e = e.substr(0, e.length - 1))
-              : (r = m.exec(e)) &&
+              : (r = v.exec(e)) &&
                 c.test(r[1]) &&
                 ((e = r[1]),
-                v.test(e)
+                m.test(e)
                   ? (e += "e")
-                  : T.test(e)
+                  : A.test(e)
                     ? (e = e.substr(0, e.length - 1))
                     : f.test(e) && (e += "e")),
             (r = _.exec(e)) && c.test(r[1]) && (e = r[1] + "i"),
-            (r = A.exec(e)) && u.test(r[1]) && (e = r[1] + n[r[2]]),
+            (r = b.exec(e)) && u.test(r[1]) && (e = r[1] + n[r[2]]),
             (r = I.exec(e)) && u.test(r[1]) && (e = r[1] + i[r[2]]),
             (r = C.exec(e))
               ? d.test(r[1]) && (e = r[1])
@@ -178,13 +178,13 @@
         E = /^(.+?)e$/,
         _ = /^(.+?)y$/,
         h = /^(.+?(s|t))(ion)$/,
-        m = /^(.+?)(ed|ing)$/,
-        v = /(at|bl|iz)$/,
+        v = /^(.+?)(ed|ing)$/,
+        m = /(at|bl|iz)$/,
         g = /^(.+?)eed$/,
         y = /^.+?[^s]s$/,
-        b = /^.+?(ss|i)es$/,
-        T = /([^aeiouylsz])\1$/,
-        A = RegExp(
+        T = /^.+?(ss|i)es$/,
+        A = /([^aeiouylsz])\1$/,
+        b = RegExp(
           "^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"
         ),
         I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
@@ -354,6 +354,12 @@
       }
       p.defaultProps = { disableButton: !1 };
       var E = p;
+    },
+    7037: function (e, t, r) {
+      "use strict";
+      r.r(t);
+      var n = r("833067");
+      r.es(n, t);
     },
     177589: function (e, t, r) {
       "use strict";
@@ -676,7 +682,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return v;
+            return m;
           },
         });
       var n = r("446674"),
@@ -767,7 +773,7 @@
         }
         return (d = !a.default.needsRefresh()), e;
       }
-      class m extends n.default.Store {
+      class v extends n.default.Store {
         initialize() {
           this.waitFor(a.default), this.syncWith([a.default], h);
         }
@@ -787,8 +793,8 @@
           return f[e];
         }
       }
-      m.displayName = "NowPlayingStore";
-      var v = new m(i.default, {
+      v.displayName = "NowPlayingStore";
+      var m = new v(i.default, {
         CONNECTION_OPEN: function () {
           (c = {}), (f = {});
         },
@@ -822,7 +828,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return x;
+            return O;
           },
         }),
         r("222007"),
@@ -838,13 +844,13 @@
         E = r("934306"),
         _ = r("288518"),
         h = r("486503"),
-        m = r("233069"),
-        v = r("42203"),
+        v = r("233069"),
+        m = r("42203"),
         g = r("305961"),
         y = r("660478"),
-        b = r("282109"),
-        T = r("697218"),
-        A = r("299039"),
+        T = r("282109"),
+        A = r("697218"),
+        b = r("299039"),
         I = r("724210");
       ((a = l || (l = {})).DEFAULT = "DEFAULT"), (a.FAVORITE = "FAVORITE");
       let C = new c.SecondaryIndexMap(
@@ -875,8 +881,8 @@
                   i = e.isMessageRequestTimestamp;
                 if (null != i) {
                   let e = o(i).valueOf(),
-                    t = A.default.fromTimestamp(e);
-                  return A.default.compare(n, t) > 0 ? n : t;
+                    t = b.default.fromTimestamp(e);
+                  return b.default.compare(n, t) > 0 ? n : t;
                 }
                 return n;
               })(e);
@@ -884,27 +890,27 @@
           channelId: e.id,
           lastMessageId: t,
           isFavorite:
-            b.default.isMessagesFavorite(e.id) &&
+            T.default.isMessagesFavorite(e.id) &&
             (0, p.isInMainTabsExperiment)(),
           isRequest: _.default.isMessageRequest(e.id) || h.default.isSpam(e.id),
         };
       }
       function N() {
         C.clear(),
-          Object.values(v.default.getMutablePrivateChannels()).forEach(e => {
+          Object.values(m.default.getMutablePrivateChannels()).forEach(e => {
             C.set(e.id, S(e));
           }),
           (0, p.isInMainTabsExperiment)() &&
             (0, E.isSplitMessagesTab)() &&
-            b.default.getAddedToMessages().forEach(e => {
-              let t = v.default.getChannel(e);
+            T.default.getAddedToMessages().forEach(e => {
+              let t = m.default.getChannel(e);
               null != t &&
-                (0, m.isGuildTextChannelType)(t.type) &&
+                (0, v.isGuildTextChannelType)(t.type) &&
                 C.set(t.id, S(t));
             });
       }
       function P() {
-        let e = v.default.getMutablePrivateChannels();
+        let e = m.default.getMutablePrivateChannels();
         for (let t in e) C.set(t, S(e[t]));
       }
       let R =
@@ -930,10 +936,10 @@
             s
           );
         });
-      class O extends d.default.Store {
+      class x extends d.default.Store {
         initialize() {
-          this.waitFor(v.default, g.default, T.default, _.default, b.default),
-            this.syncWith([b.default, _.default], N);
+          this.waitFor(m.default, g.default, A.default, _.default, T.default),
+            this.syncWith([T.default, _.default], N);
         }
         getPrivateChannelIds() {
           return R();
@@ -952,8 +958,8 @@
           );
         }
       }
-      O.displayName = "PrivateChannelSortStore";
-      var x = new O(f.default, {
+      x.displayName = "PrivateChannelSortStore";
+      var O = new x(f.default, {
         CONNECTION_OPEN: N,
         CONNECTION_OPEN_SUPPLEMENTAL: N,
         OVERLAY_INITIALIZE: N,
@@ -962,13 +968,13 @@
         CHANNEL_UPDATES: function (e) {
           let { channels: t } = e;
           t.forEach(e => {
-            ((0, m.isPrivate)(e.type) || C.has(e.id)) && C.set(e.id, S(e));
+            ((0, v.isPrivate)(e.type) || C.has(e.id)) && C.set(e.id, S(e));
           });
         },
         CHANNEL_CREATE: function (e) {
           let { channel: t } = e;
           if (
-            !(0, m.isPrivate)(t.type) ||
+            !(0, v.isPrivate)(t.type) ||
             t.id === I.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
           )
             return !1;
@@ -981,7 +987,7 @@
         MESSAGE_CREATE: function (e) {
           let { channelId: t, message: r } = e;
           if (!C.has(t)) return !1;
-          let n = v.default.getChannel(t);
+          let n = m.default.getChannel(t);
           return null != n && C.set(t, S(n, r.id));
         },
         GUILD_CREATE: function (e) {
@@ -992,6 +998,38 @@
           C.clear();
         },
       });
+    },
+    137215: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
+          default: function () {
+            return f;
+          },
+        });
+      var n = r("37983"),
+        i = r("884691"),
+        s = r("414456"),
+        l = r.n(s),
+        a = r("546671"),
+        u = r("711603");
+      let o = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
+        d = {
+          [o.UP]: u.up,
+          [o.RIGHT]: u.right,
+          [o.DOWN]: u.down,
+          [o.LEFT]: u.left,
+        };
+      class c extends i.PureComponent {
+        render() {
+          let { direction: e, className: t } = this.props;
+          return (0, n.jsx)(a.default, {
+            className: l(u.arrow, t, { [d[e]]: !0 }),
+          });
+        }
+      }
+      c.Directions = o;
+      var f = c;
     },
     454589: function (e, t, r) {
       "use strict";
@@ -1149,6 +1187,61 @@
       }
       var f = c;
     },
+    546671: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
+          default: function () {
+            return a;
+          },
+        });
+      var n = r("37983");
+      r("884691");
+      var i = r("469563"),
+        s = r("7037"),
+        l = r("246053"),
+        a = (0, i.replaceIcon)(function (e) {
+          return (0, n.jsx)(l.default, {
+            ...e,
+            direction: l.default.Directions.UP,
+          });
+        }, s.ArrowSmallUpIcon);
+    },
+    833067: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
+          ArrowSmallUpIcon: function () {
+            return l;
+          },
+        });
+      var n = r("37983");
+      r("884691");
+      var i = r("669491"),
+        s = r("82169");
+      let l = e => {
+        let {
+          width: t = 24,
+          height: r = 24,
+          color: l = i.default.colors.INTERACTIVE_NORMAL,
+          colorClass: a = "",
+          ...u
+        } = e;
+        return (0, n.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: r,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, n.jsx)("path", {
+            fill: "string" == typeof l ? l : l.css,
+            d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
+            className: a,
+          }),
+        });
+      };
+    },
   },
 ]);
-//# sourceMappingURL=760520383f763771d124.js.map
+//# sourceMappingURL=35e9dcd902b9841973f7.js.map

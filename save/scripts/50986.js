@@ -690,12 +690,6 @@
       var a = s("701509");
       s.es(a, t);
     },
-    7037: function (e, t, s) {
-      "use strict";
-      s.r(t);
-      var a = s("833067");
-      s.es(a, t);
-    },
     859670: function (e, t, s) {
       "use strict";
       s.r(t);
@@ -45419,38 +45413,6 @@
         }
       };
     },
-    137215: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return E;
-          },
-        });
-      var a = s("37983"),
-        l = s("884691"),
-        n = s("414456"),
-        i = s.n(n),
-        r = s("546671"),
-        o = s("711603");
-      let d = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
-        u = {
-          [d.UP]: o.up,
-          [d.RIGHT]: o.right,
-          [d.DOWN]: o.down,
-          [d.LEFT]: o.left,
-        };
-      class c extends l.PureComponent {
-        render() {
-          let { direction: e, className: t } = this.props;
-          return (0, a.jsx)(r.default, {
-            className: i(o.arrow, t, { [u[e]]: !0 }),
-          });
-        }
-      }
-      c.Directions = d;
-      var E = c;
-    },
     93581: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -46555,26 +46517,6 @@
           });
         }, n.ArrowSmallDownIcon);
     },
-    546671: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return r;
-          },
-        });
-      var a = s("37983");
-      s("884691");
-      var l = s("469563"),
-        n = s("7037"),
-        i = s("246053"),
-        r = (0, l.replaceIcon)(function (e) {
-          return (0, a.jsx)(i.default, {
-            ...e,
-            direction: i.default.Directions.UP,
-          });
-        }, n.ArrowSmallUpIcon);
-    },
     912702: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -47446,41 +47388,6 @@
         });
       };
     },
-    833067: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          ArrowSmallUpIcon: function () {
-            return i;
-          },
-        });
-      var a = s("37983");
-      s("884691");
-      var l = s("669491"),
-        n = s("82169");
-      let i = e => {
-        let {
-          width: t = 24,
-          height: s = 24,
-          color: i = l.default.colors.INTERACTIVE_NORMAL,
-          colorClass: r = "",
-          ...o
-        } = e;
-        return (0, a.jsx)("svg", {
-          ...(0, n.default)(o),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: t,
-          height: s,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: (0, a.jsx)("path", {
-            fill: "string" == typeof i ? i : i.css,
-            d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
-            className: r,
-          }),
-        });
-      };
-    },
     29244: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -47929,4 +47836,4 @@
     },
   },
 ]);
-//# sourceMappingURL=43c85f64daf0c3dfb9a9.js.map
+//# sourceMappingURL=1662403e5cd0d044dd12.js.map

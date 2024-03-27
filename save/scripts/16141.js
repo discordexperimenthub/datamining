@@ -24116,7 +24116,7 @@
                             (0, a.jsx)("img", {
                               alt: b.config.messages.rewardName,
                               className: y.rewardTile,
-                              src: (0, I.getRewardAssetUrl)(b.id),
+                              src: (0, I.getRewardAssetUrl)(b),
                             }),
                             (0, a.jsx)(x.default, {
                               bgOpacity: 0.32,
@@ -24134,12 +24134,12 @@
                                 ? (0, a.jsx)("img", {
                                     alt: b.config.messages.rewardName,
                                     className: y.rewardTile,
-                                    src: (0, I.getRewardAssetUrl)(b.id),
+                                    src: (0, I.getRewardAssetUrl)(b),
                                   })
                                 : (0, a.jsx)("img", {
                                     className: y.gameTile,
                                     alt: b.config.messages.gameTitle,
-                                    src: (0, I.getGameTileAssetUrl)(b.id),
+                                    src: (0, I.getGameTileAssetUrl)(b),
                                   }),
                               (0, a.jsxs)("div", {
                                 className: y.details,
@@ -24295,7 +24295,7 @@
               (0, a.jsx)("img", {
                 alt: n.config.messages.rewardName,
                 className: o.rewardTile,
-                src: (0, r.getRewardAssetUrl)(n.id),
+                src: (0, r.getRewardAssetUrl)(n),
               }),
               (0, a.jsx)(i.Text, {
                 className: o.instructions,
@@ -43923,4 +43923,4 @@
     },
   },
 ]);
-//# sourceMappingURL=07ed1c1097759a0d3fe0.js.map
+//# sourceMappingURL=e51f754bd5f761dd908b.js.map

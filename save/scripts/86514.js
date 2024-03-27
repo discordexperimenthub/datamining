@@ -2999,7 +2999,7 @@
               className: i.content,
               children: [
                 (0, n.jsx)("img", {
-                  src: (0, s.getGameTileAssetUrl)(t.id),
+                  src: (0, s.getGameTileAssetUrl)(t),
                   alt: "",
                   className: i.gameTile,
                 }),
@@ -3560,4 +3560,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4eebc617baac0cbf7ec8.js.map
+//# sourceMappingURL=7e646ad2ce1a46cec686.js.map

@@ -21804,7 +21804,7 @@
             (0, l.jsx)("img", {
               className: c.partnerBrandingGameTile,
               alt: "",
-              src: (0, u.getGameTileAssetUrl)(s.id),
+              src: (0, u.getGameTileAssetUrl)(s),
               style: {
                 borderRadius: (function (e) {
                   switch (e) {
@@ -21822,7 +21822,7 @@
               className: c.partnerBrandingLogotype,
               alt: s.config.messages.gameTitle,
               src: (0, u.getGameLogotypeAssetUrl)(
-                s.id,
+                s,
                 (0, o.isThemeDark)(a) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT
               ),
             }),
@@ -22184,7 +22184,7 @@
           }),
           children: [
             (0, s.jsx)("img", {
-              src: (0, I.getRewardAssetUrl)(E.id),
+              src: (0, I.getRewardAssetUrl)(E),
               alt: "",
               className: l(S.questReward, S.gridImg, {
                 [S.questRewardGiftInventory]: w && "lg" === R,
@@ -22345,7 +22345,10 @@
             [d.default],
             () => d.default.useReducedMotion
           ),
-          O = a.useMemo(() => l.config.videoAssets.includes(o), [l, o]),
+          O = a.useMemo(
+            () => (0, N.isAssetAnimated)(l.config.assets.hero),
+            [l]
+          ),
           R = a.useRef(null),
           L = (0, I.useIsQuestExpired)(l),
           v =
@@ -22362,111 +22365,110 @@
             month: "long",
             day: "numeric",
           });
-        return (
-          a.useEffect(() => {
-            null != R.current &&
-              (n
-                ? R.current.play()
-                : (R.current.pause(), (R.current.currentTime = 0)));
-          }, [n]),
-          (0, s.jsxs)("div", {
-            className: i(h.outerContainer, {
-              [h.outerContainerGiftInventory]:
-                o === m.QuestContent.QUEST_INVENTORY_CARD,
-              [h.outerContainerEmbed]: o === m.QuestContent.QUESTS_EMBED,
+        a.useEffect(() => {
+          null != R.current &&
+            (n
+              ? R.current.play()
+              : (R.current.pause(), (R.current.currentTime = 0)));
+        }, [n]);
+        let x = (0, N.getHeroAssetUrl)(l);
+        return (0, s.jsxs)("div", {
+          className: i(h.outerContainer, {
+            [h.outerContainerGiftInventory]:
+              o === m.QuestContent.QUEST_INVENTORY_CARD,
+            [h.outerContainerEmbed]: o === m.QuestContent.QUESTS_EMBED,
+          }),
+          children: [
+            (0, s.jsx)(f.default, {
+              autoPlay: !1,
+              loop: !1,
+              muted: !0,
+              playsInline: !0,
+              className: h.questSplash,
+              controls: !1,
+              poster: x,
+              ref: R,
+              children:
+                !M &&
+                O &&
+                (0, s.jsx)("source", {
+                  src: x,
+                  type: (0, N.getVideoAssetMimeType)(x),
+                }),
             }),
-            children: [
-              (0, s.jsx)(f.default, {
-                autoPlay: !1,
-                loop: !1,
-                muted: !0,
-                playsInline: !0,
-                className: h.questSplash,
-                controls: !1,
-                poster: (0, N.getHeroStaticAssetUrl)(l.id),
-                ref: R,
-                children:
-                  !M &&
-                  O &&
-                  (0, s.jsx)("source", {
-                    src: (0, N.getHeroAnimatedAssetUrl)(l.id),
-                    type: "video/webm",
-                  }),
-              }),
-              (0, s.jsxs)("div", {
-                className: h.header,
-                children: [
-                  (0, s.jsxs)("div", {
-                    className: h.headerContent,
-                    children: [
-                      (0, s.jsxs)("div", {
-                        children: [
-                          (0, s.jsxs)("div", {
-                            className: h.iconLogotypeContainer,
-                            children: [
-                              (0, s.jsx)(p.default, {
-                                className: h.partnerBranding,
-                                gameTileSize: p.GameTileSizes.MEDIUM,
-                                quest: l,
-                                theme: T,
-                              }),
-                              (0, s.jsx)(S.default, { color: "always-white" }),
-                            ],
-                          }),
-                          (0, s.jsxs)("div", {
-                            className: h.questInfo,
-                            children: [
-                              (0, s.jsx)(u.Heading, {
-                                variant:
-                                  "lg" === _
-                                    ? "heading-xxl/bold"
-                                    : "sm" === _
-                                      ? "heading-xl/bold"
-                                      : "heading-lg/bold",
-                                children: A.default.Messages.QUEST.format({
-                                  questName: l.config.messages.questName,
-                                }),
-                              }),
-                              (0, s.jsx)(u.Text, {
-                                variant: "text-xs/normal",
-                                children: v
-                                  ? A.default.Messages.QUESTS_CLAIM_BY.format({
-                                      expirationDate: D,
-                                    })
-                                  : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format(
-                                      { expirationDate: P }
-                                    ),
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                      !L &&
-                        o === m.QuestContent.QUEST_INVENTORY_CARD &&
-                        (0, s.jsx)(g, { quest: l, location: o }),
-                    ],
-                  }),
-                  (0, s.jsx)(C.QuestsEntryContextMenuPopout, {
-                    questContent: o,
-                    quest: l,
-                    shouldShowDisclosure: !0,
-                    hideLearnMore: o === m.QuestContent.QUEST_INVENTORY_CARD,
-                    showShareLink: o === m.QuestContent.QUESTS_EMBED,
-                    children: e =>
-                      (0, s.jsx)(u.Clickable, {
-                        ...e,
-                        className: h.submenuWrapper,
-                        "aria-label": A.default.Messages.ACTIONS,
-                        children: (0, s.jsx)(E.default, {
-                          className: h.submenuIcon,
+            (0, s.jsxs)("div", {
+              className: h.header,
+              children: [
+                (0, s.jsxs)("div", {
+                  className: h.headerContent,
+                  children: [
+                    (0, s.jsxs)("div", {
+                      children: [
+                        (0, s.jsxs)("div", {
+                          className: h.iconLogotypeContainer,
+                          children: [
+                            (0, s.jsx)(p.default, {
+                              className: h.partnerBranding,
+                              gameTileSize: p.GameTileSizes.MEDIUM,
+                              quest: l,
+                              theme: T,
+                            }),
+                            (0, s.jsx)(S.default, { color: "always-white" }),
+                          ],
                         }),
+                        (0, s.jsxs)("div", {
+                          className: h.questInfo,
+                          children: [
+                            (0, s.jsx)(u.Heading, {
+                              variant:
+                                "lg" === _
+                                  ? "heading-xxl/bold"
+                                  : "sm" === _
+                                    ? "heading-xl/bold"
+                                    : "heading-lg/bold",
+                              children: A.default.Messages.QUEST.format({
+                                questName: l.config.messages.questName,
+                              }),
+                            }),
+                            (0, s.jsx)(u.Text, {
+                              variant: "text-xs/normal",
+                              children: v
+                                ? A.default.Messages.QUESTS_CLAIM_BY.format({
+                                    expirationDate: D,
+                                  })
+                                : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format(
+                                    { expirationDate: P }
+                                  ),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    !L &&
+                      o === m.QuestContent.QUEST_INVENTORY_CARD &&
+                      (0, s.jsx)(g, { quest: l, location: o }),
+                  ],
+                }),
+                (0, s.jsx)(C.QuestsEntryContextMenuPopout, {
+                  questContent: o,
+                  quest: l,
+                  shouldShowDisclosure: !0,
+                  hideLearnMore: o === m.QuestContent.QUEST_INVENTORY_CARD,
+                  showShareLink: o === m.QuestContent.QUESTS_EMBED,
+                  children: e =>
+                    (0, s.jsx)(u.Clickable, {
+                      ...e,
+                      className: h.submenuWrapper,
+                      "aria-label": A.default.Messages.ACTIONS,
+                      children: (0, s.jsx)(E.default, {
+                        className: h.submenuIcon,
                       }),
-                  }),
-                ],
-              }),
-            ],
-          })
-        );
+                    }),
+                }),
+              ],
+            }),
+          ],
+        });
       };
     },
     419292: function (e, t, n) {
@@ -33056,4 +33058,4 @@
     },
   },
 ]);
-//# sourceMappingURL=bb6a06963f9e31fe7e57.js.map
+//# sourceMappingURL=d5c2aec35982dba352de.js.map

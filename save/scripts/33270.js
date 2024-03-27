@@ -1717,7 +1717,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "279014",
+                  buildNumber: "279030",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -37380,7 +37380,7 @@
               (0, a.jsx)("img", {
                 alt: n.config.messages.rewardName,
                 className: E.questRewardTileAsset,
-                src: (0, d.getRewardAssetUrl)(n.id),
+                src: (0, d.getRewardAssetUrl)(n),
               }),
             ],
           });
@@ -37431,7 +37431,7 @@
             (0, a.jsx)("img", {
               className: N.headingGameTile,
               alt: "",
-              src: (0, C.getGameTileAssetUrl)(n.id),
+              src: (0, C.getGameTileAssetUrl)(n),
             }),
             (0, a.jsxs)("div", {
               className: N.headingCopy,
@@ -38052,7 +38052,7 @@
                     (0, a.jsx)("img", {
                       alt: S.config.messages.rewardName,
                       className: f.questProgressRewardTile,
-                      src: (0, o.getRewardAssetUrl)(S.id),
+                      src: (0, o.getRewardAssetUrl)(S),
                     }),
                     m
                       ? (0, a.jsx)(d.default, {
@@ -38142,7 +38142,7 @@
           U = (0, h.useQuestFormattedDate)(D.config.expiresAt),
           G = (0, h.useQuestFormattedDate)(D.config.rewardCodeExpiresAt),
           j = s.useMemo(
-            () => D.config.videoAssets.includes(C.QuestContent.QUEST_BAR),
+            () => (0, S.isAssetAnimated)(D.config.assets.questBarHero),
             [D]
           ),
           w = s.useCallback(() => {
@@ -38170,7 +38170,8 @@
             (null === (l = D.userStatus) || void 0 === l
               ? void 0
               : l.completedAt) != null,
-          V = v && L;
+          V = v && L,
+          Y = (0, S.getQuestBarHeroAssetUrl)(D);
         return (0, a.jsx)(r.animated.div, {
           "aria-hidden": !V,
           className: i(R, N.contentExpanded, { [N.contentInteractable]: V }),
@@ -38189,7 +38190,7 @@
                           (0, a.jsx)("img", {
                             alt: D.config.messages.rewardName,
                             className: N.questProgressRewardTile,
-                            src: (0, S.getRewardAssetUrl)(D.id),
+                            src: (0, S.getRewardAssetUrl)(D),
                           }),
                           (0, a.jsxs)("div", {
                             className: N.questAcceptedContentCopy,
@@ -38359,15 +38360,13 @@
                         playsInline: !0,
                         className: N.heroAsset,
                         controls: !1,
-                        poster: (0, S.getQuestBarStaticHeroAssetUrl)(D.id),
+                        poster: j ? void 0 : Y,
                         children:
                           x || !j
                             ? null
                             : (0, a.jsx)("source", {
-                                src: (0, S.getQuestBarAnimatedHeroAssetUrl)(
-                                  D.id
-                                ),
-                                type: "video/webm",
+                                src: Y,
+                                type: (0, S.getVideoAssetMimeType)(Y),
                               }),
                       },
                       x ? "static" : "animated"
@@ -53296,4 +53295,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c35559cf2c4baaf3f267.js.map
+//# sourceMappingURL=bc6f5237ea8ebe5fbfb9.js.map

@@ -180,7 +180,7 @@
           className: A.rewardTile,
           children: [
             (0, a.jsx)("img", {
-              src: (0, _.getRewardAssetUrl)(s.id),
+              src: (0, _.getRewardAssetUrl)(s),
               alt: s.config.messages.rewardName,
               style: { border: "1px solid ".concat(s.config.colors.primary) },
               className: A.reward,
@@ -895,4 +895,4 @@
     },
   },
 ]);
-//# sourceMappingURL=04ffcb0228d1af74d15a.js.map
+//# sourceMappingURL=cf6673fcb77da7e8fc8d.js.map
